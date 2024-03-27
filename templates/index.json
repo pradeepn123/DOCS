@@ -289,7 +289,7 @@
           "type": "accent",
           "settings": {
             "text": "CLARKSTON DERMATOLOGY",
-            "accent_font_size": 3,
+            "accent_font_size": 4,
             "accent_divider_enable": false,
             "accent_divider_color": "accent"
           }
@@ -577,7 +577,7 @@
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
@@ -627,7 +627,7 @@
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
@@ -677,7 +677,7 @@
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
