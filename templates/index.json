@@ -80,8 +80,8 @@
         "slide_PNrzTK": {
           "type": "slide",
           "settings": {
-            "background_image": "shopify:\/\/shop_images\/SKINMEDICA_PROMO.png",
-            "background_image_mobile": "shopify:\/\/shop_images\/Group_22.png",
+            "background_image": "shopify:\/\/shop_images\/SKIN_MEDICA_WEB_BANNER.png",
+            "background_image_mobile": "shopify:\/\/shop_images\/SKIN_MEDICA_WEBSITE_BANNER.png",
             "background_image_focal_point": "image_presentation",
             "background_image_mobile_focal_point": "image_presentation",
             "media_link": "",
