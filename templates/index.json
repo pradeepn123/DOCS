@@ -285,6 +285,15 @@
     "image_with_content_split_rzWNJK": {
       "type": "image-with-content-split",
       "blocks": {
+        "accent_iWTC3C": {
+          "type": "accent",
+          "settings": {
+            "text": "CLARKSTON DERMATOLOGY",
+            "accent_font_size": 3,
+            "accent_divider_enable": false,
+            "accent_divider_color": "accent"
+          }
+        },
         "heading_zPWKQB": {
           "type": "heading",
           "settings": {
@@ -309,6 +318,7 @@
         }
       },
       "block_order": [
+        "accent_iWTC3C",
         "heading_zPWKQB",
         "text_NyFUfX",
         "button_y9bypc"
@@ -317,7 +327,7 @@
         "image_width": 53,
         "image_position_desktop": "right",
         "image_position_mobile": "below",
-        "image": "shopify:\/\/shop_images\/SPLIT_IMAGE_WIDE_4ceed632-5913-40bd-b59d-6a4265b2f25f.png",
+        "image": "shopify:\/\/shop_images\/Frame_6.png",
         "image_aspect_ratio": "landscape",
         "image_focal_point": "center",
         "content_width": "custom",
@@ -864,6 +874,9 @@
         "featured_products_MJfmrr": {
           "type": "featured_products",
           "settings": {
+            "products": [
+
+            ]
           }
         }
       },
@@ -941,7 +954,7 @@
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
