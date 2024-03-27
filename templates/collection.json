@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_collection_description": true,
+        "collection_description_truncate_num_lines": "2",
+        "show_collection_image": true,
+        "background_image": "shopify:\/\/shop_images\/Group_5.png",
+        "background_image_focal_point": "image_presentation",
+        "background_image_mobile_focal_point": "image_presentation",
+        "image_height_type": "custom",
+        "custom_height_desktop": "50vh",
+        "custom_height_mobile": "250px",
+        "text_position": "flex-start_flex-end",
+        "text_position_mobile": "flex-start_flex-end",
+        "image_overlay_tint_opacity": 10,
+        "image_overlay_tint_style": "solid",
+        "image_overlay_override_with_custom_colors": false,
+        "image_overlay_override_color_text": "#ffffff",
+        "image_overlay_override_color_tint": "#000000",
+        "section_style_spacing_top": 0,
+        "section_style_spacing_bottom": 0,
+        "section_style_enable_animation": true
+      }
+    },
+    "image_with_content_split_zjwzKT": {
+      "type": "image-with-content-split",
+      "blocks": {
+        "heading_dqt8Fp": {
+          "type": "heading",
+          "settings": {
+            "title": "About",
+            "heading_font_size": 5
+          }
+        },
+        "text_MDJhMr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover a world of skincare excellence at Clarkston Dermatology, where our commitment to your skin's health extends beyond our clinic walls. In addition to providing top-tier medical and aesthetic services, we offer a curated selection of premium skincare products to complement your skincare routine.<\/p>",
+            "text_font_size": 3
+          }
+        }
+      },
+      "block_order": [
+        "heading_dqt8Fp",
+        "text_MDJhMr"
+      ],
+      "settings": {
+        "image_width": 46,
+        "image_position_desktop": "right",
+        "image_position_mobile": "above",
+        "image": "shopify:\/\/shop_images\/Group_5.png",
+        "image_aspect_ratio": "landscape_wide_alt",
+        "image_focal_point": "image_presentation",
+        "content_width": "custom",
+        "custom_width": 645,
+        "content_alignment": "left",
+        "color_scheme": "default",
+        "override_with_custom_colors": true,
+        "override_color_text": "#000000",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 0,
+        "section_style_spacing_bottom": 32,
+        "section_style_enable_animation": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "num_columns": "4",
+        "num_rows": "7",
+        "show_item_count": true,
+        "enable_grid_mode": false,
+        "default_grid_mode": "grid",
+        "enable_sticky_filter_sidebar": true,
+        "show_sort": true,
+        "show_filters": true,
+        "filter_search_groups": "",
+        "collapse_filter_sidebar": false,
+        "collapse_filter_groups_desktop": false,
+        "truncate_filter_list": true,
+        "truncate_filter_list_amount": 7,
+        "show_swatch_filters": true,
+        "show_chip_filters": true,
+        "chip_layout": "2col",
+        "pagination": "paginated",
+        "section_style_enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "image_with_content_split_zjwzKT",
+    "product-grid"
+  ]
+}

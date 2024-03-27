@@ -1,0 +1,196 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product--default",
+      "blocks": {
+        "product_header": {
+          "type": "product_header",
+          "settings": {
+            "show_divider": true,
+            "show_vendor": true,
+            "show_sku": true,
+            "show_price": true,
+            "show_discount": true,
+            "discount_format": "percent_off",
+            "show_shop_pay": false,
+            "show_product_rating": false,
+            "show_rating_count": false,
+            "rating_style": "regular",
+            "show_sale_badge": true,
+            "show_new_badge": false,
+            "show_custom_badges": true,
+            "product_header_always_top_mobile": "below"
+          }
+        },
+        "product_labels": {
+          "type": "product_labels",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "icon_size": 24,
+            "label_style": "block_heading",
+            "outline": true,
+            "icon_1": "delivery-truck-left",
+            "text_1": "Fast Shipping",
+            "icon_2": "shield-lock",
+            "text_2": "Secure payment",
+            "icon_3": "chat-support",
+            "text_3": "",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "none",
+            "text_6": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_popup_option": "Size",
+            "variant_popup_icon": "measuring-tape",
+            "variant_popup_text": "Size guide",
+            "variant_popup_page": "",
+            "swatch_size": "medium",
+            "siblings_show_product_image": true,
+            "siblings_option_name": "Color",
+            "chip_layout": "3col"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "enable_sticky_atc_bar_desktop": false,
+            "enable_sticky_atc_bar_mobile": false,
+            "drop_shadow": "none",
+            "show_quantity_selector": true,
+            "show_quantity_in_cart": true,
+            "show_pickup_availability": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "enable_os_share": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "column_placement": "right",
+            "title": "Description",
+            "text_font_class": "fs-body-100",
+            "truncate_num_lines": "0",
+            "display_as_collapsible_row": true,
+            "expand_by_default": true
+          }
+        },
+        "accordion_Hefz6e": {
+          "type": "accordion",
+          "settings": {
+            "column_placement": "right",
+            "expand_by_default": false,
+            "heading": "How To Use",
+            "content": "<p>Add your collapsible row content here.<\/p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_yfFL4K": {
+          "type": "accordion",
+          "settings": {
+            "column_placement": "right",
+            "expand_by_default": false,
+            "heading": "Ingredients",
+            "content": "<p>Add your collapsible row content here.<\/p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "product_text_columns_QCicmj": {
+          "type": "product_text_columns",
+          "settings": {
+            "column_placement": "right",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_border": "circle",
+            "icon_border_style": "outlined",
+            "icon_border_color": "accent",
+            "icon_size": 24,
+            "icon_size_mobile": 24,
+            "icon_1": "package",
+            "heading_1": "Shipping",
+            "text_1": "<p>Free shipping over $50<\/p>",
+            "icon_2": "thumbs-up",
+            "heading_2": "Returns",
+            "text_2": "<p>Free, Easy Returns<\/p>",
+            "icon_3": "chat-support",
+            "heading_3": "Support",
+            "text_3": "<p>Need help? <a href='\/pages\/contact''>Contact us<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_header",
+        "product_labels",
+        "variant_picker",
+        "buy_buttons",
+        "share",
+        "description",
+        "accordion_Hefz6e",
+        "accordion_yfFL4K",
+        "product_text_columns_QCicmj"
+      ],
+      "settings": {
+        "enable_sticky_product_details": false,
+        "show_breadcrumbs": false,
+        "show_navigation_buttons": true,
+        "gallery_size": "large",
+        "thumbnail_position": "left",
+        "thumbnail_size": "small",
+        "enable_video_looping": true,
+        "enable_product_lightbox": true,
+        "show_thumbs_in_product_lightbox": true,
+        "image_aspect_ratio": "natural",
+        "enable_gift_card_recipient": true,
+        "show_recommended_products_on_desktop": false,
+        "show_recommended_products_on_mobile": false,
+        "max_recommended_products": 3,
+        "enable_quick_view_recommended_products": true,
+        "recommended_products_heading": "You may also like",
+        "section_style_enable_animation": true
+      }
+    },
+    "recommendations": {
+      "type": "recommended-products",
+      "settings": {
+        "center_content": false,
+        "preheading": "",
+        "heading": "Recommended products",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 8,
+        "num_columns": "4",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recommendations"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "custom.overlay",
+  "name": "t:groups.overlay_group.name",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "settings": {
+      }
+    },
+    "quick-cart": {
+      "type": "quick-cart",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "quick-cart",
+    "popup"
+  ]
+}

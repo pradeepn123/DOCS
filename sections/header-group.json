@@ -1,0 +1,86 @@
+{
+  "type": "header",
+  "name": "t:groups.header_group.name",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "5ead3ce2-32e3-4045-b7d6-59031d387b93": {
+          "type": "announcement",
+          "settings": {
+            "title": "<p>Welocome to DOCS DERMATOLOGY<\/p>",
+            "title_mobile": "",
+            "link": "",
+            "enable_modal": false,
+            "modal_link_text": "Click for details",
+            "modal_link_style": "text",
+            "modal_heading": "",
+            "modal_text": "<p>Add your information popup content here<\/p>",
+            "page_for_modal_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "5ead3ce2-32e3-4045-b7d6-59031d387b93"
+      ],
+      "settings": {
+        "autoplay_delay": 8,
+        "color_text": "#ffffff",
+        "color_background": "#1a428a",
+        "show_divider": false,
+        "enable_locale_selector": false,
+        "enable_country_selector": false,
+        "show_country_flags": false,
+        "show_social_media": false,
+        "menu": ""
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "layout": "inline_logo_left_menu_left",
+        "layout_mobile": "logo_center_menu_left",
+        "enable_sticky_header": true,
+        "drop_shadow": "line",
+        "logo": "shopify:\/\/shop_images\/Group.svg",
+        "logo_width": 70,
+        "mobile_logo_width": 55,
+        "enable_transparent_on_home": false,
+        "enable_transparent_template_list": "",
+        "enable_transparent_background_tint": true,
+        "color_text_transparent": "#ffffff",
+        "menu": "main-menu",
+        "menu_interaction": "hover",
+        "featured_link_label": "",
+        "featured_link_color": "#d22919",
+        "show_account_label": true,
+        "show_cart_label": true,
+        "cart_label": "cart",
+        "cart_icon": "cart",
+        "enable_quick_sign_in": true,
+        "enable_search_bar": true,
+        "mobile_search_appearance": "icon"
+      }
+    },
+    "mobile-menu": {
+      "type": "mobile-menu",
+      "settings": {
+        "logo_width": 150,
+        "menu_main": "main-menu",
+        "menu_secondary": "",
+        "featured_link_label": "Sale",
+        "featured_link_color": "#db4827",
+        "enable_quick_sign_in": true,
+        "show_social_media": true,
+        "social_media_icons_columns": 5,
+        "enable_locale_selector": true,
+        "enable_country_selector": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "mobile-menu"
+  ]
+}

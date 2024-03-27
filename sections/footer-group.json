@@ -1,0 +1,70 @@
+{
+  "type": "footer",
+  "name": "t:groups.footer_group.name",
+  "sections": {
+    "75a630c6-25bd-4edb-83bc-d73c5312fe0e": {
+      "type": "newsletter-compact",
+      "blocks": {
+        "sections--21033935110454__75a630c6-25bd-4edb-83bc-d73c5312fe0e-text_content-1": {
+          "type": "text_content",
+          "settings": {
+            "width": "600",
+            "text_alignment": "left",
+            "accent": "",
+            "accent_divider_enable": true,
+            "accent_divider_color": "accent",
+            "title": "Sign up for our Newsletter",
+            "heading_font_size": 4,
+            "text": "<p>Get latest updates on new releases, offers and more<\/p>",
+            "text_font_size": 3
+          }
+        },
+        "sections--21033935110454__75a630c6-25bd-4edb-83bc-d73c5312fe0e-newsletter_signup-1": {
+          "type": "newsletter_signup",
+          "settings": {
+            "signup_link_text": "Sign up",
+            "button_style": "solid",
+            "footer_text": "<p>By completing this form, you are signing up to receive our emails and can unsubscribe at any time.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "sections--21033935110454__75a630c6-25bd-4edb-83bc-d73c5312fe0e-text_content-1",
+        "sections--21033935110454__75a630c6-25bd-4edb-83bc-d73c5312fe0e-newsletter_signup-1"
+      ],
+      "settings": {
+        "spacing_mode": "between",
+        "color_forms": "default",
+        "color_scheme": "default",
+        "override_with_custom_colors": true,
+        "override_color_text": "#ffffff",
+        "override_color_background": "#1a428a",
+        "background_image_focal_point": "image_presentation",
+        "background_image_mobile_focal_point": "image_presentation",
+        "image_overlay_tint_opacity": 50,
+        "image_overlay_tint_style": "solid",
+        "image_overlay_override_with_custom_colors": false,
+        "image_overlay_override_color_text": "#ffffff",
+        "image_overlay_override_color_tint": "#000000",
+        "section_style_spacing_top": 20,
+        "section_style_spacing_bottom": 20,
+        "section_style_enable_animation": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "desktop_column_gap": 72,
+        "enable_locale_selector": true,
+        "enable_country_selector": true,
+        "show_payment_icons": true,
+        "additional_copyright_text": "",
+        "subfooter_menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "75a630c6-25bd-4edb-83bc-d73c5312fe0e",
+    "footer"
+  ]
+}
