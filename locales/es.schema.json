@@ -498,6 +498,20 @@
         }
       }
     },
+    "featured_products_with_media": {
+      "name": "Featured products with media",
+      "presets": {
+        "name": "Featured products with media"
+      },
+      "settings": {
+        "header_collection_tiles": {
+          "content": "Collection tiles"
+        },
+        "show_product_counts": {
+          "label": "Show product counts"
+        }
+      }
+    },
     "featured_product": {
       "name": "Producto destacado",
       "presets": {
