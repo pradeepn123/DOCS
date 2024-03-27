@@ -30,6 +30,9 @@
 
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     {%- if settings.favicon != blank -%}
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png">
@@ -67,6 +70,41 @@
     {% endif -%}
 
     {{ content_for_header }}
+
+    <style>
+    :root {
+    --font-logo: Outfit, sans-serif;
+    --font-logo-weight: 300;
+    --font-logo-style: normal;
+
+    --font-heading: Outfit, sans-serif;
+    --font-heading-weight: 600;
+    --font-heading-bold-weight: bold;
+    
+    --font-body: Outfit, sans-serif;
+    --font-body-weight: 300;
+    --font-body-style: normal;
+    --font-body-italic: oblique;
+    --font-body-bold-weight: 600;
+
+    --font-navigation: var(--font-body);
+    --font-weight-navigation: var(--font-body-weight);
+
+    --font-weight-text-button: var(--font-body-weight);
+
+    --font-button: var(--font-heading);
+
+    --font-weight-button: 600;
+
+    --font-product-listing-title: var(--font-body);
+    --font-product-badge: var(--font-body);
+    --font-weight-badge: var(--font-body-bold-weight);
+
+    --font-product-price: var(--font-body);
+    --font-weight-product-price: var(--font-body-bold-weight);
+    }
+
+  </style>
   </head>
 
   <body class="template-{{ request.page_type | handle }}">
