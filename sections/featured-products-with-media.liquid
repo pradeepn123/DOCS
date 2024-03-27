@@ -59,18 +59,19 @@
       -%}
   
       {%- capture product_items -%}
-      {%  assign product_count = 0 %}
+  
         {%- for block in section.blocks -%}
         {%  if block.type == "featured_products" %}
-            {%  if product_count >= max_products %} {% break %} {% endif %}
-            {%  assign product_count = product_count | plus: 1 %}
-          {%- assign id = section.id | append: '-' | append: product.id -%}
-          {% render 'product-item',
-            parent_id: id,
-            prod: block.settings.product,
-            aspect_ratio: settings.product_listing_aspect_ratio,
-            product_columns: desktop_columns
-          %}
+            {%  assign products = block.settings.products %}
+            {%  for product in products limit: max_products %}
+                {%- assign id = section.id | append: '-' | append: product.id -%}
+                {% render 'product-item',
+                  parent_id: id,
+                  prod: product,
+                  aspect_ratio: settings.product_listing_aspect_ratio,
+                  product_columns: desktop_columns
+                %}
+            {%  endfor%}
         {%  endif %}
         {%- else -%}
           {%- for i in (1..max_products) -%}
@@ -80,6 +81,7 @@
               placeholder: true,
             %}
           {%- endfor -%}
+
         {%- endfor -%}
       {%- endcapture -%}
   
@@ -271,7 +273,7 @@
         "id": "button_label",
         "type": "text",
         "label": "t:shared.settings.button_label.label",
-        "default": "View all products"
+        "default": "View all products" 
       },
       {
         "type": "select",
@@ -815,13 +817,14 @@
             "content": "Product"
           },
           {
-            "type": "product",
-            "id": "product",
-            "label": "Select Product"
+            "type": "product_list",
+            "id": "products",
+            "label": "Select Products"
           }
         ]
       }
     ],
+    "max_blocks": 2,
     "presets": [
       {
         "name": "Featured Products with media"

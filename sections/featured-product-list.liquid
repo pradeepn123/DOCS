@@ -84,30 +84,28 @@
 
 {%- capture product_items -%}
   {%- assign max_products = section.settings.maximum_products -%}
-
-  {%  assign product_count = 0 %}
-    {%- for block in section.blocks -%}
-        {%  if block.type == "featured_products" %}
-            {%  if product_count >= max_products %} {% break %} {% endif %}
-            {%  assign product_count = product_count | plus: 1 %}
-          {%- assign id = section.id | append: '-' | append: product.id -%}
-          {% render 'product-item',
-            parent_id: id,
-            prod: block.settings.product,
-            aspect_ratio: settings.product_listing_aspect_ratio,
-            product_columns: desktop_columns
-          %}
-        {%  endif %}
-        {%- else -%}
-          {%- for i in (1..max_products) -%}
+  {%- for block in section.blocks -%}
+    {%  if block.type == "featured_products" %}
+        {%  assign products = block.settings.products %}
+        {%  for product in products limit: max_products %}
+            {%- assign id = section.id | append: '-' | append: product.id -%}
             {% render 'product-item',
+              parent_id: id,
+              prod: product,
               aspect_ratio: settings.product_listing_aspect_ratio,
-              product_columns: desktop_columns,
-              placeholder: true,
+              product_columns: desktop_columns
             %}
-          {%- endfor -%}
+        {%  endfor%}
+    {%  endif %}
+    {%- else -%}
+      {%- for i in (1..max_products) -%}
+        {% render 'product-item',
+          aspect_ratio: settings.product_listing_aspect_ratio,
+          product_columns: desktop_columns,
+          placeholder: true,
+        %}
+      {%- endfor -%}
     {%- endfor -%}
-
 {%- endcapture -%}
 
 <div
@@ -522,13 +520,14 @@
           "content": "Product"
         },
         {
-          "type": "product",
-          "id": "product",
-          "label": "Select Product"
+          "type": "product_list",
+          "id": "products",
+          "label": "Select Products"
         }
       ]
     }
   ],
+  "max_blocks": 1,
   "presets": [
     {
       "name": "Featured Products list"
