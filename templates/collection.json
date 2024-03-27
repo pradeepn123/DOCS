@@ -49,10 +49,10 @@
         "text_MDJhMr"
       ],
       "settings": {
-        "image_width": 46,
+        "image_width": 53,
         "image_position_desktop": "right",
         "image_position_mobile": "above",
-        "image": "shopify:\/\/shop_images\/CLARKSTON_BANNER.png",
+        "image": "shopify:\/\/shop_images\/Group_47.png",
         "image_aspect_ratio": "landscape_wide_alt",
         "image_focal_point": "left",
         "content_width": "custom",
@@ -63,7 +63,7 @@
         "override_color_text": "#000000",
         "override_color_background": "#ffffff",
         "section_style_spacing_top": 0,
-        "section_style_spacing_bottom": 32,
+        "section_style_spacing_bottom": 0,
         "section_style_enable_animation": true
       }
     },
