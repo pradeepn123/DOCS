@@ -875,6 +875,57 @@
         "section_style_spacing_bottom": 48,
         "section_style_enable_animation": true
       }
+    },
+    "image_hero_MYXbFx": {
+      "type": "image-hero",
+      "blocks": {
+        "heading_rre8x6": {
+          "type": "heading",
+          "settings": {
+            "title": "Take Your Step Toward Naturally Healthy, Radiant Skin",
+            "heading_font_size": 6
+          }
+        },
+        "button_3dYTng": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button_label": "Our Story",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rre8x6",
+        "button_3dYTng"
+      ],
+      "settings": {
+        "enable_full_width": true,
+        "image_height_type": "custom",
+        "custom_height_desktop": "450px",
+        "custom_height_mobile": "450px",
+        "background_image": "shopify:\/\/shop_images\/ABOUT_US_IMG.png",
+        "background_image_focal_point": "image_presentation",
+        "background_image_mobile_focal_point": "image_presentation",
+        "media_link": "",
+        "content_max_width": 580,
+        "text_position": "center_center",
+        "text_position_mobile": "center_center",
+        "image_overlay_tint_opacity": 20,
+        "image_overlay_tint_style": "solid",
+        "image_overlay_override_with_custom_colors": false,
+        "image_overlay_override_color_text": "#ffffff",
+        "image_overlay_override_color_tint": "#000000",
+        "enable_text_box": false,
+        "text_box_style": "soft_small",
+        "text_box_color_scheme": "default",
+        "text_box_override_with_custom_colors": false,
+        "text_box_override_color_text": "#393939",
+        "text_box_override_color_background": "#FFFFFF",
+        "section_style_spacing_top": 0,
+        "section_style_spacing_bottom": 0,
+        "section_style_enable_animation": true
+      }
     }
   },
   "order": [
@@ -889,6 +940,7 @@
     "featured_product_list_nNHnJD",
     "rich_text_BEPkmh",
     "testimonials_E9jwEK",
-    "icon_with_text_columns_QCw9CB"
+    "icon_with_text_columns_QCw9CB",
+    "image_hero_MYXbFx"
   ]
 }
