@@ -633,6 +633,56 @@
         "section_style_enable_animation": true
       }
     },
+    "featured_product_list_nNHnJD": {
+      "type": "featured-product-list",
+      "blocks": {
+        "featured_products_PVaCwG": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "alastin-c-radical-defense-antioxidant-serum",
+              "lipid-recovery-cream",
+              "heliocare",
+              "latisse",
+              "glytone-age-defying-c-advanced-antioxidant-serum"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_PVaCwG"
+      ],
+      "settings": {
+        "center_content": false,
+        "preheading": "TOP PICKS",
+        "heading": "For You",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#FFFFFF",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
     "rich_text_BEPkmh": {
       "type": "rich-text",
       "blocks": {
@@ -836,6 +886,7 @@
     "featured_products_with_media_MPwrRq",
     "featured_product_list_titJrr",
     "featured_product_list_8YtdR8",
+    "featured_product_list_nNHnJD",
     "rich_text_BEPkmh",
     "testimonials_E9jwEK",
     "icon_with_text_columns_QCw9CB"
