@@ -369,6 +369,49 @@
         "section_style_enable_animation": true
       }
     },
+    "collections_list_custom_image_ngx3EU": {
+      "type": "collections-list--custom-image",
+      "blocks": {
+        "select_kGC8CV": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/download.png",
+            "collection_title": "Avenue",
+            "collection_filter": "Alastin+Skincare"
+          }
+        }
+      },
+      "block_order": [
+        "select_kGC8CV"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "",
+        "heading": "Collection list",
+        "subheading": "",
+        "button_link": "",
+        "button_label": "",
+        "button_style": "primary",
+        "maximum_content_width": 650,
+        "num_columns": "5",
+        "num_rows": "all",
+        "enable_slider_desktop": true,
+        "num_columns_mobile": "2",
+        "num_rows_mobile": "all",
+        "enable_slider_mobile": true,
+        "show_product_counts": true,
+        "collection_item_style": "filled",
+        "image_aspect_ratio": "natural",
+        "image_circle_crop_enable": true,
+        "image_spacing": 26,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
     "featured_collection_with_media_qhkMUP": {
       "type": "featured-collection-with-media",
       "blocks": {
@@ -753,6 +796,7 @@
     "promotion_grid_9DDcLK",
     "image_with_content_split_rzWNJK",
     "collection_list_T3MQ3W",
+    "collections_list_custom_image_ngx3EU",
     "featured_collection_with_media_qhkMUP",
     "featured_collection_WLnPfh",
     "featured_collection_aLdgV4",

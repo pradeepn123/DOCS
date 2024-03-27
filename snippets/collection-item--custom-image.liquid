@@ -24,6 +24,8 @@
         - wrapper_class: { String } A class to add to the button container.
     endcomment
 
+
+
     assign collection_image = ''
     assign circle_crop = false
   
@@ -49,6 +51,7 @@
       assign circle_crop = true
     endif
   -%}
+
   
   {% capture content %} 
     <div class="collection-item__image__wrap">
@@ -77,18 +80,18 @@
       endcapture
   
       assign title_class = title_class | append: title_font_class
+      assign filter_value = filter | default: false
+      assign filter_url = ''
+      if filter_value 
+         assign filter_url = '?filter.p.m.custom.brand=' | append: filter_value
+      endif
     -%}
   
+    {%  if title %}
     <div class="collection-item__meta {{ title_class }}" data-text-alignment="{{ text_alignment }}">
-      {% if coll -%}
-        {{ coll.title }}
-        {% if show_product_counts %}
-          <span class="collection-item__product-count">{{ product_count_string }}</span>
-        {% endif %}
-      {%- else -%}
-        {{ custom_title }}
-      {%- endif %}
+        {{ title }}
     </div>
+  {%  endif %}
   {% endcapture %}
   
   <div
@@ -100,7 +103,7 @@
     data-image-crop="{{ circle_crop }}"
   >
     {% if coll -%}
-      <a href="{{ coll.url }}" class="collection-item__link">
+      <a href="{{ coll.url | append: filter_url }}" class="collection-item__link">
         {{ content }}
       </a>
     {% else %}
@@ -108,3 +111,4 @@
     {%- endif %}
   </div>
   
+

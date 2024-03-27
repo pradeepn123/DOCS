@@ -43,8 +43,8 @@
     assign truncate_desktop = false
     assign truncate_mobile = false
   
-    if section.settings.collections.count > 0
-      assign collection_count = section.settings.collections.count
+    if section.blocks.count > 0
+      assign collection_count = section.blocks.count
     else
       assign placeholder_items = section.settings.num_columns | times: 2
       assign collection_count = placeholder_items
@@ -72,6 +72,7 @@
   
   {%- capture collection_items -%}
     {%- for coll in section.blocks -%}
+
       {%- liquid
         if truncate_desktop and forloop.index > max_collections and beyond_desktop_limit == false
           assign beyond_desktop_limit = true
@@ -83,11 +84,12 @@
       -%}
   
       {%
-        render 'custom-collection-item',
-        coll: coll.collection,
+        render 'collection-item--custom-image',
+        coll: coll.settings.collection,
+        filter: coll.settings.collection_filter
         beyond_desktop_limit: beyond_desktop_limit,
         beyond_mobile_limit: beyond_mobile_limit,
-        custom_title: coll.settings.collection_title,
+        title: coll.settings.collection_title,
         image_source: coll.settings.image_source,
         image_aspect_ratio: section.settings.image_aspect_ratio,
         image_circle_crop_enable: section.settings.image_circle_crop_enable,
@@ -97,7 +99,7 @@
         title_font_size: 3,
         text_alignment: section.settings.text_alignment,
       -%}
-    {%- endfor -%}
+    {%- endfor -%} 
   {%- endcapture -%}
   
   {%- capture footer_content -%}
@@ -580,17 +582,23 @@
                 {
                     "type": "text",
                     "id": "collection_title",
-                    "label": "Collection title",
-                    "default": "Collection title"
-                }
+                    "label": "Title"
+                },
+                {
+                  "type": "text",
+                  "id": "collection_filter",
+                  "label": "Brand to filter",
+                  "info": "smallcase and no spaces"
+              }
             ]
         }
     ],
     "presets": [
       {
-        "name": "Custom Collection List"
+        "name": "Collection List - Custom Images"
       }
     ]
   }
+
   {% endschema %}
   
