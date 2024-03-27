@@ -385,7 +385,7 @@
         "select_yQhiVz": {
           "type": "select",
           "settings": {
-            "collection": "",
+            "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/Group_27.png",
             "collection_title": "",
             "collection_filter": ""
