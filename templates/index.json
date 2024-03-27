@@ -536,9 +536,9 @@
     "featured_product_list_titJrr": {
       "type": "featured-product-list",
       "settings": {
-        "center_content": true,
-        "preheading": "",
-        "heading": "Featured Products",
+        "center_content": false,
+        "preheading": "FEATURED PRODUCTS",
+        "heading": "Eau Thermale Avène",
         "subheading": "",
         "maximum_content_width": 650,
         "button_1_button_link": "",
