@@ -334,6 +334,7 @@
     },
     "collection_list_T3MQ3W": {
       "type": "collection-list",
+      "disabled": true,
       "settings": {
         "center_content": true,
         "preheading": "",
@@ -376,14 +377,54 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/download.png",
-            "collection_title": "Avenue",
+            "image_source": "shopify:\/\/shop_images\/Group_28.png",
+            "collection_title": "",
             "collection_filter": "Alastin+Skincare"
+          }
+        },
+        "select_yQhiVz": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify:\/\/shop_images\/Group_27.png",
+            "collection_title": "",
+            "collection_filter": ""
+          }
+        },
+        "select_mKk3gb": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify:\/\/shop_images\/Group_24.png",
+            "collection_title": "",
+            "collection_filter": ""
+          }
+        },
+        "select_ERFfbq": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify:\/\/shop_images\/Group_26.png",
+            "collection_title": "",
+            "collection_filter": ""
+          }
+        },
+        "select_rDpUiG": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify:\/\/shop_images\/Group_25.png",
+            "collection_title": "",
+            "collection_filter": ""
           }
         }
       },
       "block_order": [
-        "select_kGC8CV"
+        "select_kGC8CV",
+        "select_yQhiVz",
+        "select_mKk3gb",
+        "select_ERFfbq",
+        "select_rDpUiG"
       ],
       "settings": {
         "center_content": true,
