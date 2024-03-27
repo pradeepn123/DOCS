@@ -864,12 +864,6 @@
         "featured_products_MJfmrr": {
           "type": "featured_products",
           "settings": {
-            "products": [
-              "age-defying-peptide-overnight-restorative-cream",
-              "alastin-c-radical-defense-antioxidant-serum",
-              "alastin-hydratint-spf",
-              "alastin-inhance"
-            ]
           }
         }
       },
