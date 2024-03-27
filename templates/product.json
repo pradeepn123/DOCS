@@ -98,7 +98,7 @@
       ],
       "settings": {
         "enable_sticky_product_details": false,
-        "show_breadcrumbs": false,
+        "show_breadcrumbs": true,
         "show_navigation_buttons": true,
         "gallery_size": "large",
         "thumbnail_position": "left",
