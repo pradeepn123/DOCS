@@ -188,6 +188,7 @@
             "collection": "",
             "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
             "collection_title": "SUN PROTECTION",
+            "collection_filter_type": "brand",
             "collection_filter": ""
           }
         },
@@ -197,6 +198,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/image_18.png",
             "collection_title": "MOISTURIZING",
+            "collection_filter_type": "brand",
             "collection_filter": "Moisturizing"
           }
         },
@@ -206,16 +208,18 @@
             "collection": "",
             "image_source": "shopify:\/\/shop_images\/image_24.png",
             "collection_title": "BRIGHTENING",
+            "collection_filter_type": "brand",
             "collection_filter": ""
           }
         },
         "select_cpBH7Q": {
           "type": "select",
           "settings": {
-            "collection": "",
+            "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/pexels-photo-7143195.webp",
             "collection_title": "SKIN DEFENCE",
-            "collection_filter": ""
+            "collection_filter_type": "skin_type",
+            "collection_filter": "Age Defense\/Rejuvenation"
           }
         }
       },
@@ -463,6 +467,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/Group_28.png",
             "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": "Alastin+Skincare"
           }
         },
@@ -472,6 +477,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/Group_27.png",
             "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": ""
           }
         },
@@ -481,6 +487,7 @@
             "collection": "",
             "image_source": "shopify:\/\/shop_images\/Group_24.png",
             "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": ""
           }
         },
@@ -490,6 +497,7 @@
             "collection": "",
             "image_source": "shopify:\/\/shop_images\/Group_26.png",
             "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": ""
           }
         },
@@ -499,6 +507,7 @@
             "collection": "",
             "image_source": "shopify:\/\/shop_images\/Group_25.png",
             "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": ""
           }
         }
