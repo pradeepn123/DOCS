@@ -711,10 +711,33 @@
           "content": "t:sections.slideshow.blocks.slide.settings.header__button_1.content"
         },        
         {
+          "type": "select",
+          "id": "collection_filter_type",
+          "label": "Select Filter Type",
+          "options": [
+            {
+              "value": "brand",
+              "label": "Brand"
+            },
+            {
+              "value": "skin_type",
+              "label": "Skin Type"
+            },
+            {
+              "value": "skin_concern",
+              "label": "Skin Concern"
+            },
+            {
+              "value": "skin_care",
+              "label": "Skin Care"
+            }
+          ],
+          "default": "brand"
+        }, 
+        {
           "type": "text",
           "id": "collection_filter",
-          "label": "Brand to filter",
-          "info": "smallcase and no spaces"
+          "label": "Filter Value"
         },
         {
           "id": "button_1_button_label",

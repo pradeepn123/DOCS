@@ -32,11 +32,19 @@
     assign prioritize_loading = true
   endif
 
-  assign filter_value = block.settings.collection_filter | default: false
+  assign filter_value = block.settings.collection_filter  | default: false
+  assign filter_type = block.settings.collection_filter_type
   assign filter_url = ''
+  if filter_type == "brand"
+    assign filter_string = '?filter.p.vendor'
+  else 
+    assign filter_string = '?filter.p.m.custom' | append:'.' | append: filter_type
+  endif 
   if filter_value 
-      assign filter_url = '?filter.p.m.custom.brand=' | append: filter_value
+     assign filter_value = filter_value | replace: " ", "+"
+     assign filter_url = filter_string | append: '=' | append: filter_value
   endif
+  assign collection_url = collection_url | append: filter_url
 -%}
 
 <div
@@ -133,8 +141,6 @@
             <div class="slideshow-slide__buttons-wrapper section-blocks__inline-buttons">
           {%- endif %}
           
-          {% assign collection_url = collection_url | append: filter_url | default: collection_url %}
-
           {% if collection_url != blank and block.settings.button_1_button_label != blank -%}
             {% render 'button',
               label: block.settings.button_1_button_label,

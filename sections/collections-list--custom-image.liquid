@@ -87,6 +87,7 @@
         render 'collection-item--custom-image',
         coll: coll.settings.collection,
         filter: coll.settings.collection_filter
+        filter_type: coll.settings.collection_filter_type
         beyond_desktop_limit: beyond_desktop_limit,
         beyond_mobile_limit: beyond_mobile_limit,
         title: coll.settings.collection_title,
@@ -585,11 +586,34 @@
                     "label": "Title"
                 },
                 {
+                  "type": "select",
+                  "id": "collection_filter_type",
+                  "label": "Select Filter Type",
+                  "options": [
+                    {
+                      "value": "brand",
+                      "label": "Brand"
+                    },
+                    {
+                      "value": "skin_type",
+                      "label": "Skin Type"
+                    },
+                    {
+                      "value": "skin_concern",
+                      "label": "Skin Concern"
+                    },
+                    {
+                      "value": "skin_care",
+                      "label": "Skin Care"
+                    }
+                  ],
+                  "default": "brand"
+                }, 
+                {
                   "type": "text",
                   "id": "collection_filter",
-                  "label": "Brand to filter",
-                  "info": "smallcase and no spaces"
-              }
+                  "label": "Filter Value"
+                }
             ]
         }
     ],

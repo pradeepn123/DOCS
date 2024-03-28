@@ -5,6 +5,7 @@ import Subscription from "./subscription";
 export default ({shopifyData}) => {
     const [inputSwitch, setInputSwitch] = useState('onetime');
     const [data, updateData] = useState([]);
+    console.log(data,"data");
 
     const handleSwitch = (event) => {
         const value = event.target.value;
@@ -23,10 +24,12 @@ export default ({shopifyData}) => {
         updateData(prevData => [...prevData, ...shopifyData.data]);
     }, []);
 
-    return (
-        <>
-            <Subscription data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
-            <Onetime data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
-        </>
-    );
+    if(data.length) {
+        return (
+            <>
+                <Subscription data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
+                <Onetime data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
+            </>
+        );
+    }
 };

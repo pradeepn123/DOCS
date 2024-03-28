@@ -82,8 +82,14 @@
       assign title_class = title_class | append: title_font_class
       assign filter_value = filter | default: false
       assign filter_url = ''
+      if filter_type == "brand"
+        assign filter_string = '?filter.p.vendor'
+      else 
+        assign filter_string = '?filter.p.m.custom' | append:'.' | append: filter_type
+      endif 
       if filter_value 
-         assign filter_url = '?filter.p.m.custom.brand=' | append: filter_value
+         assign filter_value = filter_value | replace: " ", "+"
+         assign filter_url = filter_string | append: '=' | append: filter_value
       endif
     -%}
   

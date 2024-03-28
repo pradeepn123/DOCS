@@ -120,6 +120,7 @@
   } = _ref;
   var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
   var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  console.log(data, "data");
   var handleSwitch = event => {
     var value = event.target.value;
     setInputSwitch(value);
@@ -135,15 +136,17 @@
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     updateData(prevData => [...prevData, ...shopifyData.data]);
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: data,
-    handleSwitch: handleSwitch,
-    inputSwitch: inputSwitch
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    data: data,
-    handleSwitch: handleSwitch,
-    inputSwitch: inputSwitch
-  }));
+  if (data.length) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      data: data,
+      handleSwitch: handleSwitch,
+      inputSwitch: inputSwitch
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      data: data,
+      handleSwitch: handleSwitch,
+      inputSwitch: inputSwitch
+    }));
+  }
 });
 
 /***/ }),
