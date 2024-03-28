@@ -548,7 +548,7 @@
             "background_image_focal_point": "image_presentation",
             "background_image_mobile_focal_point": "image_presentation",
             "media_link": "",
-            "image_overlay_tint_opacity": 40,
+            "image_overlay_tint_opacity": 60,
             "image_overlay_tint_style": "gradient_down",
             "image_overlay_override_with_custom_colors": false,
             "image_overlay_override_color_text": "#ffffff",
