@@ -205,11 +205,11 @@
         "select_WJdRip": {
           "type": "select",
           "settings": {
-            "collection": "",
+            "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/image_24.png",
             "collection_title": "BRIGHTENING",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
+            "collection_filter_type": "skin_care",
+            "collection_filter": "Brightening"
           }
         },
         "select_cpBH7Q": {
