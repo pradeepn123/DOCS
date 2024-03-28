@@ -249,110 +249,6 @@
         "section_style_enable_animation": true
       }
     },
-    "promotion_grid_9DDcLK": {
-      "type": "promotion-grid",
-      "blocks": {
-        "promotion_grid_item_6L96AR": {
-          "type": "promotion_grid_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
-            "link": "",
-            "sale_heading": "",
-            "sale_type": "SUN PROTECTION",
-            "sale_amount": "",
-            "sale_unit": "none",
-            "promotion_text": "",
-            "color_scheme": "default",
-            "override_with_custom_colors": true,
-            "override_color_text": "#ffffff",
-            "override_color_background": "#1a428a"
-          }
-        },
-        "promotion_grid_item_hYLxPi": {
-          "type": "promotion_grid_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_18.png",
-            "link": "",
-            "sale_heading": "",
-            "sale_type": "MOISTURIZING",
-            "sale_amount": "",
-            "sale_unit": "none",
-            "promotion_text": "",
-            "color_scheme": "default",
-            "override_with_custom_colors": true,
-            "override_color_text": "#ffffff",
-            "override_color_background": "#1a428a"
-          }
-        },
-        "promotion_grid_item_jyQztW": {
-          "type": "promotion_grid_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_24.png",
-            "link": "",
-            "sale_heading": "",
-            "sale_type": "BRIGHTENING",
-            "sale_amount": "",
-            "sale_unit": "none",
-            "promotion_text": "",
-            "color_scheme": "default",
-            "override_with_custom_colors": true,
-            "override_color_text": "#ffffff",
-            "override_color_background": "#1a428a"
-          }
-        },
-        "promotion_grid_item_UczjM6": {
-          "type": "promotion_grid_item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-photo-7143195.webp",
-            "link": "",
-            "sale_heading": "",
-            "sale_type": "SKIN DEFENCE",
-            "sale_amount": "",
-            "sale_unit": "none",
-            "promotion_text": "",
-            "color_scheme": "default",
-            "override_with_custom_colors": true,
-            "override_color_text": "#ffffff",
-            "override_color_background": "#1a428a"
-          }
-        }
-      },
-      "block_order": [
-        "promotion_grid_item_6L96AR",
-        "promotion_grid_item_hYLxPi",
-        "promotion_grid_item_jyQztW",
-        "promotion_grid_item_UczjM6"
-      ],
-      "disabled": true,
-      "settings": {
-        "center_content": false,
-        "preheading": "",
-        "heading": "Featured Category",
-        "subheading": "",
-        "maximum_content_width": 650,
-        "button_1_button_link": "",
-        "button_1_button_label": "",
-        "button_1_button_style": "primary",
-        "button_2_button_link": "",
-        "button_2_button_label": "",
-        "button_2_button_style": "tertiary",
-        "button_position": "header",
-        "num_columns": "4",
-        "enable_slider_mobile": true,
-        "show_border": true,
-        "bold_discount_text": true,
-        "text_position": "over-image",
-        "image_aspect_ratio": "square",
-        "image_spacing": 0,
-        "color_scheme": "default",
-        "override_with_custom_colors": false,
-        "override_color_text": "#393939",
-        "override_color_background": "#ffffff",
-        "section_style_spacing_top": 48,
-        "section_style_spacing_bottom": 60,
-        "section_style_enable_animation": false
-      }
-    },
     "image_with_content_split_rzWNJK": {
       "type": "image-with-content-split",
       "blocks": {
@@ -1008,7 +904,6 @@
   "order": [
     "slideshow_custom_fMtMUQ",
     "collections_list_custom_image_LjJFLB",
-    "promotion_grid_9DDcLK",
     "image_with_content_split_rzWNJK",
     "collection_list_T3MQ3W",
     "collections_list_custom_image_ngx3EU",
