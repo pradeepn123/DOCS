@@ -59,7 +59,7 @@
         "enable_country_selector": true,
         "show_payment_icons": true,
         "additional_copyright_text": "",
-        "subfooter_menu": "main-menu"
+        "subfooter_menu": "footer"
       }
     }
   },
