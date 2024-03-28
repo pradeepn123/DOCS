@@ -54,7 +54,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "desktop_column_gap": 72,
+        "desktop_column_gap": 44,
         "enable_locale_selector": true,
         "enable_country_selector": true,
         "show_payment_icons": true,
