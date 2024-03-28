@@ -67,7 +67,7 @@
       "type": "mobile-menu",
       "settings": {
         "logo_width": 150,
-        "menu_main": "main-menu",
+        "menu_main": "mobile-menu",
         "menu_secondary": "",
         "featured_link_label": "Sale",
         "featured_link_color": "#db4827",
