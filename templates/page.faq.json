@@ -8,75 +8,9 @@
         "custom_content_width": 700,
         "section_style_enable_animation": true
       }
-    },
-    "collapsible_row_list_a8MKeb": {
-      "type": "collapsible-row-list",
-      "blocks": {
-        "item_dzriQE": {
-          "type": "item",
-          "settings": {
-            "expand_by_default": false,
-            "icon": "none",
-            "title": "What types of skincare brands and products will be available?",
-            "text": "<p>Our platform will feature a curated selection of top-tier dermatological brands and products, including skincare essentials, treatments, and innovative solutions. From cleansers and moisturizers to specialized treatments, you'll find a comprehensive range of options to address various skin concerns and goals.<\/p>"
-          }
-        },
-        "item_nkxHQ9": {
-          "type": "item",
-          "settings": {
-            "expand_by_default": false,
-            "icon": "none",
-            "title": "How do you ensure the quality and efficacy of the products offered?",
-            "text": "<p>Quality and efficacy are paramount to us. We carefully vet each brand and product to ensure they meet our stringent standards for safety, effectiveness, and integrity. Additionally, we prioritize partnerships with reputable brands and industry experts to provide our customers with trusted skincare solutions they can rely on.<\/p>"
-          }
-        },
-        "item_th4R7f": {
-          "type": "item",
-          "settings": {
-            "expand_by_default": false,
-            "icon": "none",
-            "title": "What makes DOCS Dermatology's skincare offerings unique?",
-            "text": "<p>With over 40 years of expertise in dermatologic care, DOCS Dermatology offers a unique blend of medical insight, clinical knowledge, and consumer-friendly guidance. Unlike traditional retailers, we provide expert advice and support to help you navigate the world of skincare with confidence, ensuring you find the right solutions for your skin.<\/p>"
-          }
-        },
-        "item_m7GgdX": {
-          "type": "item",
-          "settings": {
-            "expand_by_default": false,
-            "icon": "none",
-            "title": "How can I stay updated on new arrivals and promotions?",
-            "text": "<p>To stay informed about the latest skincare arrivals, promotions, and tips, we encourage you to subscribe to our newsletter and follow us on social media. By joining our community, you'll be the first to know about exciting product launches, exclusive offers, and valuable skincare insights.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_dzriQE",
-        "item_nkxHQ9",
-        "item_th4R7f",
-        "item_m7GgdX"
-      ],
-      "settings": {
-        "center_content": true,
-        "preheading": "",
-        "heading": "FAQ",
-        "heading_font_size": 3,
-        "subheading": "",
-        "header_position": "above",
-        "item_heading_font": "heading",
-        "content_width": "custom",
-        "custom_width": 790,
-        "color_scheme": "default",
-        "override_with_custom_colors": false,
-        "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
-        "section_style_spacing_top": 76,
-        "section_style_spacing_bottom": 120,
-        "section_style_enable_animation": true
-      }
     }
   },
   "order": [
-    "main",
-    "collapsible_row_list_a8MKeb"
+    "main"
   ]
 }
