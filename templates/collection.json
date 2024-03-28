@@ -52,10 +52,10 @@
         "image_width": 46,
         "image_position_desktop": "right",
         "image_position_mobile": "above",
-        "image": "shopify:\/\/shop_images\/Cla1.png",
-        "image_aspect_ratio": "landscape_ultrawide_alt",
+        "image": "shopify:\/\/shop_images\/Group_5.png",
+        "image_aspect_ratio": "landscape_wide_alt",
         "image_focal_point": "image_presentation",
-        "content_width": "full",
+        "content_width": "custom",
         "custom_width": 645,
         "content_alignment": "left",
         "color_scheme": "default",
@@ -64,7 +64,7 @@
         "override_color_background": "#ffffff",
         "section_style_spacing_top": 0,
         "section_style_spacing_bottom": 32,
-        "section_style_enable_animation": false
+        "section_style_enable_animation": true
       }
     },
     "product-grid": {

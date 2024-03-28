@@ -22,18 +22,40 @@
             "product_header_always_top_mobile": "below"
           }
         },
-        "subscriptions_app_block_WbGNY6": {
+        "subscriptions_app_block_AanER8": {
           "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
           "settings": {
-            "color_text_title": "#000000",
-            "color_text_body": "#1a428a",
-            "dividers_color": "#bfbfbf",
-            "bacgkround_color": "#f5f5f5",
+            "color_text_title": "#303030",
+            "color_text_body": "#333333",
+            "dividers_color": "#8F8D8D",
+            "bacgkround_color": "#f2f2f2",
             "border_thickness": 1,
             "border_radius": 0,
             "supporting_text_title": "Purchase options",
             "subscription_policy_url": "",
             "product": "{{product}}"
+          }
+        },
+        "product_labels": {
+          "type": "product_labels",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "icon_size": 24,
+            "label_style": "block_heading",
+            "outline": true,
+            "icon_1": "delivery-truck-left",
+            "text_1": "Fast Shipping",
+            "icon_2": "shield-lock",
+            "text_2": "Secure payment",
+            "icon_3": "chat-support",
+            "text_3": "",
+            "icon_4": "none",
+            "text_4": "",
+            "icon_5": "none",
+            "text_5": "",
+            "icon_6": "none",
+            "text_6": ""
           }
         },
         "variant_picker": {
@@ -61,6 +83,13 @@
             "show_pickup_availability": true
           }
         },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "enable_os_share": true
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -75,9 +104,11 @@
       },
       "block_order": [
         "product_header",
-        "subscriptions_app_block_WbGNY6",
+        "subscriptions_app_block_AanER8",
+        "product_labels",
         "variant_picker",
         "buy_buttons",
+        "share",
         "description"
       ],
       "settings": {

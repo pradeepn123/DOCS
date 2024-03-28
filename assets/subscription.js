@@ -2,66 +2,17 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/sections/global.js":
-/*!*******************************!*\
-  !*** ./js/sections/global.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
-
-/* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
-/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  (0,_store_locator__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_subscription__WEBPACK_IMPORTED_MODULE_1__["default"])();
-});
-
-/***/ }),
-
-/***/ "./js/sections/store-locator.js":
-/*!**************************************!*\
-  !*** ./js/sections/store-locator.js ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  var storeLocator = document.querySelectorAll('[data-location]');
-  storeLocator.forEach(locator => {
-    locator.addEventListener('click', e => {
-      locator.closest('[data-location]').querySelector('.store-locator__location-list').classList.toggle('active');
-      locator.classList.toggle('rotate_arrow');
-    });
-  });
-  document.addEventListener('click', e => {
-    if (!e.target.closest('[data-location]')) {
-      document.querySelector('.store-locator__location-list').classList.remove('active');
-      document.querySelectorAll('[data-location]').forEach(locator => {
-        locator.classList.remove('rotate_arrow');
-      });
-    }
-  });
-});
-
-/***/ }),
-
 /***/ "./js/sections/subscription.js":
 /*!*************************************!*\
   !*** ./js/sections/subscription.js ***!
   \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
 /* harmony import */ var ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/subscription-selector */ "./js/components/subscription/subscription-selector.js");
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
   (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_1__["default"], 'subscriptions', '#subscription-data');
 });
 
@@ -190,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"global": 0
+/******/ 			"subscription": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -240,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors","shared"], () => (__webpack_require__("./js/sections/global.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors","shared"], () => (__webpack_require__("./js/sections/subscription.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

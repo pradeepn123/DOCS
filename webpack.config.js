@@ -35,7 +35,8 @@ module.exports = {
       breakpoints: path.resolve(__dirname, 'scss/components/breakpoints.scss'),
       JsComponents: path.resolve(__dirname, 'js/components'),
       SvelteComponents: path.resolve(__dirname, 'js/components/svelte'),
-      svelte: path.resolve('node_modules', 'svelte/src/runtime')
+      svelte: path.resolve('node_modules', 'svelte/src/runtime'),
+      ReactComponents: path.resolve(__dirname, 'js/components/subscription')
     },
     extensions: ['.mjs', '.js', '.svelte'],
     mainFields: ['svelte', 'browser', 'module', 'main'],

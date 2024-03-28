@@ -26,6 +26,9 @@
   "author": "@jingleBaba",
   "license": "ISC",
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@babel/preset-react": "^7.22.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

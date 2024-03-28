@@ -210,6 +210,14 @@
         endif
       -%}
 
+      <subscriptions>
+        <script id="subscription-data" type="text/json">
+          {
+            "data":{% render 'subscription-json' %}
+          }
+        </script>
+      </subscriptions>
+
       <div class="{{ submit_wrapper_class }}">
         <button
           type="submit"
