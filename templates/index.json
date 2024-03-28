@@ -226,7 +226,7 @@
         "select_cpBH7Q"
       ],
       "settings": {
-        "center_content": false,
+        "center_content": true,
         "preheading": "",
         "heading": "Featured Categories",
         "subheading": "",
@@ -247,8 +247,8 @@
         "image_spacing": 10,
         "title_font_type": "heading",
         "text_alignment": "center",
-        "section_style_spacing_top": 36,
-        "section_style_spacing_bottom": 36,
+        "section_style_spacing_top": 48,
+        "section_style_spacing_bottom": 48,
         "section_style_enable_animation": true
       }
     },
