@@ -807,7 +807,7 @@
         "button_3dYTng": {
           "type": "button",
           "settings": {
-            "button_link": "",
+            "button_link": "shopify:\/\/pages\/about-us",
             "button_label": "Our Story",
             "button_style": "primary"
           }
