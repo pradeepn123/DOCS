@@ -31,8 +31,8 @@
         "enable_locale_selector": false,
         "enable_country_selector": false,
         "show_country_flags": false,
-        "show_social_media": false,
-        "menu": ""
+        "show_social_media": true,
+        "menu": "announcement-bar"
       }
     },
     "header": {
@@ -59,6 +59,7 @@
         "cart_icon": "cart",
         "enable_quick_sign_in": true,
         "enable_search_bar": true,
+        "enable_store_locator": true,
         "mobile_search_appearance": "icon"
       }
     },
