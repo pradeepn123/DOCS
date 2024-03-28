@@ -180,7 +180,7 @@ subscriptions {
           transform: translate(-50%, -50%);
   height: 70%;
   width: 70%;
-  background: currentColor;
+  background: var(--color-button-primary-background);
   border-radius: 50%;
 }
 
