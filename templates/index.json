@@ -159,7 +159,7 @@
         "enable_autoplay": true,
         "duration_autoplay": 4,
         "navigation_size": "narrow",
-        "navigation_size_mobile": "narrow",
+        "navigation_size_mobile": "wide",
         "navigation_alignment": "center",
         "navigation_alignment_mobile": "center",
         "show_drop_shadows": false,
