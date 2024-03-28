@@ -13,6 +13,10 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            width: 100px;
+        }
+        &__icon{
+            line-height: 1;
         }
         &__title{
             font-size: typography.$body-title-size;
@@ -20,7 +24,8 @@
         }
         &__location{
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
+            gap: 10px;
             align-items: center;
             cursor: pointer;
             margin-top: -4px;
