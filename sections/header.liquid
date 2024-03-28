@@ -307,6 +307,10 @@
       echo search_bar_desktop
     endif
   -%}
+    
+    {% if section.settings.enable_store_locator %}
+      {% render 'store-locator', scope: 'desktop' %}
+    {% endif %}
 
   {% if shop.customer_accounts_enabled -%}
     {% liquid
@@ -614,8 +618,8 @@
               endif
             -%}
           </div>
+          
         </div>
-
         {% if section.settings.enable_search_bar -%}
           <div class="header__content header__content-mobile header__content--search-bar">
             {{ search_bar_mobile }}
@@ -623,6 +627,7 @@
         {%- endif %}
       </div>
     </div>
+    {% render 'store-locator', scope: 'mobile' %}
   </div>
 
   {% if navigation_position == 'below' -%}
@@ -641,6 +646,7 @@
     {% render 'no-js-navmenu', menu: menu %}
   </div>
 </header>
+
 
 <script>
   // Set heading height at component level
@@ -940,6 +946,12 @@
       "type": "checkbox",
       "id": "enable_search_bar",
       "label": "t:sections.header.settings.enable_search_bar.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_store_locator",
+      "label": "Enable store locator",
       "default": true
     },
     {

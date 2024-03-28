@@ -86,6 +86,50 @@
             "display_as_collapsible_row": true,
             "expand_by_default": true
           }
+        },
+        "accordion_Hefz6e": {
+          "type": "accordion",
+          "settings": {
+            "column_placement": "right",
+            "expand_by_default": false,
+            "heading": "How To Use",
+            "content": "<p>Add your collapsible row content here.<\/p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "accordion_yfFL4K": {
+          "type": "accordion",
+          "settings": {
+            "column_placement": "right",
+            "expand_by_default": false,
+            "heading": "Ingredients",
+            "content": "<p>Add your collapsible row content here.<\/p>",
+            "page_for_content": "",
+            "custom_liquid": ""
+          }
+        },
+        "product_text_columns_QCicmj": {
+          "type": "product_text_columns",
+          "settings": {
+            "column_placement": "right",
+            "add_box": true,
+            "add_dividers": true,
+            "icon_border": "circle",
+            "icon_border_style": "outlined",
+            "icon_border_color": "accent",
+            "icon_size": 24,
+            "icon_size_mobile": 24,
+            "icon_1": "package",
+            "heading_1": "Shipping",
+            "text_1": "<p>Free shipping over $50<\/p>",
+            "icon_2": "thumbs-up",
+            "heading_2": "Returns",
+            "text_2": "<p>Free, Easy Returns<\/p>",
+            "icon_3": "chat-support",
+            "heading_3": "Support",
+            "text_3": "<p>Need help? <a href='\/pages\/contact''>Contact us<\/a><\/p>"
+          }
         }
       },
       "block_order": [
@@ -94,11 +138,14 @@
         "variant_picker",
         "buy_buttons",
         "share",
-        "description"
+        "description",
+        "accordion_Hefz6e",
+        "accordion_yfFL4K",
+        "product_text_columns_QCicmj"
       ],
       "settings": {
         "enable_sticky_product_details": false,
-        "show_breadcrumbs": true,
+        "show_breadcrumbs": false,
         "show_navigation_buttons": true,
         "gallery_size": "large",
         "thumbnail_position": "left",
