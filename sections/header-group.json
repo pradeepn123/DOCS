@@ -57,7 +57,7 @@
         "show_cart_label": true,
         "cart_label": "cart",
         "cart_icon": "cart",
-        "enable_quick_sign_in": true,
+        "enable_quick_sign_in": false,
         "enable_search_bar": true,
         "enable_store_locator": true,
         "mobile_search_appearance": "icon"
