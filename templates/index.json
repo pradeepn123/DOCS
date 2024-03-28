@@ -185,11 +185,11 @@
         "select_hQi8VM": {
           "type": "select",
           "settings": {
-            "collection": "",
+            "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
             "collection_title": "SUN PROTECTION",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
+            "collection_filter_type": "skin_care",
+            "collection_filter": "Sun Protection"
           }
         },
         "select_XaQrcW": {
