@@ -179,6 +179,104 @@
         "section_style_enable_animation": true
       }
     },
+    "slideshow_custom_fMtMUQ": {
+      "type": "slideshow--custom",
+      "blocks": {
+        "slide_dRe8U7": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/Group_6.png",
+            "background_image_mobile": "shopify:\/\/shop_images\/Group_20.png",
+            "background_image_focal_point": "image_presentation",
+            "background_image_mobile_focal_point": "image_presentation",
+            "media_link": "",
+            "custom_width": 500,
+            "text_position": "flex-start_center",
+            "text_position_mobile": "flex-start_center",
+            "accent": "Eau Thermale Avène",
+            "accent_divider_enable": false,
+            "accent_divider_color": "accent",
+            "title": "Soothes, Strengthens & Rebalances the Skin",
+            "heading_font_size": 8,
+            "text": "",
+            "text_font_size": 3,
+            "collection_filter_type": "brand",
+            "collection_filter": "Avène",
+            "button_1_button_label": "SHOP NOW",
+            "button_1_button_style": "primary",
+            "image_overlay_tint_opacity": 20,
+            "image_overlay_tint_style": "solid",
+            "image_overlay_override_with_custom_colors": false,
+            "image_overlay_override_color_text": "#ffffff",
+            "image_overlay_override_color_tint": "#000000",
+            "enable_text_box": false,
+            "text_box_style": "soft_small",
+            "text_box_color_scheme": "default",
+            "text_box_override_with_custom_colors": false,
+            "text_box_override_color_text": "#393939",
+            "text_box_override_color_background": "#FFFFFF"
+          }
+        },
+        "slide_MkkNyb": {
+          "type": "slide",
+          "settings": {
+            "background_image_focal_point": "image_presentation",
+            "background_image_mobile_focal_point": "image_presentation",
+            "media_link": "",
+            "custom_width": 500,
+            "text_position": "center_center",
+            "text_position_mobile": "center_center",
+            "accent": "",
+            "accent_divider_enable": true,
+            "accent_divider_color": "accent",
+            "title": "Slide 2",
+            "heading_font_size": 6,
+            "text": "<p>Use this section to make a bold statement<\/p>",
+            "text_font_size": 3,
+            "collection_filter_type": "brand",
+            "collection_filter": "",
+            "button_1_button_label": "Read more",
+            "button_1_button_style": "primary",
+            "image_overlay_tint_opacity": 50,
+            "image_overlay_tint_style": "solid",
+            "image_overlay_override_with_custom_colors": false,
+            "image_overlay_override_color_text": "#ffffff",
+            "image_overlay_override_color_tint": "#000000",
+            "enable_text_box": false,
+            "text_box_style": "soft_small",
+            "text_box_color_scheme": "default",
+            "text_box_override_with_custom_colors": false,
+            "text_box_override_color_text": "#393939",
+            "text_box_override_color_background": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "slide_dRe8U7",
+        "slide_MkkNyb"
+      ],
+      "settings": {
+        "collection": "clarkston",
+        "enable_full_width": true,
+        "image_height_type": "custom",
+        "custom_height_desktop": "550px",
+        "custom_height_mobile": "60vh",
+        "enable_autoplay": false,
+        "duration_autoplay": 6,
+        "navigation_size": "narrow",
+        "navigation_size_mobile": "narrow",
+        "navigation_alignment": "center",
+        "navigation_alignment_mobile": "center",
+        "show_drop_shadows": false,
+        "navigation_color_foreground": "#ffffff",
+        "navigation_color_background": "#000000",
+        "navigation_background_opacity": 0,
+        "navigation_background_style": "fill",
+        "section_style_spacing_top": 0,
+        "section_style_spacing_bottom": 0,
+        "section_style_enable_animation": true
+      }
+    },
     "collections_list_custom_image_LjJFLB": {
       "type": "collections-list--custom-image",
       "blocks": {
@@ -188,7 +286,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
             "collection_title": "SUN PROTECTION",
-            "collection_filter_type": "skincare",
+            "collection_filter_type": "skin_care",
             "collection_filter": "Sun Protection"
           }
         },
@@ -198,7 +296,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/image_18.png",
             "collection_title": "MOISTURIZING",
-            "collection_filter_type": "skincare",
+            "collection_filter_type": "skin_care",
             "collection_filter": "Moisturizing"
           }
         },
@@ -208,7 +306,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/image_24.png",
             "collection_title": "BRIGHTENING",
-            "collection_filter_type": "skincare",
+            "collection_filter_type": "skin_care",
             "collection_filter": "Brightening"
           }
         },
@@ -1014,6 +1112,7 @@
   },
   "order": [
     "slideshow",
+    "slideshow_custom_fMtMUQ",
     "collections_list_custom_image_LjJFLB",
     "promotion_grid_9DDcLK",
     "image_with_content_split_rzWNJK",
