@@ -36,28 +36,6 @@
             "product": "{{product}}"
           }
         },
-        "product_labels": {
-          "type": "product_labels",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "icon_size": 24,
-            "label_style": "block_heading",
-            "outline": true,
-            "icon_1": "delivery-truck-left",
-            "text_1": "Fast Shipping",
-            "icon_2": "shield-lock",
-            "text_2": "Secure payment",
-            "icon_3": "chat-support",
-            "text_3": "",
-            "icon_4": "none",
-            "text_4": "",
-            "icon_5": "none",
-            "text_5": "",
-            "icon_6": "none",
-            "text_6": ""
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -83,13 +61,6 @@
             "show_pickup_availability": true
           }
         },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "enable_os_share": true
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -105,10 +76,8 @@
       "block_order": [
         "product_header",
         "subscriptions_app_block_WbGNY6",
-        "product_labels",
         "variant_picker",
         "buy_buttons",
-        "share",
         "description"
       ],
       "settings": {
