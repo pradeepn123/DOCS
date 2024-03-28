@@ -214,7 +214,7 @@
             "text_box_color_scheme": "default",
             "text_box_override_with_custom_colors": false,
             "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#FFFFFF"
+            "text_box_override_color_background": "#ffffff"
           }
         },
         "slide_MkkNyb": {
@@ -247,7 +247,7 @@
             "text_box_color_scheme": "default",
             "text_box_override_with_custom_colors": false,
             "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#FFFFFF"
+            "text_box_override_color_background": "#ffffff"
           }
         }
       },
@@ -286,7 +286,7 @@
             "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
             "collection_title": "SUN PROTECTION",
-            "collection_filter_type": "skin_care",
+            "collection_filter_type": "skincare",
             "collection_filter": "Sun Protection"
           }
         },
