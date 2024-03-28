@@ -1,184 +1,5 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_1": {
-          "type": "slide",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/AVENE_PROMO.png",
-            "background_image_mobile": "shopify:\/\/shop_images\/Group_20.png",
-            "background_image_focal_point": "center",
-            "background_image_mobile_focal_point": "image_presentation",
-            "media_link": "",
-            "custom_width": 580,
-            "text_position": "flex-start_center",
-            "text_position_mobile": "flex-start_center",
-            "accent": "Eau Thermale Avène",
-            "accent_divider_enable": false,
-            "accent_divider_color": "accent",
-            "title": "Soothes, Strengthens & Rebalances the Skin",
-            "heading_font_size": 8,
-            "text": "",
-            "text_font_size": 2,
-            "button_1_button_link": "shopify:\/\/collections",
-            "button_1_button_label": "Shop now",
-            "button_1_button_style": "primary",
-            "button_2_button_link": "",
-            "button_2_button_label": "Read more",
-            "button_2_button_style": "primary",
-            "image_overlay_tint_opacity": 10,
-            "image_overlay_tint_style": "solid",
-            "image_overlay_override_with_custom_colors": false,
-            "image_overlay_override_color_text": "#ffffff",
-            "image_overlay_override_color_tint": "#000000",
-            "enable_text_box": false,
-            "text_box_style": "plain",
-            "text_box_color_scheme": "default",
-            "text_box_override_with_custom_colors": false,
-            "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#ffffff"
-          }
-        },
-        "slide_PNrzTK": {
-          "type": "slide",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/SKIN_MEDICA_WEB_BANNER.png",
-            "background_image_mobile": "shopify:\/\/shop_images\/SKIN_MEDICA_WEBSITE_BANNER.png",
-            "background_image_focal_point": "image_presentation",
-            "background_image_mobile_focal_point": "image_presentation",
-            "media_link": "",
-            "custom_width": 500,
-            "text_position": "flex-start_center",
-            "text_position_mobile": "flex-start_center",
-            "accent": "SKINMEDICA",
-            "accent_divider_enable": false,
-            "accent_divider_color": "accent",
-            "title": "Experience The Luxury Of Scientific Skin Care.",
-            "heading_font_size": 8,
-            "text": "",
-            "text_font_size": 3,
-            "button_1_button_link": "shopify:\/\/collections",
-            "button_1_button_label": "Shop now",
-            "button_1_button_style": "primary",
-            "button_2_button_link": "",
-            "button_2_button_label": "Read more",
-            "button_2_button_style": "primary",
-            "image_overlay_tint_opacity": 10,
-            "image_overlay_tint_style": "gradient_right",
-            "image_overlay_override_with_custom_colors": false,
-            "image_overlay_override_color_text": "#ffffff",
-            "image_overlay_override_color_tint": "#000000",
-            "enable_text_box": false,
-            "text_box_style": "soft_small",
-            "text_box_color_scheme": "default",
-            "text_box_override_with_custom_colors": false,
-            "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#ffffff"
-          }
-        },
-        "slide_2": {
-          "type": "slide",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/ALASTIN_PROMO.png",
-            "background_image_mobile": "shopify:\/\/shop_images\/Group_21.png",
-            "background_image_focal_point": "image_presentation",
-            "background_image_mobile_focal_point": "image_presentation",
-            "media_link": "",
-            "custom_width": 500,
-            "text_position": "flex-start_center",
-            "text_position_mobile": "flex-start_center",
-            "accent": "ALASTIN Skincare",
-            "accent_divider_enable": false,
-            "accent_divider_color": "accent",
-            "title": "Say Goodbye to <br>Crepey Skin",
-            "heading_font_size": 8,
-            "text": "",
-            "text_font_size": 3,
-            "button_1_button_link": "shopify:\/\/collections",
-            "button_1_button_label": "Shop now",
-            "button_1_button_style": "primary",
-            "button_2_button_link": "",
-            "button_2_button_label": "Read more",
-            "button_2_button_style": "secondary",
-            "image_overlay_tint_opacity": 30,
-            "image_overlay_tint_style": "solid",
-            "image_overlay_override_with_custom_colors": false,
-            "image_overlay_override_color_text": "#ffffff",
-            "image_overlay_override_color_tint": "#000000",
-            "enable_text_box": false,
-            "text_box_style": "plain",
-            "text_box_color_scheme": "default",
-            "text_box_override_with_custom_colors": false,
-            "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#ffffff"
-          }
-        },
-        "slide_WFENP3": {
-          "type": "slide",
-          "settings": {
-            "background_image": "shopify:\/\/shop_images\/GLYTONE_PROMO.png",
-            "background_image_mobile": "shopify:\/\/shop_images\/Group_23.png",
-            "background_image_focal_point": "image_presentation",
-            "background_image_mobile_focal_point": "image_presentation",
-            "media_link": "",
-            "custom_width": 500,
-            "text_position": "flex-start_center",
-            "text_position_mobile": "flex-start_center",
-            "accent": "GLYTONE",
-            "accent_divider_enable": false,
-            "accent_divider_color": "accent",
-            "title": "Target Your <br>Treatment Plan",
-            "heading_font_size": 8,
-            "text": "",
-            "text_font_size": 3,
-            "button_1_button_link": "shopify:\/\/collections",
-            "button_1_button_label": "Shop now",
-            "button_1_button_style": "primary",
-            "button_2_button_link": "",
-            "button_2_button_label": "Read more",
-            "button_2_button_style": "primary",
-            "image_overlay_tint_opacity": 10,
-            "image_overlay_tint_style": "solid",
-            "image_overlay_override_with_custom_colors": false,
-            "image_overlay_override_color_text": "#ffffff",
-            "image_overlay_override_color_tint": "#000000",
-            "enable_text_box": false,
-            "text_box_style": "soft_small",
-            "text_box_color_scheme": "default",
-            "text_box_override_with_custom_colors": false,
-            "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "slide_1",
-        "slide_PNrzTK",
-        "slide_2",
-        "slide_WFENP3"
-      ],
-      "settings": {
-        "enable_full_width": true,
-        "image_height_type": "custom",
-        "custom_height_desktop": "550px",
-        "custom_height_mobile": "60vh",
-        "enable_autoplay": true,
-        "duration_autoplay": 4,
-        "navigation_size": "narrow",
-        "navigation_size_mobile": "extra-wide",
-        "navigation_alignment": "center",
-        "navigation_alignment_mobile": "center",
-        "show_drop_shadows": false,
-        "navigation_color_foreground": "#ffffff",
-        "navigation_color_background": "#1a428a",
-        "navigation_background_opacity": 0,
-        "navigation_background_style": "gradient",
-        "section_style_spacing_top": 0,
-        "section_style_spacing_bottom": 0,
-        "section_style_enable_animation": true
-      }
-    },
     "slideshow_custom_fMtMUQ": {
       "type": "slideshow--custom",
       "blocks": {
@@ -284,7 +105,7 @@
             "text_box_color_scheme": "default",
             "text_box_override_with_custom_colors": false,
             "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#FFFFFF"
+            "text_box_override_color_background": "#ffffff"
           }
         },
         "slide_fkJzrw": {
@@ -319,7 +140,7 @@
             "text_box_color_scheme": "default",
             "text_box_override_with_custom_colors": false,
             "text_box_override_color_text": "#393939",
-            "text_box_override_color_background": "#FFFFFF"
+            "text_box_override_color_background": "#ffffff"
           }
         }
       },
@@ -640,7 +461,7 @@
             "image_source": "shopify:\/\/shop_images\/Group_28.png",
             "collection_title": "",
             "collection_filter_type": "brand",
-            "collection_filter": "Alastin+Skincare"
+            "collection_filter": "Avène"
           }
         },
         "select_yQhiVz": {
@@ -1185,7 +1006,6 @@
     }
   },
   "order": [
-    "slideshow",
     "slideshow_custom_fMtMUQ",
     "collections_list_custom_image_LjJFLB",
     "promotion_grid_9DDcLK",
