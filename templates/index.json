@@ -95,7 +95,7 @@
             "collection_filter": "Alastin",
             "button_1_button_label": "SHOP NOW",
             "button_1_button_style": "primary",
-            "image_overlay_tint_opacity": 10,
+            "image_overlay_tint_opacity": 20,
             "image_overlay_tint_style": "solid",
             "image_overlay_override_with_custom_colors": false,
             "image_overlay_override_color_text": "#ffffff",
