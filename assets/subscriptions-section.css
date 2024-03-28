@@ -1,6 +1,6 @@
-/*!********************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/sections/subscription-sec.scss ***!
-  \********************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/sections/subscriptions-section.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************/
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/components/subscription-sec.scss ***!
   \****************************************************************************************************************************************************************************************************************************************/
@@ -9,13 +9,17 @@
     @include use-text-style('heading-1');
 }
 */
+:root {
+  --gsc-button-background-color-100: #8F8D8D;
+}
+
+subscriptions {
+  margin: var(--spacing-4) 0;
+  display: block;
+}
+
 .subscription-container__value-tag {
-  color: #FFFFFF;
-  background: var(--gsc-button-background-color-100);
-  width: 106px;
-  padding: 4px 14px;
-  margin-left: 10px;
-  font-family: var(--secondary-font);
+  padding: 8px 0;
 }
 
 .subscription-container__subscription-wrapper {
@@ -23,6 +27,7 @@
   display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
+  border: 1px solid #8F8D8D;
   border: 1px solid var(--gsc-button-background-color-100);
   padding: 10px 5px;
   margin-bottom: 10px;
@@ -69,31 +74,10 @@
   font-family: var(--paragraph-font);
 }
 
-@media (min-width: 375px) {
-  .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-    font-size: 18px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1290px) {
-  .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 1290px) {
-  .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-    font-size: 24px;
-  }
-}
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: var(--paragraph-font);
-}
-
-.subscription-container__subs-price, .subscription-container__oneTime-Price {
-  font-family: var(--paragraph-font);
-  font-weight: 700;
 }
 
 @media only screen and (min-width: 1290px) {
@@ -109,29 +93,16 @@
             align-items: center;
   }
 }
-.subscription-container__subs-compPrice {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.subscription-container__subs-actualPrice {
-  color: var(--gsc-button-background-color-100);
-}
-
 .subscription-container__oneTime-Price {
   color: #353B35;
 }
 
-@media (min-width: 375px) {
-  .subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {
-    font-size: 18px;
-  }
-}
 .subscription-container__onetime-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
+  border: 1px solid #8F8D8D;
   border: 1px solid var(--gsc-button-background-color-100);
   padding: 10px 5px;
   -webkit-box-align: center;
@@ -163,20 +134,13 @@
 
 @media (min-width: 375px) {
   .subscription-container__oneTime-text {
-    font-size: 18px;
     -moz-column-gap: 10px;
     -webkit-column-gap: 10px;
             column-gap: 10px;
   }
 }
-@media (min-width: 768px) and (max-width: 1290px) {
-  .subscription-container__oneTime-text {
-    font-size: 16px;
-  }
-}
 @media only screen and (min-width: 1290px) {
   .subscription-container__oneTime-text {
-    font-size: 24px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -188,6 +152,7 @@
 }
 
 .subscription-container input[type=radio] {
+  accent-color: #8F8D8D;
   accent-color: var(--gsc-button-background-color-100);
   width: 20px;
   height: 20px;
@@ -215,7 +180,7 @@
           transform: translate(-50%, -50%);
   height: 70%;
   width: 70%;
-  background: #a7693c;
+  background: currentColor;
   border-radius: 50%;
 }
 
@@ -244,21 +209,6 @@
   background-repeat: no-repeat;
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
-  .subscription-container__dropbtn {
-    font-size: 14px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1280) {
-  .subscription-container__dropbtn {
-    font-size: 13px;
-  }
-}
-@media only screen and (min-width: 1290px) {
-  .subscription-container__dropbtn {
-    font-size: 18px;
-  }
-}
 .subscription-container__dropbtn-single {
   background: transparent;
   display: -webkit-box;
@@ -272,8 +222,6 @@
           align-items: center;
   color: var(--gsc-text-color-100);
   border: none;
-  font-family: var(--paragraph-font);
-  font-size: 12px;
   width: 100%;
   cursor: pointer;
   -webkit-appearance: none;
@@ -281,16 +229,6 @@
   text-indent: 1px;
 }
 
-@media (min-width: 375px) {
-  .subscription-container__dropbtn-single {
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 1290px) {
-  .subscription-container__dropbtn-single {
-    font-size: 18px;
-  }
-}
 .select {
   border: none;
   padding: 10px 20px;

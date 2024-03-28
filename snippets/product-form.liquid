@@ -1,3 +1,4 @@
+
 {%- liquid
   comment
     Renders the product form.
@@ -20,6 +21,7 @@
       - aspect_ratio: { String } The value which determines the aspect ratio of the media.
   endcomment
 
+  
   assign product_available_label = 'products.product.add_to_cart' | t
   assign product_unavailable_label = 'products.product.sold_out' | t
 
@@ -33,6 +35,16 @@
     assign form_classes = form_classes | append: ' visually-hidden'
   endif
 -%}
+
+{{ 'subscriptions-section.css' | asset_url | stylesheet_tag }}
+
+<subscriptions>
+  <script id="subscription-data" type="text/json">
+    {
+      "data":{% render 'subscription-json' %}
+    }
+  </script>
+</subscriptions>
 
 {% form 'product',
   prod,
@@ -209,14 +221,6 @@
           assign add_to_cart_text = product_available_label
         endif
       -%}
-
-      <subscriptions>
-        <script id="subscription-data" type="text/json">
-          {
-            "data":{% render 'subscription-json' %}
-          }
-        </script>
-      </subscriptions>
 
       <div class="{{ submit_wrapper_class }}">
         <button

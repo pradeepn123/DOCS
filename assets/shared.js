@@ -177,12 +177,13 @@ var SubscriptionContainer = _ref => {
     var selectedPlanIdInputs = document.querySelectorAll("input[name='selling_plan']");
     selectedPlanIdInputs.forEach(input => {
       if (inputSwitch == "subscription") {
+        debugger;
         input.value = subscription.id;
       } else {
         input.value = '';
       }
     });
-  }, [subscription, inputSwitch]);
+  }, [inputSwitch, subscription]);
   var calculateDiscountedPrice = (offerType, price, percentage) => {
     var numericPrice = parseFloat(price.split("$")[1]);
     var flatRate = percentage / 100;
@@ -218,7 +219,7 @@ var SubscriptionContainer = _ref => {
     className: "subscription-container__value-crossBtn"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__value-tag"
-  }, "Best value")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Purchase Options")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subs-one-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subscription-wrapper"

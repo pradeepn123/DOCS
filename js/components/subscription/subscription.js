@@ -14,13 +14,14 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
         const selectedPlanIdInputs = document.querySelectorAll("input[name='selling_plan']");
         selectedPlanIdInputs.forEach(input => {
            if(inputSwitch == "subscription") {
+            debugger;
             input.value = subscription.id;
            }
            else {
             input.value = '';
            }
         });
-    }, [subscription, inputSwitch]);
+    }, [inputSwitch, subscription]);
 
     const calculateDiscountedPrice = (offerType, price, percentage) => {
         const numericPrice = parseFloat(price.split("$")[1]);
@@ -59,7 +60,7 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
     return (
         <div className="subscription-container">
             <div className="subscription-container__value-crossBtn">
-                <p className="subscription-container__value-tag">Best value</p>
+                <p className="subscription-container__value-tag">Purchase Options</p>
             </div>
             <div className="subscription-container__subs-one-wrapper">
                 <div className="subscription-container__subscription-wrapper">

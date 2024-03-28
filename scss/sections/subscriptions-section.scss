@@ -7,13 +7,17 @@
 }
 */
 
+:root {
+  --gsc-button-background-color-100: #8F8D8D;
+}
+
+subscriptions {
+  margin: var(--spacing-4) 0;
+  display: block;
+}
+
   .subscription-container__value-tag {
-    color: #FFFFFF;
-    background: var(--gsc-button-background-color-100);
-    width: 106px;
-    padding: 4px 14px;
-    margin-left: 10px;
-    font-family: var(--secondary-font);
+    padding: 8px 0;
   }
   .subscription-container__subscription-wrapper {
     display: flex;
@@ -50,29 +54,29 @@
     font-weight: 700;
     font-family: var(--paragraph-font);
   }
-  @media (min-width: 375px) {
-    .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-      font-size: 18px;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 1290px) {
-    .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-      font-size: 16px;
-    }
-  }
-  @media only screen and (min-width: 1290px) {
-    .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-      font-size: 24px;
-    }
-  }
+  // @media (min-width: 375px) {
+  //   .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
+  //     font-size: 18px;
+  //   }
+  // }
+  // @media (min-width: 768px) and (max-width: 1290px) {
+  //   .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
+  //     font-size: 16px;
+  //   }
+  // }
+  // @media only screen and (min-width: 1290px) {
+  //   .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
+  //     font-size: 24px;
+  //   }
+  // }
   .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown {
     display: flex;
-    font-family: var(--paragraph-font);
+    // font-family: var(--paragraph-font);
   }
-  .subscription-container__subs-price, .subscription-container__oneTime-Price {
-    font-family: var(--paragraph-font);
-    font-weight: 700;
-  }
+  // .subscription-container__subs-price, .subscription-container__oneTime-Price {
+  //   font-family: var(--paragraph-font);
+  //   font-weight: 700;
+  // }
   @media only screen and (min-width: 1290px) {
     .subscription-container__subs-price, .subscription-container__oneTime-Price {
       display: flex;
@@ -81,21 +85,23 @@
       align-items: center;
     }
   }
-  .subscription-container__subs-compPrice {
-    font-size: 14px;
-    font-weight: 700;
-  }
-  .subscription-container__subs-actualPrice {
-    color: var(--gsc-button-background-color-100);
-  }
+  // .subscription-container__subs-compPrice {
+  //   font-size: 14px;
+  //   font-weight: 700;
+  // }
+  // .subscription-container__subs-actualPrice {
+  //   color: var(--gsc-button-background-color-100);
+  // }
   .subscription-container__oneTime-Price {
     color: #353B35;
   }
-  @media (min-width: 375px) {
-    .subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {
-      font-size: 18px;
-    }
-  }
+  // @media (min-width: 375px) {
+  //   .subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {
+  //     font-size: 18px;
+  //   }
+  // }
+
+
   .subscription-container__onetime-wrapper {
     display: flex;
     border-radius: 5px;
@@ -119,19 +125,19 @@
   }
   @media (min-width: 375px) {
     .subscription-container__oneTime-text {
-      font-size: 18px;
+      // font-size: 18px;
       -moz-column-gap: 10px;
            column-gap: 10px;
     }
   }
-  @media (min-width: 768px) and (max-width: 1290px) {
-    .subscription-container__oneTime-text {
-      font-size: 16px;
-    }
-  }
+  // @media (min-width: 768px) and (max-width: 1290px) {
+  //   .subscription-container__oneTime-text {
+  //     font-size: 16px;
+  //   }
+  // }
   @media only screen and (min-width: 1290px) {
     .subscription-container__oneTime-text {
-      font-size: 24px;
+      // font-size: 24px;
       align-items: center;
     }
   }
@@ -165,7 +171,7 @@
     transform: translate(-50%, -50%);
     height: 70%;
     width: 70%;
-    background: #a7693c;
+    background: currentColor;
     border-radius: 50%;
   }
   .subscription-container__dropbtn {
@@ -186,21 +192,21 @@
     background-position: right 0% bottom 50%;
     background-repeat: no-repeat;
   }
-  @media (min-width: 375px) and (max-width: 767px) {
-    .subscription-container__dropbtn {
-      font-size: 14px;
-    }
-  }
-  @media (min-width: 768px) and (max-width: 1280) {
-    .subscription-container__dropbtn {
-      font-size: 13px;
-    }
-  }
-  @media only screen and (min-width: 1290px) {
-    .subscription-container__dropbtn {
-      font-size: 18px;
-    }
-  }
+  // @media (min-width: 375px) and (max-width: 767px) {
+  //   .subscription-container__dropbtn {
+  //     font-size: 14px;
+  //   }
+  // }
+  // @media (min-width: 768px) and (max-width: 1280) {
+  //   .subscription-container__dropbtn {
+  //     font-size: 13px;
+  //   }
+  // }
+  // @media only screen and (min-width: 1290px) {
+  //   .subscription-container__dropbtn {
+  //     font-size: 18px;
+  //   }
+  // }
   .subscription-container__dropbtn-single {
     background: transparent;
     display: flex;
@@ -208,24 +214,24 @@
     align-items: center;
     color: var(--gsc-text-color-100);
     border: none;
-    font-family: var(--paragraph-font);
-    font-size: 12px;
+    // font-family: var(--paragraph-font);
+    // font-size: 12px;
     width: 100%;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
   }
-  @media (min-width: 375px) {
-    .subscription-container__dropbtn-single {
-      font-size: 14px;
-    }
-  }
-  @media only screen and (min-width: 1290px) {
-    .subscription-container__dropbtn-single {
-      font-size: 18px;
-    }
-  }
+  // @media (min-width: 375px) {
+  //   .subscription-container__dropbtn-single {
+  //     font-size: 14px;
+  //   }
+  // }
+  // @media only screen and (min-width: 1290px) {
+  //   .subscription-container__dropbtn-single {
+  //     font-size: 18px;
+  //   }
+  // }
   
   .select {
     border: none;
