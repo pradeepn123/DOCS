@@ -251,11 +251,45 @@
             "text_box_override_color_text": "#393939",
             "text_box_override_color_background": "#ffffff"
           }
+        },
+        "slide_RG9V9F": {
+          "type": "slide",
+          "settings": {
+            "background_image_focal_point": "image_presentation",
+            "background_image_mobile_focal_point": "image_presentation",
+            "media_link": "",
+            "custom_width": 500,
+            "text_position": "center_center",
+            "text_position_mobile": "center_center",
+            "accent": "",
+            "accent_divider_enable": true,
+            "accent_divider_color": "accent",
+            "title": "Say Goodbye to Crepey Skin",
+            "heading_font_size": 6,
+            "text": "",
+            "text_font_size": 3,
+            "collection_filter_type": "brand",
+            "collection_filter": "",
+            "button_1_button_label": "SHOP NOW",
+            "button_1_button_style": "primary",
+            "image_overlay_tint_opacity": 50,
+            "image_overlay_tint_style": "solid",
+            "image_overlay_override_with_custom_colors": false,
+            "image_overlay_override_color_text": "#ffffff",
+            "image_overlay_override_color_tint": "#000000",
+            "enable_text_box": false,
+            "text_box_style": "soft_small",
+            "text_box_color_scheme": "default",
+            "text_box_override_with_custom_colors": false,
+            "text_box_override_color_text": "#393939",
+            "text_box_override_color_background": "#FFFFFF"
+          }
         }
       },
       "block_order": [
         "slide_dRe8U7",
-        "slide_MkkNyb"
+        "slide_MkkNyb",
+        "slide_RG9V9F"
       ],
       "settings": {
         "collection": "clarkston",
