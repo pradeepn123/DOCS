@@ -373,7 +373,7 @@
         "select_mKk3gb": {
           "type": "select",
           "settings": {
-            "collection": "",
+            "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/Group_24.png",
             "collection_title": "",
             "collection_filter_type": "brand",
@@ -393,7 +393,7 @@
         "select_rDpUiG": {
           "type": "select",
           "settings": {
-            "collection": "",
+            "collection": "clarkston",
             "image_source": "shopify:\/\/shop_images\/Group_25.png",
             "collection_title": "",
             "collection_filter_type": "brand",
