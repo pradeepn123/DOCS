@@ -42,11 +42,19 @@
             "text": "<p>Discover a world of skincare excellence at Clarkston Dermatology, where our commitment to your skin's health extends beyond our clinic walls. In addition to providing top-tier medical and aesthetic services, we offer a curated selection of premium skincare products to complement your skincare routine.<\/p>",
             "text_font_size": 3
           }
+        },
+        "text_fntyEe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ collection.metafields.custom.storelocation | metafield_tag }}<\/p>",
+            "text_font_size": 3
+          }
         }
       },
       "block_order": [
         "heading_dqt8Fp",
-        "text_MDJhMr"
+        "text_MDJhMr",
+        "text_fntyEe"
       ],
       "settings": {
         "image_width": 46,
