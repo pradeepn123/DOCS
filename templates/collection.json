@@ -32,7 +32,7 @@
         "heading_dqt8Fp": {
           "type": "heading",
           "settings": {
-            "title": "About",
+            "title": "{{ collection.title }}",
             "heading_font_size": 5
           }
         },
@@ -50,9 +50,9 @@
       ],
       "settings": {
         "image_width": 46,
-        "image_position_desktop": "right",
+        "image_position_desktop": "left",
         "image_position_mobile": "above",
-        "image": "shopify:\/\/shop_images\/Group_5.png",
+        "image": "{{ collection.image }}",
         "image_aspect_ratio": "landscape_wide_alt",
         "image_focal_point": "image_presentation",
         "content_width": "custom",
