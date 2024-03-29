@@ -75,6 +75,14 @@
         "section_style_enable_animation": true
       }
     },
+    "custom_liquid_bTCe4X": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https:\/\/static.elfsight.com\/platform\/platform.js\" data-use-service-core defer><\/script>\n<div class=\"elfsight-app-0f5b1066-df57-4f08-ab84-f6619e81dcc5\" data-elfsight-app-lazy><\/div>",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -102,6 +110,7 @@
   "order": [
     "banner",
     "image_with_content_split_zjwzKT",
+    "custom_liquid_bTCe4X",
     "product-grid"
   ]
 }
