@@ -58,7 +58,7 @@
       ],
       "settings": {
         "image_width": 46,
-        "image_position_desktop": "left",
+        "image_position_desktop": "right",
         "image_position_mobile": "above",
         "image": "{{ collection.image }}",
         "image_aspect_ratio": "landscape_wide_alt",
