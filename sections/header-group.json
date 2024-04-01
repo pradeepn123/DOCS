@@ -126,16 +126,16 @@
           "type": "promoted_products",
           "settings": {
             "submenu_name": "",
-            "block_position": "top",
+            "block_position": "bottom",
             "title": "Promoted products",
             "products": [
               "age-defying-peptide-overnight-restorative-cream",
               "alastin-c-radical-defense-antioxidant-serum",
               "alastin-inhance"
             ],
-            "image_size": "large",
+            "image_size": "small",
             "image_aspect_ratio": "use_theme_settings",
-            "layout": "columns",
+            "layout": "list",
             "show_product_vendor": false,
             "show_product_subtitles": false,
             "show_product_prices": true
