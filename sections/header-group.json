@@ -40,6 +40,7 @@
       "blocks": {
         "meganav_simple_LWLFGj": {
           "type": "meganav_simple",
+          "disabled": true,
           "settings": {
             "title": "Shop",
             "header_area_heading": "",
@@ -48,10 +49,49 @@
             "nav_column_count": 5,
             "show_column_borders": false
           }
+        },
+        "meganav_collection_images_fcDa8R": {
+          "type": "meganav_collection_images",
+          "disabled": true,
+          "settings": {
+            "title": "Shop",
+            "header_area_heading": "Shop",
+            "header_link_link": "",
+            "header_link_label": "",
+            "nav_column_count": 4,
+            "show_column_borders": true,
+            "image_source": "product",
+            "image_aspect_ratio": "landscape"
+          }
+        },
+        "meganav_promo_products_Cdcgi3": {
+          "type": "meganav_promo_products",
+          "settings": {
+            "title": "Shop",
+            "header_area_heading": "Mega menu",
+            "header_link_link": "",
+            "header_link_label": "",
+            "nav_column_count": 3,
+            "show_column_borders": true,
+            "promo_width": 50,
+            "promo_heading_text": "Promoted products",
+            "products": [
+              "age-defying-peptide-overnight-restorative-cream",
+              "alastin-c-radical-defense-antioxidant-serum",
+              "alastin-inhance"
+            ],
+            "image_aspect_ratio": "use_theme_settings",
+            "layout": "list",
+            "show_product_vendor": true,
+            "show_product_subtitles": false,
+            "show_product_prices": true
+          }
         }
       },
       "block_order": [
-        "meganav_simple_LWLFGj"
+        "meganav_simple_LWLFGj",
+        "meganav_collection_images_fcDa8R",
+        "meganav_promo_products_Cdcgi3"
       ],
       "settings": {
         "layout": "inline_logo_left_menu_left",
