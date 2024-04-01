@@ -46,7 +46,7 @@
             "header_link_link": "",
             "header_link_label": "",
             "nav_column_count": 4,
-            "show_column_borders": true
+            "show_column_borders": false
           }
         }
       },
