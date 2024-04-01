@@ -37,6 +37,22 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "meganav_simple_LWLFGj": {
+          "type": "meganav_simple",
+          "settings": {
+            "title": "Shop",
+            "header_area_heading": "",
+            "header_link_link": "",
+            "header_link_label": "",
+            "nav_column_count": 4,
+            "show_column_borders": true
+          }
+        }
+      },
+      "block_order": [
+        "meganav_simple_LWLFGj"
+      ],
       "settings": {
         "layout": "inline_logo_left_menu_left",
         "layout_mobile": "logo_center_menu_left",
