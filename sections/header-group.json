@@ -121,9 +121,31 @@
     },
     "mobile-menu": {
       "type": "mobile-menu",
+      "blocks": {
+        "promoted_products_x4reqT": {
+          "type": "promoted_products",
+          "settings": {
+            "submenu_name": "",
+            "block_position": "top",
+            "title": "Promoted products",
+            "products": [
+
+            ],
+            "image_size": "large",
+            "image_aspect_ratio": "use_theme_settings",
+            "layout": "columns",
+            "show_product_vendor": false,
+            "show_product_subtitles": false,
+            "show_product_prices": true
+          }
+        }
+      },
+      "block_order": [
+        "promoted_products_x4reqT"
+      ],
       "settings": {
         "logo_width": 150,
-        "menu_main": "mobile-menu",
+        "menu_main": "main-menu",
         "menu_secondary": "",
         "featured_link_label": "Sale",
         "featured_link_color": "#db4827",
