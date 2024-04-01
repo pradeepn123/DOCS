@@ -68,13 +68,13 @@
           "type": "meganav_promo_products",
           "settings": {
             "title": "Shop",
-            "header_area_heading": "Mega menu",
+            "header_area_heading": "Shop",
             "header_link_link": "",
             "header_link_label": "",
             "nav_column_count": 3,
             "show_column_borders": true,
             "promo_width": 50,
-            "promo_heading_text": "Promoted products",
+            "promo_heading_text": "Best selling",
             "products": [
               "age-defying-peptide-overnight-restorative-cream",
               "alastin-c-radical-defense-antioxidant-serum",
