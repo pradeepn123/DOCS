@@ -23,27 +23,56 @@ document.addEventListener('DOMContentLoaded', () => {
 /*!**************************************!*\
   !*** ./js/sections/store-locator.js ***!
   \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  var storeLocator = document.querySelectorAll('[data-location]');
-  storeLocator.forEach(locator => {
-    locator.addEventListener('click', e => {
-      locator.closest('[data-location]').querySelector('.store-locator__location-list').classList.toggle('active');
-      locator.classList.toggle('rotate_arrow');
+/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/readOnlyError */ "./node_modules/@babel/runtime/helpers/esm/readOnlyError.js");
+
+// export default  () =>{
+//     const storeLocator = document.querySelectorAll('[data-location]');
+//     storeLocator.forEach(locator => {
+//         locator.addEventListener('click', (e) => {
+//             locator.closest('[data-location]').querySelector('.store-locator__location-list').classList.toggle('active')
+//             locator.classList.toggle('rotate_arrow')
+//         })
+
+//     })
+//     document.addEventListener('click', (e) => {
+//         if(!e.target.closest('[data-location]')){
+//             document.querySelector('.store-locator__location-list').classList.remove('active')
+//             document.querySelectorAll('[data-location]').forEach(locator => {
+//                 locator.classList.remove('rotate_arrow')
+//             })
+//         }
+//     })
+// }
+
+document.querySelectorAll('[data-dropdown-wrapper]').forEach(dropdown => {
+  var _menu, _dropdownSelect, _dropdownSelect3;
+  var dropdownSelect = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-select]');
+  var caret = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-caret]');
+  var menu = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-menu]');
+  var options = (_menu = menu) === null || _menu === void 0 ? void 0 : _menu.querySelectorAll('[data-dropdown-selector]');
+  var selected = (_dropdownSelect = dropdownSelect) === null || _dropdownSelect === void 0 ? void 0 : _dropdownSelect.querySelector('[data-dropdown-selected]');
+  var toggleDropdown = () => {
+    var _dropdownSelect2, _caret, _menu2;
+    (_dropdownSelect2 = dropdownSelect) === null || _dropdownSelect2 === void 0 || _dropdownSelect2.classList.toggle('select-clicked');
+    (_caret = caret) === null || _caret === void 0 || _caret.classList.toggle('caret-rotate');
+    (_menu2 = menu) === null || _menu2 === void 0 || _menu2.classList.toggle('menu-open');
+  };
+  (_dropdownSelect3 = dropdownSelect) === null || _dropdownSelect3 === void 0 || _dropdownSelect3.addEventListener('click', toggleDropdown);
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      console.log(option.querySelector('[store-name]').innerText, "option");
+      selected.innerText = option.querySelector('[store-name]').innerText;
+      [('', (0,_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__["default"])("dropdownSelect")), ('', (0,_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__["default"])("caret")), ('', (0,_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__["default"])("menu"))].forEach(el => el === null || el === void 0 ? void 0 : el.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
+      options.forEach(opt => opt.classList.remove('active'));
+      option.classList.add('active');
     });
   });
-  document.addEventListener('click', e => {
-    if (!e.target.closest('[data-location]')) {
-      document.querySelector('.store-locator__location-list').classList.remove('active');
-      document.querySelectorAll('[data-location]').forEach(locator => {
-        locator.classList.remove('rotate_arrow');
-      });
-    }
-  });
+  var handleDropdownContainer = event => {
+    if (!dropdown.contains(event.target)) [dropdownSelect, caret, menu].forEach(el => el === null || el === void 0 ? void 0 : el.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
+  };
+  ['click', 'scroll'].forEach(eventType => document.addEventListener(eventType, handleDropdownContainer));
 });
 
 /***/ }),

@@ -10,28 +10,35 @@
     left: 0;
     top: 100%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    // height: 177px;
+    visibility: hidden;
+    opacity: 0;
+
+    &.menu-open {
+        visibility: visible;
+        opacity: 1;
+    }
   
     @media (min-width:1024px){
         width: 267px; 
         left: unset;
         top: 80%;
-        right: 8%; 
+        right: 11%; 
     }
     @media (min-width:1200px){
-        right: 7%;
+        right: 9%;
     }
     @media (min-width:1680px){
-        right: 6%;
+        right: 9%;
     }
 
     &__optionsWrap{
         border-bottom:  none; 
         padding: 17px 0;
+        // cursor: default;
     }
-    // &__optionsWrap:not(:last-child) {
-    //     border-bottom: 1px solid #D7D7D7; 
-    // } 
+    &__optionsWrap:not(:last-child) {
+        border-bottom: 1px solid #D7D7D7; 
+    } 
 
     &__storeName{
         margin-bottom: 5px;
@@ -43,22 +50,40 @@
         font-size: 12px;
         max-width: 60%;
     }
-    &__options-box, &__options-box{
-        display: flex;
-        justify-content: space-between;
-    }
+    &__options-box {
 
-    &__options-box
-    label{
-        max-width: 60%;
-        margin-bottom: 19px;
+        .storeDd-wrapper__text-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &.checked {
+            .storeDd-wrapper__button {
+                svg {
+                    display: unset;
+                }
+            }
+        }
+
+        label{
+            max-width: 60%;
+            margin-bottom: 19px;
+        }
     }
 
     &__optionsWrap2{
         margin-top: 17px;
     }
+    &__button {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #1A428A;
+        border-radius: 50%;
+        cursor: pointer;
 
-
+        svg {
+            display: none;
+        }
+    }
 }
-
-  

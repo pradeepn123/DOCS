@@ -135,6 +135,9 @@ body{
   color:var(--color-text);
   -webkit-font-smoothing:antialiased;
 }
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
 a{
   color:inherit;
   -webkit-text-decoration:none;

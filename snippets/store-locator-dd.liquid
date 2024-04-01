@@ -1,42 +1,46 @@
 {{ 'store-locator-dd.css' | asset_url | stylesheet_tag }}
 
-<div class="storeDd-wrapper">
-    <div class="storeDd-wrapper__optionsWrap">
-        <p class="storeDd-wrapper__storeName">Clarkston Dermatology</p>
-        <a href="/collections/clarkston" class="storeDd-wrapper__options-box checked">
-            <div class="storeDd-wrapper__storeAddress">5701 Bow Pointe Drive Suites 215 & 217, Village of Clarkston, MI 48346</div>
-            <div class="storeDd-wrapper__button">
-               {% render 'store-dd-checked-icon' %}
+<div class="storeDd-wrapper" data-dropdown-menu>
+    <div class="storeDd-wrapper__optionsWrap" data-dropdown-selector>
+        <a href="/collections/clarkston" class="storeDd-wrapper__options-box{% unless collection.title == 'Dermatologists Of Southwest Ohio' or collection.title == 'The Skin Care Center' %} checked{% endunless %}">
+            <p class="storeDd-wrapper__storeName" store-name>Clarkston Dermatology</p>
+            <div class="storeDd-wrapper__text-container">
+                <div class="storeDd-wrapper__storeAddress">5701 Bow Pointe Drive Suites 215 & 217, Village of Clarkston, MI 48346</div>
+                <div class="storeDd-wrapper__button">
+                    {% render 'store-dd-checked-icon' %}
+                </div>
             </div>
         </a>
     </div>
-      <div class="storeDd-wrapper__optionsWrap">
-        <p class="storeDd-wrapper__storeName">Dermatologists Of Southwest Ohio</p>
-        <a href="/collections/dermatologists-of-southwest-ohio" class="storeDd-wrapper__options-box checked">
-            <div class="storeDd-wrapper__storeAddress">2551 Compass Rd. Suite 105 Glenview, IL 60026</div>
-            <div class="storeDd-wrapper__button">
-               {% render 'store-dd-checked-icon' %}
+    <div class="storeDd-wrapper__optionsWrap" data-dropdown-selector>
+        <a href="/collections/dermatologists-of-southwest-ohio" class="storeDd-wrapper__options-box{% if collection.title == 'Dermatologists Of Southwest Ohio' %} checked{% endif %}">
+            <p class="storeDd-wrapper__storeName" store-name>Dermatologists Of Southwest Ohio</p>
+            <div class="storeDd-wrapper__text-container">
+                <div class="storeDd-wrapper__storeAddress">2551 Compass Rd. Suite 105 Glenview, IL 60026</div>
+                <div class="storeDd-wrapper__button">
+                    {% render 'store-dd-checked-icon' %}
+                </div>
             </div>
         </a>
     </div>
-      <div class="storeDd-wrapper__optionsWrap">
-        <p class="storeDd-wrapper__storeName">The Skin Care Center</p>
-        <a href="/collections/skin-care-center" class="storeDd-wrapper__options-box checked">
-            <div class="storeDd-wrapper__storeAddress">5300 Far Hills Ave Suite 300 Dayton, OH 45429</div>
-            <div class="storeDd-wrapper__button">
-               {% render 'store-dd-checked-icon' %}
+      <div class="storeDd-wrapper__optionsWrap" data-dropdown-selector>
+        <a href="/collections/skin-care-center" class="storeDd-wrapper__options-box{% if collection.title == 'The Skin Care Center' %} checked{% endif %}">
+            <p class="storeDd-wrapper__storeName" store-name>The Skin Care Center</p>
+            <div class="storeDd-wrapper__text-container">
+                <div class="storeDd-wrapper__storeAddress">5300 Far Hills Ave Suite 300 Dayton, OH 45429</div>
+                <div class="storeDd-wrapper__button">
+                {% render 'store-dd-checked-icon' %}
+                </div>
             </div>
         </a>
     </div>
-
-    <!-- <div class="storeDd-wrapper__optionsWrap">
-        <p class="storeDd-wrapper__storeName">Sample store</p>
-        <div class="storeDd-wrapper__options-box">
-            <div class="storeDd-wrapper__storeAddress">5701 Bow Point Dr.Suites 215 & 217Clarkston, MI 48346</div>
-            <div class="storeDd-wrapper__button"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                <circle cx="15" cy="15" r="14.5" stroke="#1A428A"/>
-              </svg></div>
-        </div>
-    </div> -->
 </div>
 
+{% comment %} <ul class="language-selector-menu" data-dropdown-menu>
+    <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/" title="English">English (en)</a></li>
+    <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+    <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+    <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+    <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+    <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+  </ul> {% endcomment %}

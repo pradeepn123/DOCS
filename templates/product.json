@@ -86,20 +86,6 @@
             "display_as_collapsible_row": true,
             "expand_by_default": true
           }
-        },
-        "subscriptions_app_block_mdw7aE": {
-          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
-          "settings": {
-            "color_text_title": "#6d7175",
-            "color_text_body": "#6d7175",
-            "dividers_color": "#8f8d8d",
-            "bacgkround_color": "#ffffff",
-            "border_thickness": 1,
-            "border_radius": 0,
-            "supporting_text_title": "Purchase options",
-            "subscription_policy_url": "",
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -108,8 +94,7 @@
         "variant_picker",
         "buy_buttons",
         "share",
-        "description",
-        "subscriptions_app_block_mdw7aE"
+        "description"
       ],
       "settings": {
         "enable_sticky_product_details": false,

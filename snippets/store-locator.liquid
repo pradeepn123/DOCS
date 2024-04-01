@@ -1,8 +1,5 @@
 {{ 'store-locator-header.css' | asset_url | stylesheet_tag }}
 
-
-
-
 <div
     class="
       store-locator
@@ -12,20 +9,35 @@
         <div class="store-locator__icon">
            {% render 'store-loc-icon' %}
         </div>
-        <div class="store-locator__container">
+        <div class="store-locator__container" data-dropdown-wrapper>
             <div class="store-locator__title">
                 <p>Shop from</p>
             </div>
-            <div class="store-locator__location" data-location>
-                <p>Clarkston </p>
+            <div class="store-locator__location" data-dropdown-select>
+                <p data-dropdown-selected>{% if template.name == 'collection' %} {{ collection.title }}{% else %} Clarkston Dermatology{% endif %}</p>
                 {% render 'store-dropdown-icon' %}
                 <div class="store-locator__location-list">
                     {% render 'store-locator-dd' %}
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
 
-<script src="{{ 'store-locator.js' | asset_url }}"></script>
+
+
+{% comment %} 
+<div class="dropdown sproos-language-chooser" data-dropdown-wrapper>
+    <div class="dropdown-select" data-dropdown-select>
+      <span class="dropdown__selected" data-dropdown-selected>{{ request.locale.name | capitalize }} <span class="tab-hide">({{ request.locale.iso_code }})</span></span>
+      <div class="caret" data-dropdown-caret>{% render 'icon-caret' %}</div>
+    </div>
+    <ul class="language-selector-menu" data-dropdown-menu>
+      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/" title="English">English (en)</a></li>
+      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
+      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
+      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
+      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
+      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
+    </ul>
+</div> {% endcomment %}

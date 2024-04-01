@@ -36,6 +36,13 @@
   endif
 -%}
 
+{% capture sellingSize %}
+  {% for group in product.selling_plan_groups %}
+    {{ group.selling_plans.size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sellingSize = sellingSize | plus: 0 %}
+
 {{ 'subscriptions-section.css' | asset_url | stylesheet_tag }}
 
 <subscriptions>
@@ -248,6 +255,10 @@
       </div>
     </div>
   </div>
+
+  {% if sellingSize >= 1 %}
+    <input name="selling_plan" class="selected-selling-plan-id" type="hidden" value="">
+  {%- endif -%}
 
   {% if show_dynamic_checkout -%}
     {{ form | payment_button }}
