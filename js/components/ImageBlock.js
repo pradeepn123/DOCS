@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default (props) => {
-  console.log(props,"props")
+export default () => {
   return (
     <div>Imageblock</div>
   )
