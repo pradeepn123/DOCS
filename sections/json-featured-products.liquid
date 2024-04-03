@@ -1,38 +1,21 @@
-<div class="featured-collection section 
-    {% if settings.enable_section_animations and section.settings.section_style_enable_animation %}
-      animation
-      animation--featured-collection
-    {% endif %}"
-    style="
-    {% render 'settings-section-style-style' %}
-    --num-columns-desktop: {{ section.settings.num_columns }};
-    --num-columns-tablet: {{ num_columns_tablet }};
-    --num-columns-mobile: {{ section.settings.num_columns_mobile }};"
-  data-section-id="{{ section.id }}"
-  data-section-type="featured-collection"
-  data-products-per-view="{{ section.settings.num_columns }}"
-  data-mobile-products-per-view="{{ section.settings.num_columns_mobile }}">
-  <div class="section-inner">
-    <product-card>
-      <script type="application/json" id="product-card-data">
-        {
-            "heading": "{{section.settings.heading}}",
-            "preheading": "{{section.settings.preheading}}",
-            "products": [
-                {% assign count = 0 %}
-                {% for block in section.blocks %}
-                  {% for product in block.settings.products %}
-                      {% unless count == 0 %},{% endunless %}
-                      {% assign count = count | plus: 1 %}
-                      {% render 'JSON-product-card', product: product %} 
-                  {% endfor %}
-                {% endfor %}
-            ]
-        }
-      </script>
-    </product-card>
-  </div>
-</div>
+<script data-json="true" type="application/json">
+  "ProductCard-section-type__{{ section.id }}" : 
+  {
+      "heading": "{{section.settings.heading}}",
+      "preheading": "{{section.settings.preheading}}",
+      "products": [
+          {% assign count = 0 %}
+          {% for block in section.blocks %}
+            {% for product in block.settings.products %}
+                {% unless count == 0 %},{% endunless %}
+                {% assign count = count | plus: 1 %}
+                {% render 'JSON-product-card', product: product %} 
+            {% endfor %}
+          {% endfor %}
+      ]
+  }
+</script>    
+
 
 {% schema %}
 {

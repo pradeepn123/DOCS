@@ -17,6 +17,10 @@ var map = {
 	"./reactWrapper.js": [
 		"./js/components/reactWrapper.js"
 	],
+	"./subscription/ProductCard.js": [
+		"./js/components/subscription/ProductCard.js",
+		"module3"
+	],
 	"./subscription/megamenu-product.js": [
 		"./js/components/subscription/megamenu-product.js",
 		"shared"
@@ -40,10 +44,6 @@ var map = {
 	"./subscription/onetime.js": [
 		"./js/components/subscription/onetime.js",
 		"shared"
-	],
-	"./subscription/product-card-common.js": [
-		"./js/components/subscription/product-card-common.js",
-		"module9"
 	],
 	"./subscription/store-locator.js": [
 		"./js/components/subscription/store-locator.js",
