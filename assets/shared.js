@@ -1,5 +1,118 @@
-"use strict";
 (self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["shared"],{
+
+/***/ "./js/components lazy recursive ^\\.\\/.*\\.js$":
+/*!*****************************************************************************!*\
+  !*** ./js/components/ lazy ^\.\/.*\.js$ chunkName: module namespace object ***!
+  \*****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./ImageBlock.js": [
+		"./js/components/ImageBlock.js",
+		"module0"
+	],
+	"./homepage.js": [
+		"./js/components/homepage.js"
+	],
+	"./reactWrapper.js": [
+		"./js/components/reactWrapper.js"
+	],
+	"./subscription/onetime.js": [
+		"./js/components/subscription/onetime.js",
+		"shared"
+	],
+	"./subscription/subscription-selector.js": [
+		"./js/components/subscription/subscription-selector.js",
+		"shared"
+	],
+	"./subscription/subscription.js": [
+		"./js/components/subscription/subscription.js",
+		"shared"
+	]
+};
+function webpackAsyncContext(req) {
+	if(!__webpack_require__.o(map, req)) {
+		return Promise.resolve().then(() => {
+			var e = new Error("Cannot find module '" + req + "'");
+			e.code = 'MODULE_NOT_FOUND';
+			throw e;
+		});
+	}
+
+	var ids = map[req], id = ids[0];
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(() => {
+		return __webpack_require__(id);
+	});
+}
+webpackAsyncContext.keys = () => (Object.keys(map));
+webpackAsyncContext.id = "./js/components lazy recursive ^\\.\\/.*\\.js$";
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "./js/components/homepage.js":
+/*!***********************************!*\
+  !*** ./js/components/homepage.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  var [sections, updateSections] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      var data = yield fetch('/pages/clarkston');
+      var xmlString = yield data.text();
+      var pageDoc = new DOMParser().parseFromString(xmlString, "text/html");
+      var pageData = "";
+      pageDoc.querySelectorAll('[data-json]').forEach((scriptData, index) => {
+        if (index) {
+          pageData = pageData + ",";
+        }
+        pageData = pageData + "".concat(scriptData.innerHTML);
+      });
+      pageData = "{ ".concat(pageData, " }");
+      var sectionData = JSON.parse(pageData);
+      var sections = yield Promise.all(Object.keys(sectionData).map( /*#__PURE__*/function () {
+        var _ref2 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (sectionKey, index) {
+          var props = sectionData[sectionKey];
+          var componentKey = sectionKey.split('-section-type')[0];
+          var module = yield __webpack_require__("./js/components lazy recursive ^\\.\\/.*\\.js$")("./".concat(componentKey, ".js"));
+          var Component = yield module.default;
+          return {
+            props: props,
+            Component: Component
+          };
+        });
+        return function (_x, _x2) {
+          return _ref2.apply(this, arguments);
+        };
+      }()));
+      updateSections(sections);
+    })();
+  }, []);
+  return sections.map((componentData, index) => {
+    var {
+      Component,
+      props
+    } = componentData;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Component, {
+      data: props,
+      key: index
+    });
+  });
+});
+
+/***/ }),
 
 /***/ "./js/components/reactWrapper.js":
 /*!***************************************!*\
@@ -7,6 +120,8 @@
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -715,6 +830,8 @@
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -880,6 +997,8 @@ var SvgIcon = _ref => {
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -933,6 +1052,8 @@ var SvgIcon = _ref => {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
