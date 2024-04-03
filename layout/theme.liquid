@@ -134,7 +134,10 @@
       </div>
 
       <main id="main" class="main">
+
         {{ content_for_layout }}
+
+        <homepage></homepage>
       </main>
 
       {%- sections 'footer-group' -%}
@@ -147,8 +150,23 @@
     <script src="{{'vendors.js' | asset_url }}" defer></script>  
     <script src="{{'shared.js' | asset_url }}" defer></script> 
     <script src="{{'global.js' | asset_url }}" defer></script> 
+<<<<<<< HEAD
     <script src="{{'sections.js' | asset_url }}" defer></script> 
     
+=======
+    <script id="section-data"> 
+      (async () => {
+        const data = await fetch('/pages/clarkston');
+        var xmlString = await data.text();
+         var pageDoc = new DOMParser().parseFromString(xmlString, "text/html");
+         console.log(pageDoc);
+         let pageData = "";
+         pageDoc.querySelectorAll('[data-json]').forEach((scriptData) => {
+          pageData = pageData+`${scriptData.innerHTML}`;
+        })
+      })()
+    </script>
+>>>>>>> 3f6112b (Created json and parsed it for image block section)
   </body>
 
   <link

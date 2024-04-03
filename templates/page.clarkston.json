@@ -1,11 +1,62 @@
-{    
-    "layout": false,
-    "sections": {
-      "main": {
-        "type": "json-product-card"
+{  
+  "sections": {
+    "json_image_card_LKCfTw": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_MLYF4D": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "collection_title": "First Block",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        }
+      },
+      "block_order": [
+        "select_MLYF4D"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Collection list",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36
       }
     },
-    "order": [
-      "main"
-    ]
+    "json_image_card_zHbU9h": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_mCQe9x": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "collection_title": "Second",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        }
+      },
+      "block_order": [
+        "select_mCQe9x"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Collection list",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "json_image_card_LKCfTw",
+    "json_image_card_zHbU9h"
+  ]
 }

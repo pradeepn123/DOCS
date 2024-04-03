@@ -899,6 +899,19 @@
         "section_style_spacing_bottom": 48,
         "section_style_enable_animation": true
       }
+    },
+    "json_image_card_cqArNk": {
+      "type": "json-image-card",
+      "settings": {
+        "center_content": true,
+        "heading": "Featured Categories",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36
+      }
     }
   },
   "order": [
@@ -914,6 +927,7 @@
     "rich_text_BEPkmh",
     "image_hero_MYXbFx",
     "testimonials_E9jwEK",
-    "icon_with_text_columns_QCw9CB"
+    "icon_with_text_columns_QCw9CB",
+    "json_image_card_cqArNk"
   ]
 }
