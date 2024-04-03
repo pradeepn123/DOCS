@@ -1,0 +1,14 @@
+{
+    "block": [
+        {% for block in section.blocks %}
+            {
+                "text": "product card",
+                "collectionData":[
+                    {% for product in block.settings.collection.products %}
+                        {% render 'JSON-product-card', product: product %} 
+                    {% endfor %}
+                ]
+            }
+        {% endfor %}
+    ]
+}
