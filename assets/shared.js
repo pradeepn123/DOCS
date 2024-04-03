@@ -41,8 +41,8 @@ var map = {
 		"./js/components/subscription/onetime.js",
 		"shared"
 	],
-	"./subscription/product-card.js": [
-		"./js/components/subscription/product-card.js",
+	"./subscription/product-card-common.js": [
+		"./js/components/subscription/product-card-common.js",
 		"module9"
 	],
 	"./subscription/store-locator.js": [
