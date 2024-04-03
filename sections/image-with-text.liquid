@@ -1,13 +1,17 @@
-{
-    "bannerContent":[
-        {% for block in section.blocks %}
-            {% render 'JSON-image-with-text' , block:block %}
-             {%- unless forloop.last %}, {% endunless %}
-        {% endfor%}
 
-    ]
-}
+<hero-banner>
+    <script type="application/json" id="hero-banner">
+    {
+        "bannerContent":[
+            {% for block in section.blocks %}
+                {% render 'JSON-image-with-text' , block:block %}
+                {%- unless forloop.last %}, {% endunless %}
+            {% endfor%}
 
+        ]
+    }
+    </script>
+</hero-banner>
 
 
 {% schema %}
