@@ -1,4 +1,4 @@
-{  
+{
   "sections": {
     "json_image_card_LKCfTw": {
       "type": "json-image-card",
@@ -53,10 +53,60 @@
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36
       }
+    },
+    "json_featured_products_hJeWYP": {
+      "type": "json-featured-products",
+      "blocks": {
+        "featured_products_WtNLY8": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "alastin-renewal-retinol-25",
+              "alastin-renewal-retinol-5",
+              "alastin-restorative",
+              "restorative-neck-complex"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_WtNLY8"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "",
+        "heading": "Featured Products",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#FFFFFF",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
     }
   },
   "order": [
     "json_image_card_LKCfTw",
-    "json_image_card_zHbU9h"
+    "json_image_card_zHbU9h",
+    "json_featured_products_hJeWYP"
   ]
 }

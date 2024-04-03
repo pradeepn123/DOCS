@@ -11,15 +11,15 @@ var map = {
 		"./js/components/ImageBlock.js",
 		"module0"
 	],
+	"./ProductCard.js": [
+		"./js/components/ProductCard.js",
+		"module1"
+	],
 	"./homepage.js": [
 		"./js/components/homepage.js"
 	],
 	"./reactWrapper.js": [
 		"./js/components/reactWrapper.js"
-	],
-	"./subscription/ProductCard.js": [
-		"./js/components/subscription/ProductCard.js",
-		"module3"
 	],
 	"./subscription/megamenu-product.js": [
 		"./js/components/subscription/megamenu-product.js",

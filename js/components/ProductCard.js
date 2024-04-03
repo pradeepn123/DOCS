@@ -1,8 +1,7 @@
 import React, { useEffect, useState, Component } from "react";
 
 
-export default ({ shopifyData }) => {
-    console.log('Data', shopifyData);
+export default ({ data:shopifyData }) => {
     return(
         <>
             <div class="featured-collection section "        
