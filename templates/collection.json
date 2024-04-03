@@ -45,16 +45,55 @@
         },
         "text_fntyEe": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "<p>{{ collection.metafields.custom.storelocation | metafield_tag }}<\/p>",
+            "text": "{{ collection.metafields.custom.storelocation | metafield_tag }}",
             "text_font_size": 3
+          }
+        },
+        "text_FfaqYP": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Phone: <a href=\"tel:(248) 620-3376\">(248) 620-3376<br\/><\/a>Fax: 248-620-3379<\/p>",
+            "text_font_size": 3
+          }
+        },
+        "text_list_with_icons_dghP7d": {
+          "type": "text-list-with-icons",
+          "settings": {
+            "icon_border": "none",
+            "icon_border_style": "outlined",
+            "icon_border_color": "accent",
+            "icon_size": 24,
+            "icon_size_mobile": 24,
+            "icon_1": "pin-location",
+            "icon_alignment_1": "icon_center",
+            "text_1": "{{ collection.metafields.custom.storelocation | metafield_tag }}",
+            "icon_2": "phone",
+            "icon_alignment_2": "icon_center",
+            "text_2": "<p>{{ collection.metafields.custom.contact.value }}<\/p>",
+            "icon_3": "envelope",
+            "icon_alignment_3": "icon_center",
+            "text_3": "<p>{{ collection.metafields.custom.email_id.value }}<\/p>",
+            "icon_4": "none",
+            "icon_alignment_4": "icon_center",
+            "text_4": "",
+            "icon_5": "none",
+            "icon_alignment_5": "icon_center",
+            "text_5": "",
+            "icon_6": "none",
+            "icon_alignment_6": "icon_center",
+            "text_6": ""
           }
         }
       },
       "block_order": [
         "heading_dqt8Fp",
         "text_MDJhMr",
-        "text_fntyEe"
+        "text_fntyEe",
+        "text_FfaqYP",
+        "text_list_with_icons_dghP7d"
       ],
       "settings": {
         "image_width": 46,
