@@ -1,0 +1,15 @@
+{
+    "image" : [ 
+        {
+            "desktopImage": " {% if block.settings.image_desktop != blank %}{{ block.settings.image_desktop | image_url }} {% endif %}",
+            "mobileImage": " {% if block.settings.image_mobile != blank  %}{{ block.settings.image_mobile | image_url }}{% endif %}"
+        }
+    ],
+   "heading": "{% if block.settings.heading != blank %}{{ block.settings.heading }}{% endif %}", 
+   "subheading": "{% if block.settings.subheading != blank %} {{ block.settings.subheading }}{% endif %}", 
+   "url": " {% if block.settings.cta_url != blank %}{{ block.settings.cta_url }}{% endif %}" 
+}
+
+
+
+
