@@ -1,0 +1,237 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "custom",
+        "custom_content_width": 700,
+        "section_style_enable_animation": true
+      }
+    },
+    "rich_text_QjaHeB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4wxzmm": {
+          "type": "heading",
+          "settings": {
+            "title": "We believe, it’s all about the people you can relate to",
+            "heading_font_size": 8
+          }
+        }
+      },
+      "block_order": [
+        "heading_4wxzmm"
+      ],
+      "settings": {
+        "alignment": "center_center",
+        "content_width": "custom",
+        "custom_content_width": 600,
+        "color_scheme": "default",
+        "override_with_custom_colors": true,
+        "override_color_text": "#1a428a",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 72,
+        "section_style_spacing_bottom": 72,
+        "section_style_enable_animation": true
+      }
+    },
+    "image_with_content_g83DrG": {
+      "type": "image-with-content",
+      "blocks": {
+        "heading_8qwQeL": {
+          "type": "heading",
+          "settings": {
+            "title": "About DOCS Dermatology",
+            "heading_font_size": 5
+          }
+        },
+        "text_ERgC43": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At DOCS Dermatology, we're committed to revolutionizing the way you experience skincare. With over 40 years of expertise in dermatologic care, we've established ourselves as industry leaders in providing top-tier medical, surgical, and cosmetic dermatology services.<\/p>",
+            "text_font_size": 3
+          }
+        }
+      },
+      "block_order": [
+        "heading_8qwQeL",
+        "text_ERgC43"
+      ],
+      "settings": {
+        "image_width": 52,
+        "image_position_desktop": "right",
+        "image_position_mobile": "above",
+        "image_1": "shopify:\/\/shop_images\/ha.png",
+        "image_aspect_ratio_1": "square",
+        "image_focal_point_1": "center",
+        "image_caption_1": "",
+        "enable_image_2": true,
+        "image_2": "shopify:\/\/shop_images\/pexels-sora-shimazaki-5938600_1.jpg",
+        "image_aspect_ratio_2": "square",
+        "image_focal_point_2": "right",
+        "content_width": "custom",
+        "custom_width": 500,
+        "content_alignment": "left",
+        "color_scheme": "default",
+        "override_with_custom_colors": true,
+        "override_color_text": "#000000",
+        "override_color_background": "#f5f5f5",
+        "section_style_spacing_top": 0,
+        "section_style_spacing_bottom": 0,
+        "section_style_enable_animation": true
+      }
+    },
+    "icon_with_text_columns_L8eDHL": {
+      "type": "icon-with-text-columns",
+      "blocks": {
+        "column_bgzzdf": {
+          "type": "column",
+          "settings": {
+            "icon": "help-wheel",
+            "link": "",
+            "accent": "",
+            "heading": "Expertise",
+            "text": "<p>Collective knowledge and expertise to every product selection.<\/p>"
+          }
+        },
+        "column_JLycmm": {
+          "type": "column",
+          "settings": {
+            "icon": "hand-shake-heart",
+            "link": "",
+            "accent": "",
+            "heading": "Quality Assurance",
+            "text": "<p>Products featured in our store are meticulously selected to meet the highest standards <\/p>"
+          }
+        },
+        "column_HzU94i": {
+          "type": "column",
+          "settings": {
+            "icon": "smile",
+            "link": "",
+            "accent": "",
+            "heading": "Customer First",
+            "text": "<p>We're committed to guiding you through your skincare journey<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_bgzzdf",
+        "column_JLycmm",
+        "column_HzU94i"
+      ],
+      "settings": {
+        "icon_border": "circle",
+        "icon_border_style": "filled",
+        "icon_border_color": "accent",
+        "icon_size": 46,
+        "icon_size_mobile": 24,
+        "accent_font_size": 3,
+        "heading_font_size": 2,
+        "text_font_size": 3,
+        "desktop_alignment": "left_left",
+        "columns_per_row": 3,
+        "content_width": "full",
+        "custom_width": 1000,
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#f5f5f5",
+        "section_style_spacing_top": 68,
+        "section_style_spacing_bottom": 48,
+        "section_style_enable_animation": true
+      }
+    },
+    "grid_BwHJzA": {
+      "type": "grid",
+      "blocks": {
+        "item_k9dWKQ": {
+          "type": "item",
+          "settings": {
+            "width": "50",
+            "height": 500,
+            "mobile_height": 500,
+            "background_image": "shopify:\/\/shop_images\/vision_e9ffe878-6073-4a3c-80a9-32522ecb7a67.png",
+            "background_image_focal_point": "image_presentation",
+            "background_image_mobile_focal_point": "image_presentation",
+            "text_position": "flex-start_flex-end",
+            "text_position_mobile": "flex-start_flex-end",
+            "accent": "",
+            "accent_divider_enable": true,
+            "accent_divider_color": "accent",
+            "title": "Our Vision",
+            "heading_font_size": 3,
+            "text": "<p>At the core of our vision is the belief that everyone deserves access to high-quality skincare solutions that deliver real results. <\/p>",
+            "text_font_size": 3,
+            "maximum_text_width": 400,
+            "button_link": "",
+            "button_label": "Read more",
+            "button_style": "primary",
+            "image_overlay_tint_opacity": 40,
+            "image_overlay_tint_style": "gradient_up",
+            "image_overlay_override_with_custom_colors": false,
+            "image_overlay_override_color_text": "#ffffff",
+            "image_overlay_override_color_tint": "#1a428a"
+          }
+        },
+        "item_mkXCcA": {
+          "type": "item",
+          "settings": {
+            "width": "50",
+            "height": 500,
+            "mobile_height": 500,
+            "background_image": "shopify:\/\/shop_images\/COMMITMENT.png",
+            "background_image_focal_point": "image_presentation",
+            "background_image_mobile_focal_point": "image_presentation",
+            "text_position": "flex-start_flex-end",
+            "text_position_mobile": "flex-start_flex-end",
+            "accent": "",
+            "accent_divider_enable": true,
+            "accent_divider_color": "accent",
+            "title": "Our Commitment",
+            "heading_font_size": 3,
+            "text": "<p>At DOCS Dermatology, we're committed to transparency, integrity, and innovation. We are your trusted source for skincare essentials.<\/p>",
+            "text_font_size": 3,
+            "maximum_text_width": 400,
+            "button_link": "",
+            "button_label": "Read more",
+            "button_style": "primary",
+            "image_overlay_tint_opacity": 50,
+            "image_overlay_tint_style": "gradient_up",
+            "image_overlay_override_with_custom_colors": false,
+            "image_overlay_override_color_text": "#ffffff",
+            "image_overlay_override_color_tint": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "item_k9dWKQ",
+        "item_mkXCcA"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "",
+        "heading": "",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "full_width": false,
+        "grid_spacing": 24,
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_QjaHeB",
+    "image_with_content_g83DrG",
+    "icon_with_text_columns_L8eDHL",
+    "grid_BwHJzA"
+  ]
+}
