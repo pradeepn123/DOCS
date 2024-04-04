@@ -34,6 +34,7 @@ module.exports = {
       Token: path.resolve(__dirname, 'scss/designTokens/index.scss'),
       breakpoints: path.resolve(__dirname, 'scss/components/breakpoints.scss'),
       JsComponents: path.resolve(__dirname, 'js/components'),
+      JsDynamicSections: path.resolve(__dirname, 'js/components/sections'),
       SvelteComponents: path.resolve(__dirname, 'js/components/svelte'),
       svelte: path.resolve('node_modules', 'svelte/src/runtime'),
       ReactComponents: path.resolve(__dirname, 'js/components/subscription')

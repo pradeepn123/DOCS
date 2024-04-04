@@ -160,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _ImageCards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ImageCards */ "./js/components/ImageCards.js");
+/* harmony import */ var JsComponents_ImageCards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/ImageCards */ "./js/components/ImageCards.js");
 
 
 ;
@@ -177,7 +177,7 @@ __webpack_require__.r(__webpack_exports__);
     "data-alignment": "center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "ff-heading section-header__heading fs-heading-3-base"
-  }, heading)), blocks.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ImageCards__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, heading)), blocks.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ImageCards__WEBPACK_IMPORTED_MODULE_1__["default"], {
     block: block,
     key: index
   })));

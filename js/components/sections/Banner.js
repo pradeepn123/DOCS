@@ -1,6 +1,6 @@
 import React from "react";
-import ImageWithText from "../image-with-text"
-import Carousel from "../Carousel";
+import ImageWithText from "JsComponents/image-with-text"
+import Carousel from "JsComponents/Carousel";
 
 export default ({ data }) => {
     const slides =  Object.values(data).map((eachData, index) => <ImageWithText  data={eachData} key={eachData.name + index} />);

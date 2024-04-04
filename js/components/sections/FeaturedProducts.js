@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../ProductCard";
+import ProductCard from "JsComponents/ProductCard";
 
 export default ({ data }) => {
     return(
