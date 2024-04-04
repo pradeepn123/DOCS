@@ -1,10 +1,10 @@
 "use strict";
 (self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module4"],{
 
-/***/ "./js/components/subscription/banner.js":
-/*!**********************************************!*\
-  !*** ./js/components/subscription/banner.js ***!
-  \**********************************************/
+/***/ "./js/components/ImageBlock.js":
+/*!*************************************!*\
+  !*** ./js/components/ImageBlock.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -13,35 +13,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _image_with_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image-with-text */ "./js/components/subscription/image-with-text.js");
+/* harmony import */ var _ImageCards__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ImageCards */ "./js/components/ImageCards.js");
 
 
+;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    shopifyData
+    data
   } = _ref;
-  // console.log("--------------",shopifyData)
-  var bannerData = [];
-  Object.values(shopifyData).forEach(data => {
-    data.map(eachData => {
-      bannerData.push({
-        image: eachData.image,
-        title: eachData.heading,
-        subText: eachData.subheading,
-        button: eachData.button,
-        url: eachData.url
-      });
-    });
-  });
-  console.log("cccc", bannerData);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "banner__container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "banner__header-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, Object.values(bannerData).map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: eachData,
-    key: eachData.name + index
-  })))));
+  var {
+    blocks,
+    heading
+  } = data;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "section-header section-blocks animation--container-header",
+    "data-alignment": "center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
+    className: "ff-heading section-header__heading fs-heading-3-base"
+  }, heading)), blocks.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ImageCards__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    block: block,
+    key: index
+  })));
 });
 
 /***/ })

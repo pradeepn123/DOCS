@@ -23,11 +23,15 @@ var map = {
 		"shared",
 		"module2"
 	],
+	"./FeaturedProductsWithMedia.js": [
+		"./js/components/FeaturedProductsWithMedia.js",
+		"module3"
+	],
 	"./ImageBlock.js": [
 		"./js/components/ImageBlock.js",
 		"vendors",
 		"shared",
-		"module3"
+		"module4"
 	],
 	"./ImageCards.js": [
 		"./js/components/ImageCards.js",
@@ -46,7 +50,7 @@ var map = {
 		"./js/components/SlideshowComponent.js",
 		"vendors",
 		"shared",
-		"module7"
+		"module8"
 	],
 	"./homepage.js": [
 		"./js/components/homepage.js"
@@ -581,7 +585,6 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data
   } = _ref;
-  console.log('data', data);
   var {
     heading,
     image = [],

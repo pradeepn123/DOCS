@@ -1,7 +1,6 @@
 import React from "react";
 
-export default ({ data }) => {
-    console.log('data', data);
+export default ({ data }) => {    
     let {heading, image=[], subheading, url, button} = data || {}; 
     const imageDesktop = image.map((image) => {return image.desktopImage});
     const imageMobile = image.map((image) => {return image.mobileImage});
