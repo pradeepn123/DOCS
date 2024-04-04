@@ -1,0 +1,49 @@
+
+<script type="application/json" data-json="true">
+    "SlideshowComponent-section-type__{{ section.id }}" : 
+    [
+        {
+            "imageSrc": "https://shop.docsdermgroup.com/cdn/shop/files/ALASTIN_PROMO.png?v=1711434298&width=1400",
+            "title": "Soothes, Strengthens & Rebalances the Skin",
+            "accentText": "accent text 1",
+            "buttonText": "button 1",
+            "buttonurl": "url 1"
+        },
+        {
+            "imageSrc": "https://shop.docsdermgroup.com/cdn/shop/files/GLYTONE_PROMO.png?v=1711434298&width=1400",
+            "title": "text2",
+            "accentText": "accent text 2",
+            "buttonText": "button 2",
+            "buttonurl": "url 2"
+        }
+    ]
+</script>
+
+
+{% schema %}
+{
+  "name": "Custom Slideshow",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slideshow"
+    }
+  ]
+}
+{% endschema %}

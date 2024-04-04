@@ -1,6 +1,5 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-<<<<<<< HEAD
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./js/components/subscription/banner.js":
@@ -257,9 +256,6 @@
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors","shared"], () => (__webpack_require__("./js/sections/image-with-text.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-=======
-/******/ 	
->>>>>>> 75065ec (banner image ui done)
 /******/ 	
 /******/ })()
 ;

@@ -12,18 +12,29 @@ var map = {
 		"shared",
 		"module0"
 	],
+	"./Carousel.js": [
+		"./js/components/Carousel.js",
+		"vendors",
+		"shared"
+	],
 	"./FeaturedProducts.js": [
 		"./js/components/FeaturedProducts.js",
 		"shared",
-		"module1"
+		"module2"
 	],
 	"./ImageBlock.js": [
 		"./js/components/ImageBlock.js",
-		"module2"
+		"module3"
 	],
 	"./ProductCard.js": [
 		"./js/components/ProductCard.js",
 		"shared"
+	],
+	"./SlideshowComponent.js": [
+		"./js/components/SlideshowComponent.js",
+		"vendors",
+		"shared",
+		"module5"
 	],
 	"./homepage.js": [
 		"./js/components/homepage.js"
@@ -89,6 +100,49 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = () => (Object.keys(map));
 webpackAsyncContext.id = "./js/components lazy recursive ^\\.\\/.*\\.js$";
 module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ "./js/components/Carousel.js":
+/*!***********************************!*\
+  !*** ./js/components/Carousel.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var swiper_element_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/element/bundle */ "./node_modules/swiper/swiper-element-bundle.mjs");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    slides
+  } = _ref;
+  (0,swiper_element_bundle__WEBPACK_IMPORTED_MODULE_1__.register)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    var swiperEl = document.querySelector("swiper-container");
+    var params = {
+      slidesPerView: 1
+    };
+    Object.assign(swiperEl, params);
+    swiperEl.initialize();
+    swiperEl.addEventListener('swiperafterinit', () => {
+      console.log("swiper init");
+    });
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("swiper-container", {
+    init: "false"
+  }, slides.map((slide, index) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("swiper-slide", {
+      key: index
+    }, slide);
+  }));
+});
 
 /***/ }),
 
