@@ -1,8 +1,7 @@
 import React, { useEffect, useState, Component } from "react";
 
 
-export default ({ product }) => {
-    debugger;
+export default ({ product }) => {    
     const {variants=[] } = product || {}
     const variantData = variants.map((variant) => {        
         return{
@@ -10,10 +9,10 @@ export default ({ product }) => {
             id: variant.id,
             compare_at_price: variant.compare_at_price
         }
-    })
-    console.log(variantData,'variantData')
+    }) 
     const [{ price, id, compare_at_price }] = variantData || []
-    console.log(price, id, compare_at_price,'variantData')
+    const originalPrice = price;
+    const convertedPrice = (originalPrice / 100).toFixed(2);    
     return(
         <>
             <div className="product-item animation--item" data-input-item="" data-id="8091513782403" data-title={product.title} data-url={product.link} data-variant-id="43813675630723" data-quantity-in-cart="0" data-product-has-single-variant="true" data-quick-add-style="icon" data-product-item-alignment="left" data-price-position="below_title" data-show-inventory="false" data-ratings-visible="false">
@@ -63,12 +62,9 @@ export default ({ product }) => {
                                     <div className="product-item__price-wrap" data-position="below_title">
                                         <p className="product-item__price ff-product-price" data-position="below_title" data-enlarged-prices="false">
                                             <span className="product-item__price-main">
-                                                {
-                                                    compare_at_price > price ? 
-                                                    <s className="t-subdued">{compare_at_price}</s> : null
-                                                }
-                                                    <span className={compare_at_price > price ? 'sale' : ''}>${price}</span>
-                                                </span>
+                                                {compare_at_price > convertedPrice ? <s className="t-subdued">{compare_at_price}</s> : null}
+                                                <span className={compare_at_price > convertedPrice ? 'sale' : ''}>${convertedPrice}</span>
+                                            </span>
                                             <span className="displayed-discount-wrapper" data-hidden="false" data-has-discount="false">
                                                 {product.discountPercentage > 0 ?
                                                     <span className="displayed-discount badge-shape fs-body-60" data-badge-shape="pill">

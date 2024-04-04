@@ -21,7 +21,11 @@ __webpack_require__.r(__webpack_exports__);
     data
   } = _ref;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "featured-collection section ",
+    class: "featured-collection section",
+    style: {
+      "--section-style-spacing-top": "36px",
+      "--section-style-spacing-bottom": "36px"
+    },
     "data-section-id": "{{ section.id }}",
     "data-section-type": "featured-collection",
     "data-products-per-view": "{{ section.settings.num_columns }}",
@@ -29,7 +33,7 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "section-inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featured-collection section"
+    className: "featured-collection__inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "section-header section-blocks"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {

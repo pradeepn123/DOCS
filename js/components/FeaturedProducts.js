@@ -4,13 +4,14 @@ import ProductCard from "./ProductCard";
 export default ({ data }) => {
     return(
         <>
-            <div class="featured-collection section "        
+            <div class="featured-collection section"
+            style={{"--section-style-spacing-top": "36px", "--section-style-spacing-bottom": "36px"}}
             data-section-id="{{ section.id }}"
             data-section-type="featured-collection"
             data-products-per-view="{{ section.settings.num_columns }}"
             data-mobile-products-per-view="{{ section.settings.num_columns_mobile }}">
                 <div class="section-inner">
-                    <div className="featured-collection section">
+                    <div className="featured-collection__inner">
                         <div className="section-header section-blocks">
                             <h3 className="ff-body fs-body-50 fs-accent section-header__preheading">{data.preheading}</h3>
                             <h2 className="ff-heading section-header__heading fs-heading-3-base">{data.heading}</h2>

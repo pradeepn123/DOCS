@@ -125,7 +125,7 @@
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "./" + chunkId + ".js?" + {"module0":"6f670bb962535b659ffc","module1":"ee9e9a4bba8534cf2267"}[chunkId] + "";
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"06f508a33b159b29f00c","module1":"ee9e9a4bba8534cf2267"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

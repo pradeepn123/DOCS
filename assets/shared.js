@@ -101,7 +101,6 @@ __webpack_require__.r(__webpack_exports__);
   var {
     product
   } = _ref;
-  debugger;
   var {
     variants = []
   } = product || {};
@@ -112,13 +111,13 @@ __webpack_require__.r(__webpack_exports__);
       compare_at_price: variant.compare_at_price
     };
   });
-  console.log(variantData, 'variantData');
   var [{
     price,
     id,
     compare_at_price
   }] = variantData || [];
-  console.log(price, id, compare_at_price, 'variantData');
+  var originalPrice = price;
+  var convertedPrice = (originalPrice / 100).toFixed(2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "product-item animation--item",
     "data-input-item": "",
@@ -225,11 +224,11 @@ __webpack_require__.r(__webpack_exports__);
     "data-enlarged-prices": "false"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "product-item__price-main"
-  }, compare_at_price > price ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("s", {
+  }, compare_at_price > convertedPrice ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("s", {
     className: "t-subdued"
   }, compare_at_price) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: compare_at_price > price ? 'sale' : ''
-  }, "$", price)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: compare_at_price > convertedPrice ? 'sale' : ''
+  }, "$", convertedPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "displayed-discount-wrapper",
     "data-hidden": "false",
     "data-has-discount": "false"
