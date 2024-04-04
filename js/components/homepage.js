@@ -24,7 +24,7 @@ export default ({shopifyData}) => {
             const Component = await module.default;
             return {
                 props: props,
-                Component:Component
+                Component: Component
             }
         }))
         const script = document.createElement("script");
@@ -38,7 +38,7 @@ export default ({shopifyData}) => {
    }, []);
 
    return ( sections.map((componentData, index) => {
-    const {Component , props} = componentData;
+    const {Component, props} = componentData;
     return <Component data={props} key={index}/>
    }))
 }
