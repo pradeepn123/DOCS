@@ -13,10 +13,22 @@
             "cta_text": "Button",
             "cta_url": "shopify:\/\/pages\/about-us"
           }
+        },
+        "image_with_text_overlay_kxGbgm": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/CLARKSTON_BANNER.png",
+            "image_mobile": "shopify:\/\/shop_images\/BESTSELLING_BANNER.png",
+            "heading": "Heading 2",
+            "subheading": "lala",
+            "cta_text": "kuch bhi",
+            "cta_url": "https:\/\/google.com"
+          }
         }
       },
       "block_order": [
-        "image_with_text_overlay_UxarHd"
+        "image_with_text_overlay_UxarHd",
+        "image_with_text_overlay_kxGbgm"
       ],
       "settings": {
       }

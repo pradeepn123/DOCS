@@ -3,13 +3,18 @@ import React, { useEffect } from 'react';
 import { register } from 'swiper/element/bundle'
 
 
-export default ({ slides }) => {
+export default ({ slides , settings}) => {
     register();
     useEffect(() => {
         const swiperEl = document.querySelector("swiper-container");
-        const params = {
+
+        let params = {
             slidesPerView: 1
         };
+
+        if(settings) {
+            params = {...params,...settings};
+        }
 
         Object.assign(swiperEl, params);
         swiperEl.initialize();

@@ -7,37 +7,6 @@ export default ({ data }) => {
     const imageMobile = image.map((image) => {return image.mobileImage});
 
     return(
-        // <div className="banne__container">
-        //     { imageDesktop &&
-        //     <div className="background-image-container image-hero__image-container">
-        //         <div className="image background-image animation--image">
-        //             <img className="image__img" fetchpriority="high" src={imageDesktop} alt={imageDesktop } />
-        //         </div>
-        //     </div>
-        //     }
-        //     { imageMobile && 
-        //          <div className="image background-image animation--image">
-        //             <img className="image__img" src={imageMobile } alt={imageMobile } />
-        //          </div>
-        //     }
-        
-        //     <div className="slideshow-slide__text-container-inner text-container-inner section-blocks animation--container">
-        //         <p class="section-blocks__accent fs-accent " data-divider-enabled="false" style={{"--delay-offset-multiplier": "4"}}>
-        //             <span class="accent__text">{subheading}</span>
-        //         </p>
-        //         <h2 class="slideshow-slide__text-container-heading ff-heading fs-heading-display-1 section-blocks__heading" style={{"--delay-offset-multiplier": "5"}}>
-        //             {heading}
-        //         </h2>
-        //         { url &&
-        //             <div className="button-wrapper slideshow-slide__text-container-image-button section-blocks__button" data-alignment="none" style={{"--delay-offset-multiplier": "6"}}>
-        //                 <a className="btn btn--primary" href={url}>
-        //                     <span>{button}</span>
-        //                 </a>
-        //             </div>
-        //         }
-        //     </div>
-
-        // </div>
 
         <div class="scroll-slider__slider" data-slide-count="1">
             <div class="slideshow-slide" data-index="0">
