@@ -1,5 +1,26 @@
 {
   "sections": {
+    "banner_JQUbh7": {
+      "type": "banner",
+      "blocks": {
+        "image_with_text_overlay_UxarHd": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Cla.png",
+            "image_mobile": "shopify:\/\/shop_images\/small_smile.png",
+            "heading": "Main Banner",
+            "subheading": "Subtext",
+            "cta_text": "Button",
+            "cta_url": "shopify:\/\/pages\/about-us"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_UxarHd"
+      ],
+      "settings": {
+      }
+    },
     "json_featured_products_hJeWYP": {
       "type": "json-featured-products",
       "blocks": {
@@ -51,6 +72,7 @@
     }
   },
   "order": [
+    "banner_JQUbh7",
     "json_featured_products_hJeWYP"
   ]
 }
