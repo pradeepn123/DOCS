@@ -1,87 +1,99 @@
 import React, { useEffect, useState, Component } from "react";
 
 
-export default ({ data:shopifyData }) => {
+export default ({ product }) => {
+    debugger;
+    const {variants=[] } = product || {}
+    const variantData = variants.map((variant) => {        
+        return{
+            price: variant.price,
+            id: variant.id,
+            compare_at_price: variant.compare_at_price
+        }
+    })
+    console.log(variantData,'variantData')
+    const [{ price, id, compare_at_price }] = variantData || []
+    console.log(price, id, compare_at_price,'variantData')
     return(
         <>
-            <div class="featured-collection section "        
-            data-section-id="{{ section.id }}"
-            data-section-type="featured-collection"
-            data-products-per-view="{{ section.settings.num_columns }}"
-            data-mobile-products-per-view="{{ section.settings.num_columns_mobile }}">
-                <div class="section-inner">
-                    <div className="featured-collection section">
-                        <div className="section-header section-blocks">
-                            <h3 className="ff-body fs-body-50 fs-accent section-header__preheading">{shopifyData.preheading}</h3>
-                            <h2 className="ff-heading section-header__heading fs-heading-3-base">{shopifyData.heading}</h2>
-                        </div>
-                        <div className="featured-collection__products featured-collection-slider-grid standard-grid-spacing product-item-holder">
-                            <scroll-slider-component class="scroll-slider scroll-slider--full-width-below-1024 scroll-slider--peek-and-full-width-below-1024 scroll-all-sizes"
-                            style={{"--columns": "2", "--columns-above-720": "4", "--columns-above-1024": "5", "--peek": "24px", "--peek-above-1024": "0px","--gap": "12px", 
-                            "--gap-above-1024": "16px", "--gap-above-1200": "24px"}}>
-                                <div className="scroll-slider__slider">
-                                    {(shopifyData.products).map((product) => (
-                                        <div className="product-item">
-                                            <div className="product-item__inner">
-                                                <div className="product-item__media-wrapper">
-                                                    <div className="product-item__media">
-                                                        <a className="product-item__image-link" href={product.link}>
-                                                            <div className="image product-item__image aspect-ratio--square">
-                                                                <img className="image__img" src={product.image.src} alt={product.title} />
-                                                            </div>
-                                                        </a>
-                                                        {product.discountPercentage > 0 ?
-                                                        <div className="product-badges" data-badge-shape="pill" data-badge-vertical-position="bottom" data-badge-horizontal-position="left">
-                                                            <div className="product-badge" data-type="sale">
-                                                                <span className="product-badge__inner badge-shape" data-badge-shape="pill">
-                                                                    <span className="displayed-discount-wrapper">
-                                                                        <span data-badge-shape="pill">Sale</span>
-                                                                    </span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        : null 
-                                                        }
-                                                    </div>
-                                                </div>
-                                                <div className="product-item__meta">
-                                                    <div className="product-item__text ta-l">
-                                                        <div className="product-item__text_group_primary">
-                                                            <span className="ff-body fs-body-60 product-item__product-vendor">{product.vendor}</span>
-                                                            <h3 className="product-item__product-title fs-product-title ff-body">
-                                                                <a href={product.link}>
-                                                                    {product.title}
-                                                                </a>
-                                                            </h3>
-                                                            <div data-product-item-element-visible-only-for-mode="grid">
-                                                                <div className="product-item__price-wrap">
-                                                                    <p className="product-item__price ff-product-price">
-                                                                        <span className="product-item__price-main">
-                                                                            {
-                                                                                product.variants[0].compare_at_price > product.variants[0].price ? 
-                                                                                <s className="t-subdued">{product.variants[0].compare_at_price}</s> : null
-                                                                            }
-                                                                            <span className={product.variants[0].compare_at_price > product.variants[0].price ? 'sale' : ''}>${product.variants[0].price}</span>
-                                                                        </span>
-                                                                        <div className="displayed-discount-wrapper">
-                                                                            {product.discountPercentage > 0 ?
-                                                                                <span className="displayed-discount badge-shape fs-body-60" data-badge-shape="pill">
-                                                                                    Save {product.discountPercentage}%
-                                                                                </span>
-                                                                                : null
-                                                                            }
-                                                                        </div>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
+            <div className="product-item animation--item" data-input-item="" data-id="8091513782403" data-title={product.title} data-url={product.link} data-variant-id="43813675630723" data-quantity-in-cart="0" data-product-has-single-variant="true" data-quick-add-style="icon" data-product-item-alignment="left" data-price-position="below_title" data-show-inventory="false" data-ratings-visible="false">
+                <div className="product-item__inner">
+                    <div className="product-item__media-wrapper">
+                        <div className="product-item__media" data-aspect-ratio="square">
+                            <a className="product-item__image-link" href={product.link} aria-label={product.title}>
+                                <div className="image product-item__image aspect-ratio--square animation--lazy-load loaded" style={{"--object-fit": "contain"}}>
+                                    <img alt={product.title} className="image__img" loading="lazy" width="2500" height="2500" src={product.image.src} />
                                 </div>
-                            </scroll-slider-component>
+                            </a>
+                            {product.discountPercentage > 0 ?
+                                <div className="product-badges" data-badge-shape="pill" data-badge-vertical-position="bottom" data-badge-horizontal-position="left">
+                                    <div className="product-badge" data-type="sale">
+                                        <span className="product-badge__inner badge-shape" data-badge-shape="pill">
+                                            <span className="displayed-discount-wrapper">
+                                                <span data-badge-shape="pill">Sale</span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                : null 
+                            }
+                            <div data-product-item-element-visible-only-for-mode="grid">
+                                <div className="product-item__floating-action-buttons">
+                                    <button className="product-item__quick-view-button btn btn--rounded show-product-quick-view product-item__disc-button" href={product.link} title="Quick View" aria-label="Quick View">
+                                        <span className="icon icon-quick-view">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0875 15.6805C13.9032 15.6805 15.375 14.2086 15.375 12.393C15.375 10.5773 13.9032 9.10547 12.0875 9.10547C10.2719 9.10547 8.80005 10.5773 8.80005 12.393C8.80005 14.2086 10.2719 15.6805 12.0875 15.6805Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M22.489 11.7954C21.3901 10.5555 17.0224 6 11.8 6C6.57759 6 2.20992 10.5555 1.11096 11.7954C1.03921 11.8827 1 11.9923 1 12.1053C1 12.2184 1.03921 12.3279 1.11096 12.4153C2.20992 13.6552 6.57759 18.2107 11.8 18.2107C17.0224 18.2107 21.3901 13.6552 22.489 12.4153C22.5608 12.3279 22.6 12.2184 22.6 12.1053C22.6 11.9923 22.5608 11.8827 22.489 11.7954V11.7954Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="product-item__meta">
+                        <div data-product-item-element-visible-only-for-mode="grid"></div>
+                        <div className="product-item__text ta-l">
+                            <div className="product-item__text_group_primary">
+                                <span className="ff-body fs-body-60 product-item__product-vendor">
+                                    {product.vendor}
+                                </span>
+                                <h3 className="product-item__product-title fs-product-title ff-body" data-line-limit="2" data-base-size-setting="16">
+                                    <a href={product.link}>{product.title}</a>
+                                </h3>
+                                <div data-product-item-element-visible-only-for-mode="grid">
+                                    <div className="product-item__price-wrap" data-position="below_title">
+                                        <p className="product-item__price ff-product-price" data-position="below_title" data-enlarged-prices="false">
+                                            <span className="product-item__price-main">
+                                                {
+                                                    compare_at_price > price ? 
+                                                    <s className="t-subdued">{compare_at_price}</s> : null
+                                                }
+                                                    <span className={compare_at_price > price ? 'sale' : ''}>${price}</span>
+                                                </span>
+                                            <span className="displayed-discount-wrapper" data-hidden="false" data-has-discount="false">
+                                                {product.discountPercentage > 0 ?
+                                                    <span className="displayed-discount badge-shape fs-body-60" data-badge-shape="pill">
+                                                        Save {product.discountPercentage}%
+                                                    </span>
+                                                    : null
+                                                }
+                                            </span>
+                                        </p>
+                                        <dl className="unit-price" data-unit-price-container="" data-unit-price-available="false">
+                                            <dt>
+                                                <span className="visually-hidden visually-hidden--inline">Unit price</span>
+                                            </dt>
+                                            <dd className="unit-price__price">
+                                                <span data-unit-price=""></span>
+                                                <span aria-hidden="true">/</span>
+                                                <span className="visually-hidden">per</span>
+                                                <span data-unit-base="">
+                                                <span data-unit-price-base-unit=""></span>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -7489,6 +7489,8 @@ var quickProductModal = function quickProductModal(node) {
   };
 };
 
+window.quickProductModal = quickProductModal;
+
 var icons$1 = window.theme.icons;
 var classes$h = {
   activeThumbnail: "pswp__thumbnail--active"
@@ -13374,10 +13376,15 @@ productLightbox();
 widthWatcher();
 
 // Product quick view/add modal
-var quickProductModalElement = n$2("[data-quick-product-modal]", document);
-if (quickProductModalElement) {
-  quickProductModal(quickProductModalElement);
+window.initQuickView = () => {
+  var quickProductModalElement = n$2("[data-quick-product-modal]", document);
+  if (quickProductModalElement) {    
+    quickProductModal(quickProductModalElement);
+  }
 }
+window.initQuickView();
+
+
 
 // Load quick add modal
 // Removing until quick add modal can be fleshed out.

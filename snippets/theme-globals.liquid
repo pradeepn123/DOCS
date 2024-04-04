@@ -13,13 +13,8 @@
 </script>
 
 {% # Set the following line to true to use the unminified javascript file theme.js %}
-{% assign useUnminThemeJS = true %}
-
-{% if useUnminThemeJS %}
+{% assign useUnminThemeJS = false %}
   <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
-{% else %}
-  <script type="module" src="{{ 'theme.min.js' | asset_url }}"></script>
-{% endif %}
 
 {% # Set the following line to true to import custom-events.js %}
 {% assign useCustomEvents = false %}
