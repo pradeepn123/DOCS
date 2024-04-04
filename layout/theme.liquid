@@ -134,10 +134,17 @@
       </div>
 
       <main id="main" class="main">
-
-        {{ content_for_layout }}
-
-        <homepage></homepage>
+        {% if template == 'index' %}
+          <homepage>
+           <script type="application/json" id="theme-files">
+             {
+               "url": "{{ 'theme.js' | asset_url }}"
+              }
+          </script>
+          </homepage>
+        {% else %}
+          {{ content_for_layout }}
+        {% endif %}
       </main>
 
       {%- sections 'footer-group' -%}
@@ -147,6 +154,9 @@
       {% render 'modal' %}
       {% render 'back-to-top' %}
     </div>
+    
+    {% render 'inline-scripts', script_name: 'slideshow' %}
+    {% render 'inline-scripts', script_name: 'scroll-slider' %}
     <script src="{{'vendors.js' | asset_url }}" defer></script>  
     <script src="{{'shared.js' | asset_url }}" defer></script> 
     <script src="{{'global.js' | asset_url }}" defer></script> 

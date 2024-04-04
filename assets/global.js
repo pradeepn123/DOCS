@@ -27,19 +27,14 @@
   \*******************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-<<<<<<< HEAD
 /* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
 /* harmony import */ var _custom_store_locatore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./custom-store-locatore */ "./js/sections/custom-store-locatore.js");
 /* harmony import */ var _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./megamenu-nav */ "./js/sections/megamenu-nav.js");
 /* harmony import */ var _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./megamenu-product-nav */ "./js/sections/megamenu-product-nav.js");
 /* harmony import */ var _mobile_menu_product_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mobile-menu-product-nav */ "./js/sections/mobile-menu-product-nav.js");
 /* harmony import */ var _mobile_nav_menu_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mobile-nav-menu-list */ "./js/sections/mobile-nav-menu-list.js");
-=======
-/* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
-/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
-/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./homepage */ "./js/sections/homepage.js");
+/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./homepage */ "./js/sections/homepage.js");
 
->>>>>>> 14f4bdf (Created dynamic structure for component and prop rendering)
 
 
 
@@ -51,13 +46,9 @@ window.initMegamenuNavProduct = _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1
 window.initMobilemenuNavProduct = _mobile_menu_product_nav__WEBPACK_IMPORTED_MODULE_2__["default"];
 window.initmobileMenuNav = _mobile_nav_menu_list__WEBPACK_IMPORTED_MODULE_3__["default"];
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
   (0,_subscription__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_custom_store_locatore__WEBPACK_IMPORTED_MODULE_5__["default"])();
-=======
-  (0,_store_locator__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_subscription__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_homepage__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_homepage__WEBPACK_IMPORTED_MODULE_6__["default"])();
 });
 
 /***/ }),
@@ -76,8 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(_components_homepage__WEBPACK_IMPORTED_MODULE_1__["default"], 'Homepage');
->>>>>>> 14f4bdf (Created dynamic structure for component and prop rendering)
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(_components_homepage__WEBPACK_IMPORTED_MODULE_1__["default"], 'Homepage', '#theme-files');
 });
 
 /***/ }),

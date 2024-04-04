@@ -600,11 +600,7 @@ function register(type, properties) {
   }
 
   if (typeof registered[type] !== 'undefined') {
-    throw new Error(
-      'Theme Sections: A section of type "' +
-        type +
-        '" has already been registered. You cannot register the same section type twice'
-    );
+    return;
   }
 
   function TypedSection(container) {
@@ -10752,6 +10748,7 @@ var selectors$j = {
 };
 register("slideshow", {
   onLoad: function onLoad() {
+    debugger;
     var _this = this;
     var scrollerId = this.container.dataset.scrollerId;
     this.scrollerId = scrollerId;

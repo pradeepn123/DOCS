@@ -13,7 +13,7 @@
 
 
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(_components_homepage__WEBPACK_IMPORTED_MODULE_1__["default"], 'Homepage');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(_components_homepage__WEBPACK_IMPORTED_MODULE_1__["default"], 'Homepage', '#theme-files');
 });
 
 /***/ })

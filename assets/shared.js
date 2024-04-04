@@ -17,8 +17,32 @@ var map = {
 	"./reactWrapper.js": [
 		"./js/components/reactWrapper.js"
 	],
+	"./subscription/megamenu-product.js": [
+		"./js/components/subscription/megamenu-product.js",
+		"shared"
+	],
+	"./subscription/megamenu.js": [
+		"./js/components/subscription/megamenu.js",
+		"shared"
+	],
+	"./subscription/mobile-account-drawer.js": [
+		"./js/components/subscription/mobile-account-drawer.js",
+		"shared"
+	],
+	"./subscription/mobile-menu-list.js": [
+		"./js/components/subscription/mobile-menu-list.js",
+		"shared"
+	],
+	"./subscription/mobile-menu-product.js": [
+		"./js/components/subscription/mobile-menu-product.js",
+		"shared"
+	],
 	"./subscription/onetime.js": [
 		"./js/components/subscription/onetime.js",
+		"shared"
+	],
+	"./subscription/store-locator.js": [
+		"./js/components/subscription/store-locator.js",
 		"shared"
 	],
 	"./subscription/subscription-selector.js": [
@@ -66,7 +90,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    shopifyData
+  } = _ref;
   var [sections, updateSections] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
@@ -83,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
       pageData = "{ ".concat(pageData, " }");
       var sectionData = JSON.parse(pageData);
       var sections = yield Promise.all(Object.keys(sectionData).map( /*#__PURE__*/function () {
-        var _ref2 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (sectionKey, index) {
+        var _ref3 = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (sectionKey, index) {
           var props = sectionData[sectionKey];
           var componentKey = sectionKey.split('-section-type')[0];
           var module = yield __webpack_require__("./js/components lazy recursive ^\\.\\/.*\\.js$")("./".concat(componentKey, ".js"));
@@ -94,9 +121,13 @@ __webpack_require__.r(__webpack_exports__);
           };
         });
         return function (_x, _x2) {
-          return _ref2.apply(this, arguments);
+          return _ref3.apply(this, arguments);
         };
       }()));
+      var script = document.createElement("script");
+      script.src = shopifyData.url;
+      script.async = false;
+      document.body.appendChild(script);
       updateSections(sections);
     })();
   }, []);
@@ -171,6 +202,8 @@ __webpack_require__.r(__webpack_exports__);
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -269,6 +302,8 @@ __webpack_require__.r(__webpack_exports__);
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -377,6 +412,8 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -534,6 +571,8 @@ __webpack_require__.r(__webpack_exports__);
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -729,6 +768,8 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
@@ -880,10 +921,12 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SvgIcon: () => (/* binding */ SvgIcon),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* unused harmony export SvgIcon */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 

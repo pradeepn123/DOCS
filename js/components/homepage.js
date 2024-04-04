@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-export default () => {
+export default ({shopifyData}) => {
+
   const [sections, updateSections] = useState([]);
    useEffect(() => {
     (async () => {
@@ -26,6 +27,12 @@ export default () => {
                 Component:Component
             }
         }))
+        const script = document.createElement("script");
+       
+        script.src = shopifyData.url;
+        script.async = false;
+        document.body.appendChild(script)
+
         updateSections(sections);
     })();
    }, []);
