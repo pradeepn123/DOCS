@@ -64,7 +64,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    data
+    data,
+    wrapperclass
   } = _ref;
   var {
     heading,
@@ -82,25 +83,30 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   } = mobileImage || {};
   console.log("222", srcDesktop);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "scroll-slider__slider",
+    className: "scroll-slider__slider",
     "data-slide-count": "1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "slideshow-slide",
+    className: "slideshow-slide",
     "data-index": "0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "slideshow-slide__inner"
+    className: "slideshow-slide__inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "background-image-container image-hero__image-container",
+    className: "background-image-container image-hero__image-container",
     "data-has-mobile-image": "true",
     "data-absolutely-position-image": "false"
+<<<<<<< HEAD
   }, srcMobile && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "image background-image background-image--mobile",
+=======
+  }, imageMobile && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "image background-image background-image--mobile",
+>>>>>>> 1a547ee (Image with text added two different classes)
     style: {
       "--focal-alignment": "center"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     alt: "",
-    class: "image__img",
+    className: "image__img",
     fetchpriority: "high",
     width: "1440",
     height: "550",
@@ -109,8 +115,13 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       "height": "550px",
       "objectFit": "cover"
     }
+<<<<<<< HEAD
   })), srcDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "image background-image ",
+=======
+  })), imageDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "image background-image ",
+>>>>>>> 1a547ee (Image with text added two different classes)
     style: {
       "--focal-alignment": "center"
     }
@@ -126,25 +137,16 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       "objectFit": "cover"
     }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "slideshow-slide__overlay image-overlay animation--image-overlay",
+    className: "slideshow-slide__overlay image-overlay animation--image-overlay",
     "data-image-overlay-tint-style": "solid",
     style: {
       "--overlay-opacity": "20%",
       "--color-overlay-tint": "#000;"
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "slideshow-slide__text-container-wrapper",
-    style: {
-      "--text-horizontal-position": "flex-start",
-      "--text-horizontal-position-mobile": "flex-start",
-      "--text-vertical-position": "center",
-      "--text-vertical-position-mobile": "center",
-      "--text-alignment": "left",
-      "--text-alignment-mobile": "left",
-      "--content-max-width": "500px"
-    }
+    className: "slideshow-slide__text-container-wrapper ".concat(wrapperclass)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "slideshow-slide__text-container text-container image-overlay-content animation--item",
+    className: "slideshow-slide__text-container text-container image-overlay-content animation--item",
     style: {
       "--color-text": "#FFFFFF",
       "--color-background": "#000",
@@ -162,28 +164,28 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       "--delay-offset-multiplier": "3"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "slideshow-slide__text-container-inner text-container-inner section-blocks animation--container"
+    className: "slideshow-slide__text-container-inner text-container-inner section-blocks animation--container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    class: "section-blocks__accent fs-accent ",
+    className: "section-blocks__accent fs-accent ",
     "data-divider-enabled": "false",
     style: {
       "--delay-offset-multiplier": "4"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    class: "accent__text"
+    className: "accent__text"
   }, subheading)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    class: "slideshow-slide__text-container-heading ff-heading fs-heading-display-1 section-blocks__heading",
+    className: "slideshow-slide__text-container-heading ff-heading fs-heading-display-1 section-blocks__heading",
     style: {
       "--delay-offset-multiplier": "5"
     }
   }, heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "button-wrapper slideshow-slide__text-container-image-button section-blocks__button",
+    className: "button-wrapper slideshow-slide__text-container-image-button section-blocks__button",
     "data-alignment": "none",
     style: {
       "--delay-offset-multiplier": "6"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    class: "btn btn--primary",
+    className: "btn btn--primary",
     href: url
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, button)))))))));
 });
@@ -213,7 +215,8 @@ __webpack_require__.r(__webpack_exports__);
   } = _ref;
   var slides = Object.values(data).map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     data: eachData,
-    key: eachData.name + index
+    key: eachData.name + index,
+    wrapperclass: "slideshow-slide__text_wrapper"
   }));
   var settings = {
     "slidesPerView": 1

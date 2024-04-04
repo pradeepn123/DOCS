@@ -3,7 +3,7 @@ import ImageWithText from "JsComponents/image-with-text"
 import Carousel from "JsComponents/Carousel";
 
 export default ({ data }) => {
-    const slides =  Object.values(data).map((eachData, index) => <ImageWithText  data={eachData} key={eachData.name + index} />);
+    const slides =  Object.values(data).map((eachData, index) => <ImageWithText  data={eachData} key={eachData.name + index} wrapperclass="slideshow-slide__text_wrapper" />);
     const settings = {
         "slidesPerView": 1
     }

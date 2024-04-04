@@ -1,27 +1,32 @@
 import React, { useEffect, useState, Component } from "react";
-
+import ResponsiveImage from './ResponsiveImage';
 
 export default ({ product }) => {    
-    const {variants=[] } = product || {}
+    const {title, link, vendor, variants=[] } = product || {}
     const variantData = variants.map((variant) => {        
         return{
             price: variant.price,
-            id: variant.id,
+            variant_id: variant.id,
             compare_at_price: variant.compare_at_price
         }
     }) 
-    const [{ price, id, compare_at_price }] = variantData || []
+
+    const imageObj= {
+        id: Date.now(),
+        ...product.image
+    }
+    const [{ price, variant_id, compare_at_price }] = variantData || []
     const originalPrice = price;
     const convertedPrice = (originalPrice / 100).toFixed(2);    
     return(
         <>
-            <div className="product-item animation--item" data-input-item="" data-id="8091513782403" data-title={product.title} data-url={product.link} data-variant-id="43813675630723" data-quantity-in-cart="0" data-product-has-single-variant="true" data-quick-add-style="icon" data-product-item-alignment="left" data-price-position="below_title" data-show-inventory="false" data-ratings-visible="false">
+            <div className="product-item animation--item" data-input-item="" data-id="8091513782403" data-title={product.title} data-url={product.link} data-variant-id={variant_id} data-quantity-in-cart="0" data-product-has-single-variant="true" data-quick-add-style="icon" data-product-item-alignment="left" data-price-position="below_title" data-show-inventory="false" data-ratings-visible="false">
                 <div className="product-item__inner">
                     <div className="product-item__media-wrapper">
                         <div className="product-item__media" data-aspect-ratio="square">
-                            <a className="product-item__image-link" href={product.link} aria-label={product.title}>
-                                <div className="image product-item__image aspect-ratio--square animation--lazy-load loaded" style={{"--object-fit": "contain"}}>
-                                    <img alt={product.title} className="image__img" loading="lazy" width="2500" height="2500" src={product.image.src} />
+                            <a className="product-item__image-link" href={link} aria-label={title}>
+                                <div className="image product-item__image aspect-ratio--square animation--lazy-load loaded" style={{"--object-fit": "contain"}}>                                    
+                                    <ResponsiveImage image={imageObj} image_aspect_ratio={1} />
                                 </div>
                             </a>
                             {product.discountPercentage > 0 ?
@@ -53,10 +58,10 @@ export default ({ product }) => {
                         <div className="product-item__text ta-l">
                             <div className="product-item__text_group_primary">
                                 <span className="ff-body fs-body-60 product-item__product-vendor">
-                                    {product.vendor}
+                                    {vendor}
                                 </span>
                                 <h3 className="product-item__product-title fs-product-title ff-body" data-line-limit="2" data-base-size-setting="16">
-                                    <a href={product.link}>{product.title}</a>
+                                    <a href={link}>{title}</a>
                                 </h3>
                                 <div data-product-item-element-visible-only-for-mode="grid">
                                     <div className="product-item__price-wrap" data-position="below_title">

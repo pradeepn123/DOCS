@@ -125,7 +125,11 @@
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
+<<<<<<< HEAD
 /******/ 			return "./" + chunkId + ".js?" + {"module0":"a789cd08a4709d932c85","module1":"a94a4b90671d326af730","module2":"32207adb432443814208","module3":"e38e7a902eacf4b596b1"}[chunkId] + "";
+=======
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"11909703e758b9edfc7e","module1":"e11b9cde6453ca30b497","module2":"d61d7884ee7ae19e53f6","module3":"e264c3a9e18c3da1d55d"}[chunkId] + "";
+>>>>>>> 1a547ee (Image with text added two different classes)
 /******/ 		};
 /******/ 	})();
 /******/ 	

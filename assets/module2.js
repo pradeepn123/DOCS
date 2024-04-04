@@ -18,7 +18,6 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data
   } = _ref;
-  console.log(data, 'data');
 });
 
 /***/ })

@@ -1,8 +1,6 @@
 import React from "react";
 
 export default ({ image_aspect_ratio, image }) => {
-    debugger;
-
   const min = 100;
   const max = 10000;
   const diff = max - min;
