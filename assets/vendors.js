@@ -35934,7 +35934,6 @@ function _typeof(o) {
   }, _typeof(o);
 }
 
-<<<<<<< HEAD
 /***/ }),
 
 /***/ "./node_modules/swiper/modules/a11y.mjs":
@@ -46921,8 +46920,6 @@ if (typeof window !== 'undefined') {
 
 
 
-=======
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 /***/ })
 
 }]);

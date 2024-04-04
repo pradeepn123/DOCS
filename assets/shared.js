@@ -25,32 +25,28 @@ var map = {
 	],
 	"./ImageBlock.js": [
 		"./js/components/ImageBlock.js",
-<<<<<<< HEAD
+		"vendors",
+		"shared",
 		"module3"
-	],
-	"./ProductCard.js": [
-		"./js/components/ProductCard.js",
-		"shared"
-	],
-	"./SlideshowComponent.js": [
-		"./js/components/SlideshowComponent.js",
-		"vendors",
-		"shared",
-		"module5"
-=======
-		"vendors",
-		"shared",
-		"module0"
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 	],
 	"./ImageCards.js": [
 		"./js/components/ImageCards.js",
 		"vendors",
 		"shared"
 	],
+	"./ProductCard.js": [
+		"./js/components/ProductCard.js",
+		"shared"
+	],
 	"./ResponsiveImage.js": [
 		"./js/components/ResponsiveImage.js",
 		"shared"
+	],
+	"./SlideshowComponent.js": [
+		"./js/components/SlideshowComponent.js",
+		"vendors",
+		"shared",
+		"module7"
 	],
 	"./homepage.js": [
 		"./js/components/homepage.js"
@@ -119,17 +115,10 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./js/components/Carousel.js":
 /*!***********************************!*\
   !*** ./js/components/Carousel.js ***!
   \***********************************/
-=======
-/***/ "./js/components/ImageCards.js":
-/*!*************************************!*\
-  !*** ./js/components/ImageCards.js ***!
-  \*************************************/
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -140,11 +129,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var swiper_element_bundle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/element/bundle */ "./node_modules/swiper/swiper-element-bundle.mjs");
-=======
-/* harmony import */ var _ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResponsiveImage */ "./js/components/ResponsiveImage.js");
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -152,7 +137,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-<<<<<<< HEAD
     slides,
     settings
   } = _ref;
@@ -178,7 +162,32 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       key: index
     }, slide);
   }));
-=======
+});
+
+/***/ }),
+
+/***/ "./js/components/ImageCards.js":
+/*!*************************************!*\
+  !*** ./js/components/ImageCards.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ResponsiveImage */ "./js/components/ResponsiveImage.js");
+
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
     block
   } = _ref;
   var {
@@ -204,22 +213,14 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     className: "collection-item__meta collection-item__title ff-body fs-body-100",
     "data-text-alignment": "center"
   })));
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 });
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./js/components/ProductCard.js":
 /*!**************************************!*\
   !*** ./js/components/ProductCard.js ***!
   \**************************************/
-=======
-/***/ "./js/components/ResponsiveImage.js":
-/*!******************************************!*\
-  !*** ./js/components/ResponsiveImage.js ***!
-  \******************************************/
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -232,7 +233,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-<<<<<<< HEAD
     product
   } = _ref;
   var {
@@ -388,7 +388,26 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     "data-unit-price-base-unit": ""
   }))))))))))));
-=======
+});
+
+/***/ }),
+
+/***/ "./js/components/ResponsiveImage.js":
+/*!******************************************!*\
+  !*** ./js/components/ResponsiveImage.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
     image_aspect_ratio,
     image
   } = _ref;
@@ -469,7 +488,6 @@ __webpack_require__.r(__webpack_exports__);
     tabIndex: "-1",
     style: getImageStyle()
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("style", null, css)));
->>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 });
 
 /***/ }),
