@@ -1,9 +1,11 @@
 import React from "react";
 
 export default ({ data }) => {    
-    let {heading, image=[], subheading, url, button} = data || {}; 
-    const imageDesktop = image.map((image) => {return image.desktopImage});
-    const imageMobile = image.map((image) => {return image.mobileImage});
+    let {heading, desktopImage, mobileImage, subheading, url, button} = data || {}; 
+    let {srcDesktop} = desktopImage || {}; 
+    let {srcMobile} = mobileImage || {}; 
+
+    console.log("222",srcDesktop)
 
     return(
 
@@ -11,14 +13,14 @@ export default ({ data }) => {
             <div class="slideshow-slide" data-index="0">
                 <div class="slideshow-slide__inner">
                     <div class="background-image-container image-hero__image-container" data-has-mobile-image="true" data-absolutely-position-image="false">
-                        { imageMobile &&
+                        { srcMobile &&
                             <div class="image background-image background-image--mobile" style={{"--focal-alignment": "center"}}>
-                                <img alt="" class="image__img" fetchpriority="high" width="1440" height="550" src={imageMobile}  style={{"height": "550px", "objectFit": "cover"}}/>
+                                <img alt="" class="image__img" fetchpriority="high" width="1440" height="550" src={srcMobile}  style={{"height": "550px", "objectFit": "cover"}}/>
                             </div> 
                         }
-                        { imageDesktop &&
+                        { srcDesktop &&
                             <div class="image background-image " style={{"--focal-alignment": "center"}}>
-                                <img alt="" class="image__img" fetchpriority="high" width="1440" height="550" src={imageDesktop}  style={{"height": "550px", "objectFit": "cover"}}/>
+                                <img alt="" class="image__img" fetchpriority="high" width="1440" height="550" src={srcDesktop}  style={{"height": "550px", "objectFit": "cover"}}/>
                             </div>
                         }
                     </div>

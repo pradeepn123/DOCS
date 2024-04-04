@@ -68,17 +68,19 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   } = _ref;
   var {
     heading,
-    image = [],
+    desktopImage,
+    mobileImage,
     subheading,
     url,
     button
   } = data || {};
-  var imageDesktop = image.map(image => {
-    return image.desktopImage;
-  });
-  var imageMobile = image.map(image => {
-    return image.mobileImage;
-  });
+  var {
+    srcDesktop
+  } = desktopImage || {};
+  var {
+    srcMobile
+  } = mobileImage || {};
+  console.log("222", srcDesktop);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "scroll-slider__slider",
     "data-slide-count": "1"
@@ -91,7 +93,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     class: "background-image-container image-hero__image-container",
     "data-has-mobile-image": "true",
     "data-absolutely-position-image": "false"
-  }, imageMobile && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, srcMobile && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "image background-image background-image--mobile",
     style: {
       "--focal-alignment": "center"
@@ -102,12 +104,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     fetchpriority: "high",
     width: "1440",
     height: "550",
-    src: imageMobile,
+    src: srcMobile,
     style: {
       "height": "550px",
       "objectFit": "cover"
     }
-  })), imageDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  })), srcDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "image background-image ",
     style: {
       "--focal-alignment": "center"
@@ -118,7 +120,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     fetchpriority: "high",
     width: "1440",
     height: "550",
-    src: imageDesktop,
+    src: srcDesktop,
     style: {
       "height": "550px",
       "objectFit": "cover"
@@ -216,6 +218,7 @@ __webpack_require__.r(__webpack_exports__);
   var settings = {
     "slidesPerView": 1
   };
+  console.log("iiii", data);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

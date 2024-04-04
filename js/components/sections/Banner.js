@@ -7,6 +7,7 @@ export default ({ data }) => {
     const settings = {
         "slidesPerView": 1
     }
+    console.log("iiii", data)
     return (
         <div className="banner__container">
             <div className="banner__header-content">
