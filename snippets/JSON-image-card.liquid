@@ -1,7 +1,19 @@
+{% assign image_block = imageblock.settings %}
 {
-    "collection": "{{ imageblock.settings.collection }}",
-    "image_source": "{{ imageblock.settings.image_source }}",
+    "collection": "{{ image_block.collection }}",
+    "image_source": {
+        "src": "{{image_block.image_source | image_url}}",
+        "width": "{{image_block.image_source.width}}",
+        "height": "{{image_block.image_source.height}}"
+    },
     "collection_title": "{{ imageblock.settings.collection_title }}",
     "collection_filter_type": "{{ imageblock.settings.collection_filter_type }}",
-    "collection_filter": "{{ imageblock.settings.collection_filter }}"
+    "collection_filter": "{{ imageblock.settings.collection_filter }}",
+    "center_content": "{{ section.settings.center_content }}",
+    "image_circle_crop_enable": "{{ section.settings.image_circle_crop_enable }}",
+    "image_spacing": "{{ section.settings.image_spacing }}",
+    "title_font_type": "{{ section.settings.title_font_type }}",
+    "text_alignment": "{{ section.settings.text_alignment }}",
+    "section_style_spacing_top": "{{ section.settings.section_style_spacing_top }}",
+    "section_style_spacing_bottom": "{{ section.settings.section_style_spacing_bottom }}"
 }

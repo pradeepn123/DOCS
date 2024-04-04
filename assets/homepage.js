@@ -126,10 +126,14 @@
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
 <<<<<<< HEAD
+<<<<<<< HEAD
 /******/ 			return "./" + chunkId + ".js?" + {"module0":"113e73a9c00c3a805efd","module2":"ee8620bf0629a17ec2cc","module3":"ccd1d43fced585cb2617","module5":"995f7af97c8bbfd4c206"}[chunkId] + "";
 =======
 /******/ 			return "./" + chunkId + ".js?" + "bdaa2ad57117b309b8d9" + "";
 >>>>>>> 77b45e8 (image block section html updated)
+=======
+/******/ 			return "./" + chunkId + ".js?" + "ddd4958bc4ca073cb0c7" + "";
+>>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 /******/ 		};
 /******/ 	})();
 /******/ 	

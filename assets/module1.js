@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 (self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module1"],{
 
@@ -61,6 +62,17 @@ __webpack_require__.r(__webpack_exports__);
     key: index
   })))))))));
 });
+=======
+(self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module1"],{
+
+/***/ "./js/components/ImageCards.js":
+/*!*************************************!*\
+  !*** ./js/components/ImageCards.js ***!
+  \*************************************/
+/***/ (() => {
+
+
+>>>>>>> 86b1a33 (Created image blocks section and rendered individual image card data)
 
 /***/ })
 
