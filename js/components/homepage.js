@@ -20,7 +20,7 @@ export default ({shopifyData}) => {
         const sections = await Promise.all(Object.keys(sectionData).map( async (sectionKey,index) => {
             const props = sectionData[sectionKey];
             const componentKey = sectionKey.split('-section-type')[0];
-            const module = await import(/* webpackChunkName: "module" */ `./${componentKey}.js`);
+            const module = await import(/* webpackChunkName: "module" */ `./sections/${componentKey}.js`);
             const Component = await module.default;
             return {
                 props: props,

@@ -1,27 +1,28 @@
 
 <script data-json="true" type="application/json">
-    "FeaturedProductsWithMedia-section-type__{{ section.id }}" : 
-    {
-        "heading": "{{section.settings.heading}}",
-        "preheading": "{{section.settings.preheading}}",
-        "subheading": "{{section.settings.subheading}}",
+    
+    "FeaturedProductsWithMedia-section-type__{{ section.id }}": {
+        "heading": "{{ section.settings.heading }}",
+        "preheading": "{{ section.settings.preheading }}",
+        "subheading": "{{ section.settings.subheading }}",
         "blocks": [
-            {% for block in section.blocks %}
-                {% render 'JSON-image-with-media', block:block %}
-                {%- unless forloop.last %}, {% endunless %}
-            {% endfor%}
+            {% for block in section.blocks %}                
+                {% render 'JSON-image-with-media', block: block %}                
+                {%- unless forloop.last %}, {% endunless %}                
+            {% endfor %}
         ],
         "products": [
             {% assign count = 0 %}
-            {% for block in section.blocks %}
+            {% for block in section.blocks %}                
                 {% for product in block.settings.products %}
                     {% unless count == 0 %},{% endunless %}
                     {% assign count = count | plus: 1 %}
                     {% render 'JSON-product-card', product: product %} 
-                {% endfor %}
+                {% endfor %}            
             {% endfor %}
         ]
     }
+
 </script>   
 
 

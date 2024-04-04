@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module2"],{
+(self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module10"],{
 
 /***/ "./js/components/sections/FeaturedProductsWithMedia.js":
 /*!*************************************************************!*\

@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageCard from './ImageCards';;
+import ImageCard from '../ImageCards';;
 
 export default ({data}) => {
   const{blocks,heading} = data;
