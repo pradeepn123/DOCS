@@ -16,6 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _image_with_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./image-with-text */ "./js/components/image-with-text.js");
 /* harmony import */ var _Carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel */ "./js/components/Carousel.js");
 
+<<<<<<< HEAD
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
@@ -37,6 +38,34 @@ __webpack_require__.r(__webpack_exports__);
     slides: slides,
     settings: settings
   }))));
+=======
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (data => {
+  // console.log(data);
+  var dataValues = data.data;
+  var imageCards = dataValues.blocks;
+  // console.log(imageCards);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, dataValues.heading), imageCards.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: index
+  }, console.log("item...", item), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.collection), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.collection_filter), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.collection_filter_type), item.collection_title && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.collection_title), item.image_source && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.image_source), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "collection-item animation--item",
+    "data-image-crop": "false"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: item.collection,
+    className: "collection-item__link"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "collection-item__image__wrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "image collection-item__image aspect-ratio--square animation--lazy-load loaded"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    alt: "",
+    className: "image__img",
+    loading: "lazy",
+    src: item.image_source
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "collection-item__meta collection-item__title ff-heading fs-body-100",
+    "data-text-alignment": "center"
+  }, " ", item.collection_title, " "))))));
+>>>>>>> 77b45e8 (image block section html updated)
 });
 
 /***/ })
