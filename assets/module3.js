@@ -25,7 +25,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     aspectratio
   } = _ref;
   var {
-    image_source: image
+    image_source: image,
+    collection_title
   } = block;
   var imageObj = _objectSpread({
     id: Date.now()
@@ -45,9 +46,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     image_aspect_ratio: 1,
     settings: "cover"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "collection-item__meta collection-item__title ff-body fs-body-100",
+    className: "collection-item__meta collection-item__title ff-heading fs-body-100",
     "data-text-alignment": "center"
-  })));
+  }, block.collection_title)));
 });
 
 /***/ }),

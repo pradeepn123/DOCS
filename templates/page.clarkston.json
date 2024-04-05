@@ -247,12 +247,74 @@
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
       }
+    },
+    "json_image_card_F7tzra": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_nCVVT9": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_28.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_JnKDg3": {
+          "type": "select",
+          "settings": {
+            "collection": "dermatologists-of-southwest-ohio",
+            "image_source": "shopify:\/\/shop_images\/Group_27.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_iPxkNq": {
+          "type": "select",
+          "settings": {
+            "collection": "skin-care-center",
+            "image_source": "shopify:\/\/shop_images\/Group_25.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_RHJnMW": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_24.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        }
+      },
+      "block_order": [
+        "select_nCVVT9",
+        "select_JnKDg3",
+        "select_iPxkNq",
+        "select_RHJnMW"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Shop By Brands",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36
+      }
     }
   },
   "order": [
     "banner_JQUbh7",
     "json_featured_products_JMnJHK",
     "json_image_card_AHgpJA",
-    "json_featured_product_with_media_e8VRJ4"
+    "json_featured_product_with_media_e8VRJ4",
+    "json_image_card_F7tzra"
   ]
 }
