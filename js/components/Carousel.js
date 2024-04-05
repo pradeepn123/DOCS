@@ -8,7 +8,6 @@ export default ({ settings, children}) => {
     register();
     useEffect(() => {
         const swiperEl = document.querySelector("swiper-container");
-
         let params = {
             slidesPerView: 1
         };
