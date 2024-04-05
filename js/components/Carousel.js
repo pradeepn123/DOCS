@@ -3,7 +3,8 @@ import React, { useEffect } from 'react';
 import { register } from 'swiper/element/bundle'
 
 
-export default ({ slides , settings}) => {
+
+export default ({ settings, children}) => {
     register();
     useEffect(() => {
         const swiperEl = document.querySelector("swiper-container");
@@ -26,7 +27,7 @@ export default ({ slides , settings}) => {
 
     return (
         <swiper-container init="false">
-            {slides.map((slide, index) => {
+            {children.map((slide, index) => {
                 return <swiper-slide key={index}>
                     {slide}
                 </swiper-slide>
