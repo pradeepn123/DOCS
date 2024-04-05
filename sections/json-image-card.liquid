@@ -2,6 +2,7 @@
   "ImageBlock-section-type__{{ section.id }}" : 
   {
     "heading": "{{section.settings.heading}}",
+    "aspectratio": "{{image_aspect_ratio}}",
     "blocks": [
         {% for imageblock in section.blocks %}
             {% render 'JSON-image-card', imageblock: imageblock %}{% unless forloop.last %},{% endunless %}
@@ -79,6 +80,38 @@
           "label": "t:shared.settings.alignment_horizontal.options.right"
         }
       ]
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "t:shared.settings.aspect_ratio.label",
+      "options": [
+        {
+          "value": "natural",
+          "label": "t:shared.settings.aspect_ratio.option_natural"
+        },
+        {
+          "value": "portrait",
+          "label": "t:shared.settings.aspect_ratio.option_portrait"
+        },
+        {
+          "value": "portrait_alt",
+          "label": "t:shared.settings.aspect_ratio.option_portrait_alt"
+        },
+        {
+          "value": "square",
+          "label": "t:shared.settings.aspect_ratio.option_square"
+        },
+        {
+          "value": "landscape_alt",
+          "label": "t:shared.settings.aspect_ratio.option_landscape_alt"
+        },
+        {
+          "value": "landscape",
+          "label": "t:shared.settings.aspect_ratio.option_landscape"
+        }
+      ],
+      "default": "square"
     },
     {
       "type": "header",

@@ -21,7 +21,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    block
+    block,
+    aspectratio
   } = _ref;
   var {
     image_source: image
@@ -38,7 +39,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "collection-item__image__wrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "image collection-item__image animation--lazy-load loaded"
+    className: "image collection-item__image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObj,
     image_aspect_ratio: 1
