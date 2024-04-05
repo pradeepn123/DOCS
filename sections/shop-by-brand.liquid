@@ -1,0 +1,167 @@
+<script data-json="true" type="application/json">
+    "ShopByBrand-section-type__{{ section.id }}" : 
+    {
+      "heading": "{{section.settings.heading}}",
+      "aspectRatio": "1.75",
+      "imageFit": "contain",
+      "blocks": [
+          {% for imageblock in section.blocks %}
+              {% render 'JSON-image-card', imageblock: imageblock %}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+      ]
+    } 
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Shop By Brand -- JSON",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "center_content",
+        "default": true,
+        "label": "t:shared.settings.section_header.center_content.label"
+      },
+      { 
+        "type": "text",
+        "id": "heading",
+        "label": "t:shared.settings.section_header.heading.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_circle_crop_enable",
+        "label": "t:shared.settings.collection_listing.image_crop.label",
+        "info": "t:shared.settings.collection_listing.image_crop.info",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "image_spacing",
+        "min": 0,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "label": "t:shared.settings.image_spacing.label",
+        "default": 10
+      },
+      {
+        "type": "select",
+        "id": "title_font_type",
+        "label": "t:shared.settings.typography.title_font.label",
+        "options": [
+          {
+            "value": "body",
+            "label": "t:shared.settings.typography.title_font.option_body"
+          },
+          {
+            "value": "heading",
+            "label": "t:shared.settings.typography.title_font.option_heading"
+          }
+        ],
+        "default": "body"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "t:shared.settings.alignment_horizontal.text.label",
+        "default": "center",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:shared.settings.alignment_horizontal.options.left"
+          },
+          {
+            "value": "center",
+            "label": "t:shared.settings.alignment_horizontal.options.center"
+          },
+          {
+            "value": "right",
+            "label": "t:shared.settings.alignment_horizontal.options.right"
+          }
+        ]
+      },    
+      {
+        "type": "header",
+        "content": "t:shared.settings.section_style.header_style.content"
+      },
+      {
+        "id": "section_style_spacing_top",
+        "type": "range",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "label": "t:shared.settings.section_style.spacing_top.label",
+        "default": 36
+      },
+      {
+        "id": "section_style_spacing_bottom",
+        "type": "range",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "unit": "px",
+        "label": "t:shared.settings.section_style.spacing_bottom.label",
+        "default": 36
+      }
+    ],
+    "blocks": [
+        {
+            "type": "select",
+            "name": "collection",
+            "settings": [
+                {
+                    "type": "header",
+                    "content": "t:sections.collection_sections_shared.settings.header__collection_list.content"
+                },
+                {
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "Choose a collection"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_source",
+                    "label": "t:shared.settings.collection_listing.image_source.label"
+                },
+                {
+                  "type": "select",
+                  "id": "collection_filter_type",
+                  "label": "Select Filter Type",
+                  "options": [
+                    {
+                      "value": "brand",
+                      "label": "Brand"
+                    },
+                    {
+                      "value": "skin_type",
+                      "label": "Skin Type"
+                    },
+                    {
+                      "value": "skin_concern",
+                      "label": "Skin Concern"
+                    },
+                    {
+                      "value": "skincare", 
+                      "label": "Skincare"
+                    }
+                  ],
+                  "default": "brand"
+                }, 
+                {
+                  "type": "text",
+                  "id": "collection_filter",
+                  "label": "Filter Value"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Shop By Brand -- JSON"
+      }
+    ]
+  }
+  {% endschema %}
+  

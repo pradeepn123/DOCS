@@ -7,7 +7,7 @@
         "width": "{{image_block.image_source.width}}",
         "height": "{{image_block.image_source.height}}"
     },
-    "collection_title": "{{ imageblock.settings.collection_title }}",
+    "collection_title": "{%if imageblock.settings.collection_title != blank %}{{ imageblock.settings.collection_title }}{% endif %}",
     "collection_filter_type": "{{ imageblock.settings.collection_filter_type }}",
     "collection_filter": "{{ imageblock.settings.collection_filter }}",
     "center_content": "{{ section.settings.center_content }}",

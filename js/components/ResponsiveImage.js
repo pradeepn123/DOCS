@@ -15,6 +15,9 @@ export default ({ image_aspect_ratio, image, settings }) => {
     };
   }
 
+  const {imageFit} = settings || {};
+  
+
   const aspectRatio = image_aspect_ratio;
   let { height: maxHeightImage, id: image_id, src: imageSrc, width: maxWidthImage } = displayImage;
   const IMAGE_WIDTHS = [180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2160, 2376, 2592, 2808, 3024]
@@ -57,7 +60,7 @@ export default ({ image_aspect_ratio, image, settings }) => {
     return {
       maxWidth: `${maxWidthImage}px`,
       maxHeight: `${maxHeightImage}px`,
-      objectFit: `${settings ? settings : 'contain'}`
+      objectFit: `${imageFit ? imageFit : 'contain'}`
     };
   };
 
