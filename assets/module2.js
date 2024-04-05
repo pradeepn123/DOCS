@@ -1,57 +1,12 @@
-"use strict";
 (self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module2"],{
 
 /***/ "./js/components/sections/FeaturedProductsWithMedia.js":
 /*!*************************************************************!*\
   !*** ./js/components/sections/FeaturedProductsWithMedia.js ***!
   \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/image-with-text */ "./js/components/image-with-text.js");
-/* harmony import */ var JsComponents_ProductCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/ProductCard */ "./js/components/ProductCard.js");
-
-
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
-  var {
-    data
-  } = _ref;
-  var blockData = data.blocks;
-  var products = data.products;
-  blockData.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: block,
-    key: index
-  }));
-  var desktopImage = blockData.map((block, index) => {
-    return block.desktopImage;
-  });
-  var mobileImage = blockData.map((block, index) => {
-    return block.mobileImage;
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "banner__container kuchVi"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "banner__header-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, blockData.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: block,
-    key: index
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featured-collection__products featured-collection-slider-grid standard-grid-spacing product-item-holder"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "scroll-slider__slider"
-  }, products.map((product, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    product: product,
-    key: index
-  })))));
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/shoptradepradeep/shoptrade/DOCS/js/components/sections/FeaturedProductsWithMedia.js: Unexpected token (9:1)\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m ({ data }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m \u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\n \u001b[90m    |\u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mconst\u001b[39m blockData \u001b[33m=\u001b[39m data\u001b[33m.\u001b[39mblocks\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mconst\u001b[39m products \u001b[33m=\u001b[39m data\u001b[33m.\u001b[39mproducts\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     blockData\u001b[33m.\u001b[39mmap((block\u001b[33m,\u001b[39m index) \u001b[33m=>\u001b[39m \u001b[0m\n    at constructor (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:353:19)\n    at JSXParserMixin.raise (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:3277:19)\n    at JSXParserMixin.unexpected (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:3297:16)\n    at JSXParserMixin.jsxParseIdentifier (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6624:12)\n    at JSXParserMixin.jsxParseNamespacedName (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6631:23)\n    at JSXParserMixin.jsxParseElementName (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6640:21)\n    at JSXParserMixin.jsxParseOpeningElementAt (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6716:22)\n    at JSXParserMixin.jsxParseElementAt (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6741:33)\n    at JSXParserMixin.jsxParseElement (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6804:17)\n    at JSXParserMixin.parseExprAtom (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6816:19)\n    at JSXParserMixin.parseExprSubscripts (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10590:23)\n    at JSXParserMixin.parseUpdate (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10573:21)\n    at JSXParserMixin.parseMaybeUnary (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10551:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10405:61)\n    at JSXParserMixin.parseExprOps (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10410:23)\n    at JSXParserMixin.parseMaybeConditional (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10387:23)\n    at JSXParserMixin.parseMaybeAssign (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10348:21)\n    at JSXParserMixin.parseExpressionBase (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10302:23)\n    at /Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10298:39\n    at JSXParserMixin.allowInAnd (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:11931:16)\n    at JSXParserMixin.parseExpression (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10298:17)\n    at JSXParserMixin.parseStatementContent (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12372:23)\n    at JSXParserMixin.parseStatementLike (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12239:17)\n    at JSXParserMixin.parseStatementListItem (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12219:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12796:61)\n    at JSXParserMixin.parseBlockBody (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12789:10)\n    at JSXParserMixin.parseBlock (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12777:10)\n    at JSXParserMixin.parseFunctionBody (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:11616:24)\n    at JSXParserMixin.parseArrowExpression (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:11591:10)\n    at JSXParserMixin.parseParenAndDistinguishExpression (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:11211:12)\n    at JSXParserMixin.parseExprAtom (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10857:23)\n    at JSXParserMixin.parseExprAtom (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:6821:20)\n    at JSXParserMixin.parseExprSubscripts (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10590:23)\n    at JSXParserMixin.parseUpdate (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10573:21)\n    at JSXParserMixin.parseMaybeUnary (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10551:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10405:61)\n    at JSXParserMixin.parseExprOps (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10410:23)\n    at JSXParserMixin.parseMaybeConditional (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10387:23)\n    at JSXParserMixin.parseMaybeAssign (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10348:21)\n    at /Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10318:39\n    at JSXParserMixin.allowInAnd (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:11931:16)\n    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:10318:17)\n    at JSXParserMixin.parseExportDefaultExpression (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:13387:22)\n    at JSXParserMixin.parseExport (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:13297:25)\n    at JSXParserMixin.parseStatementContent (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12352:27)\n    at JSXParserMixin.parseStatementLike (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12239:17)\n    at JSXParserMixin.parseModuleItem (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12216:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12796:36)\n    at JSXParserMixin.parseBlockBody (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12789:10)\n    at JSXParserMixin.parseProgram (/Users/shoptradepradeep/shoptrade/DOCS/node_modules/@babel/parser/lib/index.js:12116:10)");
 
 /***/ })
 

@@ -5,7 +5,6 @@ import ProductCard from "JsComponents/ProductCard";
 import Carousel from "../Carousel";
 
 
-
 export default ({ data }) => {
     const blockData = data.blocks;
     const products = data.products;
