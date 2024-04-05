@@ -30,9 +30,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     id: Date.now()
   }, image);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "scroll-slider__slider",
-    "data-slide-count": "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "collection-item animation--item",
     "data-image-crop": "false"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
@@ -48,7 +45,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "collection-item__meta collection-item__title ff-body fs-body-100",
     "data-text-alignment": "center"
-  }))));
+  })));
 });
 
 /***/ }),

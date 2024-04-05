@@ -9,7 +9,7 @@ export default ({block}) => {
   }
 
   return(
-    <div className="scroll-slider__slider" data-slide-count="4">
+   
       <div className="collection-item animation--item" data-image-crop="false">
       <a href={block.collection} className="collection-item__link">
         <div className="collection-item__image__wrap">
@@ -21,6 +21,6 @@ export default ({block}) => {
         </div>
       </a>
     </div>
-  </div>
+  
   )
 }
