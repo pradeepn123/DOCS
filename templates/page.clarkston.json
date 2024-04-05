@@ -6,29 +6,77 @@
         "image_with_text_overlay_UxarHd": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Cla.png",
-            "image_mobile": "shopify:\/\/shop_images\/small_smile.png",
-            "heading": "Main Banner",
-            "subheading": "Subtext",
-            "cta_text": "Button",
+            "image_desktop": "shopify:\/\/shop_images\/AVENE_PROMO.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_20.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 1,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "heading": "<p>Soothes, Strengthens & Rebalances the Skin<\/p>",
+            "heading-font": 48,
+            "subheading": "Eau Thermale Avène",
+            "description": "",
+            "cta_text": "SHOP NOW",
             "cta_url": "shopify:\/\/pages\/about-us"
           }
         },
         "image_with_text_overlay_kxGbgm": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/CLARKSTON_BANNER.png",
-            "image_mobile": "shopify:\/\/shop_images\/BESTSELLING_BANNER.png",
-            "heading": "Heading 2",
-            "subheading": "lala",
-            "cta_text": "kuch bhi",
-            "cta_url": "https:\/\/google.com"
+            "image_desktop": "shopify:\/\/shop_images\/SKIN_MEDICA_WEB_BANNER.png",
+            "image_mobile": "shopify:\/\/shop_images\/SKIN_MEDICA_WEBSITE_BANNER.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 1,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "heading": "<p>Experience The Luxury Of Scientific Skin Care.<\/p>",
+            "heading-font": 48,
+            "subheading": "SKINMEDICA",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify:\/\/pages\/clarkston"
+          }
+        },
+        "image_with_text_overlay_QPqerD": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/ALASTIN_PROMO.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_21.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 1,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "heading": "<p>Say Goodbye&lt;\/br&gt;to Crepey Skin<\/p>",
+            "heading-font": 48,
+            "subheading": "ALASTIN Skincare",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify:\/\/pages\/clarkston"
+          }
+        },
+        "image_with_text_overlay_4t7Q9M": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/GLYTONE_PROMO.png",
+            "image_mobile": "shopify:\/\/shop_images\/Group_23.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 1,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "heading": "<p>Target Your <\/p><p>Treatment Plan<\/p>",
+            "heading-font": 48,
+            "subheading": "GLYTONE",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify:\/\/collections"
           }
         }
       },
       "block_order": [
         "image_with_text_overlay_UxarHd",
-        "image_with_text_overlay_kxGbgm"
+        "image_with_text_overlay_kxGbgm",
+        "image_with_text_overlay_QPqerD",
+        "image_with_text_overlay_4t7Q9M"
       ],
       "settings": {
       }

@@ -275,6 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
 <<<<<<< HEAD
+<<<<<<< HEAD
 /******/ 			return "./" + chunkId + ".js?" + {"module0":"505fe5668f29d7da831c","module1":"a8565ee9d37417b17d5c","module2":"32207adb432443814208","module3":"e264c3a9e18c3da1d55d"}[chunkId] + "";
 =======
 <<<<<<< HEAD
@@ -287,6 +288,9 @@ document.addEventListener('DOMContentLoaded', () => {
 >>>>>>> 74a0088 (image rendering through component)
 >>>>>>> 8b75d40 (image rendering through component)
 >>>>>>> fd7925b (image rendering through component)
+=======
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"db6d63b1a047c6585e17","module1":"a8565ee9d37417b17d5c","module2":"d61d7884ee7ae19e53f6","module3":"e264c3a9e18c3da1d55d"}[chunkId] + "";
+>>>>>>> 62ae5b7 (custom option added and smal change in component)
 /******/ 		};
 /******/ 	})();
 /******/ 	
