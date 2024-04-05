@@ -9,18 +9,15 @@ export default ({block, aspectratio}) => {
   }
 
   return(
-   
-      <div className="collection-item animation--item" data-image-crop="false">
+    <div className="collection-item animation--item" data-image-crop="false">
       <a href={block.collection} className="collection-item__link">
         <div className="collection-item__image__wrap">
           <div className="image collection-item__image">
-            <ResponsiveImage image={imageObj} image_aspect_ratio={1} />
+            <ResponsiveImage image={imageObj} image_aspect_ratio={1} settings="cover" />
           </div>
         </div>
-        <div className="collection-item__meta collection-item__title ff-body fs-body-100" data-text-alignment="center">
-        </div>
+        <div className="collection-item__meta collection-item__title ff-body fs-body-100" data-text-alignment="center"></div>
       </a>
     </div>
-  
   )
 }

@@ -250,7 +250,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
     image_aspect_ratio,
-    image
+    image,
+    settings
   } = _ref;
   var min = 100;
   var max = 10000;
@@ -307,7 +308,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     return {
       maxWidth: "".concat(maxWidthImage, "px"),
       maxHeight: "".concat(maxHeightImage, "px"),
-      objectFit: 'contain'
+      objectFit: "".concat(settings ? settings : 'contain')
     };
   };
   var css = "\n  .responsive-image__wrapper:before {\n    content: '';\n    width: 100%;\n    display: block;\n    padding-top: var(--padding-top);\n  }\n\n  .responsive-image__wrapper {\n      height: 100%;\n      position: relative;\n      max-width: var(--max-width);\n      max-height: var(--max-height);\n  }\n\n  .responsive-image__image {\n      position: absolute;\n      top: 0;\n      height: 100%;\n      left: 0;\n      width: 100%;\n      \n  }";

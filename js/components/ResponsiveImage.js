@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ image_aspect_ratio, image }) => {
+export default ({ image_aspect_ratio, image, settings }) => {
   const min = 100;
   const max = 10000;
   const diff = max - min;
@@ -57,7 +57,7 @@ export default ({ image_aspect_ratio, image }) => {
     return {
       maxWidth: `${maxWidthImage}px`,
       maxHeight: `${maxHeightImage}px`,
-      objectFit: 'contain'
+      objectFit: `${settings ? settings : 'contain'}`
     };
   };
 

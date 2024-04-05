@@ -133,6 +133,67 @@
         "section_style_enable_animation": true
       }
     },
+    "json_image_card_AHgpJA": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_Vcdd3x": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
+            "collection_title": "SUN PROTECTION",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Sun Protection"
+          }
+        },
+        "select_JzVEcm": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/image_18.png",
+            "collection_title": "MOISTURIZING",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Moisturizing"
+          }
+        },
+        "select_gHHFAA": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/image_24.png",
+            "collection_title": "BRIGHTENING",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Brightening"
+          }
+        },
+        "select_JGQ3jb": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/pexels-photo-7143195.webp",
+            "collection_title": "SKIN DEFENCE",
+            "collection_filter_type": "skin_type",
+            "collection_filter": "Age Defense\/Rejuvenation"
+          }
+        }
+      },
+      "block_order": [
+        "select_Vcdd3x",
+        "select_JzVEcm",
+        "select_gHHFAA",
+        "select_JGQ3jb"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Featured Categories",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36
+      }
+    },
     "json_featured_product_with_media_e8VRJ4": {
       "type": "JSON-featured-product-with-media",
       "blocks": {
@@ -191,6 +252,7 @@
   "order": [
     "banner_JQUbh7",
     "json_featured_products_JMnJHK",
+    "json_image_card_AHgpJA",
     "json_featured_product_with_media_e8VRJ4"
   ]
 }

@@ -42,7 +42,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     className: "image collection-item__image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObj,
-    image_aspect_ratio: 1
+    image_aspect_ratio: 1,
+    settings: "cover"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "collection-item__meta collection-item__title ff-body fs-body-100",
     "data-text-alignment": "center"
@@ -75,15 +76,36 @@ __webpack_require__.r(__webpack_exports__);
     blocks,
     heading
   } = data;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "collection-list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "section-inner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "collection-list__inner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "section-header section-blocks animation--container-header",
     "data-alignment": "center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "ff-heading section-header__heading fs-heading-3-base"
-  }, heading)), blocks.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ImageCards__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, heading)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "collection-list__collections"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "scroll-slider scroll-slider--full-width-below-1024 scroll-slider--peek-and-full-width-below-1024 scroll-all-sizes",
+    style: {
+      "--columns": "2",
+      "--columns-above-720": "4",
+      "--peek": "24px",
+      "--peek-above-720": "0px",
+      "--gap": "12px",
+      "--gap-above-1024": "16px",
+      "--gap-above-1200": "24px"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "scroll-slider__slider"
+  }, blocks.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ImageCards__WEBPACK_IMPORTED_MODULE_1__["default"], {
     block: block,
     key: index
-  })));
+  }))))))));
 });
 
 /***/ })
