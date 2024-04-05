@@ -8,16 +8,6 @@ import Carousel from "../Carousel";
 export default ({ data }) => {
     const blockData = data.blocks;
     const products = data.products;
-    blockData.map((block, index) => 
-    <ImageWithText data={block} key={index} />
-    )
-
-  const desktopImage =  blockData.map((block, index) => {
-        return  block.desktopImage;
-    })
-  const mobileImage =  blockData.map((block, index) => {
-        return  block.mobileImage;
-    })
     return(
         <> 
             <div className="banner__container kuchVi">
