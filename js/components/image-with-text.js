@@ -1,4 +1,5 @@
 import React from "react";
+import ResponsiveImage from './ResponsiveImage';
 
 export default ({ data, wrapperclass }) => {    
     let {heading, desktopImage, mobileImage, subheading, url, button} = data || {}; 
@@ -12,13 +13,13 @@ export default ({ data, wrapperclass }) => {
                 <div className="slideshow-slide__inner">
                     <div className="background-image-container image-hero__image-container" data-has-mobile-image="true" data-absolutely-position-image="false">
                         { srcMobile &&
-                            <div className="image background-image background-image--mobile" style={{"--focal-alignment": "center"}}>
-                                <img alt="" className="image__img" fetchpriority="high" width="1440" height="550" src={srcMobile}  style={{"height": "550px", "objectFit": "cover"}}/>
+                            <div class="image background-image background-image--mobile" style={{"--focal-alignment": "center"}}>
+                                <ResponsiveImage image={srcMobile} image_aspect_ratio={0.7} />
                             </div> 
                         }
                         { srcDesktop &&
-                            <div className="image background-image " style={{"--focal-alignment": "center"}}>
-                                <img alt="" className="image__img" fetchpriority="high" width="1440" height="550" src={srcDesktop}  style={{"height": "550px", "objectFit": "cover"}}/>
+                            <div class="image background-image " style={{"--focal-alignment": "center"}}>
+                                <ResponsiveImage image={srcDesktop} image_aspect_ratio={2.6} />
                             </div>
                         }
                     </div>

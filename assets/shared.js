@@ -10,6 +10,7 @@ var map = {
 	"./Banner.js": [
 		"./js/components/sections/Banner.js",
 		"vendors",
+		"shared",
 		"module0"
 	],
 	"./FeaturedProducts.js": [
@@ -67,6 +68,7 @@ module.exports = webpackAsyncContext;
     image_aspect_ratio,
     image
   } = _ref;
+  debugger;
   var min = 100;
   var max = 10000;
   var diff = max - min;

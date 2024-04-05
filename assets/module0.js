@@ -61,6 +61,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ResponsiveImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ResponsiveImage */ "./js/components/ResponsiveImage.js");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
@@ -98,33 +100,17 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     style: {
       "--focal-alignment": "center"
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    alt: "",
-    className: "image__img",
-    fetchpriority: "high",
-    width: "1440",
-    height: "550",
-    src: srcMobile,
-    style: {
-      "height": "550px",
-      "objectFit": "cover"
-    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: srcMobile,
+    image_aspect_ratio: 0.7
   })), srcDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "image background-image ",
     style: {
       "--focal-alignment": "center"
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    alt: "",
-    className: "image__img",
-    fetchpriority: "high",
-    width: "1440",
-    height: "550",
-    src: srcDesktop,
-    style: {
-      "height": "550px",
-      "objectFit": "cover"
-    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: srcDesktop,
+    image_aspect_ratio: 2.6
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "slideshow-slide__overlay image-overlay animation--image-overlay",
     "data-image-overlay-tint-style": "solid",
