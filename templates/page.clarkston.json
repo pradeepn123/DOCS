@@ -206,12 +206,67 @@
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36
       }
+    },
+    "json_featured_product_with_media_e8VRJ4": {
+      "type": "JSON-featured-product-with-media",
+      "blocks": {
+        "image_with_text_overlay_eRpTt3": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/CLARKSTON_HOMEPAGE.png",
+            "image_mobile": "shopify:\/\/shop_images\/small_smile.png",
+            "heading": "",
+            "subheading": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "featured_products_Pwrwi3": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "alastin-hydratint-spf",
+              "alastin-renewal-retinol-25",
+              "alastin-renewal-retinol-5",
+              "alastin-restorative",
+              "alastin-restorative-eye"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_eRpTt3",
+        "featured_products_Pwrwi3"
+      ],
+      "settings": {
+        "center_content": false,
+        "preheading": "",
+        "heading": "Featured collection with media",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_link": "shopify:\/\/collections\/all",
+        "button_label": "View all products",
+        "button_style": "primary",
+        "maximum_products": 3,
+        "num_columns": "3",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "media_position": "left",
+        "media_width": 40,
+        "media_height": 350,
+        "media_position_mobile": "above",
+        "media_height_mobile": 360,
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
     }
   },
   "order": [
     "banner_JQUbh7",
     "json_featured_products_JMnJHK",
     "json_image_card_AHgpJA",
-    "json_image_card_g4dbzm"
+    "json_image_card_g4dbzm",
+    "json_featured_product_with_media_e8VRJ4"
   ]
 }
