@@ -2,16 +2,22 @@
     "desktopImage" : {
             "srcDesktop": "{% if block.settings.image_desktop != blank %}{{ block.settings.image_desktop | image_url }} {% endif %}",
             "width": "{{block.settings.image_desktop.width}}",
-            "height": "{{block.settings.image_desktop.height}}"
+            "height": "{{block.settings.image_desktop.height}}",
+            "textFont": "{{ block.settings.desktop-ratio }}"
         },
    "mobileImage" :
         {
             "srcMobile": "{% if block.settings.image_mobile != blank  %}{{ block.settings.image_mobile | image_url }}{% endif %}",
             "width": "{{block.settings.image_mobile.width}}",
-            "height": "{{block.settings.image_mobile.height}}"
+            "height": "{{block.settings.image_mobile.height}}",
+            "textFont": "{{ block.settings.mobile-ratio }}"
         },
+   "positionVertical": "{{ block.settings.text_position }}",
+   "positionHorizontal": "{{ block.settings.text_position_horizontal }}",
+   "textFont": "{{ block.settings.heading-font }}",
    "heading": "{% if block.settings.heading != blank %}{{ block.settings.heading }}{% endif %}", 
-   "subheading": "{% if block.settings.subheading != blank %} {{ block.settings.subheading }}{% endif %}", 
+   "subheading": "{% if block.settings.subheading != blank %} {{ block.settings.subheading }}{% endif %}",
+   "description": "{% if block.settings.description != blank %}{{ block.settings.description }}{% endif %}",
    "button": "{% if block.settings.cta_url != blank %}{{ block.settings.cta_text }}{% endif %}",
    "url": "{% if block.settings.cta_url != blank %}{{ block.settings.cta_url }}{% endif %}" 
 }

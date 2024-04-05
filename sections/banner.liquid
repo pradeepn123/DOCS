@@ -28,14 +28,79 @@
           "label": "Image Mobile"
         },
         {
+          "type": "number",
+          "id": "desktop-ratio",
+          "label": "Desktop Image Ratio"
+        },
+        {
+          "type": "number",
+          "id": "mobile-ratio",
+          "label": "Mobile Image Ratio"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Vertical Text position",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "top",
+              "label": "top"
+            },
+            {
+              "value": "end",
+              "label": "end"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "text_position_horizontal",
+          "label": "Horizontal Text position",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ],
+          "default": "center"
+        },
+        {
           "type": "text",
           "id": "heading",
           "label": "Heading"
         },
         {
+          "type": "range",
+          "id": "heading-font",
+          "min": 16,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "heading Font Size",
+          "default": 48
+        },
+        {
           "type": "text",
           "id": "subheading",
           "label": "Subheading"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
         },
         {
           "type": "text",
