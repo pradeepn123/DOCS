@@ -81,7 +81,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var {
     srcMobile
   } = mobileImage || {};
-  console.log("222", srcDesktop);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "scroll-slider__slider",
     "data-slide-count": "1"
@@ -94,13 +93,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     className: "background-image-container image-hero__image-container",
     "data-has-mobile-image": "true",
     "data-absolutely-position-image": "false"
-<<<<<<< HEAD
   }, srcMobile && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "image background-image background-image--mobile",
-=======
-  }, imageMobile && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "image background-image background-image--mobile",
->>>>>>> 1a547ee (Image with text added two different classes)
     style: {
       "--focal-alignment": "center"
     }
@@ -115,19 +109,14 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       "height": "550px",
       "objectFit": "cover"
     }
-<<<<<<< HEAD
   })), srcDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "image background-image ",
-=======
-  })), imageDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "image background-image ",
->>>>>>> 1a547ee (Image with text added two different classes)
     style: {
       "--focal-alignment": "center"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     alt: "",
-    class: "image__img",
+    className: "image__img",
     fetchpriority: "high",
     width: "1440",
     height: "550",

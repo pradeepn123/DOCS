@@ -112,15 +112,15 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("path", {
     d: "M12.0875 15.6805C13.9032 15.6805 15.375 14.2086 15.375 12.393C15.375 10.5773 13.9032 9.10547 12.0875 9.10547C10.2719 9.10547 8.80005 10.5773 8.80005 12.393C8.80005 14.2086 10.2719 15.6805 12.0875 15.6805Z",
     stroke: "currentColor",
-    "stroke-width": "1.2",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
+    strokeWidth: "1.2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("path", {
     d: "M22.489 11.7954C21.3901 10.5555 17.0224 6 11.8 6C6.57759 6 2.20992 10.5555 1.11096 11.7954C1.03921 11.8827 1 11.9923 1 12.1053C1 12.2184 1.03921 12.3279 1.11096 12.4153C2.20992 13.6552 6.57759 18.2107 11.8 18.2107C17.0224 18.2107 21.3901 13.6552 22.489 12.4153C22.5608 12.3279 22.6 12.2184 22.6 12.1053C22.6 11.9923 22.5608 11.8827 22.489 11.7954V11.7954Z",
     stroke: "currentColor",
-    "stroke-width": "1.2",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
+    strokeWidth: "1.2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
   })))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "product-item__meta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
@@ -202,7 +202,7 @@ __webpack_require__.r(__webpack_exports__);
     data
   } = _ref;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "featured-collection section",
+    className: "featured-collection section",
     style: {
       "--section-style-spacing-top": "36px",
       "--section-style-spacing-bottom": "36px"
@@ -212,7 +212,7 @@ __webpack_require__.r(__webpack_exports__);
     "data-products-per-view": "{{ section.settings.num_columns }}",
     "data-mobile-products-per-view": "{{ section.settings.num_columns_mobile }}"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "section-inner"
+    className: "section-inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "section-header section-blocks"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
@@ -228,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
     "data-slider-desktop": "true",
     "data-slider-mobile": "true"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "scroll-slider scroll-slider--full-width-below-1024 scroll-slider--peek-and-full-width-below-1024 scroll-all-sizes",
+    className: "scroll-slider scroll-slider--full-width-below-1024 scroll-slider--peek-and-full-width-below-1024 scroll-all-sizes",
     style: {
       "--columns": "2",
       "--columns-above-720": "4",
