@@ -1,0 +1,105 @@
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/sections/banner.scss ***!
+  \**********************************************************************************************************************************************************************************************************************/
+.banner__desktop-image-wrapp img, .banner__mob-image-wrapp img {
+  max-width: 100% !important;
+}
+
+.banner__mob-image-wrapp {
+  display: block;
+}
+@media (min-width: 768px) {
+  .banner__mob-image-wrapp {
+    display: none;
+  }
+}
+
+.banner__desktop-image-wrapp {
+  display: none;
+}
+@media (min-width: 768px) {
+  .banner__desktop-image-wrapp {
+    display: block;
+  }
+}
+
+.banner__text-wrapp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: var(--vertical-align);
+      -ms-flex-pack: var(--vertical-align);
+          justify-content: var(--vertical-align);
+  -webkit-box-align: var(--horizontal-align);
+      -ms-flex-align: var(--horizontal-align);
+          align-items: var(--horizontal-align);
+  max-width: 1832px;
+  max-width: calc(var(--max-width) + var(--space-outer) * 2);
+  max-width: 1832px;
+  max-width: calc(var(--max-width) + var(--space-outer) * 2);
+  margin: 0 auto;
+  padding: 24px 16px;
+  padding: var(--spacing-6) var(--space-outer);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #FFFFFF;
+  line-height: 1.15;
+}
+
+.banner__subtext {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.banner__heading {
+  font-size: var(--heading-font);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-style: var(--font-heading-style);
+  letter-spacing: 0;
+  letter-spacing: var(--font-heading-base-letter-spacing, 0);
+}
+
+@media (max-width: 720px) {
+  .banner__heading {
+    font-size: var(--heading-font-mob);
+  }
+}
+.banner__description {
+  font-size: 16px;
+}
+
+@media (max-width: 720px) {
+  .banner__text-wrapp {
+    -webkit-box-pack: var(--vertical-align-mob);
+        -ms-flex-pack: var(--vertical-align-mob);
+            justify-content: var(--vertical-align-mob);
+    -webkit-box-align: var(--horizontal-align-mob);
+        -ms-flex-align: var(--horizontal-align-mob);
+            align-items: var(--horizontal-align-mob);
+  }
+}
+.banner_text-container {
+  max-width: 500px;
+}
+
+.button-wrapper {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .button-wrapper {
+    margin-top: 24px;
+  }
+}
+
+.responsive-image__wrapper {
+  max-width: 100% !important;
+}

@@ -568,6 +568,11 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var imageObjMobile = _objectSpread({
     id: Date.now()
   }, mobileImage);
+  function createMarkup() {
+    return {
+      __html: heading
+    };
+  }
   var getWrapperStyles = () => {
     return {
       '--horizontal-align': "".concat(positionHorizontal),
@@ -578,7 +583,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       '--heading-font-mob': "".concat(textFontMob, "px")
     };
   };
-  var css = "\n    .banner__desktop-image-wrapp img, .banner__mob-image-wrapp img{\n        max-width: 100% !important;\n        object-fit: cover !important;\n    }\n    .banner__mob-image-wrapp{\n        display: block;\n        @media (min-width: 768px){\n            display: none;\n        }\n    }\n    .banner__desktop-image-wrapp{\n        display: none;\n        @media (min-width: 768px){\n            display: block;\n        }\n    }\n    .banner__text-wrapp{\n        position:absolute;\n        top:0;\n        right:0;\n        bottom:0;\n        left:0;\n        display:flex;\n        justify-content: var(--vertical-align);\n        align-items: var(--horizontal-align);\n        max-width:calc(1800px + (calc(4px * 4) * 2));\n        max-width:calc(var(--max-width) + (var(--space-outer) * 2));\n        max-width:calc(1800px + calc(calc(4px * 4) * 2));\n        max-width:calc(var(--max-width) + calc(var(--space-outer) * 2));\n        margin:0 auto;\n        padding:calc(4px * 6) calc(4px * 4);\n        padding:var(--spacing-6) var(--space-outer);\n        flex-direction: column;\n        color: #FFFFFF;\n        line-height: 1.15;\n    }\n    .banner__subtext{\n        font-size:12px;\n        text-transform: uppercase;\n        letter-spacing: .05em;\n    }\n    .banner__heading{\n        font-size: var(--heading-font);\n        font-family: var(--font-heading);\n        font-weight: var(--font-heading-weight);\n        font-style: var(--font-heading-style);\n        letter-spacing: 0;\n        letter-spacing: var(--font-heading-base-letter-spacing, 0);\n    }\n    @media (max-width: 720px){\n        .banner__heading{\n            font-size: var(--heading-font-mob);\n        }\n    }\n    .banner__description{\n        font-size:16px;\n    }\n    @media (max-width: 720px){\n        .banner__text-wrapp{\n            justify-content:var(--vertical-align-mob);\n            align-items:var(--horizontal-align-mob);\n        }\n    }\n    .banner_text-container{\n        max-width:500px;\n    }\n    .button-wrapper{\n        margin-top:20px;\n        @media (min-width: 768px){\n            margin-top:24px;\n        }\n    }\n    .responsive-image__wrapper{\n        max-width: 100% !important;\n    }";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "banner__container",
     style: getWrapperStyles()
@@ -592,12 +596,18 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     className: "banner__mob-image-wrapp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObjMobile,
-    image_aspect_ratio: "".concat(mobileratio)
+    image_aspect_ratio: "".concat(mobileratio),
+    settings: {
+      imageFit: "cover"
+    }
   })), imageObjDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "banner__desktop-image-wrapp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObjDesktop,
-    image_aspect_ratio: "".concat(desktopratio)
+    image_aspect_ratio: "".concat(desktopratio),
+    settings: {
+      imageFit: "cover"
+    }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "banner__text-wrapp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
@@ -608,8 +618,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
     className: "banner__subtext"
   }, subheading)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", {
-    className: "banner__heading"
-  }, heading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
+    className: "banner__heading",
+    dangerouslySetInnerHTML: createMarkup()
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
     className: "banner__description",
     "data-divider-enabled": "false"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
@@ -620,7 +631,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
     className: "btn btn--primary",
     href: url
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", null, button)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("style", null, css)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", null, button))))))));
 });
 
 /***/ }),
