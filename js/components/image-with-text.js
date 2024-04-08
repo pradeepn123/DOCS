@@ -1,7 +1,7 @@
 import React from "react";
 import ResponsiveImage from './ResponsiveImage';
 
-export default ({ data, wrapperclass }) => {    
+export default ({ data }) => {    
     let {heading = '', description, desktopImage, mobileImage, desktopratio,mobileratio , positionVertical, positionHorizontal, subheading,textFont, url, button} = data || {}; 
    
     const imageObjDesktop= {
@@ -12,7 +12,6 @@ export default ({ data, wrapperclass }) => {
         id: Date.now(),
         ...mobileImage
     }  
-    console.log("jjj",imageObjDesktop.id)
 
     const getWrapperStyles = () => {
         return {
@@ -48,6 +47,10 @@ export default ({ data, wrapperclass }) => {
         display:flex;
         justify-content: var(--vertical-align);
         align-items: var(--horizontal-align);
+        max-width:calc(1800px + (calc(4px * 4) * 2));
+        max-width:calc(var(--max-width) + (var(--space-outer) * 2));
+        max-width:calc(1800px + calc(calc(4px * 4) * 2));
+        max-width:calc(var(--max-width) + calc(var(--space-outer) * 2));
         margin:0 auto;
         padding:calc(4px * 6) calc(4px * 4);
         padding:var(--spacing-6) var(--space-outer);
@@ -108,12 +111,12 @@ export default ({ data, wrapperclass }) => {
            <div className="banner__images" id={`banner-image-${imageObjDesktop.id}`} style={{"poisition": "relative !important"}}>
             { imageObjMobile &&
                 <div className="banner__mob-image-wrapp">
-                    <ResponsiveImage image={imageObjMobile} image_aspect_ratio= {0.7} />
+                    <ResponsiveImage image={imageObjMobile} image_aspect_ratio= {`${mobileratio}`} />
                 </div>
                 }
                 { imageObjDesktop && 
                     <div className="banner__desktop-image-wrapp">
-                        <ResponsiveImage image={imageObjDesktop} image_aspect_ratio={2.6}/>
+                        <ResponsiveImage image={imageObjDesktop} image_aspect_ratio={`${desktopratio}`} />
                     </div>
                 }
         
@@ -142,7 +145,6 @@ export default ({ data, wrapperclass }) => {
                 {css}
             </style>
         </div>
-        
         </>
     )
 }

@@ -25,8 +25,6 @@ __webpack_require__.r(__webpack_exports__);
   var settings = {
     "slidesPerView": 1
   };
-
-  // console.log("slides banner.js",slides) 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

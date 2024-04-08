@@ -533,8 +533,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    data,
-    wrapperclass
+    data
   } = _ref;
   var {
     heading = '',
@@ -556,7 +555,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var imageObjMobile = _objectSpread({
     id: Date.now()
   }, mobileImage);
-  console.log("jjj", imageObjDesktop.id);
   var getWrapperStyles = () => {
     return {
       '--horizontal-align': "".concat(positionHorizontal),
@@ -564,7 +562,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       '--heading-font': "".concat(textFont, "px")
     };
   };
-  var css = "\n    .banner__desktop-image-wrapp img, .banner__mob-image-wrapp img{\n        max-width: 100% !important;\n        object-fit: cover !important;\n    }\n    .banner__mob-image-wrapp{\n        display: block;\n        @media (min-width: 768px){\n            display: none;\n        }\n    }\n    .banner__desktop-image-wrapp{\n        display: none;\n        @media (min-width: 768px){\n            display: block;\n        }\n    }\n    .banner__text-wrapp{\n        position:absolute;\n        top:0;\n        right:0;\n        bottom:0;\n        left:0;\n        display:flex;\n        justify-content: var(--vertical-align);\n        align-items: var(--horizontal-align);\n        margin:0 auto;\n        padding:calc(4px * 6) calc(4px * 4);\n        padding:var(--spacing-6) var(--space-outer);\n        flex-direction: column;\n        color: #FFFFFF;\n        line-height: 1.15;\n        text-align:left;\n    }\n    .banner__subtext{\n        font-size:12px;\n        text-transform: uppercase;\n        letter-spacing: .05em;\n    }\n    .banner__heading{\n        font-size: var(--heading-font);\n        font-family: var(--font-heading);\n        font-weight: var(--font-heading-weight);\n        font-style: var(--font-heading-style);\n        letter-spacing: 0;\n        letter-spacing: var(--font-heading-base-letter-spacing, 0);\n    }\n    @media (max-width: 720px){\n        .banner__heading{\n            font-size: 43px;\n        }\n    }\n    .banner__description{\n        font-size:16px;\n    }\n    @media (min-width: 720px){\n        .slideshow-slide__text-container-wrapper{\n            justify-content:var(--text-horizontal-position);\n            align-items:var(--text-vertical-position)\n        }\n    }\n    @media (min-width: 1024px){\n        .slideshow-slide__text-container-wrapper{\n            padding:calc(4px * 8) calc(4px * 4);\n            padding:var(--spacing-8) var(--space-outer)\n        }\n    }\n    .banner_text-container{\n        max-width:500px;\n    }\n    .button-wrapper{\n        margin-top:20px;\n        @media (min-width: 768px){\n            margin-top:24px;\n        }\n    }\n    .responsive-image__wrapper{\n        max-width: 100% !important;\n    }";
+  var css = "\n    .banner__desktop-image-wrapp img, .banner__mob-image-wrapp img{\n        max-width: 100% !important;\n        object-fit: cover !important;\n    }\n    .banner__mob-image-wrapp{\n        display: block;\n        @media (min-width: 768px){\n            display: none;\n        }\n    }\n    .banner__desktop-image-wrapp{\n        display: none;\n        @media (min-width: 768px){\n            display: block;\n        }\n    }\n    .banner__text-wrapp{\n        position:absolute;\n        top:0;\n        right:0;\n        bottom:0;\n        left:0;\n        display:flex;\n        justify-content: var(--vertical-align);\n        align-items: var(--horizontal-align);\n        max-width:calc(1800px + (calc(4px * 4) * 2));\n        max-width:calc(var(--max-width) + (var(--space-outer) * 2));\n        max-width:calc(1800px + calc(calc(4px * 4) * 2));\n        max-width:calc(var(--max-width) + calc(var(--space-outer) * 2));\n        margin:0 auto;\n        padding:calc(4px * 6) calc(4px * 4);\n        padding:var(--spacing-6) var(--space-outer);\n        flex-direction: column;\n        color: #FFFFFF;\n        line-height: 1.15;\n        text-align:left;\n    }\n    .banner__subtext{\n        font-size:12px;\n        text-transform: uppercase;\n        letter-spacing: .05em;\n    }\n    .banner__heading{\n        font-size: var(--heading-font);\n        font-family: var(--font-heading);\n        font-weight: var(--font-heading-weight);\n        font-style: var(--font-heading-style);\n        letter-spacing: 0;\n        letter-spacing: var(--font-heading-base-letter-spacing, 0);\n    }\n    @media (max-width: 720px){\n        .banner__heading{\n            font-size: 43px;\n        }\n    }\n    .banner__description{\n        font-size:16px;\n    }\n    @media (min-width: 720px){\n        .slideshow-slide__text-container-wrapper{\n            justify-content:var(--text-horizontal-position);\n            align-items:var(--text-vertical-position)\n        }\n    }\n    @media (min-width: 1024px){\n        .slideshow-slide__text-container-wrapper{\n            padding:calc(4px * 8) calc(4px * 4);\n            padding:var(--spacing-8) var(--space-outer)\n        }\n    }\n    .banner_text-container{\n        max-width:500px;\n    }\n    .button-wrapper{\n        margin-top:20px;\n        @media (min-width: 768px){\n            margin-top:24px;\n        }\n    }\n    .responsive-image__wrapper{\n        max-width: 100% !important;\n    }";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "banner__container",
     style: getWrapperStyles()
@@ -578,12 +576,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     className: "banner__mob-image-wrapp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObjMobile,
-    image_aspect_ratio: 0.7
+    image_aspect_ratio: "".concat(mobileratio)
   })), imageObjDesktop && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "banner__desktop-image-wrapp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObjDesktop,
-    image_aspect_ratio: 2.6
+    image_aspect_ratio: "".concat(desktopratio)
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "banner__text-wrapp"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
