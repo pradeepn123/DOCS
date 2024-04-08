@@ -30,6 +30,8 @@ __webpack_require__.r(__webpack_exports__);
   var blockData = data.blocks;
   var products = data.products;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "section-inner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featured-collection-with-media__inner featured_products_with_image",
     style: {
       cssMedia
@@ -42,11 +44,11 @@ __webpack_require__.r(__webpack_exports__);
     data: block,
     key: index
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featured-collection__products  product-item-holder"
+    className: "featured-collection__products  product-item-holder featured-products-grid"
   }, products.map((product, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
     product: product,
     key: index
-  })))));
+  }))))));
 });
 
 /***/ })

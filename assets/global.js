@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "./" + chunkId + ".js?" + {"module0":"f1eac6de159483dff98e","module1":"5568cf8215578960ca2c","module2":"767f22a6d1e8b515298e","module3":"978e55fcc7426a0218b6","module4":"6874a5bf0d10470110ac"}[chunkId] + "";
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"f1eac6de159483dff98e","module1":"5568cf8215578960ca2c","module2":"c135cb5e243b7058c1bb","module3":"978e55fcc7426a0218b6","module4":"6874a5bf0d10470110ac"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
