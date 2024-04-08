@@ -20,7 +20,7 @@ export default ({data}) => {
   }
   
   return (
-    <div className='collection-list'>
+    <div className='collection-list' style={{"--section-style-spacing-top": "36px", "--section-style-spacing-bottom": "36px"}}>
       <div className='section-inner'>
         <div className='collection-list__inner'>
           <div className="section-header section-blocks animation--container-header" data-alignment="center">

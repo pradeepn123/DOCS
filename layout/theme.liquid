@@ -143,7 +143,9 @@
                "url": "{{ 'theme.js' | asset_url }}"
               }
           </script>
-          </homepage>          
+          </homepage>
+          {% render 'banner-loader' %}
+          {% render 'placeholder-product-card' %}
         {% else %}
           {{ content_for_layout }}
         {% endif %}

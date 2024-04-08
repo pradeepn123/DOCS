@@ -41,7 +41,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "collection-list"
+    className: "collection-list",
+    style: {
+      "--section-style-spacing-top": "36px",
+      "--section-style-spacing-bottom": "36px"
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "section-inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

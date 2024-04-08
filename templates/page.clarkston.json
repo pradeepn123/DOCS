@@ -81,58 +81,6 @@
       "settings": {
       }
     },
-    "json_featured_products_JMnJHK": {
-      "type": "json-featured-products",
-      "blocks": {
-        "featured_products_e6bWzm": {
-          "type": "featured_products",
-          "settings": {
-            "products": [
-              "cicalfate-restorative-skin-cream",
-              "retrinal-ceramide-lipid-replenishing-balm",
-              "high-protection-tinted-compact-spf-50-beige",
-              "high-protection-tinted-compact-spf-50-honey",
-              "avene-retrinal-0-05-cream",
-              "thermal-spring-water-1-76-oz",
-              "thermal-spring-water-10-14-fl-oz"
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "featured_products_e6bWzm"
-      ],
-      "settings": {
-        "center_content": true,
-        "preheading": "FEATURED PRODUCTS",
-        "heading": "Eau Thermale Avène",
-        "subheading": "",
-        "maximum_content_width": 650,
-        "button_1_button_link": "",
-        "button_1_button_label": "",
-        "button_1_button_style": "primary",
-        "button_2_button_link": "",
-        "button_2_button_label": "",
-        "button_2_button_style": "tertiary",
-        "button_position": "header",
-        "maximum_products": 10,
-        "num_columns": "5",
-        "num_columns_mobile": "2",
-        "enable_slider_desktop": true,
-        "enable_slider_mobile": true,
-        "accent": "",
-        "title": "Featured collection",
-        "text": "Shop all",
-        "text_position": "flex-start_flex-start",
-        "color_scheme": "default",
-        "override_with_custom_colors": false,
-        "override_color_text": "#393939",
-        "override_color_background": "#ffffff",
-        "section_style_spacing_top": 36,
-        "section_style_spacing_bottom": 36,
-        "section_style_enable_animation": true
-      }
-    },
     "json_image_card_AHgpJA": {
       "type": "json-image-card",
       "blocks": {
@@ -194,6 +142,98 @@
         "section_style_spacing_bottom": 36
       }
     },
+    "banner_VCL6Kt": {
+      "type": "banner",
+      "blocks": {
+        "image_with_text_overlay_p7Bcqh": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Frame_6.png",
+            "desktop-ratio": 2,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "heading": "<p>Get The Care You Want,<br\/> Whenever You Want<\/p>",
+            "heading-font": 48,
+            "subheading": "CLARKSTON DERMATOLOGY",
+            "description": "Discover our curated selection of premium brands to provide unparalleled results, giving you the radiant complexion you deserve.",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_p7Bcqh"
+      ],
+      "settings": {
+      }
+    },
+    "shop_by_brand_8HHTPQ": {
+      "type": "shop-by-brand",
+      "blocks": {
+        "select_eBjVbF": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_28.png",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_QUtxCd": {
+          "type": "select",
+          "settings": {
+            "collection": "dermatologists-of-southwest-ohio",
+            "image_source": "shopify:\/\/shop_images\/Group_27.png",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_VzVMat": {
+          "type": "select",
+          "settings": {
+            "collection": "skin-care-center",
+            "image_source": "shopify:\/\/shop_images\/Group_24.png",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_CnUVQh": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify:\/\/shop_images\/Group_26.png",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_UGkL6t": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify:\/\/shop_images\/Group_25.png",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        }
+      },
+      "block_order": [
+        "select_eBjVbF",
+        "select_QUtxCd",
+        "select_VzVMat",
+        "select_CnUVQh",
+        "select_UGkL6t"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Shop By Brand",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 60,
+        "section_style_spacing_bottom": 60
+      }
+    },
     "json_featured_product_with_media_e8VRJ4": {
       "type": "JSON-featured-product-with-media",
       "blocks": {
@@ -247,49 +287,168 @@
         "section_style_enable_animation": true
       }
     },
-    "shop_by_brand_8HHTPQ": {
-      "type": "shop-by-brand",
+    "json_featured_products_JMnJHK": {
+      "type": "json-featured-products",
       "blocks": {
-        "select_eBjVbF": {
-          "type": "select",
+        "featured_products_e6bWzm": {
+          "type": "featured_products",
           "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/Group_28.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
-          }
-        },
-        "select_QUtxCd": {
-          "type": "select",
-          "settings": {
-            "collection": "dermatologists-of-southwest-ohio",
-            "image_source": "shopify:\/\/shop_images\/Group_27.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
+            "products": [
+              "cicalfate-restorative-skin-cream",
+              "retrinal-ceramide-lipid-replenishing-balm",
+              "high-protection-tinted-compact-spf-50-beige",
+              "high-protection-tinted-compact-spf-50-honey",
+              "avene-retrinal-0-05-cream",
+              "thermal-spring-water-1-76-oz",
+              "thermal-spring-water-10-14-fl-oz"
+            ]
           }
         }
       },
       "block_order": [
-        "select_eBjVbF",
-        "select_QUtxCd"
+        "featured_products_e6bWzm"
       ],
       "settings": {
         "center_content": true,
-        "heading": "Shop By Brand",
-        "image_circle_crop_enable": true,
-        "image_spacing": 10,
-        "title_font_type": "body",
-        "text_alignment": "center",
-        "section_style_spacing_top": 60,
-        "section_style_spacing_bottom": 60
+        "preheading": "FEATURED PRODUCTS",
+        "heading": "Eau Thermale Avène",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
+    "json_featured_products_Afm3Yp": {
+      "type": "json-featured-products",
+      "blocks": {
+        "featured_products_aXdTbm": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "glytone-age-defying-c-advanced-antioxidant-serum",
+              "glytone-enhance-brightening-complex",
+              "lactic-superficial-retexturizing-serum",
+              "lipid-recovery-cream",
+              "mandelic-gentle-resurfacing-serum",
+              "night-renewal-cream"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_aXdTbm"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "FEATURED PRODUCTS",
+        "heading": "Glytone",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#FFFFFF",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
+    "json_featured_products_9xMgrw": {
+      "type": "json-featured-products",
+      "blocks": {
+        "featured_products_WFWeaJ": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "alastin-c-radical-defense-antioxidant-serum",
+              "lipid-recovery-cream",
+              "heliocare",
+              "latisse",
+              "glytone-age-defying-c-advanced-antioxidant-serum"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_WFWeaJ"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "TOP PICKS",
+        "heading": "For You",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#FFFFFF",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
       }
     }
   },
   "order": [
     "banner_JQUbh7",
-    "json_featured_products_JMnJHK",
     "json_image_card_AHgpJA",
+    "banner_VCL6Kt",
+    "shop_by_brand_8HHTPQ",
     "json_featured_product_with_media_e8VRJ4",
-    "shop_by_brand_8HHTPQ"
+    "json_featured_products_JMnJHK",
+    "json_featured_products_Afm3Yp",
+    "json_featured_products_9xMgrw"
   ]
 }

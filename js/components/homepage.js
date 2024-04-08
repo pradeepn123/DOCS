@@ -26,7 +26,14 @@ export default ({shopifyData}) => {
                 props: props,
                 Component: Component
             }
-        }))        
+        }))
+        if(sectionData){
+          const loader = document.querySelector('.product-card-item__placeholder')
+          loader.style.display = 'none';
+
+          const bannerLoader = document.querySelector('.banner_loader_section')
+          bannerLoader.style.display = 'none';
+        }
         const script = document.createElement("script");
         script.src = shopifyData.url;
         script.async = false;

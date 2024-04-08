@@ -491,6 +491,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
           return _ref3.apply(this, arguments);
         };
       }()));
+      if (sectionData) {
+        var loader = document.querySelector('.product-card-item__placeholder');
+        loader.style.display = 'none';
+        var bannerLoader = document.querySelector('.banner_loader_section');
+        bannerLoader.style.display = 'none';
+      }
       var script = document.createElement("script");
       script.src = shopifyData.url;
       script.async = false;
