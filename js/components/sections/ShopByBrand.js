@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageCard from 'JsComponents/ImageCards';
+import ImageCard from 'JsComponents/ImageCard';
 import Carousel from '../Carousel';
 
 export default ({data}) => {
