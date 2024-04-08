@@ -28,7 +28,6 @@ export default ({shopifyData}) => {
             }
         }))
         const script = document.createElement("script");
-       
         script.src = shopifyData.url;
         script.async = false;
         document.body.appendChild(script)

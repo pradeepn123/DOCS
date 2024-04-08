@@ -18,6 +18,7 @@ export default ({ product }) => {
     const [{ price, variant_id, compare_at_price }] = variantData || []
     const originalPrice = price;
     const convertedPrice = (originalPrice / 100).toFixed(2);    
+
     return(
         <>
             <div className="product-item animation--item" data-input-item="" data-id="8091513782403" data-title={product.title} data-url={product.link} data-variant-id={variant_id} data-quantity-in-cart="0" data-product-has-single-variant="true" data-quick-add-style="icon" data-product-item-alignment="left" data-price-position="below_title" data-show-inventory="false" data-ratings-visible="false">
@@ -101,4 +102,6 @@ export default ({ product }) => {
             </div>
         </>
     )
+ 
 }
+

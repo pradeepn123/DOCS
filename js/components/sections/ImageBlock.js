@@ -1,8 +1,23 @@
 import React from 'react'
-import ImageCard from 'JsComponents/ImageCards';;
+import ImageCard from 'JsComponents/ImageCards';
+import Carousel from '../Carousel';
 
 export default ({data}) => {
   const{blocks,heading} = data;
+  const settings = {
+    "slidesPerView": 2.1,
+    "spaceBetween": "12px",
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 3.2,
+        "spaceBetween": "16px",
+      },
+      "1024": {
+        "slidesPerView": 4,
+        "spaceBetween": "24px",
+      }
+    }
+  }
   
   return (
     <div className='collection-list'>
@@ -14,14 +29,11 @@ export default ({data}) => {
             </h2>
           </div>
           <div className='collection-list__collections'>
-            <div className="scroll-slider scroll-slider--full-width-below-1024 scroll-slider--peek-and-full-width-below-1024 scroll-all-sizes"
-              style={{"--columns": "2", "--columns-above-720": "4", "--peek": "24px", "--peek-above-720": "0px", "--gap": "12px", "--gap-above-1024": "16px", "--gap-above-1200": "24px"}}>
-              <div className='scroll-slider__slider'>
+             <Carousel settings={settings}>
               {blocks.map((block, index) => (
                 <ImageCard block={block} key={index}/>
               ))}
-              </div>
-            </div>
+              </Carousel>
           </div>
         </div>
       </div>
