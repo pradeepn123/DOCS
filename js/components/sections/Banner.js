@@ -7,7 +7,6 @@ export default ({ data }) => {
         "slidesPerView": 1
     }    
 
-    // console.log("slides banner.js",slides) 
     return (
         <div className="banner__container">
             <div className="banner__header-content">
