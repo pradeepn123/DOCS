@@ -8,7 +8,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/AVENE_PROMO.png",
             "image_mobile": "shopify:\/\/shop_images\/Group_20.png",
-            "desktop-ratio": 2.6,
+            "desktop-ratio": 1.4,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
@@ -25,7 +25,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/SKIN_MEDICA_WEB_BANNER.png",
             "image_mobile": "shopify:\/\/shop_images\/SKIN_MEDICA_WEBSITE_BANNER.png",
-            "desktop-ratio": 2.6,
+            "desktop-ratio": 1.4,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
@@ -42,7 +42,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/ALASTIN_PROMO.png",
             "image_mobile": "shopify:\/\/shop_images\/Group_21.png",
-            "desktop-ratio": 2.6,
+            "desktop-ratio": 1.4,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
@@ -59,7 +59,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/GLYTONE_PROMO.png",
             "image_mobile": "shopify:\/\/shop_images\/Group_23.png",
-            "desktop-ratio": 2.6,
+            "desktop-ratio": 1.4,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",

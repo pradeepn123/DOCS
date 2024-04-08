@@ -47,7 +47,7 @@
         "text_box_color_scheme": "default",
         "text_box_override_with_custom_colors": false,
         "text_box_override_color_text": "#393939",
-        "text_box_override_color_background": "#FFFFFF",
+        "text_box_override_color_background": "#ffffff",
         "section_style_spacing_top": 0,
         "section_style_spacing_bottom": 0,
         "section_style_enable_animation": true
@@ -127,12 +127,12 @@
         "text_box_color_scheme": "default",
         "text_box_override_with_custom_colors": false,
         "text_box_override_color_text": "#393939",
-        "text_box_override_color_background": "#FFFFFF",
+        "text_box_override_color_background": "#ffffff",
         "color_rating": "product_rating",
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
