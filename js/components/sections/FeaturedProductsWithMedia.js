@@ -12,7 +12,7 @@ export default ({ data }) => {
 	const products = data.products;
 	return (
 		<>
-			<div className="featured-collection-with-media__inner" style={{ cssMedia }} data-media-position="left" data-media-position-mobile="above">
+			<div className="featured-collection-with-media__inner featured_products_with_image" style={{ cssMedia }} data-media-position="left" data-media-position-mobile="above">
 				<div className="featured-collection__products">
 					{blockData.map((block, index) => <ImageWithText data={block} key={index} />)}
 				</div>
