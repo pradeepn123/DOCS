@@ -914,7 +914,6 @@ html.nav-bar-hidden .header[data-drop-shadow="shadow"].header--has-nav-bar .head
   max-width:calc(1800px + calc(calc(4px * 4) * 2));
   max-width:calc(var(--max-width) + calc(var(--space-outer) * 2));
   padding:0 calc(4px * 4) 0;
-  padding:var(--section-style-spacing-top, 0) var(--space-outer) var(--section-style-spacing-bottom, 0);
   margin-right:auto;
   margin-left:auto;
 }
