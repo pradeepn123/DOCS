@@ -4,7 +4,7 @@ import Carousel from '../Carousel';
 
 
 export default ({data}) => {
-  const{blocks,heading,imagefit,aspectratio} = data;
+  const{blocks,heading,imagefit,aspectratio = 1} = data;
   const settings = {
     "slidesPerView": 2.1,
     "spaceBetween": "12px",

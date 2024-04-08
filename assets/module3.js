@@ -25,7 +25,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     imageFit,
     aspectratio
   } = _ref;
-  console.log('aspectratio-imagecard', aspectratio);
   var {
     image_source: image,
     collection_title
@@ -84,9 +83,8 @@ __webpack_require__.r(__webpack_exports__);
     blocks,
     heading,
     imagefit,
-    aspectratio
+    aspectratio = 1
   } = data;
-  console.log("aspectratio-in section", aspectratio);
   var settings = {
     "slidesPerView": 2.1,
     "spaceBetween": "12px",

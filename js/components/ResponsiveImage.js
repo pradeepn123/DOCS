@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ aspectratio, image, settings }) => {
+export default ({ aspectratio = 1, image, settings }) => {
   const min = 100;
   const max = 10000;
   const diff = max - min;

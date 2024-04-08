@@ -292,7 +292,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    aspectratio,
+    aspectratio = 1,
     image,
     settings
   } = _ref;
