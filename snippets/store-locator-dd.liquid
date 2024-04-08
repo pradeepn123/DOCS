@@ -3,7 +3,7 @@
 <div class="storeDd-wrapper" data-dropdown-menu>
     <div class="storeDd-wrapper__optionsWrap" data-dropdown-selector>
         <a href="/collections/clarkston" class="storeDd-wrapper__options-box{% unless collection.title == 'Dermatologists Of Southwest Ohio' or collection.title == 'The Skin Care Center' %} checked{% endunless %}">
-            <p class="storeDd-wrapper__storeName" store-name>Clarkston Dermatology</p>
+            <p class="storeDd-wrapper__storeName" store-name>Clarkston Skin Science</p>
             <div class="storeDd-wrapper__text-container">
                 <div class="storeDd-wrapper__storeAddress">5701 Bow Pointe Drive Suites 215 & 217, Village of Clarkston, MI 48346</div>
                 <div class="storeDd-wrapper__button">
@@ -28,6 +28,17 @@
             <p class="storeDd-wrapper__storeName" store-name>The Skin Care Center</p>
             <div class="storeDd-wrapper__text-container">
                 <div class="storeDd-wrapper__storeAddress">5300 Far Hills Ave Suite 300 Dayton, OH 45429</div>
+                <div class="storeDd-wrapper__button">
+                {% render 'store-dd-checked-icon' %}
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="storeDd-wrapper__optionsWrap" data-dropdown-selector>
+        <a href="/collections/spa43-cosmetic-laser-center" class="storeDd-wrapper__options-box{% if collection.title == 'The Skin Care Center' %} checked{% endif %}">
+            <p class="storeDd-wrapper__storeName" store-name>Spa 43 Cosmetic & Laser Center</p>
+            <div class="storeDd-wrapper__text-container">
+                <div class="storeDd-wrapper__storeAddress">43900 Garfield Road, Ste. 108, Clinton Township, MI 48038</div>
                 <div class="storeDd-wrapper__button">
                 {% render 'store-dd-checked-icon' %}
                 </div>
