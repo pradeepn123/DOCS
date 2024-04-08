@@ -38,6 +38,10 @@
           "label": "Mobile Image Ratio"
         },
         {
+        "type": "header",
+        "content": "Desktop Position"
+        },
+        {
           "type": "select",
           "id": "text_position",
           "label": "Vertical Text position",
@@ -78,6 +82,50 @@
           "default": "center"
         },
         {
+        "type": "header",
+        "content": "Mobile Position"
+        },
+         {
+          "type": "select",
+          "id": "text_position_mob",
+          "label": "Vertical Text position Mobile",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "top",
+              "label": "top"
+            },
+            {
+              "value": "end",
+              "label": "end"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "text_position_horizontal_mob",
+          "label": "Horizontal Text Mobile",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ],
+          "default": "center"
+        },
+        {
           "type": "richtext",
           "id": "heading",
           "label": "Heading"
@@ -85,6 +133,16 @@
         {
           "type": "range",
           "id": "heading-font",
+          "min": 16,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "heading Font Size",
+          "default": 48
+        },
+        {
+          "type": "range",
+          "id": "heading-font-mob",
           "min": 16,
           "max": 50,
           "step": 1,

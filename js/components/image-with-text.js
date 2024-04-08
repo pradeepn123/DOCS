@@ -2,7 +2,7 @@ import React from "react";
 import ResponsiveImage from './ResponsiveImage';
 
 export default ({ data }) => {    
-    let {heading = '', description, desktopImage, mobileImage, desktopratio,mobileratio , positionVertical, positionHorizontal, subheading,textFont, url, button} = data || {}; 
+    let {heading = '', description, desktopImage, mobileImage, desktopratio ,mobileratio , positionVertical, positionHorizontal, positionHorizontalMobile, positionVerticalMobile ,subheading,textFont,textFontMob , url, button} = data || {}; 
    
     const imageObjDesktop= {
         id: Date.now(),
@@ -17,7 +17,10 @@ export default ({ data }) => {
         return {
           '--horizontal-align': `${positionHorizontal}`,
           '--vertical-align': `${positionVertical}`,
-          '--heading-font': `${textFont}px`
+          '--horizontal-align-mob': `${positionHorizontalMobile}`,
+          '--vertical-align-mob': `${positionVerticalMobile}`,
+          '--heading-font': `${textFont}px`,
+          '--heading-font-mob': `${textFontMob}px`
         };
       };
 
@@ -57,7 +60,6 @@ export default ({ data }) => {
         flex-direction: column;
         color: #FFFFFF;
         line-height: 1.15;
-        text-align:left;
     }
     .banner__subtext{
         font-size:12px;
@@ -74,22 +76,16 @@ export default ({ data }) => {
     }
     @media (max-width: 720px){
         .banner__heading{
-            font-size: 43px;
+            font-size: var(--heading-font-mob);
         }
     }
     .banner__description{
         font-size:16px;
     }
-    @media (min-width: 720px){
-        .slideshow-slide__text-container-wrapper{
-            justify-content:var(--text-horizontal-position);
-            align-items:var(--text-vertical-position)
-        }
-    }
-    @media (min-width: 1024px){
-        .slideshow-slide__text-container-wrapper{
-            padding:calc(4px * 8) calc(4px * 4);
-            padding:var(--spacing-8) var(--space-outer)
+    @media (max-width: 720px){
+        .banner__text-wrapp{
+            justify-content:var(--vertical-align-mob);
+            align-items:var(--horizontal-align-mob);
         }
     }
     .banner_text-container{

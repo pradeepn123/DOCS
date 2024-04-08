@@ -269,38 +269,161 @@
       {
         "type": "image_with_text_overlay",
         "name": "Image with text overlay",
-        "settings": [
+         "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_desktop",
+          "label": "Image Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "number",
+          "id": "desktop-ratio",
+          "label": "Desktop Image Ratio"
+        },
+        {
+          "type": "number",
+          "id": "mobile-ratio",
+          "label": "Mobile Image Ratio"
+        },
+        {
+        "type": "header",
+        "content": "Desktop Position"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "Vertical Text position",
+          "options": [
             {
-                "type": "image_picker",
-                "id": "image_desktop",
-                "label": "Image Desktop"
+              "value": "center",
+              "label": "center"
             },
             {
-                "type": "image_picker",
-                "id": "image_mobile",
-                "label": "Image Mobile"
+              "value": "top",
+              "label": "top"
             },
             {
-                "type": "text",
-                "id": "heading",
-                "label": "Heading"
-            },
-            {
-                "type": "text",
-                "id": "subheading",
-                "label": "Subheading"
-            },
-            {
-                "type": "text",
-                "id": "cta_text",
-                "label": "CTA Text"
-            },
-            {
-                "type": "url",
-                "id": "cta_url",
-                "label": "CTA Url"
+              "value": "end",
+              "label": "end"
             }
-        ]
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "text_position_horizontal",
+          "label": "Horizontal Text position",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+        "type": "header",
+        "content": "Mobile Position"
+        },
+         {
+          "type": "select",
+          "id": "text_position_mob",
+          "label": "Vertical Text position Mobile",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "top",
+              "label": "top"
+            },
+            {
+              "value": "end",
+              "label": "end"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "text_position_horizontal_mob",
+          "label": "Horizontal Text Mobile",
+          "options": [
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "range",
+          "id": "heading-font",
+          "min": 16,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "heading Font Size",
+          "default": 48
+        },
+        {
+          "type": "range",
+          "id": "heading-font-mob",
+          "min": 16,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "heading Font Size",
+          "default": 48
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA Text"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "CTA Url"
+        }
+      ]
         },
       {
         "type": "featured_products",
