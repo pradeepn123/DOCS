@@ -153,7 +153,7 @@
         "section_style_spacing_top": 60,
         "section_style_spacing_bottom": 60,
         "image_fit": "cover",
-        "image_aspect_ratio": "square"
+        "image_aspect_ratio": "1"
       }
     },
     "banner_VCL6Kt": {
@@ -240,6 +240,7 @@
         "select_CnUVQh",
         "select_UGkL6t"
       ],
+      "disabled": true,
       "settings": {
         "center_content": true,
         "heading": "Shop By Brand",
@@ -465,6 +466,69 @@
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
       }
+    },
+    "json_image_card_wGFkND": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_LCpMge": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_26.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_qygE88": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_27.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_xyfM4d": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_28.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_cjyVRy": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify:\/\/shop_images\/Group_24.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        }
+      },
+      "block_order": [
+        "select_LCpMge",
+        "select_qygE88",
+        "select_xyfM4d",
+        "select_cjyVRy"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Shop By Brand",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "image_fit": "contain",
+        "image_aspect_ratio": "1.75"
+      }
     }
   },
   "order": [
@@ -475,6 +539,7 @@
     "json_featured_product_with_media_e8VRJ4",
     "json_featured_products_JMnJHK",
     "json_featured_products_Afm3Yp",
-    "json_featured_products_9xMgrw"
+    "json_featured_products_9xMgrw",
+    "json_image_card_wGFkND"
   ]
 }

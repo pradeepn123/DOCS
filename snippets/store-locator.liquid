@@ -2,14 +2,26 @@
 {{ 'store-locator-dd.css' | asset_url | stylesheet_tag }}
 
 <div
-  class="
-    store-locator
-    store-locator--{{ scope }}
-  "
->
-  <div class="store-locator__wrapper">
-    <div class="store-locator__icon">
-      {% render 'store-loc-icon' %}
+    class="
+      store-locator
+      store-locator--{{ scope }}
+    ">
+    <div class="store-locator__wrapper">
+        <div class="store-locator__icon">
+           {% render 'store-loc-icon' %}
+        </div>
+        <div class="store-locator__container" data-dropdown-wrapper>
+            <div class="store-locator__title">
+                <p>Shop from</p>
+            </div>
+            <div class="store-locator__location" data-dropdown-select>
+                <p data-dropdown-selected>{% if template.name == 'collection' %} {{ collection.title }}{% else %} Clarkston Skin Science{% endif %}</p>
+                {% render 'store-dropdown-icon' %}
+                <div class="store-locator__location-list">
+                    {% render 'store-locator-dd' %}
+                </div>
+            </div>
+        </div>
     </div>
       <store-locator>
         <script id="storeLocator-data" type="text/json">

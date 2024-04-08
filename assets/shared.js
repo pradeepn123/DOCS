@@ -126,6 +126,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     imageFit,
     aspectratio
   } = _ref;
+  console.log('aspectratio-imagecard', aspectratio);
   var {
     image_source: image,
     collection_title
@@ -376,7 +377,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var {
     imageFit
   } = settings || {};
-  var aspectRatio = aspectratio;
   var {
     height: maxHeightImage,
     id: image_id,
@@ -401,13 +401,11 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var imageSrcSet = imageSizes.map(width => {
     return "".concat(displayImage.src, "&width=").concat(width, " ").concat(width, "w");
   }).join(",");
-
-  // if (aspectRatio <= 1) {
-  //   maxWidthImage = parseInt(maxHeightImage) * aspectRatio;
-  // }
-  // else {
-  //   maxHeightImage = parseInt(maxWidthImage) / aspectRatio;
-  // }
+  if (aspectratio <= 1) {
+    maxWidthImage = parseInt(maxHeightImage) * aspectratio;
+  } else {
+    maxHeightImage = parseInt(maxWidthImage) / aspectratio;
+  }
   var maxWidthImageFloat = maxWidthImage * 1.0;
   var getWrapperStyles = () => {
     return {
@@ -421,7 +419,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       maxWidth: "".concat(maxWidthImage, "px"),
       maxHeight: "".concat(maxHeightImage, "px"),
       objectFit: "".concat(imageFit ? imageFit : 'contain'),
-      aspectRatio: "".concat(aspectRatio)
+      aspectRatio: "".concat(aspectratio)
     };
   };
   var css = "\n  .responsive-image__wrapper:before {\n    content: '';\n    width: 100%;\n    display: block;\n    padding-top: var(--padding-top);\n  }\n\n  .responsive-image__wrapper {\n      height: 100%;\n      position: relative;\n      max-width: var(--max-width);\n      max-height: var(--max-height);\n  }\n\n  .responsive-image__image {\n      position: absolute;\n      top: 0;\n      height: 100%;\n      left: 0;\n      width: 100%;\n      object-fit: var(--objectFit);\n      aspect-ratio: var(--aspectRatio);\n      \n  }";
@@ -437,7 +435,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     load: "lazy",
     srcSet: imageSrcSet,
     "data-widths": "[".concat(imageSizes, "]"),
-    "data-aspectratio": aspectRatio,
+    "data-aspectratio": aspectratio,
     "data-sizes": "auto",
     tabIndex: "-1",
     style: getImageStyle()

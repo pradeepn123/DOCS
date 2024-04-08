@@ -28,6 +28,7 @@ __webpack_require__.r(__webpack_exports__);
     imagefit,
     aspectratio
   } = data;
+  console.log("aspectratio-in section", aspectratio);
   var settings = {
     "slidesPerView": 2.1,
     "spaceBetween": "12px",

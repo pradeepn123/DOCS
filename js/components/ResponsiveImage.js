@@ -15,11 +15,9 @@ export default ({ aspectratio, image, settings }) => {
     };
   }
 
-  const {imageFit} = settings || {};
- 
   
+  const {imageFit} = settings || {};
 
-  const aspectRatio = aspectratio;
   let { height: maxHeightImage, id: image_id, src: imageSrc, width: maxWidthImage } = displayImage;
   const IMAGE_WIDTHS = [180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2160, 2376, 2592, 2808, 3024]
   const getImageWidths = nativeWidth => {
@@ -41,12 +39,12 @@ export default ({ aspectratio, image, settings }) => {
     return `${displayImage.src}&width=${width} ${width}w`
   }).join(",")
 
-  // if (aspectRatio <= 1) {
-  //   maxWidthImage = parseInt(maxHeightImage) * aspectRatio;
-  // }
-  // else {
-  //   maxHeightImage = parseInt(maxWidthImage) / aspectRatio;
-  // }
+  if (aspectratio <= 1) {
+    maxWidthImage = parseInt(maxHeightImage) * aspectratio;
+  }
+  else {
+    maxHeightImage = parseInt(maxWidthImage) / aspectratio;
+  }
   const maxWidthImageFloat = maxWidthImage * 1.0;
 
   const getWrapperStyles = () => {
@@ -62,7 +60,7 @@ export default ({ aspectratio, image, settings }) => {
       maxWidth: `${maxWidthImage}px`,
       maxHeight: `${maxHeightImage}px`,
       objectFit: `${imageFit ? imageFit : 'contain'}`,
-      aspectRatio:`${aspectRatio}`,
+      aspectRatio:`${aspectratio}`,
     };
   };
 
@@ -91,7 +89,7 @@ export default ({ aspectratio, image, settings }) => {
       aspect-ratio: var(--aspectRatio);
       
   }`
-
+ 
   return (
     <>
       <div
@@ -100,6 +98,7 @@ export default ({ aspectratio, image, settings }) => {
         className="responsive-image__wrapper"
         style={getWrapperStyles()}
       >
+        
         <img
           id={`Image-${image_id}-${generated_image_id}`}
           className="responsive-image__image"
@@ -107,7 +106,7 @@ export default ({ aspectratio, image, settings }) => {
           load="lazy"
           srcSet={imageSrcSet}
           data-widths={`[${imageSizes}]`}
-          data-aspectratio={aspectRatio}
+          data-aspectratio={aspectratio}
           data-sizes="auto"
           tabIndex="-1"
           style={getImageStyle()}
