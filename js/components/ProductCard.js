@@ -71,7 +71,7 @@ export default ({ product }) => {
                                                 {compare_at_price > convertedPrice ? <s className="t-subdued">{compare_at_price}</s> : null}
                                                 <span className={compare_at_price > convertedPrice ? 'sale' : ''}>${convertedPrice}</span>
                                             </span>
-                                            <span className="displayed-discount-wrapper" data-hidden="false" data-has-discount="false">
+                                            <span className="displayed-discount-wrapper" data-hidden="false" data-has-discount="true">
                                                 {product.discountPercentage > 0 ?
                                                     <span className="displayed-discount badge-shape fs-body-60" data-badge-shape="pill">
                                                         Save {product.discountPercentage}%

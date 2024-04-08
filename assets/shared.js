@@ -313,7 +313,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }, "$", convertedPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
     className: "displayed-discount-wrapper",
     "data-hidden": "false",
-    "data-has-discount": "false"
+    "data-has-discount": "true"
   }, product.discountPercentage > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
     className: "displayed-discount badge-shape fs-body-60",
     "data-badge-shape": "pill"
