@@ -5,7 +5,6 @@ import Carousel from '../Carousel';
 
 export default ({data}) => {
   const{blocks,heading,imagefit,aspectratio} = data;
-  console.log("aspectratio-in section",aspectratio)
   const settings = {
     "slidesPerView": 2.1,
     "spaceBetween": "12px",

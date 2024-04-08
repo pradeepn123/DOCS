@@ -2,7 +2,6 @@ import React from 'react';
 import ResponsiveImage from './ResponsiveImage';
 
 export default ({block, imageFit ,aspectratio}) => {
-  console.log('aspectratio-imagecard',aspectratio);
   const {image_source:image, collection_title} = block;
   const imageObj= {
     id: Date.now(),
