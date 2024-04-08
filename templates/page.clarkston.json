@@ -13,10 +13,10 @@
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
-            "text_position_horizontal_mob": "left",
+            "text_position_horizontal_mob": "center",
             "heading": "<p>Soothes, Strengthens & Rebalances the Skin<\/p>",
             "heading-font": 48,
-            "heading-font-mob": 43,
+            "heading-font-mob": 48,
             "subheading": "Eau Thermale Avène",
             "description": "",
             "cta_text": "SHOP NOW",
@@ -33,10 +33,10 @@
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
-            "text_position_horizontal_mob": "left",
+            "text_position_horizontal_mob": "center",
             "heading": "<p>Experience The Luxury Of Scientific Skin Care.<\/p>",
             "heading-font": 48,
-            "heading-font-mob": 43,
+            "heading-font-mob": 48,
             "subheading": "SKINMEDICA",
             "description": "",
             "cta_text": "SHOP NOW",
@@ -53,10 +53,10 @@
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
-            "text_position_horizontal_mob": "left",
-            "heading": "<p>Say Goodbye to Crepey Skin<\/p>",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Say Goodbye&lt;\/br&gt;to Crepey Skin<\/p>",
             "heading-font": 48,
-            "heading-font-mob": 43,
+            "heading-font-mob": 48,
             "subheading": "ALASTIN Skincare",
             "description": "",
             "cta_text": "SHOP NOW",
@@ -73,10 +73,10 @@
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
-            "text_position_horizontal_mob": "left",
+            "text_position_horizontal_mob": "center",
             "heading": "<p>Target Your <\/p><p>Treatment Plan<\/p>",
             "heading-font": 48,
-            "heading-font-mob": 43,
+            "heading-font-mob": 48,
             "subheading": "GLYTONE",
             "description": "",
             "cta_text": "SHOP NOW",
@@ -166,8 +166,11 @@
             "desktop-ratio": 2,
             "text_position": "center",
             "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
             "heading": "<p>Get The Care You Want,<br\/> Whenever You Want<\/p>",
             "heading-font": 48,
+            "heading-font-mob": 48,
             "subheading": "CLARKSTON DERMATOLOGY",
             "description": "Discover our curated selection of premium brands to provide unparalleled results, giving you the radiant complexion you deserve.",
             "cta_text": "",
@@ -256,15 +259,13 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
             "image_mobile": "shopify:\/\/shop_images\/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
-            "desktop-ratio": 0.7,
-            "mobile-ratio": 1,
             "text_position": "top",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Bestselling &lt;br&gt; Products<\/p>",
-            "heading-font": 16,
-            "heading-font-mob": 16,
+            "heading": "<p>Best Selling Products<\/p>",
+            "heading-font": 48,
+            "heading-font-mob": 48,
             "subheading": "",
             "description": "",
             "cta_text": "",
@@ -365,171 +366,7 @@
     "json_featured_products_Afm3Yp": {
       "type": "json-featured-products",
       "blocks": {
-        "select_Vcdd3x": {
-          "type": "select",
-          "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
-            "collection_title": "SUN PROTECTION",
-            "collection_filter_type": "skincare",
-            "collection_filter": "Sun Protection"
-          }
-        },
-        "select_JzVEcm": {
-          "type": "select",
-          "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/image_18.png",
-            "collection_title": "MOISTURIZING",
-            "collection_filter_type": "skincare",
-            "collection_filter": "Moisturizing"
-          }
-        },
-        "select_gHHFAA": {
-          "type": "select",
-          "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/image_24.png",
-            "collection_title": "BRIGHTENING",
-            "collection_filter_type": "skincare",
-            "collection_filter": "Brightening"
-          }
-        },
-        "select_JGQ3jb": {
-          "type": "select",
-          "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/pexels-photo-7143195.webp",
-            "collection_title": "SKIN DEFENCE",
-            "collection_filter_type": "skin_type",
-            "collection_filter": "Age Defense\/Rejuvenation"
-          }
-        }
-      },
-      "block_order": [
-        "select_Vcdd3x",
-        "select_JzVEcm",
-        "select_gHHFAA",
-        "select_JGQ3jb"
-      ],
-      "settings": {
-        "center_content": true,
-        "heading": "Featured Categories",
-        "image_circle_crop_enable": true,
-        "image_spacing": 10,
-        "title_font_type": "body",
-        "text_alignment": "center",
-        "section_style_spacing_top": 36,
-        "section_style_spacing_bottom": 36
-      }
-    },
-    "banner_VCL6Kt": {
-      "type": "banner",
-      "blocks": {
-        "image_with_text_overlay_p7Bcqh": {
-          "type": "image_with_text_overlay",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Frame_6.png",
-            "desktop-ratio": 2,
-            "text_position": "center",
-            "text_position_horizontal": "left",
-            "heading": "<p>Get The Care You Want,<br\/> Whenever You Want<\/p>",
-            "heading-font": 48,
-            "subheading": "CLARKSTON DERMATOLOGY",
-            "description": "Discover our curated selection of premium brands to provide unparalleled results, giving you the radiant complexion you deserve.",
-            "cta_text": "",
-            "cta_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_with_text_overlay_p7Bcqh"
-      ],
-      "settings": {
-      }
-    },
-    "shop_by_brand_8HHTPQ": {
-      "type": "shop-by-brand",
-      "blocks": {
-        "select_eBjVbF": {
-          "type": "select",
-          "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/Group_28.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
-          }
-        },
-        "select_QUtxCd": {
-          "type": "select",
-          "settings": {
-            "collection": "dermatologists-of-southwest-ohio",
-            "image_source": "shopify:\/\/shop_images\/Group_27.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
-          }
-        },
-        "select_VzVMat": {
-          "type": "select",
-          "settings": {
-            "collection": "skin-care-center",
-            "image_source": "shopify:\/\/shop_images\/Group_24.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
-          }
-        },
-        "select_CnUVQh": {
-          "type": "select",
-          "settings": {
-            "collection": "",
-            "image_source": "shopify:\/\/shop_images\/Group_26.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
-          }
-        },
-        "select_UGkL6t": {
-          "type": "select",
-          "settings": {
-            "collection": "",
-            "image_source": "shopify:\/\/shop_images\/Group_25.png",
-            "collection_filter_type": "brand",
-            "collection_filter": ""
-          }
-        }
-      },
-      "block_order": [
-        "select_eBjVbF",
-        "select_QUtxCd",
-        "select_VzVMat",
-        "select_CnUVQh",
-        "select_UGkL6t"
-      ],
-      "settings": {
-        "center_content": true,
-        "heading": "Shop By Brand",
-        "image_circle_crop_enable": true,
-        "image_spacing": 10,
-        "title_font_type": "body",
-        "text_alignment": "center",
-        "section_style_spacing_top": 60,
-        "section_style_spacing_bottom": 60
-      }
-    },
-    "json_featured_product_with_media_e8VRJ4": {
-      "type": "JSON-featured-product-with-media",
-      "blocks": {
-        "image_with_text_overlay_eRpTt3": {
-          "type": "image_with_text_overlay",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/CLARKSTON_HOMEPAGE.png",
-            "image_mobile": "shopify:\/\/shop_images\/small_smile.png",
-            "heading": "Best Selling Products",
-            "subheading": "",
-            "cta_text": "",
-            "cta_url": ""
-          }
-        },
-        "featured_products_Pwrwi3": {
+        "featured_products_aXdTbm": {
           "type": "featured_products",
           "settings": {
             "products": [
@@ -571,7 +408,7 @@
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
@@ -621,7 +458,7 @@
         "color_scheme": "default",
         "override_with_custom_colors": false,
         "override_color_text": "#393939",
-        "override_color_background": "#FFFFFF",
+        "override_color_background": "#ffffff",
         "section_style_spacing_top": 36,
         "section_style_spacing_bottom": 36,
         "section_style_enable_animation": true
