@@ -1,7 +1,7 @@
 import React from 'react';
 import ResponsiveImage from './ResponsiveImage';
 
-export default ({block, imageFit="cover" ,aspectRatio= "1"}) => {
+export default ({block, imageFit ,aspectratio}) => {
   const {image_source:image, collection_title} = block;
   const imageObj= {
     id: Date.now(),
@@ -16,7 +16,7 @@ export default ({block, imageFit="cover" ,aspectRatio= "1"}) => {
       <a href={block.collection} className="collection-item__link">
         <div className="collection-item__image__wrap">
           <div className="image collection-item__image">
-            <ResponsiveImage image={imageObj} image_aspect_ratio={aspectRatio} settings={imageSettings} />
+            <ResponsiveImage image={imageObj} aspectratio={aspectratio} settings={imageSettings} imageFit={imageFit} />
           </div>
         </div>
         <div className="collection-item__meta collection-item__title ff-heading fs-body-100" data-text-alignment="center">{collection_title}</div>

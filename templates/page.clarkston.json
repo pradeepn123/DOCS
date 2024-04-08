@@ -88,7 +88,7 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
+            "image_source": "shopify:\/\/shop_images\/image_18.png",
             "collection_title": "SUN PROTECTION",
             "collection_filter_type": "skincare",
             "collection_filter": "Sun Protection"
@@ -138,8 +138,10 @@
         "image_spacing": 10,
         "title_font_type": "body",
         "text_alignment": "center",
-        "section_style_spacing_top": 36,
-        "section_style_spacing_bottom": 36
+        "section_style_spacing_top": 60,
+        "section_style_spacing_bottom": 60,
+        "image_fit": "cover",
+        "image_aspect_ratio": "square"
       }
     },
     "banner_VCL6Kt": {

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ image_aspect_ratio, image, settings }) => {
+export default ({ aspectratio, image, settings }) => {
   const min = 100;
   const max = 10000;
   const diff = max - min;
@@ -16,9 +16,10 @@ export default ({ image_aspect_ratio, image, settings }) => {
   }
 
   const {imageFit} = settings || {};
+ 
   
 
-  const aspectRatio = image_aspect_ratio;
+  const aspectRatio = aspectratio;
   let { height: maxHeightImage, id: image_id, src: imageSrc, width: maxWidthImage } = displayImage;
   const IMAGE_WIDTHS = [180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2160, 2376, 2592, 2808, 3024]
   const getImageWidths = nativeWidth => {
@@ -40,12 +41,12 @@ export default ({ image_aspect_ratio, image, settings }) => {
     return `${displayImage.src}&width=${width} ${width}w`
   }).join(",")
 
-  if (aspectRatio <= 1) {
-    maxWidthImage = parseInt(maxHeightImage) * aspectRatio;
-  }
-  else {
-    maxHeightImage = parseInt(maxWidthImage) / aspectRatio;
-  }
+  // if (aspectRatio <= 1) {
+  //   maxWidthImage = parseInt(maxHeightImage) * aspectRatio;
+  // }
+  // else {
+  //   maxHeightImage = parseInt(maxWidthImage) / aspectRatio;
+  // }
   const maxWidthImageFloat = maxWidthImage * 1.0;
 
   const getWrapperStyles = () => {
@@ -60,7 +61,8 @@ export default ({ image_aspect_ratio, image, settings }) => {
     return {
       maxWidth: `${maxWidthImage}px`,
       maxHeight: `${maxHeightImage}px`,
-      objectFit: `${imageFit ? imageFit : 'contain'}`
+      objectFit: `${imageFit ? imageFit : 'contain'}`,
+      aspectRatio:`${aspectRatio}`,
     };
   };
 
@@ -85,6 +87,8 @@ export default ({ image_aspect_ratio, image, settings }) => {
       height: 100%;
       left: 0;
       width: 100%;
+      object-fit: var(--objectFit);
+      aspect-ratio: var(--aspectRatio);
       
   }`
 

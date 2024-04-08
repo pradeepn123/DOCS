@@ -1,9 +1,10 @@
 import React from 'react'
-import ImageCard from 'JsComponents/ImageCards';
+import ImageCard from 'JsComponents/ImageCard';
 import Carousel from '../Carousel';
 
+
 export default ({data}) => {
-  const{blocks,heading} = data;
+  const{blocks,heading,imagefit,aspectratio} = data;
   const settings = {
     "slidesPerView": 2.1,
     "spaceBetween": "12px",
@@ -19,6 +20,7 @@ export default ({data}) => {
     }
   }
   
+  
   return (
     <div className='collection-list' style={{"--section-style-spacing-top": "36px", "--section-style-spacing-bottom": "36px"}}>
       <div className='section-inner'>
@@ -31,7 +33,7 @@ export default ({data}) => {
           <div className='collection-list__collections'>
              <Carousel settings={settings}>
               {blocks.map((block, index) => (
-                <ImageCard block={block} key={index}/>
+                <ImageCard block={block} key={index} imageFit={imagefit} aspectratio={aspectratio}/>
               ))}
               </Carousel>
           </div>

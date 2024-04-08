@@ -101,10 +101,10 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /***/ }),
 
-/***/ "./js/components/ImageCards.js":
-/*!*************************************!*\
-  !*** ./js/components/ImageCards.js ***!
-  \*************************************/
+/***/ "./js/components/ImageCard.js":
+/*!************************************!*\
+  !*** ./js/components/ImageCard.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -123,8 +123,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
     block,
-    imageFit = "cover",
-    aspectRatio = "1"
+    imageFit,
+    aspectratio
   } = _ref;
   var {
     image_source: image,
@@ -148,8 +148,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     className: "image collection-item__image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: imageObj,
-    image_aspect_ratio: aspectRatio,
-    settings: imageSettings
+    aspectratio: aspectratio,
+    settings: imageSettings,
+    imageFit: imageFit
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "collection-item__meta collection-item__title ff-heading fs-body-100",
     "data-text-alignment": "center"
@@ -355,7 +356,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    image_aspect_ratio,
+    aspectratio,
     image,
     settings
   } = _ref;
@@ -375,7 +376,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var {
     imageFit
   } = settings || {};
-  var aspectRatio = image_aspect_ratio;
+  var aspectRatio = aspectratio;
   var {
     height: maxHeightImage,
     id: image_id,
@@ -400,11 +401,13 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var imageSrcSet = imageSizes.map(width => {
     return "".concat(displayImage.src, "&width=").concat(width, " ").concat(width, "w");
   }).join(",");
-  if (aspectRatio <= 1) {
-    maxWidthImage = parseInt(maxHeightImage) * aspectRatio;
-  } else {
-    maxHeightImage = parseInt(maxWidthImage) / aspectRatio;
-  }
+
+  // if (aspectRatio <= 1) {
+  //   maxWidthImage = parseInt(maxHeightImage) * aspectRatio;
+  // }
+  // else {
+  //   maxHeightImage = parseInt(maxWidthImage) / aspectRatio;
+  // }
   var maxWidthImageFloat = maxWidthImage * 1.0;
   var getWrapperStyles = () => {
     return {
@@ -417,10 +420,11 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     return {
       maxWidth: "".concat(maxWidthImage, "px"),
       maxHeight: "".concat(maxHeightImage, "px"),
-      objectFit: "".concat(imageFit ? imageFit : 'contain')
+      objectFit: "".concat(imageFit ? imageFit : 'contain'),
+      aspectRatio: "".concat(aspectRatio)
     };
   };
-  var css = "\n  .responsive-image__wrapper:before {\n    content: '';\n    width: 100%;\n    display: block;\n    padding-top: var(--padding-top);\n  }\n\n  .responsive-image__wrapper {\n      height: 100%;\n      position: relative;\n      max-width: var(--max-width);\n      max-height: var(--max-height);\n  }\n\n  .responsive-image__image {\n      position: absolute;\n      top: 0;\n      height: 100%;\n      left: 0;\n      width: 100%;\n      \n  }";
+  var css = "\n  .responsive-image__wrapper:before {\n    content: '';\n    width: 100%;\n    display: block;\n    padding-top: var(--padding-top);\n  }\n\n  .responsive-image__wrapper {\n      height: 100%;\n      position: relative;\n      max-width: var(--max-width);\n      max-height: var(--max-height);\n  }\n\n  .responsive-image__image {\n      position: absolute;\n      top: 0;\n      height: 100%;\n      left: 0;\n      width: 100%;\n      object-fit: var(--objectFit);\n      aspect-ratio: var(--aspectRatio);\n      \n  }";
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "ImageWrapper-".concat(image_id, "-").concat(generated_image_id),
     "data-image-id": image_id,
