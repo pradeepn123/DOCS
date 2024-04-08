@@ -239,7 +239,7 @@
         "enable_slider_mobile": true,
         "show_product_counts": true,
         "collection_item_style": "plain",
-        "image_aspect_ratio": "square",
+        "image_aspect_ratio": "portrait",
         "image_circle_crop_enable": false,
         "image_spacing": 10,
         "title_font_type": "heading",
