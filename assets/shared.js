@@ -491,6 +491,10 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
           return _ref3.apply(this, arguments);
         };
       }()));
+      if (sectionData) {
+        var loader = document.querySelector('.pre_loader');
+        loader.style.display = 'none';
+      }
       var script = document.createElement("script");
       script.src = shopifyData.url;
       script.async = false;

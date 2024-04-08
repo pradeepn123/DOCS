@@ -15,7 +15,7 @@ export default ({ data }) => {
 					</div>
 					<div className="featured-collection__products featured-collection-slider-grid standard-grid-spacing product-item-holder">
 						<div className="carousel">
-								 <ProductCarousel products={products}/>
+							<ProductCarousel products={products}/>
 						</div>
 					</div>
 				</div>

@@ -202,7 +202,7 @@
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/CLARKSTON_HOMEPAGE.png",
             "image_mobile": "shopify:\/\/shop_images\/small_smile.png",
-            "heading": "",
+            "heading": "Best Selling Products",
             "subheading": "",
             "cta_text": "",
             "cta_url": ""
@@ -212,7 +212,6 @@
           "type": "featured_products",
           "settings": {
             "products": [
-              "alastin-hydratint-spf",
               "alastin-renewal-retinol-25",
               "alastin-renewal-retinol-5",
               "alastin-restorative",
