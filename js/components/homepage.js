@@ -26,11 +26,7 @@ export default ({shopifyData}) => {
                 props: props,
                 Component: Component
             }
-        }))
-        if(sectionData){
-          const loader = document.querySelector('.pre_loader')
-          loader.style.display = 'none';
-        }
+        }))        
         const script = document.createElement("script");
         script.src = shopifyData.url;
         script.async = false;
