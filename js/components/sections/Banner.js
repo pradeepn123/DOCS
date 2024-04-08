@@ -7,25 +7,17 @@ export default ({ data }) => {
         "slidesPerView": 1
     }    
 
+    // console.log("slides banner.js",slides) 
     return (
         <div className="banner__container">
             <div className="banner__header-content">
-                { data 
-                ? 
-                    <div>
-                        <Carousel settings={settings}>
-                            {Object.values(data).map((eachData, index) => 
-                            <ImageWithText  data={eachData} key={eachData.name + index} wrapperclass="slideshow-slide__text_wrapper" />)}
-                    </Carousel>
-                    </div>
-                :
-                    <div class="pre_loader">
-                        <div class="loader"></div>
-                    </div>
-                }
+                <div>
+                    <Carousel settings={settings}>
+                        {Object.values(data).map((eachData, index) => 
+                         <ImageWithText  data={eachData} key={eachData.name + index} wrapperclass="slideshow-slide__text_wrapper" />)}
+                   </Carousel>
+                </div>
             </div>
         </div>
     )
 } 
-
-
