@@ -31,3 +31,6 @@
 .image-text__button {
   display: inline-block;
 }
+.image-text .responsive-image__wrapper {
+  max-width: 100%;
+}

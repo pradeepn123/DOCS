@@ -88,22 +88,26 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }
   var navigationPrevRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
   var navigationNextRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
+  var navigation = {};
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.Swiper, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, settings, {
-    navigation: {
-      prevEl: navigationPrevRef.current,
-      nextEl: navigationNextRef.current
-    },
+    navigation: navigation,
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.A11y],
-    onSwiper: swiper => console.log(swiper)
+    onSwiper: swiper => console.log(swiper),
+    onBeforeInit: swiper => {
+      swiper.navigation = {
+        // prevEl: navigationPrevRef.current,
+        // nextEl: navigationNextRef.current,
+      };
+    }
   }), children.map((slide, index) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.SwiperSlide, {
       key: index
     }, slide);
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
     ref: navigationPrevRef
-  }, "Prev"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
+  }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", null, "Prev")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
     ref: navigationNextRef
-  }, "Next"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", null, "Next")));
 });
 
 /***/ }),

@@ -13,23 +13,27 @@ export default ({ settings, children }) => {
 
 	const navigationPrevRef = useRef(null)
   	const navigationNextRef = useRef(null)
+	let navigation = {}
 
 	return (
 		<Swiper
 			{...settings}
-			navigation={{
-				prevEl: navigationPrevRef.current,
-				nextEl: navigationNextRef.current,
-			  }}
+			navigation={navigation}
 			modules={[Navigation, Pagination, A11y]}
-			onSwiper={(swiper) => console.log(swiper)}>
+			onSwiper={(swiper) => console.log(swiper)}
+			onBeforeInit={(swiper) => {
+				swiper.navigation = {
+					// prevEl: navigationPrevRef.current,
+					// nextEl: navigationNextRef.current,
+				  }
+			}}>
 			{children.map((slide, index) => {
 				return <SwiperSlide key={index}>
 					{slide}
 				</SwiperSlide>
 			})}
-			<div ref={navigationPrevRef} >Prev</div>
-      		<div ref={navigationNextRef} >Next</div>
+			<div ref={navigationPrevRef} > <button>Prev</button></div>
+      		<div ref={navigationNextRef} ><button>Next</button></div>
 		</Swiper>
 	);
 };
