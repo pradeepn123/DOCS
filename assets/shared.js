@@ -621,8 +621,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     id: Date.now()
   }, image);
   function createMarkup() {
+    var htmlContent = "".concat(heading);
     return {
-      __html: heading
+      __html: htmlContent
     };
   }
   var contentStyle = {

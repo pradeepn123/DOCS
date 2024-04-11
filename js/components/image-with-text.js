@@ -14,7 +14,8 @@ export default ({ data: curatedData, wrapperClass }) => {
         ...image
     }  
     function createMarkup() {
-        return {__html:heading};
+        const htmlContent = `${heading}`;
+        return {__html:htmlContent};
       }
 
       const contentStyle = {

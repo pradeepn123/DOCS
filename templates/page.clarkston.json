@@ -9,7 +9,7 @@
             "image_desktop": "shopify://shop_images/AVENE_PROMO.png",
             "image_mobile": "shopify://shop_images/Group_20.png",
             "desktop-ratio": 2.6,
-            "mobile-ratio": 1,
+            "mobile-ratio": 0.8,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
@@ -29,7 +29,7 @@
             "image_desktop": "shopify://shop_images/SKIN_MEDICA_WEB_BANNER.png",
             "image_mobile": "shopify://shop_images/SKIN_MEDICA_WEBSITE_BANNER.png",
             "desktop-ratio": 2.6,
-            "mobile-ratio": 1,
+            "mobile-ratio": 0.8,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
@@ -49,7 +49,7 @@
             "image_desktop": "shopify://shop_images/ALASTIN_PROMO.png",
             "image_mobile": "shopify://shop_images/Group_21.png",
             "desktop-ratio": 2.6,
-            "mobile-ratio": 1,
+            "mobile-ratio": 0.8,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
@@ -69,7 +69,7 @@
             "image_desktop": "shopify://shop_images/GLYTONE_PROMO.png",
             "image_mobile": "shopify://shop_images/Group_23.png",
             "desktop-ratio": 2.6,
-            "mobile-ratio": 1,
+            "mobile-ratio": 0.8,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
@@ -100,7 +100,7 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify://shop_images/image_18.png",
+            "image_source": "shopify://shop_images/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
             "collection_title": "SUN PROTECTION",
             "collection_filter_type": "skincare",
             "collection_filter": "Sun Protection"
@@ -153,7 +153,7 @@
         "section_style_spacing_top": 60,
         "section_style_spacing_bottom": 60,
         "image_fit": "cover",
-        "image_aspect_ratio": "1"
+        "image_aspect_ratio": 1
       }
     },
     "image_with_text_split_BnThCN": {
@@ -164,8 +164,8 @@
           "settings": {
             "image_desktop": "shopify://shop_images/Frame_6.png",
             "image_mobile": "shopify://shop_images/Frame_6.png",
-            "desktop-ratio": 1.4,
-            "mobile-ratio": 1,
+            "desktop-ratio": 1.5,
+            "mobile-ratio": 1.5,
             "text_position": "center",
             "text_position_horizontal": "center",
             "text_position_mob": "center",
@@ -193,17 +193,19 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify://shop_images/image_18.png",
-            "collection_filter_type": "skincare",
+            "image_source": "shopify://shop_images/Group_28.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": "Sun Protection"
           }
         },
         "select_JzVEcm": {
           "type": "select",
           "settings": {
-            "collection": "clarkston",
-            "image_source": "shopify://shop_images/image_18.png",
-            "collection_filter_type": "skincare",
+            "collection": "",
+            "image_source": "shopify://shop_images/Group_27.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": "Moisturizing"
           }
         },
@@ -211,16 +213,28 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify://shop_images/image_24.png",
-            "collection_filter_type": "skincare",
+            "image_source": "shopify://shop_images/Group_24.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
             "collection_filter": "Brightening"
+          }
+        },
+        "select_mEpRJg": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify://shop_images/Group_26.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
           }
         },
         "select_JGQ3jb": {
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify://shop_images/pexels-photo-7143195.webp",
+            "image_source": "shopify://shop_images/Group_25.png",
+            "collection_title": "",
             "collection_filter_type": "skin_type",
             "collection_filter": "Age Defense/Rejuvenation"
           }
@@ -230,19 +244,20 @@
         "select_Vcdd3x",
         "select_JzVEcm",
         "select_gHHFAA",
+        "select_mEpRJg",
         "select_JGQ3jb"
       ],
       "settings": {
         "center_content": true,
-        "heading": "Featured Brands",
+        "heading": "Shop By Brands",
         "image_circle_crop_enable": true,
         "image_spacing": 10,
         "title_font_type": "body",
         "text_alignment": "center",
         "section_style_spacing_top": 60,
         "section_style_spacing_bottom": 60,
-        "image_fit": "cover",
-        "image_aspect_ratio": "1.75"
+        "image_fit": "contain",
+        "image_aspect_ratio": 2.5
       }
     },
     "banner_VCL6Kt": {
@@ -305,7 +320,7 @@
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Best Selling &lt;br&gt; Products</p>",
+            "heading": "<p>Best Selling </p><p>Products</p>",
             "heading-font": 16,
             "heading-font-mob": 16,
             "subheading": "",
