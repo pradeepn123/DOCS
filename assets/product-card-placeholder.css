@@ -18,10 +18,22 @@
           box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
   background-color: #FFF;
   border-radius: 6px;
-  max-height: 460px;
+  max-height: 300px;
   overflow: hidden;
   width: 100%;
-  margin: 40px auto;
+  margin: 20px auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 38%;
+          flex: 1 0 38%;
+}
+@media (--sm) {
+  .card {
+    max-height: 460px;
+    margin: 40px auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 .card .shimmerBG {
   -webkit-animation-duration: 2.2s;
@@ -40,7 +52,12 @@
   background-size: 1200px 100%;
 }
 .card .media {
-  height: 200px;
+  height: 160px;
+}
+@media (--sm) {
+  .card .media {
+    height: 200px;
+  }
 }
 .card .p-32 {
   padding: 32px;
@@ -50,18 +67,40 @@
   width: 100%;
   margin-bottom: 12px;
   border-radius: 20px;
+  display: none;
+}
+@media (--sm) {
+  .card .title-line {
+    display: block;
+  }
 }
 .card .content-line {
   height: 8px;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   border-radius: 8px;
+}
+@media (--sm) {
+  .card .content-line {
+    margin-bottom: 16px;
+  }
 }
 .card .end {
   width: 40%;
+  display: none;
+}
+@media (--sm) {
+  .card .end {
+    display: block;
+  }
 }
 .card .m-t-24 {
-  margin-top: 24px;
+  margin-top: 14px;
+}
+@media (--sm) {
+  .card .m-t-24 {
+    margin-top: 24px;
+  }
 }
 
 @-webkit-keyframes shimmer {
