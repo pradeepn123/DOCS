@@ -6,81 +6,81 @@
         "image_with_text_overlay_UxarHd": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/AVENE_PROMO.png",
-            "image_mobile": "shopify:\/\/shop_images\/Group_20.png",
+            "image_desktop": "shopify://shop_images/AVENE_PROMO.png",
+            "image_mobile": "shopify://shop_images/Group_20.png",
             "desktop-ratio": 2.6,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Soothes, Strengthens & Rebalances the Skin<\/p>",
+            "heading": "<p>Soothes, Strengthens & Rebalances the Skin</p>",
             "heading-font": 48,
             "heading-font-mob": 48,
             "subheading": "Eau Thermale Avène",
             "description": "",
             "cta_text": "SHOP NOW",
-            "cta_url": "shopify:\/\/pages\/about-us"
+            "cta_url": "shopify://pages/about-us"
           }
         },
         "image_with_text_overlay_kxGbgm": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/SKIN_MEDICA_WEB_BANNER.png",
-            "image_mobile": "shopify:\/\/shop_images\/SKIN_MEDICA_WEBSITE_BANNER.png",
+            "image_desktop": "shopify://shop_images/SKIN_MEDICA_WEB_BANNER.png",
+            "image_mobile": "shopify://shop_images/SKIN_MEDICA_WEBSITE_BANNER.png",
             "desktop-ratio": 2.6,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Experience The Luxury Of Scientific Skin Care.<\/p>",
+            "heading": "<p>Experience The Luxury Of Scientific Skin Care.</p>",
             "heading-font": 48,
             "heading-font-mob": 48,
             "subheading": "SKINMEDICA",
             "description": "",
             "cta_text": "SHOP NOW",
-            "cta_url": "shopify:\/\/pages\/clarkston"
+            "cta_url": "shopify://pages/clarkston"
           }
         },
         "image_with_text_overlay_QPqerD": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/ALASTIN_PROMO.png",
-            "image_mobile": "shopify:\/\/shop_images\/Group_21.png",
+            "image_desktop": "shopify://shop_images/ALASTIN_PROMO.png",
+            "image_mobile": "shopify://shop_images/Group_21.png",
             "desktop-ratio": 2.6,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Say Goodbye&lt;\/br&gt;to Crepey Skin<\/p>",
+            "heading": "<p>Say Goodbye&lt;/br&gt;to Crepey Skin</p>",
             "heading-font": 48,
             "heading-font-mob": 48,
             "subheading": "ALASTIN Skincare",
             "description": "",
             "cta_text": "SHOP NOW",
-            "cta_url": "shopify:\/\/pages\/clarkston"
+            "cta_url": "shopify://pages/clarkston"
           }
         },
         "image_with_text_overlay_4t7Q9M": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/GLYTONE_PROMO.png",
-            "image_mobile": "shopify:\/\/shop_images\/Group_23.png",
+            "image_desktop": "shopify://shop_images/GLYTONE_PROMO.png",
+            "image_mobile": "shopify://shop_images/Group_23.png",
             "desktop-ratio": 2.6,
             "mobile-ratio": 1,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Target Your <\/p><p>Treatment Plan<\/p>",
+            "heading": "<p>Target Your </p><p>Treatment Plan</p>",
             "heading-font": 48,
             "heading-font-mob": 48,
             "subheading": "GLYTONE",
             "description": "",
             "cta_text": "SHOP NOW",
-            "cta_url": "shopify:\/\/collections"
+            "cta_url": "shopify://collections"
           }
         }
       },
@@ -100,7 +100,7 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/image_18.png",
+            "image_source": "shopify://shop_images/image_18.png",
             "collection_title": "SUN PROTECTION",
             "collection_filter_type": "skincare",
             "collection_filter": "Sun Protection"
@@ -110,7 +110,7 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/image_18.png",
+            "image_source": "shopify://shop_images/image_18.png",
             "collection_title": "MOISTURIZING",
             "collection_filter_type": "skincare",
             "collection_filter": "Moisturizing"
@@ -120,7 +120,7 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/image_24.png",
+            "image_source": "shopify://shop_images/image_24.png",
             "collection_title": "BRIGHTENING",
             "collection_filter_type": "skincare",
             "collection_filter": "Brightening"
@@ -130,10 +130,10 @@
           "type": "select",
           "settings": {
             "collection": "clarkston",
-            "image_source": "shopify:\/\/shop_images\/pexels-photo-7143195.webp",
+            "image_source": "shopify://shop_images/pexels-photo-7143195.webp",
             "collection_title": "SKIN DEFENCE",
             "collection_filter_type": "skin_type",
-            "collection_filter": "Age Defense\/Rejuvenation"
+            "collection_filter": "Age Defense/Rejuvenation"
           }
         }
       },
@@ -162,13 +162,13 @@
         "image_with_text_overlay_p7Bcqh": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/Frame_6.png",
+            "image_desktop": "shopify://shop_images/Frame_6.png",
             "desktop-ratio": 2,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Get The Care You Want,<br\/> Whenever You Want<\/p>",
+            "heading": "<p>Get The Care You Want,<br/> Whenever You Want</p>",
             "heading-font": 48,
             "heading-font-mob": 48,
             "subheading": "CLARKSTON DERMATOLOGY",
@@ -190,15 +190,15 @@
         "image_with_text_overlay_eRpTt3": {
           "type": "image_with_text_overlay",
           "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/small_smile.png",
-            "image_mobile": "shopify:\/\/shop_images\/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
-            "desktop-ratio": 0.7,
+            "image_desktop": "shopify://shop_images/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
+            "image_mobile": "shopify://shop_images/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
+            "desktop-ratio": 0.8,
             "mobile-ratio": 1,
             "text_position": "top",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
             "text_position_horizontal_mob": "center",
-            "heading": "<p>Best Selling &lt;br&gt; Products<\/p>",
+            "heading": "<p>Best Selling &lt;br&gt; Products</p>",
             "heading-font": 16,
             "heading-font-mob": 16,
             "subheading": "",
@@ -229,7 +229,7 @@
         "heading": "Featured collection with media",
         "subheading": "",
         "maximum_content_width": 650,
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "button_label": "View all products",
         "button_style": "primary",
         "maximum_products": 3,

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 export default ({ settings, children }) => {
 	let params = {
 		slidesPerView: 1
@@ -14,7 +13,7 @@ export default ({ settings, children }) => {
 	return (
 		<Swiper
 			{...settings}
-			onSwiper={(swiper) => console.log(swiper)}>
+			onSwiper={(swiper) => false}>
 			{children.map((slide, index) => {
 				return <SwiperSlide key={index}>
 					{slide}

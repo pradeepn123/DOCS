@@ -26,6 +26,8 @@ __webpack_require__.r(__webpack_exports__);
     "slidesPerView": 1
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "banner banner--custom"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__header-content"
@@ -39,7 +41,7 @@ __webpack_require__.r(__webpack_exports__);
     class: "pre_loader"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "loader"
-  }))));
+  })))));
 });
 
 /***/ })

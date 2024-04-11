@@ -11,6 +11,16 @@ export default  () =>{
         };
         dropdownSelect?.addEventListener('click', toggleDropdown);
 
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                
+                selected.innerText = option.querySelector('[store-name]').innerText;
+                [dropdownSelect='', caret='', menu=''].forEach(el => el?.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
+                options.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+            });
+        });
+
         const handleDropdownContainer = event => {
         if (!dropdown.contains(event.target)) [dropdownSelect, caret, menu].forEach(el => el?.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
         };

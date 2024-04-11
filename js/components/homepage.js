@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import BreakpointWrapper from './contexts/breakpointContextWrapper';
 
 export default ({shopifyData}) => {
-
   const [sections, updateSections] = useState([]);
    useEffect(() => {
     (async () => {
@@ -45,6 +45,6 @@ export default ({shopifyData}) => {
 
    return ( sections.map((componentData, index) => {
     const {Component, props} = componentData;
-    return <Component data={props} key={index}/>
+    return <Component data={props} key={index}/>;
    }))
 }

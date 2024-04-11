@@ -57,8 +57,6 @@ export default ({ aspectratio = 1, image, settings }) => {
 
   const getImageStyle = () => {
     return {
-      maxWidth: `${maxWidthImage}px`,
-      maxHeight: `${maxHeightImage}px`,
       objectFit: `${imageFit ? imageFit : 'contain'}`,
       aspectRatio:`${aspectratio}`,
     };

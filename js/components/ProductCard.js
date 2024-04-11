@@ -27,7 +27,7 @@ export default ({ product }) => {
                         <div className="product-item__media" data-aspect-ratio="square">
                             <a className="product-item__image-link" href={link} aria-label={title}>
                                 <div className="image product-item__image aspect-ratio--square animation--lazy-load loaded" style={{"--object-fit": "contain"}}>                                    
-                                    <ResponsiveImage image={imageObj} image_aspect_ratio={1} />
+                                    <ResponsiveImage image={imageObj} />
                                 </div>
                             </a>
                             {product.discountPercentage > 0 ?

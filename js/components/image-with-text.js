@@ -1,69 +1,120 @@
 import React from "react";
-import ResponsiveImage from './ResponsiveImage';
+import ResponsiveImage from "JsComponents/ResponsiveImage"
+import { BreakPointContext } from "JsComponents/contexts/breakpointContextWrapper";
+import { useContext } from 'react';
 
 export default ({ data }) => {    
-    let {heading = '', description, desktopImage, mobileImage, desktopratio ,mobileratio , positionVertical, positionHorizontal, positionHorizontalMobile, positionVerticalMobile ,subheading,textFont,textFontMob , url, button} = data || {}; 
+    const currentBreakpoint = useContext(BreakPointContext);
+    let {
+    heading = '', 
+    description, 
+    desktopImage, 
+    mobileImage, 
+    desktopratio ,
+    mobileratio , 
+    subheading,
+    wrapperClass,
+    url, 
+    button} = data || {}; 
    
-    const imageObjDesktop= {
+    const curatedData = {
+        heading,
+        description,
+        subheading,
+        url,
+        button,
+        "default": {
+            "media": {
+               image: mobileImage || desktopImage,
+               ratio: mobileratio,
+               gridColumn: `span 4`,
+               gridRow: `span ${rowSpan}`
+
+            },
+            "layout": {
+                columnSpan: 2,
+                rowSpan: 1
+            },
+            "content": {
+                maxWidth: `500px`,
+                textColor: 'white',
+                background: 'blue',
+                gridColumn: `span 1`,
+                gridRow: `span ${rowSpan}`
+            }
+        },
+        "lg": {
+            "media": {
+                image: desktopImage || mobileImage,
+                ratio: desktopratio,
+                gridColumn: `span 4`,
+                gridRow: `span ${rowSpan}`
+            },
+            "layout": {
+                columnsSpan: 1
+            },
+            "content": {
+                maxWidth: `500px`,
+                textColor: 'white',
+                background: 'blue',
+                gridColumn: `span ${columnSpan}`,
+                gridRow: `span ${rowSpan}`
+            }
+        }
+    }
+
+    const selectedBreakpoinData = curatedData[currentBreakpoint] || curatedData["default"];
+    const {
+     media: {image, ratio, gridColumn:mediaGridColumn, gridRow:mediagridRow} ,
+     layout: {columnSpan , rowSpan}, 
+     content: {maxWidth: contentMaxWidth,textColor, gridColumn:contentGridColumn, gridRow:contentgridRow, background}} = selectedBreakpoinData;
+
+    const imageObj= {
         id: Date.now(),
-        ...desktopImage
-      }  
-    const imageObjMobile= {
-        id: Date.now(),
-        ...mobileImage
+        ...image
     }  
     function createMarkup() {
         return {__html:heading};
       }
 
-    const getWrapperStyles = () => {
-        return {
-          '--horizontal-align': `${positionHorizontal}`,
-          '--vertical-align': `${positionVertical}`,
-          '--horizontal-align-mob': `${positionHorizontalMobile}`,
-          '--vertical-align-mob': `${positionVerticalMobile}`,
-          '--heading-font': `${textFont}px`,
-          '--heading-font-mob': `${textFontMob}px`
-        };
-      };
+
+      const contentStyle = {
+        maxWidth:contentMaxWidth,
+        color: textColor,
+        background,
+        gridColumn: `span ${contentGridColumn}`,
+        gridRow: `span ${contentgridRow}`
+      }
+
+      const mediaStyle = {
+        gridColumn: `span 4`,
+        gridRow: `span 1`
+      }
 
     return(
-        <>
-        <div className="banner__container" style={getWrapperStyles()}>
-           <div className="banner__images" id={`banner-image-${imageObjDesktop.id}`} style={{"poisition": "relative !important"}}>
-            { imageObjMobile &&
-                <div className="banner__mob-image-wrapp">
-                    <ResponsiveImage image={imageObjMobile} image_aspect_ratio= {`${mobileratio}`} settings={{imageFit: "cover"}} />
-                </div>
-                }
-                { imageObjDesktop && 
-                    <div className="banner__desktop-image-wrapp">
-                        <ResponsiveImage image={imageObjDesktop} image_aspect_ratio={`${desktopratio}`} settings={{imageFit: "cover"}} />
-                    </div>
-                }
-        
-                <div className="banner__text-wrapp">
-                <div className="banner_text-container">
-                <p className="banner__subheading " data-divider-enabled="false">
-                        <span className="banner__subtext">{subheading}</span>
+        <div className={`image-text ${wrapperClass} image-text--style-1`} >
+           <div className={`image-text__images image-text__images--${wrapperClass}`} style={mediaStyle}>
+              <ResponsiveImage image={imageObj} aspectratio={`${ratio}`} settings={{imageFit: "cover"}} />
+            </div>
+            <div className={`image-text__content-wrapper image-text__content-wrapper--${wrapperClass}`} style={contentStyle}>
+            <div className={`image-text__content image-text__content--${wrapperClass}`}>
+                <p className="image-text__subheading fs-accent section-blocks__accent accent__text">
+                    {subheading}
                     </p>
-                    <h2 className="banner__heading" dangerouslySetInnerHTML={createMarkup()}>
-                      
+                    <h2 className="image-text__heading image-text__text fs-heading-display-1 ff-heading" dangerouslySetInnerHTML={createMarkup()}>
                     </h2>
-                    <p className="banner__description" data-divider-enabled="false">
-                        <span className="accent__text">{description}</span>
+                    <p className="image-text__description">
+                        {description}
                     </p>
                     { url &&
-                        <div className="button-wrapper" data-alignment="none">
+                        <div className="image-text__button section-blocks__button">
                             <a className="btn btn--primary" href={url}>
                                 <span>{button}</span>
                             </a>
                         </div>
                     }
-                </div>
-                </div>
+            </div>
             </div>
         </div>
-        </>
     )
 }

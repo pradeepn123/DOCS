@@ -1,0 +1,20 @@
+@use 'StyleComponents/mixins';
+
+.image-text {
+  $parent: &; 
+  @include mixins.grid(4, 100px, 100px);
+  position: relative;
+  &__content-wrapper {
+    @include mixins.section-padding;
+  }
+  &--style-1 {
+    #{$parent}__content-wrapper {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__button {
+    display: inline-block;
+  }
+}

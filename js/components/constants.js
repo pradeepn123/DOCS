@@ -1,24 +1,27 @@
-import getBreakpoint from "./breakpoints"
+import { getCurrentBreakpoint } from "JsComponents/breakpoints"
+
 
 const getGap = () => {
     const gaps = {
-      "index": "12px",
+      "default": "12px",
       "sm": "12px",
       "md": "16px",
       "lg": "24px"
     }
 
-    const currentBreakpoint = getBreakpoint();
+    console.log(getCurrentBreakpoint, "fn")
+
+    const currentBreakpoint = getCurrentBreakpoint();
     return gaps[currentBreakpoint];
 } 
 
 
 export const LAYOUT = {
-    gap: getGap()
+    gap: getGap
 }
 
 export const BREAKPOINTS = {
-    "0": "index",
+    "0": "default",
     "769": "sm",
     "1024": "md",
     "1200": "lg"

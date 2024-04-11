@@ -1,15 +1,9 @@
 
+@use 'StyleComponents/mixins';
 @import 'breakpoints';
 
-.featured_products_with_image{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    @media(--sm){
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 32px;
-    }
-
+.featured-products-with-image{
+   @include mixins.grid(2, 100px, 100px);
     .featured-products-grid{
         display: flex;
         flex-wrap: nowrap;

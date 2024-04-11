@@ -22,30 +22,19 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data
   } = _ref;
-  var cssMedia = {
-    "--media-width": "50%",
-    "--media-height": "350px",
-    "--media-height-mobile": "360px"
-  };
   var blockData = data.blocks;
   var products = data.products;
-  console.log("gggg", data);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "section-inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featured-collection-with-media__inner featured_products_with_image",
-    style: {
-      cssMedia
-    },
-    "data-media-position": "left",
-    "data-media-position-mobile": "above"
+    className: "featured-products-with-image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featured-collection__products"
   }, blockData.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     data: block,
     key: block.name + index
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featured-collection__products  product-item-holder featured-products-grid"
+    className: "featured-collection__products product-item-holder featured-products-grid"
   }, products.map((product, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
     product: product,
     key: index

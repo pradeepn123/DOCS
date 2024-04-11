@@ -98,3 +98,8 @@
     grid-template-columns: repeat(auto-fill, minmax(0, calc(25% - 4*(var(--grid-column-gap)/5))));
   }
 }
+
+
+@mixin section-padding{
+  padding: var(--spacing-10) var(--space-outer) var(--spacing-10);
+}

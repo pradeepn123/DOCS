@@ -6,8 +6,9 @@ export default ({ data }) => {
     const settings = {
         "slidesPerView": 1
     }    
-
+    
     return (
+        <div className="banner banner--custom">
         <div className="banner__container">
             <div className="banner__header-content">
                 { data 
@@ -24,6 +25,7 @@ export default ({ data }) => {
                     </div>
                 }
             </div>
+        </div>
         </div>
     )
 } 
