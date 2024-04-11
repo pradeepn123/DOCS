@@ -160,6 +160,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     vendor,
     variants = []
   } = product || {};
+  var productParent = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
   var variantData = variants.map(variant => {
     return {
       price: variant.price,
@@ -170,6 +171,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var imageObj = _objectSpread({
     id: Date.now()
   }, product.image);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    window.initProductItem(productParent.current);
+  }, []);
   var [{
     price,
     variant_id,
@@ -178,6 +182,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var originalPrice = price;
   var convertedPrice = (originalPrice / 100).toFixed(2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "product__container",
+    ref: productParent
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "product-item animation--item",
     "data-input-item": "",
     "data-id": "8091513782403",
@@ -307,7 +314,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     "data-unit-base": ""
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
     "data-unit-price-base-unit": ""
-  }))))))))))));
+  })))))))))))));
 });
 
 /***/ }),
@@ -559,10 +566,6 @@ var BreakPointContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.creat
         var bannerLoader = document.querySelector('.banner_loader_section');
         bannerLoader.style.display = 'none';
       }
-      var script = document.createElement("script");
-      script.src = shopifyData.url;
-      script.async = false;
-      document.body.appendChild(script);
       updateSections(sections);
     })();
   }, []);

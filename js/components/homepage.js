@@ -34,11 +34,6 @@ export default ({shopifyData}) => {
           const bannerLoader = document.querySelector('.banner_loader_section')
           bannerLoader.style.display = 'none';
         }
-        const script = document.createElement("script");
-        script.src = shopifyData.url;
-        script.async = false;
-        document.body.appendChild(script)
-
         updateSections(sections);
     })();
    }, []);

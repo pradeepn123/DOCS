@@ -5793,7 +5793,7 @@ function ProductItem(container) {
     unload: unload
   };
 }
-
+window.initProductItem = ProductItem;
 var selectors$S = {
   wrappingContainer: ".product__block-complementary-products",
   complementaryProducts: "[data-complementary-products]",
@@ -7348,6 +7348,7 @@ var selectors$J = {
   quickImage: ".product__block--product-header-image-wrap"
 };
 var quickProductModal = function quickProductModal(node) {
+
   var focusTrap = createFocusTrap(node, {
     allowOutsideClick: true
   });
@@ -7489,7 +7490,9 @@ var quickProductModal = function quickProductModal(node) {
   };
 };
 
+
 window.quickProductModal = quickProductModal;
+
 
 var icons$1 = window.theme.icons;
 var classes$h = {
@@ -10491,6 +10494,7 @@ register("countdown-bar", {
 
 register("featured-collection", {
   onLoad: function onLoad() {
+    debugger;
     this.productItem = ProductItem(this.container);
     if (shouldAnimate(this.container)) {
       this.animateFeaturedCollection = animateStandard(this.container);
@@ -10750,7 +10754,6 @@ var selectors$j = {
 };
 register("slideshow", {
   onLoad: function onLoad() {
-    debugger;
     var _this = this;
     var scrollerId = this.container.dataset.scrollerId;
     this.scrollerId = scrollerId;
@@ -13376,13 +13379,12 @@ productLightbox();
 widthWatcher();
 
 // Product quick view/add modal
-window.initQuickView = () => {
+
   var quickProductModalElement = n$2("[data-quick-product-modal]", document);
   if (quickProductModalElement) {    
     quickProductModal(quickProductModalElement);
   }
-}
-window.initQuickView();
+
 
 
 

@@ -1,8 +1,9 @@
-import React, { useEffect, useState, Component } from "react";
+import React, { useEffect, useState, Component,useRef } from "react";
 import ResponsiveImage from './ResponsiveImage';
 
 export default ({ product }) => {    
-    const {title, link, vendor, variants=[] } = product || {}
+    const {title, link, vendor, variants=[] } = product || {};
+    const productParent = useRef();
     const variantData = variants.map((variant) => {        
         return{
             price: variant.price,
@@ -15,12 +16,18 @@ export default ({ product }) => {
         id: Date.now(),
         ...product.image
     }
+
+    useEffect(() => {
+        window.initProductItem(productParent.current);
+    },[])
+
     const [{ price, variant_id, compare_at_price }] = variantData || []
     const originalPrice = price;
     const convertedPrice = (originalPrice / 100).toFixed(2);    
 
     return(
         <>
+        <div className="product__container" ref={productParent}>
             <div className="product-item animation--item" data-input-item="" data-id="8091513782403" data-title={product.title} data-url={product.link} data-variant-id={variant_id} data-quantity-in-cart="0" data-product-has-single-variant="true" data-quick-add-style="icon" data-product-item-alignment="left" data-price-position="below_title" data-show-inventory="false" data-ratings-visible="false">
                 <div className="product-item__inner">
                     <div className="product-item__media-wrapper">
@@ -100,6 +107,7 @@ export default ({ product }) => {
                     </div>
                 </div>
             </div>
+        </div>
         </>
     )
  

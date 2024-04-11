@@ -6,7 +6,7 @@ export default ({ data }) => {
 	const {products = []} = data || {};
 	return (
 		<>
-			<div className="featured-collection-react section"
+			<div className="featured-collection-react section featured-product"
 				style={{ "--section-style-spacing-top": "36px", "--section-style-spacing-bottom": "36px" }}>
 				<div className="section-inner">
 					<div className="section-header section-blocks">

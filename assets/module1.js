@@ -70,7 +70,7 @@ __webpack_require__.r(__webpack_exports__);
     products = []
   } = data || {};
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "featured-collection-react section",
+    className: "featured-collection-react section featured-product",
     style: {
       "--section-style-spacing-top": "36px",
       "--section-style-spacing-bottom": "36px"
