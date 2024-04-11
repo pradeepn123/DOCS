@@ -68,20 +68,13 @@ const imageWithTextData = Object.values(data).map((item) => {
         <div className="banner banner--custom">
         <div className="banner__container">
             <div className="banner__header-content">
-                { data 
-                ? 
-                    <div>
-                        <Carousel settings={settings}>
-                            {imageWithTextData.map((eachData, index) => 
-                            <ImageWithText  data={eachData} key={eachData.name + index} wrapperClass="banner__slideshow" />
-                            )}
-                    </Carousel>
-                    </div>
-                :
-                    <div class="pre_loader">
-                        <div class="loader"></div>
-                    </div>
-                }
+                <div>
+                    <Carousel settings={settings}>
+                        {imageWithTextData.map((eachData, index) => 
+                        <ImageWithText  data={eachData} key={eachData.name + index} wrapperClass="banner__slideshow" />
+                        )}
+                </Carousel>
+                </div>
             </div>
         </div>
         </div>
