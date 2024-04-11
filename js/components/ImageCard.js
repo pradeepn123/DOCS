@@ -1,7 +1,7 @@
 import React from 'react';
 import ResponsiveImage from './ResponsiveImage';
 
-export default ({block, imageFit ,aspectratio}) => {
+export default ({block, imageFit ,aspectratio=1}) => {
   const {image_source:image, collection_title} = block;
   const imageObj= {
     id: Date.now(),

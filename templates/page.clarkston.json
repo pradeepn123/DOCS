@@ -153,17 +153,122 @@
         "section_style_spacing_top": 60,
         "section_style_spacing_bottom": 60,
         "image_fit": "cover",
-        "image_aspect_ratio": "square"
+        "image_aspect_ratio": "1"
+      }
+    },
+    "image_with_text_split_BnThCN": {
+      "type": "image-with-text-split",
+      "blocks": {
+        "image_with_text_overlay_gcTXtQ": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Frame_6.png",
+            "image_mobile": "shopify://shop_images/Frame_6.png",
+            "desktop-ratio": 1.4,
+            "mobile-ratio": 1,
+            "text_position": "center",
+            "text_position_horizontal": "center",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Get The Care You Want,<br/> Whenever You Want</p>",
+            "heading-font": 32,
+            "heading-font-mob": 32,
+            "subheading": "CLARKSTON DERMATOLOGY",
+            "description": "Discover our curated selection of premium brands to provide unparalleled results, giving you the radiant complexion you deserve.",
+            "cta_text": "Explore",
+            "cta_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_gcTXtQ"
+      ],
+      "settings": {
+      }
+    },
+    "json_image_card_AHgpJB": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_Vcdd3x": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/image_18.png",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Sun Protection"
+          }
+        },
+        "select_JzVEcm": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/image_18.png",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Moisturizing"
+          }
+        },
+        "select_gHHFAA": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/image_24.png",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Brightening"
+          }
+        },
+        "select_JGQ3jb": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/pexels-photo-7143195.webp",
+            "collection_filter_type": "skin_type",
+            "collection_filter": "Age Defense/Rejuvenation"
+          }
+        }
+      },
+      "block_order": [
+        "select_Vcdd3x",
+        "select_JzVEcm",
+        "select_gHHFAA",
+        "select_JGQ3jb"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Featured Brands",
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 60,
+        "section_style_spacing_bottom": 60,
+        "image_fit": "cover",
+        "image_aspect_ratio": "1.75"
       }
     },
     "banner_VCL6Kt": {
       "type": "banner",
       "blocks": {
+        "image_with_text_overlay_zVWTAH": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "text_position": "center",
+            "text_position_horizontal": "center",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "",
+            "heading-font": 48,
+            "heading-font-mob": 48,
+            "subheading": "",
+            "description": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
         "image_with_text_overlay_p7Bcqh": {
           "type": "image_with_text_overlay",
           "settings": {
             "image_desktop": "shopify://shop_images/Frame_6.png",
-            "desktop-ratio": 2,
+            "desktop-ratio": 4,
             "text_position": "center",
             "text_position_horizontal": "left",
             "text_position_mob": "center",
@@ -179,8 +284,10 @@
         }
       },
       "block_order": [
+        "image_with_text_overlay_zVWTAH",
         "image_with_text_overlay_p7Bcqh"
       ],
+      "disabled": true,
       "settings": {
       }
     },
@@ -403,6 +510,8 @@
   "order": [
     "banner_JQUbh7",
     "json_image_card_AHgpJA",
+    "image_with_text_split_BnThCN",
+    "json_image_card_AHgpJB",
     "banner_VCL6Kt",
     "json_featured_product_with_media_e8VRJ4",
     "json_featured_products_JMnJHK",

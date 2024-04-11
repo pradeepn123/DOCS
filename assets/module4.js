@@ -1,10 +1,10 @@
 "use strict";
 (self["webpackChunkshoptrade_Shopify_Development"] = self["webpackChunkshoptrade_Shopify_Development"] || []).push([["module4"],{
 
-/***/ "./js/components/sections/ShopByBrand.js":
-/*!***********************************************!*\
-  !*** ./js/components/sections/ShopByBrand.js ***!
-  \***********************************************/
+/***/ "./js/components/sections/ImageWithTextSplit.js":
+/*!******************************************************!*\
+  !*** ./js/components/sections/ImageWithTextSplit.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -13,8 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var JsComponents_ImageCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/ImageCard */ "./js/components/ImageCard.js");
-/* harmony import */ var _Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Carousel */ "./js/components/Carousel.js");
+/* harmony import */ var JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/image-with-text */ "./js/components/image-with-text.js");
+/* harmony import */ var JsComponents_Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/Carousel */ "./js/components/Carousel.js");
 
 
 
@@ -22,50 +22,78 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data
   } = _ref;
-  var {
-    blocks,
-    heading,
-    imageFit,
-    aspectRatio = 1
-  } = data;
   var settings = {
-    "slidesPerView": 2.1,
-    "spaceBetween": "12px",
-    "breakpoints": {
-      "768": {
-        "slidesPerView": 3.2,
-        "spaceBetween": "16px"
-      },
-      "1024": {
-        "slidesPerView": 5,
-        "spaceBetween": "24px"
-      }
-    }
+    "slidesPerView": 1
   };
+  var imageWithTextData = Object.values(data).map(item => {
+    var {
+      heading = '',
+      description,
+      desktopImage,
+      mobileImage,
+      desktopratio,
+      mobileratio,
+      subheading = '',
+      styleClass = 'style-2',
+      mobileMediaGridColumn = 'span 4',
+      desktopMediaGridColumn = 'span 2',
+      mobileContentGridColumn = 'span 4',
+      desktopContentGridColumn = 'span 2',
+      url,
+      button
+    } = item || {};
+    return {
+      heading,
+      description,
+      subheading,
+      url,
+      button,
+      styleClass,
+      themeHeadingClasses: 'fs-heading-display-3 ff-heading',
+      "default": {
+        "media": {
+          image: mobileImage || desktopImage,
+          ratio: mobileratio,
+          gridColumn: mobileMediaGridColumn,
+          gridRow: 'span 1'
+        },
+        "content": {
+          maxWidth: '',
+          textColor: '#38393d',
+          background: '#e5ded8',
+          gridColumn: mobileContentGridColumn,
+          gridRow: 'span 1'
+        }
+      },
+      "lg": {
+        "media": {
+          image: desktopImage || mobileImage,
+          ratio: desktopratio,
+          gridColumn: desktopMediaGridColumn,
+          gridRow: 'span 1'
+        },
+        "content": {
+          maxWidth: '',
+          textColor: '#38393d',
+          background: '#e5ded8',
+          gridColumn: desktopContentGridColumn,
+          gridRow: 'span 1'
+        }
+      }
+    };
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "collection-list",
-    style: {
-      "--section-style-spacing-top": "36px",
-      "--section-style-spacing-bottom": "36px"
-    }
+    className: "image-with-text-split image-with-text-split__custom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "section-inner"
+    className: "image-with-text-split__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "collection-list__inner"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "section-header section-blocks animation--container-header",
-    "data-alignment": "center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: "ff-heading section-header__heading fs-heading-3-base"
-  }, heading)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "collection-list__collections"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "image-with-text-split__header-content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
     settings: settings
-  }, blocks.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ImageCard__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    block: block,
-    key: index,
-    imageFit: imageFit,
-    aspectRatio: aspectRatio
+  }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: eachData,
+    key: eachData.name + index,
+    wrapperClass: "image-with-text__split"
   })))))));
 });
 

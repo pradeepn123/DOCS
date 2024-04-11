@@ -28,6 +28,7 @@ export default ({ data }) => {
         url,
         button,
         styleClass,
+        themeHeadingClasses:'ff-heading fs-heading-1-base',
         "default": {
             "media": {
                image: mobileImage || desktopImage,

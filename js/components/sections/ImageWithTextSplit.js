@@ -15,11 +15,11 @@ const imageWithTextData = Object.values(data).map((item) => {
             desktopratio ,
             mobileratio , 
             subheading = '',
-            styleClass = 'style-1',
+            styleClass = 'style-2',
             mobileMediaGridColumn = 'span 4',
-            desktopMediaGridColumn = 'span 4',
-            mobileContentGridColumn = 'span 1',
-            desktopContentGridColumn = 'span 1',
+            desktopMediaGridColumn = 'span 2',
+            mobileContentGridColumn = 'span 4',
+            desktopContentGridColumn = 'span 2',
             url, 
             button} = item || {}; 
         return {
@@ -29,7 +29,7 @@ const imageWithTextData = Object.values(data).map((item) => {
         url,
         button,
         styleClass,
-        themeHeadingClasses : 'fs-heading-display-1 ff-heading',
+        themeHeadingClasses : 'fs-heading-display-3 ff-heading',
         "default": {
             "media": {
                image: mobileImage || desktopImage,
@@ -38,9 +38,9 @@ const imageWithTextData = Object.values(data).map((item) => {
                gridRow: 'span 1'
             },
             "content": {
-                maxWidth: `500px`,
-                textColor: 'white',
-                background: 'transparent',
+                maxWidth: '',
+                textColor: '#38393d',
+                background: '#e5ded8',
                 gridColumn: mobileContentGridColumn,
                 gridRow: 'span 1'
             }
@@ -53,9 +53,9 @@ const imageWithTextData = Object.values(data).map((item) => {
                 gridRow: 'span 1'
             },
             "content": {
-                maxWidth: `500px`,
-                textColor: 'white',
-                background: 'transparent',
+                maxWidth: '',
+                textColor: '#38393d',
+                background: '#e5ded8',
                 gridColumn: desktopContentGridColumn,
                 gridRow: 'span 1'
             }
@@ -66,15 +66,15 @@ const imageWithTextData = Object.values(data).map((item) => {
 
 
     return (
-        <div className="banner banner--custom">
-            <div className="banner__container">
-                <div className="banner__header-content">
+        <div className="image-with-text-split image-with-text-split__custom">
+            <div className="image-with-text-split__container">
+                <div className="image-with-text-split__header-content">
                     <div>
                         <Carousel settings={settings}>
                             {imageWithTextData.map((eachData, index) => 
-                            <ImageWithText  data={eachData} key={eachData.name + index} wrapperClass="banner__slideshow" />
+                                <ImageWithText  data={eachData} key={eachData.name + index} wrapperClass="image-with-text__split" />
                             )}
-                    </Carousel>
+                        </Carousel>
                     </div>
                 </div>
             </div>

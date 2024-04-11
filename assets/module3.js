@@ -23,7 +23,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var {
     block,
     imageFit,
-    aspectratio
+    aspectratio = 1
   } = _ref;
   var {
     image_source: image,

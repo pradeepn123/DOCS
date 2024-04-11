@@ -30,6 +30,12 @@ var map = {
 		"vendors",
 		"shared",
 		"module3"
+	],
+	"./ImageWithTextSplit.js": [
+		"./js/components/sections/ImageWithTextSplit.js",
+		"vendors",
+		"shared",
+		"module4"
 	]
 };
 function webpackAsyncContext(req) {
@@ -630,8 +636,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     maxWidth: contentMaxWidth,
     color: textColor,
     background,
-    gridColumn: "span ".concat(contentGridColumn),
-    gridRow: "span ".concat(contentgridRow)
+    gridColumn: contentGridColumn,
+    gridRow: contentgridRow
   };
   var mediaStyle = {
     gridColumn: mediaGridColumn,
@@ -643,7 +649,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     subheading,
     styleClass,
     url,
-    button
+    button,
+    themeHeadingClasses
   } = curatedData;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "image-text ".concat(wrapperClass, " ")
@@ -664,7 +671,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
     className: "image-text__subheading fs-accent section-blocks__accent accent__text"
   }, subheading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", {
-    className: "image-text__heading image-text__text fs-heading-display-1 ff-heading",
+    className: "image-text__heading image-text__text ".concat(themeHeadingClasses),
     dangerouslySetInnerHTML: createMarkup()
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
     className: "image-text__description"

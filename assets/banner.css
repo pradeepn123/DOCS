@@ -34,3 +34,35 @@
 .image-text .responsive-image__wrapper {
   max-width: 100%;
 }
+.image-text.image-with-text__split {
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+}
+.image-text.image-with-text__split .image-text__images--style-2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.image-text.image-with-text__split .image-text__content-wrapper--style-2 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.image-text.image-with-text__split .image-text__content-wrapper--style-2 .image-text__content--image-with-text__split {
+  max-width: 520px;
+}

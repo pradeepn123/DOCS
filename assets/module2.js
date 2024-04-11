@@ -48,6 +48,7 @@ __webpack_require__.r(__webpack_exports__);
       url,
       button,
       styleClass,
+      themeHeadingClasses: 'ff-heading fs-heading-1-base',
       "default": {
         "media": {
           image: mobileImage || desktopImage,

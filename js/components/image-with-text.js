@@ -21,8 +21,8 @@ export default ({ data: curatedData, wrapperClass }) => {
         maxWidth:contentMaxWidth,
         color: textColor,
         background,
-        gridColumn: `span ${contentGridColumn}`,
-        gridRow: `span ${contentgridRow}`
+        gridColumn: contentGridColumn,
+        gridRow: contentgridRow
       }
 
       const mediaStyle = {
@@ -30,12 +30,14 @@ export default ({ data: curatedData, wrapperClass }) => {
         gridRow: mediagridRow
       }
 
-      const { heading,
-      description,
-      subheading,
-      styleClass,
-      url,
-      button
+      const { 
+        heading,
+        description,
+        subheading,
+        styleClass,
+        url,
+        button,
+        themeHeadingClasses
       } = curatedData;
 
     return(
@@ -44,23 +46,23 @@ export default ({ data: curatedData, wrapperClass }) => {
               <ResponsiveImage image={imageObj} aspectratio={`${ratio}`} settings={{imageFit: "cover"}} />
             </div>
             <div className={`image-text__content-wrapper image-text__content-wrapper--${wrapperClass} image-text__content-wrapper--${styleClass}`} style={contentStyle}>
-            <div className={`image-text__content image-text__content--${wrapperClass}`}>
-                <p className="image-text__subheading fs-accent section-blocks__accent accent__text">
-                    {subheading}
-                    </p>
-                    <h2 className="image-text__heading image-text__text fs-heading-display-1 ff-heading" dangerouslySetInnerHTML={createMarkup()}>
-                    </h2>
-                    <p className="image-text__description">
-                        {description}
-                    </p>
-                    { url &&
-                        <div className="image-text__button section-blocks__button">
-                            <a className="btn btn--primary" href={url}>
-                                <span>{button}</span>
-                            </a>
-                        </div>
-                    }
-            </div>
+                <div className={`image-text__content image-text__content--${wrapperClass}`}>
+                    <p className="image-text__subheading fs-accent section-blocks__accent accent__text">
+                        {subheading}
+                        </p>
+                        <h2 className={`image-text__heading image-text__text ${themeHeadingClasses}`} dangerouslySetInnerHTML={createMarkup()}>
+                        </h2>
+                        <p className="image-text__description">
+                            {description}
+                        </p>
+                        { url &&
+                            <div className="image-text__button section-blocks__button">
+                                <a className="btn btn--primary" href={url}>
+                                    <span>{button}</span>
+                                </a>
+                            </div>
+                        }
+                </div>
             </div>
         </div>
     )

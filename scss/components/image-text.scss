@@ -19,4 +19,21 @@
   .responsive-image__wrapper  {
     max-width: 100%;
   }
+  &.image-with-text__split{
+    column-gap: 0;
+    row-gap: 0;
+    .image-text__images--style-2{
+      order: 2;
+    }
+    .image-text__content-wrapper--style-2{
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .image-text__content--image-with-text__split{
+        max-width: 520px;
+      }
+    }
+  }
 }

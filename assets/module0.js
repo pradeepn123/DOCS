@@ -49,6 +49,7 @@ __webpack_require__.r(__webpack_exports__);
       url,
       button,
       styleClass,
+      themeHeadingClasses: 'fs-heading-display-1 ff-heading',
       "default": {
         "media": {
           image: mobileImage || desktopImage,
@@ -87,17 +88,13 @@ __webpack_require__.r(__webpack_exports__);
     className: "banner__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__header-content"
-  }, data ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
     settings: settings
   }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     data: eachData,
     key: eachData.name + index,
     wrapperClass: "banner__slideshow"
-  })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "pre_loader"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "loader"
-  })))));
+  })))))));
 });
 
 /***/ })
