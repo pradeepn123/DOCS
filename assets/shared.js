@@ -80,6 +80,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     settings,
     children
   } = _ref;
+  var [currentIndex, updateCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0);
   var params = {
     slidesPerView: 1
   };
@@ -89,25 +90,37 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   var navigationPrevRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
   var navigationNextRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
   var navigation = {};
+  function SlideNextButton() {
+    var swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_3__.useSwiper)();
+    console.log(swiper, "swiper");
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", {
+      className: swiper.isEnd ? 'disabled' : '',
+      onClick: () => swiper.slideNext()
+    }, "Slide to the next slide");
+  }
+  function SlidePrevButton() {
+    var swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_3__.useSwiper)();
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", {
+      className: swiper.isBeginning ? 'disabled' : '',
+      onClick: () => swiper.slidePrev()
+    }, "Slide to the prev slide");
+  }
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.Swiper, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, settings, {
-    navigation: navigation,
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.A11y],
     onSwiper: swiper => console.log(swiper),
-    onBeforeInit: swiper => {
+    onAfterInit: swiper => {
       swiper.navigation = {
-        // prevEl: navigationPrevRef.current,
-        // nextEl: navigationNextRef.current,
+        prevEl: navigationPrevRef.current,
+        nextEl: navigationNextRef.current
       };
+    },
+    onSlideChange: swiper => {
+      updateCurrentIndex(swiper.activeIndex);
     }
   }), children.map((slide, index) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.SwiperSlide, {
       key: index
     }, slide);
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
-    ref: navigationPrevRef
-  }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", null, "Prev")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
-    ref: navigationNextRef
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", null, "Next")));
+  }));
 });
 
 /***/ }),
@@ -585,65 +598,10 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    data
+    data: curatedData,
+    wrapperClass
   } = _ref;
   var currentBreakpoint = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(JsComponents_contexts_breakpointContextWrapper__WEBPACK_IMPORTED_MODULE_2__.BreakPointContext);
-  var {
-    heading = '',
-    description,
-    desktopImage,
-    mobileImage,
-    desktopratio,
-    mobileratio,
-    subheading,
-    wrapperClass,
-    url,
-    button
-  } = data || {};
-  var curatedData = {
-    heading,
-    description,
-    subheading,
-    url,
-    button,
-    "default": {
-      "media": {
-        image: mobileImage || desktopImage,
-        ratio: mobileratio,
-        gridColumn: "span 4",
-        gridRow: "span ".concat(rowSpan)
-      },
-      "layout": {
-        columnSpan: 2,
-        rowSpan: 1
-      },
-      "content": {
-        maxWidth: "500px",
-        textColor: 'white',
-        background: 'blue',
-        gridColumn: "span 1",
-        gridRow: "span ".concat(rowSpan)
-      }
-    },
-    "lg": {
-      "media": {
-        image: desktopImage || mobileImage,
-        ratio: desktopratio,
-        gridColumn: "span 4",
-        gridRow: "span ".concat(rowSpan)
-      },
-      "layout": {
-        columnsSpan: 1
-      },
-      "content": {
-        maxWidth: "500px",
-        textColor: 'white',
-        background: 'blue',
-        gridColumn: "span ".concat(columnSpan),
-        gridRow: "span ".concat(rowSpan)
-      }
-    }
-  };
   var selectedBreakpoinData = curatedData[currentBreakpoint] || curatedData["default"];
   var {
     media: {
@@ -651,10 +609,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       ratio,
       gridColumn: mediaGridColumn,
       gridRow: mediagridRow
-    },
-    layout: {
-      columnSpan,
-      rowSpan
     },
     content: {
       maxWidth: contentMaxWidth,
@@ -680,13 +634,21 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     gridRow: "span ".concat(contentgridRow)
   };
   var mediaStyle = {
-    gridColumn: "span 4",
-    gridRow: "span 1"
+    gridColumn: mediaGridColumn,
+    gridRow: mediagridRow
   };
+  var {
+    heading,
+    description,
+    subheading,
+    styleClass,
+    url,
+    button
+  } = curatedData;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "image-text ".concat(wrapperClass, " image-text--style-1")
+    className: "image-text ".concat(wrapperClass, " ")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "image-text__images image-text__images--".concat(wrapperClass),
+    className: "image-text__images image-text__images--".concat(wrapperClass, " image-text__images--").concat(styleClass),
     style: mediaStyle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(JsComponents_ResponsiveImage__WEBPACK_IMPORTED_MODULE_3__["default"], {
     image: imageObj,
@@ -695,7 +657,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       imageFit: "cover"
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "image-text__content-wrapper image-text__content-wrapper--".concat(wrapperClass),
+    className: "image-text__content-wrapper image-text__content-wrapper--".concat(wrapperClass, " image-text__content-wrapper--").concat(styleClass),
     style: contentStyle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "image-text__content image-text__content--".concat(wrapperClass)

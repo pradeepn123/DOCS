@@ -92,3 +92,11 @@
     gap: 40px 20px;
   }
 }
+
+.image-text__content-wrapper--featured-media {
+  top: 0;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transform: initial;
+          transform: initial;
+}

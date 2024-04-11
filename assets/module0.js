@@ -25,6 +25,62 @@ __webpack_require__.r(__webpack_exports__);
   var settings = {
     "slidesPerView": 1
   };
+  var imageWithTextData = Object.values(data).map(item => {
+    var {
+      heading = '',
+      description,
+      desktopImage,
+      mobileImage,
+      desktopratio,
+      mobileratio,
+      subheading = '',
+      styleClass = 'style-1',
+      mobileMediaGridColumn = 'span 4',
+      desktopMediaGridColumn = 'span 4',
+      mobileContentGridColumn = 'span 1',
+      desktopContentGridColumn = 'span 1',
+      url,
+      button
+    } = item || {};
+    return {
+      heading,
+      description,
+      subheading,
+      url,
+      button,
+      styleClass,
+      "default": {
+        "media": {
+          image: mobileImage || desktopImage,
+          ratio: mobileratio,
+          gridColumn: mobileMediaGridColumn,
+          gridRow: 'span 1'
+        },
+        "content": {
+          maxWidth: "500px",
+          textColor: 'white',
+          background: 'transparent',
+          gridColumn: mobileContentGridColumn,
+          gridRow: 'span 1'
+        }
+      },
+      "lg": {
+        "media": {
+          image: desktopImage || mobileImage,
+          ratio: desktopratio,
+          gridColumn: desktopMediaGridColumn,
+          gridRow: 'span 1'
+        },
+        "content": {
+          maxWidth: "500px",
+          textColor: 'white',
+          background: 'transparent',
+          gridColumn: desktopContentGridColumn,
+          gridRow: 'span 1'
+        }
+      }
+    };
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner banner--custom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -33,10 +89,10 @@ __webpack_require__.r(__webpack_exports__);
     className: "banner__header-content"
   }, data ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"], {
     settings: settings
-  }, Object.values(data).map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     data: eachData,
     key: eachData.name + index,
-    wrapperclass: "slideshow-slide__text_wrapper"
+    wrapperClass: "banner__slideshow"
   })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     class: "pre_loader"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

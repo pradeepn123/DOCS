@@ -22,7 +22,7 @@
 .image-text__content-wrapper {
   padding: var(--spacing-10) var(--space-outer) var(--spacing-10);
 }
-.image-text--style-1 .image-text__content-wrapper {
+.image-text__content-wrapper--style-1 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);

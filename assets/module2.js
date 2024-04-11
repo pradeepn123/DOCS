@@ -24,15 +24,74 @@ __webpack_require__.r(__webpack_exports__);
   } = _ref;
   var blockData = data.blocks;
   var products = data.products;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  var imageWithTextData = Object.values(blockData).map(item => {
+    var {
+      heading = '',
+      description,
+      desktopImage,
+      mobileImage,
+      desktopratio,
+      mobileratio,
+      subheading,
+      styleClass = 'style-1',
+      mobileMediaGridColumn = 'span 4',
+      desktopMediaGridColumn = 'span 4',
+      mobileContentGridColumn = 'span 4',
+      desktopContentGridColumn = 'span 4',
+      url,
+      button
+    } = item || {};
+    return {
+      heading,
+      description,
+      subheading,
+      url,
+      button,
+      styleClass,
+      "default": {
+        "media": {
+          image: mobileImage || desktopImage,
+          ratio: mobileratio,
+          gridColumn: mobileMediaGridColumn,
+          gridRow: 'span 1'
+        },
+        "content": {
+          maxWidth: "500px",
+          textColor: 'white',
+          background: 'blue',
+          gridColumn: mobileContentGridColumn,
+          gridRow: 'span 1'
+        }
+      },
+      "lg": {
+        "media": {
+          image: desktopImage || mobileImage,
+          ratio: desktopratio,
+          gridColumn: desktopMediaGridColumn,
+          gridRow: 'span 1'
+        },
+        "content": {
+          maxWidth: "500px",
+          textColor: 'white',
+          background: 'transparent',
+          gridColumn: desktopContentGridColumn,
+          gridRow: 'span 1'
+        }
+      }
+    };
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "Featured-products-with-media"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "section-inner"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featured-products-with-image"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featured-collection__products"
-  }, blockData.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, imageWithTextData.map((block, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
     data: block,
-    key: block.name + index
+    key: block.name + index,
+    wrapperClass: "featured-media"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featured-collection__products product-item-holder featured-products-grid"
   }, products.map((product, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_ProductCard__WEBPACK_IMPORTED_MODULE_2__["default"], {

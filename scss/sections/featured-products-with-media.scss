@@ -30,3 +30,11 @@
     }
    
 }
+
+
+.image-text {
+    &__content-wrapper--featured-media {
+        top:0;
+        transform: unset;
+    }
+} 

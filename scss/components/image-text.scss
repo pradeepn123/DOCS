@@ -6,12 +6,10 @@
   position: relative;
   &__content-wrapper {
     @include mixins.section-padding;
-  }
-  &--style-1 {
-    #{$parent}__content-wrapper {
-      position: absolute;
-      top:50%;
-      transform: translateY(-50%);
+    &--style-1 {
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
     }
   }
   &__button {
