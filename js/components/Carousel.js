@@ -25,7 +25,7 @@ export default ({ settings, children }) => {
 					swiper.navigation.init();
 					swiper.navigation.update();
 				}}
-				pagination={settings.pagination && {clickable: true}}
+				pagination={settings.pagination && {clickable: true} }
 				modules={[Navigation, Pagination, A11y]}
 				onSwiper={(swiper) => console.log(swiper)}>
 				{children.map((slide, index) => {

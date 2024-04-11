@@ -85,7 +85,9 @@ __webpack_require__.r(__webpack_exports__);
     className: "ff-body fs-body-50 fs-accent section-header__preheading"
   }, data.preheading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "ff-heading section-header__heading fs-heading-3-base"
-  }, data.heading)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, data.heading, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "portal-root"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "featured-collection__products featured-collection-slider-grid standard-grid-spacing product-item-holder"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "carousel"
