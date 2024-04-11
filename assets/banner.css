@@ -307,6 +307,3 @@ button.swiper-pagination-bullet {
   --swiper-pagination-bullet-height: 2px;
   --swiper-pagination-bullet-border-radius: 20px;
 }
-.banner .swiper_navigation {
-  display: none;
-}

@@ -9,17 +9,13 @@
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-color: rgba(0, 0, 0, 0.8);
-    --swiper-pagination-bullet-inactive-color: rgba(0, 0, 0, 0.4);
+    --swiper-pagination-bullet-inactive-color: rgb(255, 255, 255);
     --swiper-pagination-bullet-inactive-opacity: 0.4;
     --swiper-pagination-bullet-width: 7px;
     --swiper-pagination-bullet-height: 7px;
     --swiper-pagination-bullet-border-radius: 7px;
 
-    --swiper-pagination-bullet-border-color-custom: #303030
-
-    .swiper_navigation {
-        display: none;
-    }
+    --swiper-pagination-bullet-border-color-custom: #303030;
 
     .swiper-pagination {
         .swiper-pagination-bullet {

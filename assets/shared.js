@@ -101,7 +101,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       swiper.navigation.init();
       swiper.navigation.update();
     },
-    pagination: {
+    pagination: settings.pagination && {
       clickable: true
     },
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.A11y],
@@ -110,13 +110,13 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.SwiperSlide, {
       key: index
     }, slide);
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
+  })), settings.navigation && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
     ref: prevRef,
     className: "swiper_navigation navigation__prev"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
     ref: nextRef,
     className: "swiper_navigation navigation__next"
-  }));
+  })));
 });
 
 /***/ }),

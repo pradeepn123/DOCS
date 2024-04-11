@@ -23,7 +23,9 @@ __webpack_require__.r(__webpack_exports__);
     data
   } = _ref;
   var settings = {
-    "slidesPerView": 1
+    "slidesPerView": 1,
+    "navigation": false,
+    "pagination": true
   };
   var imageWithTextData = Object.values(data).map(item => {
     var {

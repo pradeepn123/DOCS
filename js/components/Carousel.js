@@ -25,7 +25,7 @@ export default ({ settings, children }) => {
 					swiper.navigation.init();
 					swiper.navigation.update();
 				}}
-				pagination={{ clickable: true }}
+				pagination={settings.pagination && {clickable: true}}
 				modules={[Navigation, Pagination, A11y]}
 				onSwiper={(swiper) => console.log(swiper)}>
 				{children.map((slide, index) => {
@@ -34,8 +34,13 @@ export default ({ settings, children }) => {
 					</SwiperSlide>
 				})}
 			</Swiper>
-			<div ref={prevRef} className='swiper_navigation navigation__prev'></div>
-			<div ref={nextRef} className='swiper_navigation navigation__next'></div>
+			{settings.navigation && 
+				<>
+					<div ref={prevRef} className='swiper_navigation navigation__prev'></div>
+					<div ref={nextRef} className='swiper_navigation navigation__next'></div>
+				</>
+			}
+			
 		</>
 	);
 };

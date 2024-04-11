@@ -4,7 +4,9 @@ import Carousel from "JsComponents/Carousel";
 
 export default ({ data }) => {
     const settings = {
-        "slidesPerView": 1
+        "slidesPerView": 1,
+        "navigation": false,
+        "pagination": true
     }    
 const imageWithTextData = Object.values(data).map((item) => {
         let {

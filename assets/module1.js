@@ -23,6 +23,8 @@
   } = _ref;
   var carouselSettings = {
     "slidesPerView": 2.5,
+    "navigation": false,
+    "pagination": true,
     "spaceBetween": "12px",
     "breakpoints": {
       "768": {
