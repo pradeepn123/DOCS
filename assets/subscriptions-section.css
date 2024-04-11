@@ -238,3 +238,31 @@ subscriptions {
 .select:focus {
   outline: none;
 }
+
+.radio__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.radio__button input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 21px;
+  height: 20px;
+  padding: 3px;
+  background-clip: content-box;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.5px solid rgb(0, 0, 0);
+}
+
+.radio__button input[type=radio]:checked {
+  background-color: #1A428A;
+}

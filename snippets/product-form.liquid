@@ -148,6 +148,15 @@
     </select>
   </div>
 
+  {% if product.metafields.custom.radio_button_on_pdp_.value == true %}
+    <div class="radio__button">
+    <input type="radio" data-atc-trigger >
+    <label>I certify that I am a patient at this practice and have a current prescription on file for this product </label><br></div>
+    <input type="hidden" name="properties[prescription_consent]" value="true" />
+  {% endif %}
+
+
+  
   <div class="product-form__quantity-and-buy-buttons-wrapper">
     {% if show_quantity_selector -%}
       {%- assign id = 'product-form-' | append: prod.id -%}
@@ -243,6 +252,8 @@
           data-lang-available="{{ product_available_label }}"
           data-lang-unavailable="{{ 'product.unavailable' | t }}"
           data-lang-sold-out="{{ 'product.sold_out' | t }}"
+          {% if product.metafields.custom.radio_button_on_pdp_.value == true %}disabled {% endif %}
+           data-atc
         >
           <span data-add-to-cart-text>{{ add_to_cart_text }}</span>
 
