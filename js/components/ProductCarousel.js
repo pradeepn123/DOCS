@@ -19,10 +19,10 @@ export default ({ products = [] }) => {
 	}
   
 	return <div className="product-carousel">
-		<Carousel settings={carouselSettings}>
-		{(products).map((product, index) => (
-			<ProductCard product={product} key={index} />
-		))}
-	</Carousel>
-		</div>
+				<Carousel settings={carouselSettings}>
+				{(products).map((product, index) => (
+					<ProductCard product={product} key={index} />
+				))}
+				</Carousel>
+			</div>
 }

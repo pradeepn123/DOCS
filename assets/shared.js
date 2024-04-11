@@ -86,7 +86,6 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     settings,
     children
   } = _ref;
-  var [currentIndex, updateCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0);
   var params = {
     slidesPerView: 1
   };
@@ -95,7 +94,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   }
   var prevRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
   var nextRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.Swiper, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, settings, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement((react__WEBPACK_IMPORTED_MODULE_2___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.Swiper, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, settings, {
     onInit: swiper => {
       swiper.params.navigation.prevEl = prevRef.current;
       swiper.params.navigation.nextEl = nextRef.current;
@@ -105,20 +104,19 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     pagination: {
       clickable: true
     },
-    onSlideChange: swiper => {
-      updateCurrentIndex(swiper.activeIndex);
-    }
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_4__.A11y],
+    onSwiper: swiper => console.log(swiper)
   }), children.map((slide, index) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.SwiperSlide, {
       key: index
     }, slide);
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
     ref: prevRef,
     className: "swiper_navigation navigation__prev"
-  }, "Prev"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
     ref: nextRef,
     className: "swiper_navigation navigation__next"
-  }, "Next"));
+  }));
 });
 
 /***/ }),

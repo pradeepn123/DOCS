@@ -14,19 +14,6 @@
     --swiper-pagination-bullet-border-radius: 20px;
 
     .swiper_navigation {
-        position: absolute;
-        top: 50%;
-        color: red;
-        width: 20px;
-        height: 20px;
-        background-color: red;
-
-        .navigation__prev {
-            left: 10%;
-        }
-
-        .navigation__next {
-            right: 10%;
-        }
+        display: none;
     }
 }
