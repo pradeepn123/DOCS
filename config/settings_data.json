@@ -113,7 +113,7 @@
     "enable_confirmation_popup": false,
     "show_cart_notes": false,
     "cart_item_aspect_ratio": "portrait_alt",
-    "enable_free_shipping_bar": true,
+    "enable_free_shipping_bar": false,
     "free_shipping_threshold": "200",
     "enable_cross_sells": true,
     "cross_sells_recommendations_type": "product-list",
