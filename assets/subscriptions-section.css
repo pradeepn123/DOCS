@@ -254,13 +254,23 @@ subscriptions {
   -moz-appearance: none;
   appearance: none;
   display: inline-block;
-  width: 21px;
+  width: 36px;
   height: 20px;
   padding: 3px;
   background-clip: content-box;
   background-color: #fff;
   border-radius: 50%;
   border: 0.5px solid rgb(0, 0, 0);
+}
+@media (min-width: 390px) {
+  .radio__button input {
+    width: 26px !important;
+  }
+}
+@media (min-width: 768px) {
+  .radio__button input {
+    width: 21px !important;
+  }
 }
 
 .radio__button input[type=radio]:checked {
