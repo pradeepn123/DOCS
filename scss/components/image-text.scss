@@ -16,8 +16,8 @@
     display: inline-block;
   }
 
-  .responsive-image__wrapper  {
-    max-width: 100%;
+  .responsive-image__wrapper {
+    max-width: 100% !important;
   }
   &.image-with-text__split{
     column-gap: 0;

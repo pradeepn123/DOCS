@@ -1,2 +1,32 @@
 @import 'breakpoints';
 @import 'StyleComponents/image-text';
+@import 'swiper/css/pagination';
+
+.banner{
+    --swiper-pagination-bottom: 5%;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-color: rgba(255, 255, 255, 0.8);
+    --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.4);
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+    --swiper-pagination-bullet-width: 70px;
+    --swiper-pagination-bullet-height: 2px;
+    --swiper-pagination-bullet-border-radius: 20px;
+
+    .swiper_navigation {
+        position: absolute;
+        top: 50%;
+        color: red;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+
+        .navigation__prev {
+            left: 10%;
+        }
+
+        .navigation__next {
+            right: 10%;
+        }
+    }
+}

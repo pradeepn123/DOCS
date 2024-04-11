@@ -12,10 +12,9 @@ export default ({ settings, children }) => {
 	if (settings) {
 		params = { ...params, ...settings };
 	}
-
-	const navigationPrevRef = useRef(null)
-  	const navigationNextRef = useRef(null)
-	let navigation = {}
+	
+	const prevRef = useRef(null);
+	const nextRef = useRef(null);
 
 	function SlideNextButton() {
 		const swiper = useSwiper();
@@ -34,22 +33,22 @@ export default ({ settings, children }) => {
 	return (
 		<Swiper
 			{...settings}
-			onSwiper={(swiper) => console.log(swiper)}
-			onAfterInit={(swiper) => {
-				swiper.navigation = {
-					prevEl: navigationPrevRef.current,
-					nextEl: navigationNextRef.current,
-				  }
+			onInit={(swiper) => {
+				swiper.params.navigation.prevEl = prevRef.current;
+				swiper.params.navigation.nextEl = nextRef.current;
+				swiper.navigation.init();
+				swiper.navigation.update();
 			}}
-			onSlideChange={(swiper) => { 
-				updateCurrentIndex(swiper.activeIndex);
-			}}
-			>
+			pagination={{ clickable: true }}
+			modules={[Navigation, Pagination, A11y]}
+			onSwiper={(swiper) => console.log(swiper)}>
 			{children.map((slide, index) => {
 				return <SwiperSlide key={index}>
 					{slide}
 				</SwiperSlide>
 			})}
+			<div ref={prevRef} className='swiper_navigation navigation__prev'>Prev</div>
+      		<div ref={nextRef} className='swiper_navigation navigation__next'>Next</div>
 		</Swiper>
 	);
 };

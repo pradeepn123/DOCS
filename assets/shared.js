@@ -93,31 +93,17 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
   if (settings) {
     params = _objectSpread(_objectSpread({}, params), settings);
   }
-  var navigationPrevRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
-  var navigationNextRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
-  var navigation = {};
-  function SlideNextButton() {
-    var swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_3__.useSwiper)();
-    console.log(swiper, "swiper");
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", {
-      className: swiper.isEnd ? 'disabled' : '',
-      onClick: () => swiper.slideNext()
-    }, "Slide to the next slide");
-  }
-  function SlidePrevButton() {
-    var swiper = (0,swiper_react__WEBPACK_IMPORTED_MODULE_3__.useSwiper)();
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("button", {
-      className: swiper.isBeginning ? 'disabled' : '',
-      onClick: () => swiper.slidePrev()
-    }, "Slide to the prev slide");
-  }
+  var prevRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
+  var nextRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.Swiper, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, settings, {
-    onSwiper: swiper => console.log(swiper),
-    onAfterInit: swiper => {
-      swiper.navigation = {
-        prevEl: navigationPrevRef.current,
-        nextEl: navigationNextRef.current
-      };
+    onInit: swiper => {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    },
+    pagination: {
+      clickable: true
     },
     onSlideChange: swiper => {
       updateCurrentIndex(swiper.activeIndex);
@@ -126,7 +112,13 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__.SwiperSlide, {
       key: index
     }, slide);
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
+    ref: prevRef,
+    className: "swiper_navigation navigation__prev"
+  }, "Prev"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement("div", {
+    ref: nextRef,
+    className: "swiper_navigation navigation__next"
+  }, "Next"));
 });
 
 /***/ }),
