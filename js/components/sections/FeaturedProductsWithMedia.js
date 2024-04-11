@@ -39,7 +39,7 @@ export default ({ data }) => {
             "content": {
                 maxWidth: `500px`,
                 textColor: 'white',
-                background: 'blue',
+                background: 'transparent',
                 gridColumn: mobileContentGridColumn,
                 gridRow: 'span 1'
             }

@@ -3,11 +3,17 @@
 @import 'breakpoints';
 
 .featured-products-with-image{
-   @include mixins.grid(2, 100px, 100px);
+   @include mixins.grid(1, 100px, 100px);
+   row-gap: 20px;
+   @media(--sm){
+    @include mixins.grid(2, 100px, 100px);
+   }
     .featured-products-grid{
         display: flex;
         flex-wrap: nowrap;
         overflow: auto;
+        column-gap: 12px;
+      
         .product-item__inner {
             width: 200px;
             @media(--sm){
@@ -28,6 +34,13 @@
         }
     }
    
+}
+
+.featured-collection__products {
+    height: 100%;
+    .featured-media{
+        height: 100%;
+    }
 }
 
 
