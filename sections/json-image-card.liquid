@@ -4,6 +4,7 @@
     "heading": "{{section.settings.heading}}",
     "aspectratio": "{{section.settings.image_aspect_ratio}}",
     "imagefit":"{{section.settings.image_fit}}",
+    "slides":"{{section.settings.slides_per_view}}",
    
     "blocks": [
         {% for imageblock in section.blocks %}
@@ -28,6 +29,15 @@
       "type": "text",
       "id": "heading",
       "label": "t:shared.settings.section_header.heading.label"
+    },
+    {
+      "type": "range",
+      "id": "slides_per_view",
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "label": "Slides to Show",
+      "default": 4
     },
     {
       "type": "checkbox",

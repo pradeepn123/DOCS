@@ -142,6 +142,7 @@
       "settings": {
         "center_content": true,
         "heading": "Featured Categories",
+        "slides_per_view": 4,
         "image_circle_crop_enable": true,
         "image_spacing": 10,
         "title_font_type": "body",
@@ -246,6 +247,7 @@
       "settings": {
         "center_content": true,
         "heading": "Shop By Brands",
+        "slides_per_view": 5,
         "image_circle_crop_enable": true,
         "image_spacing": 10,
         "title_font_type": "body",
@@ -308,7 +310,7 @@
           "settings": {
             "image_desktop": "shopify://shop_images/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
             "image_mobile": "shopify://shop_images/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
-            "desktop-ratio": 2,
+            "desktop-ratio": 0.8,
             "mobile-ratio": 0.9,
             "text_position": "top",
             "text_position_horizontal": "left",

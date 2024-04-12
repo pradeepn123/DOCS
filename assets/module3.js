@@ -83,7 +83,8 @@ __webpack_require__.r(__webpack_exports__);
     blocks,
     heading,
     imagefit,
-    aspectratio = 1
+    aspectratio = 1,
+    slides
   } = data;
   var settings = {
     "slidesPerView": 2.1,
@@ -96,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
         "spaceBetween": "16px"
       },
       "1024": {
-        "slidesPerView": 4,
+        "slidesPerView": "".concat(slides),
         "spaceBetween": "24px"
       }
     }
