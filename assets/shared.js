@@ -278,15 +278,9 @@
       } = item;
       var handle = window.localStorage.getItem('location-page');
       menu_link = "/collections/".concat(handle);
-      item["url"] = menu_link;
-      sub_menu_title.forEach(item => {
-        var {
-          url
-        } = item;
-        var params = url.split('?')[1];
-        var newurl = "".concat(menu_link, "?").concat(params, "&filter.v.availability=1");
-        item["url"] = newurl;
-      });
+      var params = menu_link.split('?')[1];
+      var newurl = "".concat(menu_link, "?").concat(params, "&filter.v.availability=1");
+      item["url"] = newurl;
     });
     updateNavigations(dynamicNavigation);
   };
@@ -581,7 +575,6 @@ var SubscriptionContainer = _ref => {
     var selectedPlanIdInputs = document.querySelectorAll("input[name='selling_plan']");
     selectedPlanIdInputs.forEach(input => {
       if (inputSwitch == "subscription") {
-        debugger;
         input.value = subscription.id;
       } else {
         input.value = '';

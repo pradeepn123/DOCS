@@ -12,7 +12,6 @@
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  debugger;
   var atcTrigger = document.querySelector('[data-atc-trigger');
   if (atcTrigger) {
     atcTrigger.addEventListener('change', handleAtcTrigger);

@@ -208,11 +208,12 @@
         {%- endif %}
       </li>
     {%- endfor %}
+    {% assign mobile_links = linklists['mobile-menu-dynamic'] %}    
       <mobile-nav-menu-list>
         <script type= "application/json" id="mobile-nav-menu-list">
           {
             "links": [
-              {% for link in links %}
+              {% for link in mobile_links.links %}
               {% unless forloop.first %},{% endunless %}
                 {
                   "title": "{{link.title}}",

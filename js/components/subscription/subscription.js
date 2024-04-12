@@ -14,7 +14,6 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
         const selectedPlanIdInputs = document.querySelectorAll("input[name='selling_plan']");
         selectedPlanIdInputs.forEach(input => {
            if(inputSwitch == "subscription") {
-            debugger;
             input.value = subscription.id;
            }
            else {

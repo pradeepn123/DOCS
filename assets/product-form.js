@@ -5,7 +5,6 @@ var __webpack_exports__ = {};
   !*** ./js/sections/product-form.js ***!
   \*************************************/
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  debugger;
   var atcTrigger = document.querySelector('[data-atc-trigger');
   if (atcTrigger) {
     atcTrigger.addEventListener('change', handleAtcTrigger);

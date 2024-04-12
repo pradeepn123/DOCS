@@ -12,14 +12,10 @@ export default ({ shopifyData }) => {
             let {url:menu_link, sub_menu_title=[]} = item;
             const handle = window.localStorage.getItem('location-page');
             menu_link = `/collections/${handle}`
-            item["url"] = menu_link
-            sub_menu_title.forEach(item => {
-                let {url} = item;
-                const params = url.split('?')[1];
-                 const newurl = `${menu_link}?${params}&filter.v.availability=1`;
-                 item["url"] = newurl 
-            })
-         })
+            const params = menu_link.split('?')[1];
+             const newurl = `${menu_link}?${params}&filter.v.availability=1`;
+             item["url"] = newurl 
+        })     
         updateNavigations(dynamicNavigation);
     }
     useEffect(() => {
