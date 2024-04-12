@@ -91,14 +91,28 @@
           "type": "locator",
           "settings": {
             "collection": "clarkston",
-            "address": "<p>something</p>"
+            "address": "<p>5701 Bow Pointe Drive Suites 215 & 217, Village of Clarkston, MI 48346</p>"
           }
         },
         "locator_JUyJmm": {
           "type": "locator",
           "settings": {
             "collection": "dermatologists-of-southwest-ohio",
-            "address": "<p>something</p>"
+            "address": "<p>2551 Compass Rd. Suite 105 Glenview, IL 60026</p>"
+          }
+        },
+        "locator_UFpD4N": {
+          "type": "locator",
+          "settings": {
+            "collection": "skin-care-center",
+            "address": "<p>5300 Far Hills Ave Suite 300 Dayton, OH 45429</p>"
+          }
+        },
+        "locator_6mD6g7": {
+          "type": "locator",
+          "settings": {
+            "collection": "spa43-cosmetic-laser-center",
+            "address": "<p>43900 Garfield Road, Ste. 108, Clinton Township, MI 48038</p>"
           }
         }
       },
@@ -107,7 +121,9 @@
         "meganav_collection_images_fcDa8R",
         "meganav_promo_products_Cdcgi3",
         "locator_qVF7bM",
-        "locator_JUyJmm"
+        "locator_JUyJmm",
+        "locator_UFpD4N",
+        "locator_6mD6g7"
       ],
       "settings": {
         "layout": "inline_logo_left_menu_left",
