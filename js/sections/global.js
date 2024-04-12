@@ -5,6 +5,8 @@ import Megamenuproduct from "./megamenu-product-nav";
 import initMobilemenuNavProduct from "./mobile-menu-product-nav";
 import mobileMenuNav from "./mobile-nav-menu-list";
 import homepage from "./homepage";
+import CustomCarousel from "JsComponents/custom-carousel";
+
 
 
 window.initMegamenuNav = megamenunav;
@@ -15,5 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
     subscription()
     customStoreLocatore();
     homepage()
- 
-})
+    customElements.define('custom-carousel', CustomCarousel);
+});
