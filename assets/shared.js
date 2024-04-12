@@ -277,9 +277,9 @@
         sub_menu_title = []
       } = item;
       var handle = window.localStorage.getItem('location-page');
-      menu_link = "/collections/".concat(handle);
+      var collectionUrl = "/collections/".concat(handle);
       var params = menu_link.split('?')[1];
-      var newurl = "".concat(menu_link, "?").concat(params, "&filter.v.availability=1");
+      var newurl = "".concat(collectionUrl, "?").concat(params, "&filter.v.availability=1");
       item["url"] = newurl;
     });
     updateNavigations(dynamicNavigation);
@@ -287,7 +287,16 @@
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     updateNavigationItems();
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, links.map((nav, index) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, "  ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "mobile-menu__item fs-body-100"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "mobile-menu__link no-transition active"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "mobile-menu__link__text fs-body-200",
+    style: {
+      fontWeight: 500
+    }
+  }, "Shop By Brand"))), navigation.map((nav, index) => {
     var {
       title,
       url

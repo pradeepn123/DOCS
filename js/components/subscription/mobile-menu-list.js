@@ -11,9 +11,9 @@ export default ({ shopifyData }) => {
         dynamicNavigation.forEach(item => {
             let {url:menu_link, sub_menu_title=[]} = item;
             const handle = window.localStorage.getItem('location-page');
-            menu_link = `/collections/${handle}`
+            const collectionUrl = `/collections/${handle}`
             const params = menu_link.split('?')[1];
-             const newurl = `${menu_link}?${params}&filter.v.availability=1`;
+             const newurl = `${collectionUrl}?${params}&filter.v.availability=1`;
              item["url"] = newurl 
         })     
         updateNavigations(dynamicNavigation);
@@ -21,10 +21,15 @@ export default ({ shopifyData }) => {
     useEffect(() => {
         updateNavigationItems();
     },[])
-
     return (
-        <>  
-            {(links).map((nav, index) => { 
+        <>  <li className="mobile-menu__item fs-body-100" >    
+        <a
+            className="mobile-menu__link no-transition active"         
+        >
+            <span className="mobile-menu__link__text fs-body-200" style={{ fontWeight: 500}}>Shop By Brand</span>                
+        </a>
+    </li>
+            {(navigation).map((nav, index) => { 
                 const {title,url} = nav;
                 return <li className="mobile-menu__item fs-body-100" key={index}>    
                     <a
