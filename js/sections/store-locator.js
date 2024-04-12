@@ -1,18 +1,14 @@
 
 export default  () =>{
     document.querySelectorAll('[data-dropdown-wrapper]').forEach(dropdown => {
-        const dropdownSelect = dropdown?.querySelector('[data-dropdown-select]');
+    const dropdownSelect = dropdown?.querySelector('[data-dropdown-select]');
         const caret = dropdown?.querySelector('[data-dropdown-caret]');
         const menu = dropdown?.querySelector('[data-dropdown-menu]');
-        const options = menu?.querySelectorAll('[data-dropdown-selector]');
-        const selected = dropdownSelect?.querySelector('[data-dropdown-selected]');
-
         const toggleDropdown = () => {
         dropdownSelect?.classList.toggle('select-clicked');
         caret?.classList.toggle('caret-rotate');
         menu?.classList.toggle('menu-open');
         };
-
         dropdownSelect?.addEventListener('click', toggleDropdown);
 
         const handleDropdownContainer = event => {

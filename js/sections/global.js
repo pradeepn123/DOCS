@@ -6,7 +6,7 @@ import Megamenuproduct from "./megamenu-product-nav";
 window.initMegamenuNav = megamenunav;
 window.initMegamenuNavProduct = Megamenuproduct;
 document.addEventListener('DOMContentLoaded', () => {
-    storeLocator()
     subscription()
     // megamenunav()
+    customStoreLocatore();
 })

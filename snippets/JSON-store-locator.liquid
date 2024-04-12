@@ -8,11 +8,12 @@
             assign id = block_collection.id
             assign title = block_collection.title
             assign alternate_title = block_settings.alternate_title
+            assign url = block_collection.url
         %}
             "id": "{{id}}",
             "title": "{{alternate_title | default: title}}",
-            "address": "{{block.settings.address}}"
-
+            "address": "{{block.settings.address}}",
+            "url": "{{url}}"
         }
     {% endif %}
   {%- unless forloop.last %}, {% endunless %}

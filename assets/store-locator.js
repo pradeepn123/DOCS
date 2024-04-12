@@ -9,8 +9,6 @@ var __webpack_exports__ = {};
     var dropdownSelect = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-select]');
     var caret = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-caret]');
     var menu = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-menu]');
-    var options = menu === null || menu === void 0 ? void 0 : menu.querySelectorAll('[data-dropdown-selector]');
-    var selected = dropdownSelect === null || dropdownSelect === void 0 ? void 0 : dropdownSelect.querySelector('[data-dropdown-selected]');
     var toggleDropdown = () => {
       dropdownSelect === null || dropdownSelect === void 0 || dropdownSelect.classList.toggle('select-clicked');
       caret === null || caret === void 0 || caret.classList.toggle('caret-rotate');

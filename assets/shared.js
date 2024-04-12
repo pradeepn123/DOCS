@@ -113,6 +113,7 @@
 
 var storeCheckdIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\">\n                        <circle cx=\"15\" cy=\"15\" r=\"15\" fill=\"#1B428A\"/>\n                        <path d=\"M8 14.5L13 19.5L21.5 11\" stroke=\"white\"/>\n                        </svg>";
 var storeUnckeckIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\">\n                        <circle cx=\"15\" cy=\"15\" r=\"15\" fill=\"#1B428A\"></circle>\n                        <path d=\"M8 14.5L13 19.5L21.5 11\" stroke=\"white\"></path>\n                        </svg>";
+var chevronDown = "<svg width=\"9\" height=\"6\" viewBox=\"0 0 9 6\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"arrow_icon\">\n<path d=\"M1 0.625L4.75 4.375L8.5 0.625\" stroke=\"black\"></path>\n</svg>";
 var SvgIcon = _ref => {
   var {
     icon,
@@ -129,43 +130,84 @@ var SvgIcon = _ref => {
   var {
     shopifyData
   } = _ref2;
-  debugger;
   var {
     data
   } = shopifyData || {};
   var curatedData = data.filter(item => item.id);
-  var [selectedLocation, setSelectedLocation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(curatedData[0].id);
+  var location = window.localStorage.getItem("location");
+  var selectedItem = curatedData.find(_ref3 => {
+    var {
+      id
+    } = _ref3;
+    return id == location;
+  });
+  if (!selectedItem) selectedItem = curatedData[0];
+  var [selectedLocation, setSelectedLocation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(selectedItem);
+  var [isDropdownActive, setDropDownActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  var toggleDropdown = () => {
+    setDropDownActive(!isDropdownActive);
+  };
+  var handleSelection = location => {
+    window.localStorage.setItem("location", location.id);
+    setSelectedLocation(location);
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    window.addEventListener('click', ev => {
+      if (!ev.target.closest('[data-dropdown-wrapper]')) {
+        setDropDownActive(false);
+      }
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "storeDd-wrapper",
+    className: "store-locator__container",
+    "data-dropdown-wrapper": true,
+    onClick: toggleDropdown
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "store-locator__title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Shop from")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "store-locator__location ".concat(isDropdownActive ? 'select-clicked' : ''),
+    "data-dropdown-select": true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, selectedLocation.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SvgIcon, {
+    icon: chevronDown
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "store-locator__location-list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "storeDd-wrapper ".concat(isDropdownActive ? 'menu-open' : '', " "),
     "data-dropdown-menu": true
   }, data.map((location, index) => {
     var {
       id,
       title,
-      address
+      address,
+      url
     } = location || {};
-    console.log("iii", id);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "storeDd-wrapper__optionsWrap",
-      "data-dropdown-selector": true,
-      key: index
+      "data-dropdown-selector": "true",
+      key: index,
+      onClick: () => {
+        handleSelection(location);
+      }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: "/collections/clarkston",
-      className: "storeDd-wrapper__options-box ".concat(id == selectedLocation ? "checked" : '')
+      href: url,
+      className: "storeDd-wrapper__options-box ".concat(id == selectedLocation.id ? "checked" : '')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
       className: "storeDd-wrapper__storeName",
-      "store-name": true
+      "store-name": "true"
     }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "storeDd-wrapper__text-container"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "storeDd-wrapper__storeAddress"
-    }, address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "storeDd-wrapper__storeAddress",
+      dangerouslySetInnerHTML: {
+        __html: address
+      }
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "storeDd-wrapper__button"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SvgIcon, {
       svgClass: "",
       icon: id == selectedLocation ? storeCheckdIcon : storeUnckeckIcon
     })))));
-  })));
+  }))))));
 });
 
 /***/ }),

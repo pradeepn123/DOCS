@@ -2,45 +2,21 @@
 {{ 'store-locator-dd.css' | asset_url | stylesheet_tag }}
 
 <div
-    class="
-      store-locator
-      store-locator--{{ scope }}
-    ">
-    <div class="store-locator__wrapper">
-        <div class="store-locator__icon">
-           {% render 'store-loc-icon' %}
-        </div>
-        <div class="store-locator__container" data-dropdown-wrapper>
-            <div class="store-locator__title">
-                <p>Shop from</p>
-            </div>
-            <div class="store-locator__location" data-dropdown-select>
-                     <store-locator>
-                        <script  id="storeLocator-data" type="text/json">
-                        {
-                            "data": {% render 'JSON-store-locator' , section:section %}
-                        }
-                        </script>
-                    </store-locator>
-            </div>
-        </div>
+  class="
+    store-locator
+    store-locator--{{ scope }}
+  "
+>
+  <div class="store-locator__wrapper">
+    <div class="store-locator__icon">
+      {% render 'store-loc-icon' %}
     </div>
+      <store-locator>
+        <script id="storeLocator-data" type="text/json">
+          {
+              "data": {% render 'JSON-store-locator' , section:section %}
+          }
+        </script>
+      </store-locator>
+  </div>
 </div>
-
-
-
-{% comment %} 
-<div class="dropdown sproos-language-chooser" data-dropdown-wrapper>
-    <div class="dropdown-select" data-dropdown-select>
-      <span class="dropdown__selected" data-dropdown-selected>{{ request.locale.name | capitalize }} <span class="tab-hide">({{ request.locale.iso_code }})</span></span>
-      <div class="caret" data-dropdown-caret>{% render 'icon-caret' %}</div>
-    </div>
-    <ul class="language-selector-menu" data-dropdown-menu>
-      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/" title="English">English (en)</a></li>
-      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/fr/?redirect=true" title="French">Français (fr)</a></li>
-      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/nl-eu/?redirect=true" title="Dutch">Nederlands (nl)</a></li>
-      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/de-eu/?redirect=true" title="German">Deutsch (de)</a></li>
-      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/it-eu/?redirect=true" title="Italian">Italiano (it)</a></li>
-      <li class="language-selector-content" data-dropdown-selector><a class="language-selector-name" href="/es-eu/?redirect=true" title="Spanish">Español (es)</a></li>
-    </ul>
-</div> {% endcomment %}

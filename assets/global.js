@@ -197,6 +197,7 @@
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
 /* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
 /* harmony import */ var _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./megamenu-nav */ "./js/sections/megamenu-nav.js");
@@ -205,6 +206,11 @@
 /* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
 /* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
 /* harmony import */ var _custom_store_locatore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./custom-store-locatore */ "./js/sections/custom-store-locatore.js");
+=======
+/* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
+/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
+/* harmony import */ var _custom_store_locatore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./custom-store-locatore */ "./js/sections/custom-store-locatore.js");
+>>>>>>> e4c6eca (updated store locator)
 
 >>>>>>> 5a42389 (store locator using react)
 
@@ -214,6 +220,7 @@
 window.initMegamenuNav = _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__["default"];
 window.initMegamenuNavProduct = _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__["default"];
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   (0,_store_locator__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_subscription__WEBPACK_IMPORTED_MODULE_3__["default"])();
@@ -261,6 +268,11 @@ document.addEventListener('DOMContentLoaded', () => {
   (0,_subscription__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_custom_store_locatore__WEBPACK_IMPORTED_MODULE_2__["default"])();
 >>>>>>> 5a42389 (store locator using react)
+=======
+  (0,_subscription__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_custom_store_locatore__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  window.initStoreLocator = _store_locator__WEBPACK_IMPORTED_MODULE_2__["default"];
+>>>>>>> e4c6eca (updated store locator)
 });
 
 /***/ }),
@@ -279,8 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var dropdownSelect = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-select]');
     var caret = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-caret]');
     var menu = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-menu]');
-    var options = menu === null || menu === void 0 ? void 0 : menu.querySelectorAll('[data-dropdown-selector]');
-    var selected = dropdownSelect === null || dropdownSelect === void 0 ? void 0 : dropdownSelect.querySelector('[data-dropdown-selected]');
     var toggleDropdown = () => {
       dropdownSelect === null || dropdownSelect === void 0 || dropdownSelect.classList.toggle('select-clicked');
       caret === null || caret === void 0 || caret.classList.toggle('caret-rotate');
