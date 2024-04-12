@@ -139,17 +139,17 @@
         assign child_is_active = false
 
         if link.levels > 0
-          assign has_children = true
+          assign has_children = false
         endif
 
         for link in link.links
           if link.active
-            assign child_is_active = true
+            assign child_is_active = false
             break
           elsif link.links.size > 0
             for link in link.links
               if link.active
-                assign child_is_active = true
+                assign child_is_active = false
                 break
               endif
             endfor
@@ -186,25 +186,7 @@
       <li
         class="mobile-menu__item fs-body-100"
         data-list-item
-      >        
-        <a
-          class="{{ mobile_menu_link_class }}"
-          href="{{ link.url }}"
-          {% if has_children -%}
-            data-action="show-sub-pane"
-            data-link-target-pane-key="{{ submenu_pane_key }}"
-            data-link="primary"
-            aria-haspopup="true"
-            aria-expanded="false"
-          {%- endif %}
-        >
-          <span class="mobile-menu__link__text fs-body-100">{{ link.title }}</span>
-
-          {% comment %} {% if has_children -%}
-            {% render 'icon', icon: 'chevron', class: 'menu-icon' %}
-          {%- endif %} {% endcomment %}
-        </a>
-
+      >     
         {% if has_children -%}
           {%- assign next_depth = menu_depth | plus: 1 -%}
 
@@ -221,17 +203,28 @@
               parent: link,
               grandparent: parent
             -%} {% endcomment %}
-            <mobile-nav-menu-list>
-              <script type= "application/json" id="mobile-nav-menu-list">
-                {
-                  "data": {% render 'megamenu-json', link: link %}
-                }
-              </script>
-            </mobile-nav-menu-list>
+  
           {%- endcapture %}
         {%- endif %}
       </li>
     {%- endfor %}
+      <mobile-nav-menu-list>
+        <script type= "application/json" id="mobile-nav-menu-list">
+          {
+            "links": [
+              {% for link in links %}
+              {% unless forloop.first %},{% endunless %}
+                {
+                  "title": "{{link.title}}",
+                  "url": "{{link.url}}"
+                }
+              {% endfor %}
+            ]
+          }
+        </script>
+      </mobile-nav-menu-list>
+
+        
     
 
     {% unless type == 'secondary' -%}

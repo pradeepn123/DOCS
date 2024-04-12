@@ -248,6 +248,92 @@
 
 /***/ }),
 
+/***/ "./js/components/subscription/mobile-menu-list.js":
+/*!********************************************************!*\
+  !*** ./js/components/subscription/mobile-menu-list.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    shopifyData
+  } = _ref;
+  console.log(shopifyData, 'data');
+  var {
+    links
+  } = shopifyData;
+  var [navigation, updateNavigations] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(links);
+  var updateNavigationItems = () => {
+    var dynamicNavigation = JSON.parse(JSON.stringify(navigation));
+    dynamicNavigation.forEach(item => {
+      var {
+        url: menu_link,
+        sub_menu_title = []
+      } = item;
+      var handle = window.localStorage.getItem('location-page');
+      menu_link = "/collections/".concat(handle);
+      item["url"] = menu_link;
+      sub_menu_title.forEach(item => {
+        var {
+          url
+        } = item;
+        var params = url.split('?')[1];
+        var newurl = "".concat(menu_link, "?").concat(params, "&filter.v.availability=1");
+        item["url"] = newurl;
+      });
+    });
+    updateNavigations(dynamicNavigation);
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    updateNavigationItems();
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, links.map((nav, index) => {
+    var {
+      title,
+      url
+    } = nav;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      className: "mobile-menu__item fs-body-100",
+      key: index
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      className: "mobile-menu__link no-transition active",
+      href: url
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      className: "mobile-menu__link__text fs-body-100"
+    }, title)));
+  }));
+});
+
+/***/ }),
+
+/***/ "./js/components/subscription/mobile-menu-product.js":
+/*!***********************************************************!*\
+  !*** ./js/components/subscription/mobile-menu-product.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    shopifyData
+  } = _ref;
+  console.log(shopifyData, 'data');
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null);
+});
+
+/***/ }),
+
 /***/ "./js/components/subscription/onetime.js":
 /*!***********************************************!*\
   !*** ./js/components/subscription/onetime.js ***!

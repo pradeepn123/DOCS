@@ -9778,6 +9778,7 @@ var menuNav = function menuNav(node) {
         }
       });
     }, 50);
+    initmobileMenuNav();
   }
   function close(e) {
     node.classList.remove(classes$7.active);
@@ -12548,6 +12549,7 @@ var FilterDrawer = function FilterDrawer(node) {
         reserveScrollBarGap: true
       });
     }
+
   }
   function hideDrawer() {
     if (drawerToggleEl) {
