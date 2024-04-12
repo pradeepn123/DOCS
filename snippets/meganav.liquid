@@ -23,13 +23,20 @@
 -%}
 
 {%- capture meganav_primary -%}
-  <div class="meganav__primary">
-    {% render 'meganav-nav',
+  <div class="meganav__primary"> 
+    {% comment %} {% render 'meganav-nav',
       meganav_settings: meganav_settings,
       link: link,
       show_collection_images: show_collection_images,
       show_animations: settings.enable_section_animations
-    -%}
+    -%} {% endcomment %}
+    <react-megamenu>
+      <script type= "application/json" id="meganav-menu">
+        {
+          "data": {% render 'megamenu-json', link: link, meganav_settings: meganav_settings %}
+        }
+      </script>
+    </react-megamenu>
   </div>
 {%- endcapture -%}
 
@@ -42,7 +49,7 @@
         render 'meganav-promoted-products', meganav_settings: meganav_settings, show_animations: settings.enable_section_animations
       when 'meganav_promo_collections'
         render 'meganav-promoted-collections', meganav_settings: meganav_settings, show_animations: settings.enable_section_animations
-    endcase
+    endcase        
   endcapture
 -%}
 
@@ -77,11 +84,18 @@
           </a>
         {%- endif %}
       </header>
-    {%- endif %}
-
+    {%- endif %}    
     <div class="meganav__content ff-body">
-      {{ meganav_primary }}
-      {{ meganav_secondary }}
+      {{ meganav_primary }}      
+      <div class="meganav__secondary">        
+        <react-megamenu-product>
+          <script type= "application/json" id="meganav-menu-product">
+            {
+              "data": {% render 'megamenu-product-json', show_animations: settings.enable_section_animations, meganav_settings: meganav_settings %}
+            }
+          </script>
+        </react-megamenu-product> 
+      </div>
     </div>
   </div>
 </div>

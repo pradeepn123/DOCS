@@ -2,19 +2,236 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/components/subscription/megamenu-product.js":
+/*!********************************************************!*\
+  !*** ./js/components/subscription/megamenu-product.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    shopifyData
+  } = _ref;
+  console.log(shopifyData, 'data');
+  var {
+    data: {
+      proheading,
+      product_list: products
+    }
+  } = shopifyData;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
+    className: "meganav__secondary--heading fs-accent fs-accent-bold"
+  }, proheading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "meganav__secondary--inner meganav-promoted-products-inner",
+    "data-layout": "list"
+  }, products.map((product, index) => {
+    var {
+      title,
+      vendor,
+      subtitle,
+      handle,
+      image = [],
+      price = []
+    } = product;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: handle,
+      "aria-label": "[pt]",
+      className: "meganav-promoted-products-item"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "meganav-promoted-products-item-image-wrap"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "image aspect-ratio--square animation--lazy-load loaded"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      alt: "Alastin C-RADICAL Defense Antioxidant Serum",
+      className: "image__img",
+      loading: "lazy",
+      width: "2500",
+      height: "2500",
+      src: image.src
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "meganav-promoted-products-item-text-wrap"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+      className: "ff-body fs-body-60 meganav-promoted-products-item-text-vendor"
+    }, vendor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+      className: "ff-body fs-body-100 meganav-promoted-products-item-text-title"
+    }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+      className: "fs-body-60 meganav-promoted-products-item-text-price"
+    }, price.compare_at_price ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      class: "ff-product-price "
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      class: "product-item__price-main"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      class: "visually-hidden"
+    }, "Regular price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("s", {
+      class: "t-subdued"
+    }, price.compare_at_price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      class: "sale",
+      "data-price": ""
+    }, price.originalPrice))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      className: "ff-product-price "
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      className: "product-item__price-main"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, price.originalPrice)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("dl", {
+      className: "unit-price",
+      "data-unit-price-container": "",
+      "data-unit-price-available": "false"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("dt", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      className: "visually-hidden visually-hidden--inline"
+    }, "Unit price")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("dd", {
+      className: "unit-price__price"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      "data-unit-price": ""
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      "aria-hidden": "true"
+    }, "/"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      className: "visually-hidden"
+    }, "per"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      "data-unit-base": ""
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      "data-unit-price-base-unit": ""
+    }))))));
+  })));
+});
+
+/***/ }),
+
+/***/ "./js/components/subscription/megamenu.js":
+/*!************************************************!*\
+  !*** ./js/components/subscription/megamenu.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    shopifyData
+  } = _ref;
+  var {
+    data: {
+      navigation,
+      product_list: products
+    }
+  } = shopifyData;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "meganav__nav",
+    "data-column-count": "4",
+    "data-show-column-dividers": "true"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+    className: "meganav__list-parent",
+    depth: "0",
+    "data-show-column-dividers": "true"
+  }, navigation.map((nav, index) => {
+    var {
+      menu_link: link,
+      menu_title: title,
+      sub_menu_title: subMenuTitle
+    } = nav;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      className: "meganav__list-child animation--dropdown-item has-children",
+      depth: "0",
+      key: index
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
+      className: "has-children fs-accent-bold"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: link,
+      title: ""
+    }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+      depth: "1"
+    }, subMenuTitle.map((submenu, index) => {
+      var {
+        title,
+        url
+      } = submenu;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+        key: index
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+        className: "fs-body-100",
+        href: url
+      }, title));
+    })));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "meganav__column-rule",
+    "data-index": "1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "meganav__column-rule",
+    "data-index": "2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "meganav__column-rule",
+    "data-index": "3"
+  })));
+});
+
+/***/ }),
+
 /***/ "./js/sections/global.js":
 /*!*******************************!*\
   !*** ./js/sections/global.js ***!
   \*******************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
-/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
+/* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
+/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
+/* harmony import */ var _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./megamenu-nav */ "./js/sections/megamenu-nav.js");
+/* harmony import */ var _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./megamenu-product-nav */ "./js/sections/megamenu-product-nav.js");
 
 
+
+
+window.initMegamenuNav = _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__["default"];
+window.initMegamenuNavProduct = _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__["default"];
 document.addEventListener('DOMContentLoaded', () => {
-  (0,_store_locator__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_subscription__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_store_locator__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_subscription__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  // megamenunav()
+});
+
+/***/ }),
+
+/***/ "./js/sections/megamenu-nav.js":
+/*!*************************************!*\
+  !*** ./js/sections/megamenu-nav.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
+/* harmony import */ var ReactComponents_megamenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/megamenu */ "./js/components/subscription/megamenu.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_megamenu__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu', '#meganav-menu');
+});
+
+/***/ }),
+
+/***/ "./js/sections/megamenu-product-nav.js":
+/*!*********************************************!*\
+  !*** ./js/sections/megamenu-product-nav.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
+/* harmony import */ var ReactComponents_megamenu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/megamenu-product */ "./js/components/subscription/megamenu-product.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu-product', '#meganav-menu-product');
 });
 
 /***/ }),

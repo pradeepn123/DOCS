@@ -251,6 +251,7 @@
 
 {%- capture nav -%}
     <nav class="header__links" data-navigation>
+    
       {% if menu != blank -%}
         {% render 'navigation',
           menu: links,
@@ -258,6 +259,7 @@
           blocks: section.blocks,
           featured_link_label: section.settings.featured_link_label
         -%}
+        
       {%- endif %}
     </nav>
 {%- endcapture -%}

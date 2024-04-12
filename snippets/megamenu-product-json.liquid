@@ -1,0 +1,23 @@
+{   
+    "proheading": "{{meganav_settings.promo_heading_text}}",
+    "product_list": [
+        {% for prod in meganav_settings.products %}
+            {% unless forloop.first %} , {% endunless %}
+            {
+                "title": "{{ prod.title | default: placeholder_product_title }}",
+                "vendor": "{{ prod.vendor | default: placeholder_vendor }}",
+                "handle": "{{ prod.url}}",
+                "subtitle": "{{ prod.metafields.descriptors.subtitle | default: placeholder_product_subtitle }}",
+                "image" : {
+                    "src": "{{prod.featured_media | image_url }}",
+                    "image_aspect_ratio": "{{settings.product_listing_aspect_ratio}}"
+                },
+                "price" : {
+                    "originalPrice": "{{ prod.price | money_with_currency }}",
+                    "compare_at_price": "{{prod.compare_at_price | money_with_currency }}",
+                    "price_varies": "{{prod.price_varies}}"
+                }
+            }
+        {% endfor %}
+    ]
+}

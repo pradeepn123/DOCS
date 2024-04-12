@@ -1,0 +1,22 @@
+{
+    "navigation": [
+        {% for link in link.links -%}     
+            {% unless forloop.first %} , {% endunless %} 
+            {
+                "menu_title": "{{ link.title }}",
+                "menu_link": "{{ link.url }}",
+                "sub_menu_title": [
+                    {% if link.links and link.links.size > 0 -%}         
+                        {% for link in link.links -%}
+                            {% unless forloop.first %} , {% endunless %} 
+                            {
+                                "title": "{{ link.title }}",
+                                "url": "{{ link.url }}"
+                            }                        
+                        {%- endfor %}
+                    {%- endif %}
+                ]
+            }
+            {% endfor %}
+    ]    
+}
