@@ -133,7 +133,7 @@
         "show_swatch_filters": true,
         "show_chip_filters": true,
         "chip_layout": "2col",
-        "pagination": "paginated",
+        "pagination": "infinite",
         "section_style_enable_animation": true
       }
     }
