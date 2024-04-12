@@ -2,15 +2,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+<<<<<<< HEAD
 /***/ "./js/components/subscription/megamenu-product.js":
 /*!********************************************************!*\
   !*** ./js/components/subscription/megamenu-product.js ***!
   \********************************************************/
+=======
+/***/ "./js/sections/custom-store-locatore.js":
+/*!**********************************************!*\
+  !*** ./js/sections/custom-store-locatore.js ***!
+  \**********************************************/
+>>>>>>> 5a42389 (store locator using react)
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+<<<<<<< HEAD
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -170,6 +178,14 @@
     className: "meganav__column-rule",
     "data-index": "3"
   })));
+=======
+/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
+/* harmony import */ var ReactComponents_store_locator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/store-locator */ "./js/components/subscription/store-locator.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_store_locator__WEBPACK_IMPORTED_MODULE_1__["default"], 'store-locator', '#storeLocator-data');
+>>>>>>> 5a42389 (store locator using react)
 });
 
 /***/ }),
@@ -180,10 +196,17 @@
   \*******************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
+<<<<<<< HEAD
 /* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
 /* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
 /* harmony import */ var _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./megamenu-nav */ "./js/sections/megamenu-nav.js");
 /* harmony import */ var _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./megamenu-product-nav */ "./js/sections/megamenu-product-nav.js");
+=======
+/* harmony import */ var _store_locator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./store-locator */ "./js/sections/store-locator.js");
+/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
+/* harmony import */ var _custom_store_locatore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./custom-store-locatore */ "./js/sections/custom-store-locatore.js");
+
+>>>>>>> 5a42389 (store locator using react)
 
 
 
@@ -191,6 +214,7 @@
 window.initMegamenuNav = _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__["default"];
 window.initMegamenuNavProduct = _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__["default"];
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
   (0,_store_locator__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_subscription__WEBPACK_IMPORTED_MODULE_3__["default"])();
   // megamenunav()
@@ -232,6 +256,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
   (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu-product', '#meganav-menu-product');
+=======
+  (0,_store_locator__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_subscription__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_custom_store_locatore__WEBPACK_IMPORTED_MODULE_2__["default"])();
+>>>>>>> 5a42389 (store locator using react)
 });
 
 /***/ }),
@@ -245,32 +274,19 @@ document.addEventListener('DOMContentLoaded', () => {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/readOnlyError */ "./node_modules/@babel/runtime/helpers/esm/readOnlyError.js");
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
   document.querySelectorAll('[data-dropdown-wrapper]').forEach(dropdown => {
-    var _menu, _dropdownSelect, _dropdownSelect3;
     var dropdownSelect = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-select]');
     var caret = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-caret]');
     var menu = dropdown === null || dropdown === void 0 ? void 0 : dropdown.querySelector('[data-dropdown-menu]');
-    var options = (_menu = menu) === null || _menu === void 0 ? void 0 : _menu.querySelectorAll('[data-dropdown-selector]');
-    var selected = (_dropdownSelect = dropdownSelect) === null || _dropdownSelect === void 0 ? void 0 : _dropdownSelect.querySelector('[data-dropdown-selected]');
+    var options = menu === null || menu === void 0 ? void 0 : menu.querySelectorAll('[data-dropdown-selector]');
+    var selected = dropdownSelect === null || dropdownSelect === void 0 ? void 0 : dropdownSelect.querySelector('[data-dropdown-selected]');
     var toggleDropdown = () => {
-      var _dropdownSelect2, _caret, _menu2;
-      (_dropdownSelect2 = dropdownSelect) === null || _dropdownSelect2 === void 0 || _dropdownSelect2.classList.toggle('select-clicked');
-      (_caret = caret) === null || _caret === void 0 || _caret.classList.toggle('caret-rotate');
-      (_menu2 = menu) === null || _menu2 === void 0 || _menu2.classList.toggle('menu-open');
+      dropdownSelect === null || dropdownSelect === void 0 || dropdownSelect.classList.toggle('select-clicked');
+      caret === null || caret === void 0 || caret.classList.toggle('caret-rotate');
+      menu === null || menu === void 0 || menu.classList.toggle('menu-open');
     };
-    (_dropdownSelect3 = dropdownSelect) === null || _dropdownSelect3 === void 0 || _dropdownSelect3.addEventListener('click', toggleDropdown);
-    options.forEach(option => {
-      option.addEventListener('click', () => {
-        console.log(option.querySelector('[store-name]').innerText, "option");
-        selected.innerText = option.querySelector('[store-name]').innerText;
-        [('', (0,_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__["default"])("dropdownSelect")), ('', (0,_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__["default"])("caret")), ('', (0,_babel_runtime_helpers_readOnlyError__WEBPACK_IMPORTED_MODULE_0__["default"])("menu"))].forEach(el => el === null || el === void 0 ? void 0 : el.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
-        options.forEach(opt => opt.classList.remove('active'));
-        option.classList.add('active');
-      });
-    });
+    dropdownSelect === null || dropdownSelect === void 0 || dropdownSelect.addEventListener('click', toggleDropdown);
     var handleDropdownContainer = event => {
       if (!dropdown.contains(event.target)) [dropdownSelect, caret, menu].forEach(el => el === null || el === void 0 ? void 0 : el.classList.remove('select-clicked', 'caret-rotate', 'menu-open'));
     };

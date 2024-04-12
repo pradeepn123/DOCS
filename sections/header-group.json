@@ -8,14 +8,14 @@
         "5ead3ce2-32e3-4045-b7d6-59031d387b93": {
           "type": "announcement",
           "settings": {
-            "title": "<p>Welocome to DOCS DERMATOLOGY<\/p>",
+            "title": "<p>Welocome to DOCS DERMATOLOGY</p>",
             "title_mobile": "",
             "link": "",
             "enable_modal": false,
             "modal_link_text": "Click for details",
             "modal_link_style": "text",
             "modal_heading": "",
-            "modal_text": "<p>Add your information popup content here<\/p>",
+            "modal_text": "<p>Add your information popup content here</p>",
             "page_for_modal_content": ""
           }
         }
@@ -86,19 +86,35 @@
             "show_product_subtitles": false,
             "show_product_prices": true
           }
+        },
+        "locator_qVF7bM": {
+          "type": "locator",
+          "settings": {
+            "collection": "clarkston",
+            "address": "<p>something</p>"
+          }
+        },
+        "locator_JUyJmm": {
+          "type": "locator",
+          "settings": {
+            "collection": "dermatologists-of-southwest-ohio",
+            "address": "<p>something</p>"
+          }
         }
       },
       "block_order": [
         "meganav_simple_LWLFGj",
         "meganav_collection_images_fcDa8R",
-        "meganav_promo_products_Cdcgi3"
+        "meganav_promo_products_Cdcgi3",
+        "locator_qVF7bM",
+        "locator_JUyJmm"
       ],
       "settings": {
         "layout": "inline_logo_left_menu_left",
         "layout_mobile": "logo_center_menu_left",
         "enable_sticky_header": true,
         "drop_shadow": "line",
-        "logo": "shopify:\/\/shop_images\/Group.svg",
+        "logo": "shopify://shop_images/Group.svg",
         "logo_width": 70,
         "mobile_logo_width": 55,
         "enable_transparent_on_home": false,

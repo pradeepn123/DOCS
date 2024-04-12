@@ -98,6 +98,78 @@
 
 /***/ }),
 
+/***/ "./js/components/subscription/store-locator.js":
+/*!*****************************************************!*\
+  !*** ./js/components/subscription/store-locator.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* unused harmony export SvgIcon */
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var storeCheckdIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\">\n                        <circle cx=\"15\" cy=\"15\" r=\"15\" fill=\"#1B428A\"/>\n                        <path d=\"M8 14.5L13 19.5L21.5 11\" stroke=\"white\"/>\n                        </svg>";
+var storeUnckeckIcon = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"30\" height=\"30\" viewBox=\"0 0 30 30\" fill=\"none\">\n                        <circle cx=\"15\" cy=\"15\" r=\"15\" fill=\"#1B428A\"></circle>\n                        <path d=\"M8 14.5L13 19.5L21.5 11\" stroke=\"white\"></path>\n                        </svg>";
+var SvgIcon = _ref => {
+  var {
+    icon,
+    svgClass
+  } = _ref;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: svgClass,
+    dangerouslySetInnerHTML: {
+      __html: icon
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref2 => {
+  var {
+    shopifyData
+  } = _ref2;
+  debugger;
+  var {
+    data
+  } = shopifyData || {};
+  var curatedData = data.filter(item => item.id);
+  var [selectedLocation, setSelectedLocation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(curatedData[0].id);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "storeDd-wrapper",
+    "data-dropdown-menu": true
+  }, data.map((location, index) => {
+    var {
+      id,
+      title,
+      address
+    } = location || {};
+    console.log("iii", id);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "storeDd-wrapper__optionsWrap",
+      "data-dropdown-selector": true,
+      key: index
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: "/collections/clarkston",
+      className: "storeDd-wrapper__options-box ".concat(id == selectedLocation ? "checked" : '')
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+      className: "storeDd-wrapper__storeName",
+      "store-name": true
+    }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "storeDd-wrapper__text-container"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "storeDd-wrapper__storeAddress"
+    }, address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "storeDd-wrapper__button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SvgIcon, {
+      svgClass: "",
+      icon: id == selectedLocation ? storeCheckdIcon : storeUnckeckIcon
+    })))));
+  })));
+});
+
+/***/ }),
+
 /***/ "./js/components/subscription/subscription-selector.js":
 /*!*************************************************************!*\
   !*** ./js/components/subscription/subscription-selector.js ***!

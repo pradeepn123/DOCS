@@ -309,9 +309,9 @@
       echo search_bar_desktop
     endif
   -%}
-    
+ 
     {% if section.settings.enable_store_locator %}
-      {% render 'store-locator', scope: 'desktop' %}
+      {% render 'store-locator', scope: 'desktop', section:section %}
     {% endif %}
 
   {% if shop.customer_accounts_enabled -%}
@@ -1830,6 +1830,22 @@
           "id": "image_overlay_override_color_tint",
           "label": "t:shared.settings.color_scheme.color_tint",
           "default": "#000000"
+        }
+      ]
+    },
+    {
+      "type": "locator",
+      "name": "Store Locator block",
+      "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Store Location"
+        },
+        {
+            "type": "richtext",
+            "id": "address",
+            "label": "Address"
         }
       ]
     }

@@ -1,4 +1,5 @@
 {{ 'store-locator-header.css' | asset_url | stylesheet_tag }}
+{{ 'store-locator-dd.css' | asset_url | stylesheet_tag }}
 
 <div
     class="
@@ -14,11 +15,13 @@
                 <p>Shop from</p>
             </div>
             <div class="store-locator__location" data-dropdown-select>
-                <p data-dropdown-selected>{% if template.name == 'collection' %} {{ collection.title }}{% else %} Clarkston Dermatology{% endif %}</p>
-                {% render 'store-dropdown-icon' %}
-                <div class="store-locator__location-list">
-                    {% render 'store-locator-dd' %}
-                </div>
+                     <store-locator>
+                        <script  id="storeLocator-data" type="text/json">
+                        {
+                            "data": {% render 'JSON-store-locator' , section:section %}
+                        }
+                        </script>
+                    </store-locator>
             </div>
         </div>
     </div>
