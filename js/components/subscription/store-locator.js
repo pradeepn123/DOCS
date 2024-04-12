@@ -29,9 +29,12 @@ export default ({ shopifyData }) => {
       setDropDownActive(!isDropdownActive);
     }
     const handleSelection = (location) => {
-      window.localStorage.setItem("location", location.id);
       setSelectedLocation(location);
     }
+    useEffect(() => {
+      window.localStorage.setItem("location", selectedLocation.id);
+      window.localStorage.setItem("location-page", selectedLocation.handle);
+    },[selectedLocation])
 
     useEffect (() => {
       window.addEventListener('click', (ev) => {
@@ -54,7 +57,7 @@ export default ({ shopifyData }) => {
                 {data.map((location,index) => {
                     const {id,title,address, url} = location || {};
                     return  <div className="storeDd-wrapper__optionsWrap" data-dropdown-selector="true" key={index} onClick={() => {handleSelection(location)}}>
-                                <a  href={url} className={`storeDd-wrapper__options-box ${id == selectedLocation.id ? "checked" : ''}`}>
+                                <a  href={`${url}?filter.v.availability=1`} className={`storeDd-wrapper__options-box ${id == selectedLocation.id ? "checked" : ''}`}>
                                     <p className="storeDd-wrapper__storeName" store-name="true">{title}</p>
                                     <div className="storeDd-wrapper__text-container">
                                         <div className="storeDd-wrapper__storeAddress" dangerouslySetInnerHTML={{__html: address}}></div>
@@ -63,7 +66,7 @@ export default ({ shopifyData }) => {
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                    </div>
                 })}
             </div>
           </div>

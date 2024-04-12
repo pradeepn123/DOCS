@@ -167,10 +167,36 @@
   } = _ref;
   var {
     data: {
-      navigation,
+      navigation: defaultNavigation,
       product_list: products
     }
   } = shopifyData;
+  var [navigation, updateNavigations] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(defaultNavigation);
+  var updateNavigationItems = () => {
+    var dynamicNavigation = JSON.parse(JSON.stringify(navigation));
+    dynamicNavigation.forEach(item => {
+      var {
+        menu_link,
+        sub_menu_title
+      } = item;
+      var handle = window.localStorage.getItem('location-page');
+      menu_link = "/collections/".concat(handle);
+      item["menu_link"] = menu_link;
+      sub_menu_title.forEach(item => {
+        var {
+          url
+        } = item;
+        var params = url.split('?')[1];
+        var newurl = "".concat(menu_link, "?").concat(params, "&filter.v.availability=1");
+        item["url"] = newurl;
+      });
+    });
+    updateNavigations(dynamicNavigation);
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    updateNavigationItems();
+  }, []);
+  window.updateNavigationItems = updateNavigationItems;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "meganav__nav",
     "data-column-count": "4",
@@ -320,9 +346,12 @@ var SvgIcon = _ref => {
     setDropDownActive(!isDropdownActive);
   };
   var handleSelection = location => {
-    window.localStorage.setItem("location", location.id);
     setSelectedLocation(location);
   };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    window.localStorage.setItem("location", selectedLocation.id);
+    window.localStorage.setItem("location-page", selectedLocation.handle);
+  }, [selectedLocation]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     window.addEventListener('click', ev => {
       if (!ev.target.closest('[data-dropdown-wrapper]')) {
@@ -361,7 +390,7 @@ var SvgIcon = _ref => {
         handleSelection(location);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: url,
+      href: "".concat(url, "?filter.v.availability=1"),
       className: "storeDd-wrapper__options-box ".concat(id == selectedLocation.id ? "checked" : '')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
       className: "storeDd-wrapper__storeName",

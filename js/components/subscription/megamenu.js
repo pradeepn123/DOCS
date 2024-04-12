@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default ({ shopifyData }) => {    
-    const {data:{navigation, product_list: products}} = shopifyData;
+    const {data:{navigation:defaultNavigation, product_list: products}} = shopifyData;
+
+    const [navigation, updateNavigations] = useState(defaultNavigation);
+
+    const updateNavigationItems = () => {
+        const dynamicNavigation = JSON.parse(JSON.stringify(navigation));
+        dynamicNavigation.forEach(item => {
+            let {menu_link, sub_menu_title} = item;
+            const handle = window.localStorage.getItem('location-page');
+            menu_link = `/collections/${handle}`
+            item["menu_link"] = menu_link
+            sub_menu_title.forEach(item => {
+                let {url} = item;
+                const params = url.split('?')[1];
+                 const newurl = `${menu_link}?${params}&filter.v.availability=1`;
+                 item["url"] = newurl 
+            })
+         })
+        updateNavigations(dynamicNavigation);
+    }
+    useEffect(() => {
+        updateNavigationItems();
+    },[])
+    window.updateNavigationItems = updateNavigationItems;
     return (
         <>
             <div className="meganav__nav" data-column-count="4" data-show-column-dividers="true">

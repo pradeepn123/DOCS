@@ -1,18 +1,38 @@
 {% layout none %}
 {%  assign menu = linklists[page.metafields.custom.menu_items] %}
 {%  assign products = page.metafields.custom.product_list %}
+
 {
-  "megamenu": {%  render 'megamenu-json' , link:menu  %},
+  "megamenu": [
+    {% for link in menu.links -%}     
+        {% unless forloop.first %} , {% endunless %} 
+        {
+            "menu_title": "{{ link.title }}",
+            "menu_link": "{{ link.url }}",
+            "sub_menu_title": [
+                {% if link.links and link.links.size > 0 -%}         
+                    {% for link in link.links -%}
+                        {% unless forloop.first %} , {% endunless %} 
+                        {
+                            "title": "{{ link.title }}",
+                            "url": "{{ link.url }}"
+                        }                        
+                    {%- endfor %}
+                {%- endif %}
+            ]
+        }
+        {% endfor %}
+]    ,
   "products":  {
     "preheading": "Best Selling",
     "product_list": [
         {% for prod in products %}
             {% unless forloop.first %} , {% endunless %}
             {
-                "title": "{{ prod.title | default: placeholder_product_title }}",
-                "vendor": "{{ prod.vendor | default: placeholder_vendor }}",
+                "title": "{{ prod.title }}",
+                "vendor": "{{ prod.vendor  }}",
                 "handle": "{{ prod.url}}",
-                "subtitle": "{{ prod.metafields.descriptors.subtitle | default: placeholder_product_subtitle }}",
+                "subtitle": "{{ prod.metafields.descriptors.subtitle }}",
                 "image" : {
                     "src": "{{prod.featured_media | image_url }}",
                     "image_aspect_ratio": "{{settings.product_listing_aspect_ratio}}"
