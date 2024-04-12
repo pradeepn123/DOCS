@@ -1,0 +1,25 @@
+{   
+    {% for block in section.blocks %}
+    "proheading": "{{block.settings.title}}",
+    "product_list": [        
+        {% for product in block.settings.products %}
+            {% unless forloop.first %} , {% endunless %}
+            {
+                "title": "{{ product.title | default: placeholder_product_title }}",
+                "vendor": "{{ product.vendor | default: placeholder_vendor }}",
+                "handle": "{{ product.url}}",
+                "subtitle": "{{ product.metafields.descriptors.subtitle | default: placeholder_product_subtitle }}",
+                "image" : {
+                    "src": "{{product.featured_media | image_url }}",
+                    "image_aspect_ratio": "{{settings.product_listing_aspect_ratio}}"
+                },
+                "price" : {
+                    "originalPrice": "{{ product.price | money_with_currency }}",
+                    "compare_at_price": "{{product.compare_at_price | money_with_currency }}",
+                    "price_varies": "{{product.price_varies}}"
+                }
+            }
+        {% endfor %}    
+    ]
+    {% endfor %}
+}

@@ -49,7 +49,7 @@ export default ({ shopifyData }) => {
                                     <span data-unit-price-base-unit=""></span>
                                     </span>
                                 </dd>
-                            </dl>                    
+                            </dl>
                         </div>
                     </a>
                 })}

@@ -186,7 +186,7 @@
       <li
         class="mobile-menu__item fs-body-100"
         data-list-item
-      >
+      >        
         <a
           class="{{ mobile_menu_link_class }}"
           href="{{ link.url }}"
@@ -200,9 +200,9 @@
         >
           <span class="mobile-menu__link__text fs-body-100">{{ link.title }}</span>
 
-          {% if has_children -%}
+          {% comment %} {% if has_children -%}
             {% render 'icon', icon: 'chevron', class: 'menu-icon' %}
-          {%- endif %}
+          {%- endif %} {% endcomment %}
         </a>
 
         {% if has_children -%}
@@ -211,7 +211,7 @@
           {% capture subpanels %}
             {{ subpanels }}
 
-            {% render 'mobile-menu-list',
+            {% comment %} {% render 'mobile-menu-list',
               type: 'sub',
               links: link.links,
               blocks: blocks,
@@ -220,14 +220,22 @@
               parent_pane_key: pane_key,
               parent: link,
               grandparent: parent
-            -%}
+            -%} {% endcomment %}
+            <mobile-nav-menu-list>
+              <script type= "application/json" id="mobile-nav-menu-list">
+                {
+                  "data": {% render 'megamenu-json', link: link %}
+                }
+              </script>
+            </mobile-nav-menu-list>
           {%- endcapture %}
         {%- endif %}
       </li>
     {%- endfor %}
+    
 
     {% unless type == 'secondary' -%}
-      {% render 'mobile-menu-block-area', blocks: blocks, submenu_name: parent.title, position: 'bottom' %}
+      {% render 'mobile-menu-block-area', blocks: blocks, submenu_name: parent.title, position: 'bottom' %}       
     {%- endunless %}
   </ul>
 

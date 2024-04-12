@@ -8253,7 +8253,7 @@ function Navigation$1(node, headerSection) {
       u$1(menu, "active");
       menu.style.setProperty("--mega-nav-top-offset", "".concat(menu.getBoundingClientRect().top, "px"));
       window.initMegamenuNav();
-      window.initMegamenuNavProduct();
+      window.initMegamenuNavProduct();      
     });
   }
   function alignMenuToTrigger(menu, menuTrigger) {

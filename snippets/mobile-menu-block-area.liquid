@@ -30,8 +30,15 @@
   endcapture
 -%}
 
-{% if appearing_blocks != blank -%}
+
   <li class="mobile_menu__promo_blocks" data-position="{{ position }}">
     {{ appearing_blocks }}
+    {% comment %} <mobile-react-megamenu-product>
+      <script type= "application/json" id="mobile-menu-product">
+        {
+          "data": {% render 'mobile-megamenu-product-json', block: block %}
+        }
+      </script>
+    </mobile-react-megamenu-product>  {% endcomment %}
   </li>
-{%- endif %}
+
