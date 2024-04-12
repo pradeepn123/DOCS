@@ -1,4 +1,5 @@
 export default () => {
+    debugger;
     const atcTrigger = document.querySelector('[data-atc-trigger');
     if(atcTrigger){
         atcTrigger.addEventListener('change', handleAtcTrigger);

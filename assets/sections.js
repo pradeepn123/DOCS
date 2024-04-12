@@ -12,6 +12,7 @@
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  debugger;
   var atcTrigger = document.querySelector('[data-atc-trigger');
   if (atcTrigger) {
     atcTrigger.addEventListener('change', handleAtcTrigger);
@@ -84,6 +85,9 @@ var __webpack_exports__ = {};
 /* harmony import */ var _product_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-form */ "./js/sections/product-form.js");
 
 document.addEventListener('DOMContentLoaded', () => {
+  (0,_product_form__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
+document.addEventListener('quick-view:loaded', () => {
   (0,_product_form__WEBPACK_IMPORTED_MODULE_0__["default"])();
 });
 })();
