@@ -90,9 +90,13 @@
       if filter_value 
          assign filter_value = filter_value | replace: " ", "+"
          assign filter_url = filter_string | append: '=' | append: filter_value
+          assign filter_url = filter_url | append: '&filter.v.availability=1'
+
+          else
+            assign filter_url = filter_url | append: '?filter.v.availability=1'
       endif
     -%}
-  
+ 
     {%  if title %}
     <div class="collection-item__meta {{ title_class }}" data-text-alignment="{{ text_alignment }}">
         {{ title }}

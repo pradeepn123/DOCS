@@ -270,8 +270,8 @@
 
           <div class="footer__credits fs-body-75">
             <p>
-              {{ 'sections.footer.copyright' | t }} &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }} —
-              {{ powered_by_link | replace: 'rel="nofollow"', 'rel="nofollow noopener"' }}
+              {{ 'sections.footer.copyright' | t }} &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: '/' }} 
+              {% comment %} {{ powered_by_link | replace: 'rel="nofollow"', 'rel="nofollow noopener"' }} {% endcomment %}
             </p>
 
             <span class="footer__credits-additional-text">

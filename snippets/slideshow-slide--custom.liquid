@@ -44,7 +44,8 @@
      assign filter_value = filter_value | replace: " ", "+"
      assign filter_url = filter_string | append: '=' | append: filter_value
   endif
-  assign collection_url = collection_url | append: filter_url
+  assign collection_url = collection_url | append: filter_url 
+  assign collection_url = collection_url | append: '&filter.v.availability=1'
 -%}
 
 <div
