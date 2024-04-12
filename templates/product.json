@@ -7,7 +7,7 @@
           "type": "product_header",
           "settings": {
             "show_divider": true,
-            "show_vendor": true,
+            "show_vendor": false,
             "show_sku": true,
             "show_price": true,
             "show_discount": true,
