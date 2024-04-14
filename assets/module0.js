@@ -26,6 +26,10 @@ __webpack_require__.r(__webpack_exports__);
     "slidesPerView": 1,
     "spaceBetween": 10,
     "overflowNagivation": false,
+    "speed": 1000,
+    "autoplay": {
+      "delay": 3000
+    },
     "breakpoints": {
       "768": {
         "slidesPerView": 1,
@@ -34,8 +38,10 @@ __webpack_require__.r(__webpack_exports__);
       "1200": {
         "slidesPerView": 1,
         "spaceBetween": 27,
-        "speed": 600,
-        "pagination": true
+        "pagination": true,
+        "autoplay": {
+          "delay": 3000
+        }
       }
     }
   });

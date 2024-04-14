@@ -27,14 +27,18 @@
     "spaceBetween": "12px",
     "navigation": false,
     "overflowNagivation": true,
+    "speed": 600,
+    "autoplay": {
+      "delay": 3000
+    },
     "breakpoints": {
       "768": {
-        "slidesPerView": 4.2,
+        "slidesPerView": 3.2,
         "spaceBetween": "16px",
         "pagination": true
       },
       "1024": {
-        "slidesPerView": 5,
+        "slidesPerView": 4,
         "spaceBetween": "24px",
         "pagination": true,
         "navigation": true
@@ -44,7 +48,7 @@
   var sliderSettings = {
     paginationWrapperClass: 'swiper-pagination--dot',
     parentRef
-    //you pass navigationWrapperClassas well
+    //pass navigationWrapperClassas for a custom navigation class
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "product-carousel"

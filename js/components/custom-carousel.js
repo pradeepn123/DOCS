@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 class CustomCarousel extends HTMLElement {
   constructor() {
@@ -115,8 +115,9 @@ class CustomCarousel extends HTMLElement {
           }
         }
       },
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Autoplay],
       ...carouselSettings
+   
     });
 
     this.swiper.on('activeIndexChange', (current) => {

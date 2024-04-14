@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ProductCard from './ProductCard';
 import CarouselItems from "./carousel-items";
 
@@ -8,14 +8,18 @@ export default ({ products = [], parentRef }) => {
 		"spaceBetween": "12px",
 		"navigation": false,
 		"overflowNagivation": true,
+		"speed": 600,
+		"autoplay": {
+			"delay": 3000
+		},
 		"breakpoints": {
 			"768": {
-				"slidesPerView": 4.2,
+				"slidesPerView": 3.2,
 				"spaceBetween": "16px",
 				"pagination": true
 			},
 			"1024": {
-				"slidesPerView": 5,
+				"slidesPerView": 4,
 				"spaceBetween": "24px",
 				"pagination": true,
 				"navigation": true
@@ -26,7 +30,7 @@ export default ({ products = [], parentRef }) => {
 	const sliderSettings = {
 		paginationWrapperClass: 'swiper-pagination--dot',
 		parentRef
-		//you pass navigationWrapperClassas well
+		//pass navigationWrapperClassas for a custom navigation class
 	}
 
   
