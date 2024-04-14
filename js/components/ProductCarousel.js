@@ -1,30 +1,45 @@
-import React from "react";
-import Carousel from "./Carousel";
+import React, { useState } from "react";
 import ProductCard from './ProductCard';
+import CarouselItems from "./carousel-items";
 
-export default ({ products = [] }) => {
-	const carouselSettings = {
+export default ({ products = [], parentRef }) => {
+	const carouselSettings = JSON.stringify({
 		"slidesPerView": 2.5 ,
-		"navigation": false,
-        "pagination": true,
 		"spaceBetween": "12px",
+		"navigation": false,
+		"overflowNagivation": true,
 		"breakpoints": {
 			"768": {
 				"slidesPerView": 4.2,
 				"spaceBetween": "16px",
+				"pagination": true
 			},
 			"1024": {
 				"slidesPerView": 5,
 				"spaceBetween": "24px",
+				"pagination": true,
+				"navigation": true
 			}
 		}
+	})
+
+	const sliderSettings = {
+		paginationWrapperClass: 'swiper-pagination--dot',
+		parentRef
+		//you pass navigationWrapperClassas well
 	}
+
   
 	return <div className="product-carousel">
-				<Carousel settings={carouselSettings}>
-				{(products).map((product, index) => (
-					<ProductCard product={product} key={index} />
-				))}
-				</Carousel>
+				<custom-carousel>
+					<CarouselItems settings={sliderSettings}>
+						{(products).map((product, index) => (
+							<ProductCard product={product} key={index} />
+						))}
+					</CarouselItems>
+					<script data-settings type="text/json">
+						{carouselSettings}
+					</script>
+				</custom-carousel>
 			</div>
 }

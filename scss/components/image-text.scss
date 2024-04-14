@@ -4,36 +4,39 @@
   $parent: &; 
   @include mixins.grid(4, 100px, 100px);
   position: relative;
-  &__content-wrapper {
+  &__content {
     @include mixins.section-padding;
-    &--style-1 {
-        position: absolute;
-        top:50%;
-        transform: translateY(-50%);
-    }
+
   }
   &__button {
     display: inline-block;
   }
 
-  .responsive-image__wrapper {
-    max-width: 100% !important;
-  }
-  &.image-with-text__split{
-    column-gap: 0;
-    row-gap: 0;
-    .image-text__images--style-2{
-      order: 2;
-    }
-    .image-text__content-wrapper--style-2{
-      order: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .image-text__content--image-with-text__split{
-        max-width: 520px;
+    &__content-wrapper {
+      &--style-1 {
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        .image-text__content  {
+          position: absolute;
+          z-index: 2;
+          top:50%;
+          transform: translateY(-50%);
+        }
+      }
+      &--style-2 {
+        grid-column: span 2;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     }
+  .responsive-image__wrapper {
+    max-width: 100% !important;
   }
 }

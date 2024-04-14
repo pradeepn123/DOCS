@@ -13,3 +13,11 @@
     --swiper-pagination-bullet-height: 2px;
     --swiper-pagination-bullet-border-radius: 20px;
 }
+
+.image-text__content--banner__slideshow {
+    max-width: 100%;
+
+    @media(--md) {
+        max-width: 500px;
+    }
+}

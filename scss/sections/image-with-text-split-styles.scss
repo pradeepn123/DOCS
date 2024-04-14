@@ -1,0 +1,13 @@
+.image-with-text-split {
+  column-gap: 0;
+  row-gap: 0;
+
+  .image-text__images {
+    order: 2;
+  }
+
+  .image-text__content {
+    max-width: 520px;
+  }
+  background:#e5ded8;
+}

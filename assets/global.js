@@ -76,6 +76,7 @@ class CustomCarousel extends HTMLElement {
       });
     }
     if (this.carouselSettings && Object.keys(this.carouselSettings).length > 0) {
+      debugger;
       var _this$carouselSetting2 = this.carouselSettings,
         {
           navigation,
@@ -85,8 +86,8 @@ class CustomCarousel extends HTMLElement {
         otherSwiperSettings = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$carouselSetting2, _excluded3);
       carouselSettings = _objectSpread({}, otherSwiperSettings);
       if (navigation) {
-        var navigationNext = this.querySelector('.swiper-navigation--next');
-        var navigationPrev = this.querySelector('.swiper-navigation--prev');
+        var navigationNext = this.parent.querySelector('[data-navigation-next]');
+        var navigationPrev = this.parent.querySelector('[data-navigation-prev]');
         carouselSettings = _objectSpread(_objectSpread({}, carouselSettings), {}, {
           navigation: {
             nextEl: navigationNext,
@@ -95,7 +96,7 @@ class CustomCarousel extends HTMLElement {
         });
       }
       if (pagination) {
-        var swiperPagination = this.querySelector('.swiper-pagination');
+        var swiperPagination = this.parent.querySelector('[data-pagination]');
         var _pagination = {
           el: swiperPagination,
           clickable: true
@@ -114,13 +115,14 @@ class CustomCarousel extends HTMLElement {
     return carouselSettings;
   }
   initCarousel() {
-    var _this$querySelector, _this$querySelector2, _this$querySelector3;
+    var _this$querySelector, _this$querySelector2;
+    debugger;
+    this.parent = this.closest('[data-parent]');
     this.carouselSettings = JSON.parse(((_this$querySelector = this.querySelector('[data-settings]')) === null || _this$querySelector === void 0 ? void 0 : _this$querySelector.innerHTML) || "{}");
-    this.carouselContent = (_this$querySelector2 = this.querySelector('[data-carousel-content]')) === null || _this$querySelector2 === void 0 ? void 0 : _this$querySelector2.innerHTML;
-    this.placeholders = (_this$querySelector3 = this.querySelector('[data-carousel-placeholder]')) === null || _this$querySelector3 === void 0 ? void 0 : _this$querySelector3.innerHTML;
-    this.navigations = this.querySelector('[data-swiper-navigations]');
+    this.placeholders = (_this$querySelector2 = this.querySelector('[data-carousel-placeholder]')) === null || _this$querySelector2 === void 0 ? void 0 : _this$querySelector2.innerHTML;
+    this.navigations = this.parent.querySelector('[data-navigations]');
     this.currentWidth = window.innerWidth;
-    var swiperNavigationElements = "\n      <div class=\"swiper-navigation swiper-navigation--next ".concat(this.carouselSettings.overflowNagivation ? "swiper-navigation--overflow" : '', " \">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"42\" height=\"42\" viewBox=\"0 0 42 42\" fill=\"none\">\n      <circle cx=\"21\" cy=\"21\" r=\"21\" fill=\"#ED1C24\"/>\n      <path d=\"M18.9414 14.8237L24.7061 20.5884L18.9414 26.3531\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"square\"/>\n      </svg>\n    </div>\n    <div class=\"swiper-navigation swiper-navigation--prev ").concat(this.carouselSettings.overflowNagivation ? "swiper-navigation--overflow" : '', " \">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"42\" height=\"42\" viewBox=\"0 0 42 42\" fill=\"none\">\n        <circle cx=\"21\" cy=\"21\" r=\"21\" fill=\"#ED1C24\"/>\n        <path d=\"M22.7061 26.353L16.9413 20.5883L22.7061 14.8236\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"square\"/>\n      </svg>\n    </div>\n    ");
+    var swiperNavigationElements = "\n      <div data-navigation-next data-navigation  class=\"swiper-navigation swiper-navigation--next ".concat(this.carouselSettings.overflowNagivation ? "swiper-navigation--overflow" : '', " \">\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12.4016H11.5H23M23 12.4016L13.8 3M23 12.4016L13.8 21.8032\" stroke=\"currentColor\" stroke-width=\"1.75\"></path></svg>\n    </div>\n    <div data-navigation-prev data-navigation class=\"swiper-navigation swiper-navigation--prev ").concat(this.carouselSettings.overflowNagivation ? "swiper-navigation--overflow" : '', " \">\n    <svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12.4016H11.5H23M23 12.4016L13.8 3M23 12.4016L13.8 21.8032\" stroke=\"currentColor\" stroke-width=\"1.75\"></path></svg>\n    </div>\n    ");
     this.carouselSettings['customNavigation'] ? '' : this.navigations.innerHTML = swiperNavigationElements;
     this.container = this.querySelector('[data-swiper-container]');
     var carouselSettings = this.getCarouselSettings();
@@ -132,23 +134,23 @@ class CustomCarousel extends HTMLElement {
             pagination
           } = carouselSettings || {};
           if (!navigation) {
-            this.querySelectorAll('.swiper-navigation').forEach(navigation => navigation.classList.add('swiper-navigation--hide'));
+            this.parent.querySelectorAll('[data-navigation]').forEach(navigation => navigation.classList.add('swiper-navigation--hide'));
           } else {
-            this.querySelector('.swiper-navigation--hide') && this.querySelectorAll('.swiper-navigation--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
+            this.parent.querySelector('.swiper-navigation--hide') && this.querySelectorAll('.swiper-navigation--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
           }
           if (!pagination) {
-            this.querySelectorAll('.swiper-pagination').forEach(navigation => navigation.classList.add('swiper-pagination--hide'));
+            this.parent.querySelectorAll('.swiper-pagination').forEach(navigation => navigation.classList.add('swiper-pagination--hide'));
           } else {
-            this.querySelector('.swiper-pagination--hide') && this.querySelectorAll('.swiper-pagination--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
+            this.parent.querySelector('.swiper-pagination--hide') && this.querySelectorAll('.swiper-pagination--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
           }
         }
       },
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Pagination]
     }, carouselSettings));
     this.swiper.on('activeIndexChange', current => {
-      var _this$querySelector4, _this$querySelectorAl;
-      (_this$querySelector4 = this.querySelector('.swiper-pagination-bullet-active')) === null || _this$querySelector4 === void 0 || _this$querySelector4.classList.remove('swiper-pagination-bullet-active');
-      (_this$querySelectorAl = this.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex]) === null || _this$querySelectorAl === void 0 || _this$querySelectorAl.classList.add('swiper-pagination-bullet-active');
+      var _this$parent$querySel, _this$parent$querySel2;
+      (_this$parent$querySel = this.parent.querySelector('.swiper-pagination-bullet-active')) === null || _this$parent$querySel === void 0 || _this$parent$querySel.classList.remove('swiper-pagination-bullet-active');
+      (_this$parent$querySel2 = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex]) === null || _this$parent$querySel2 === void 0 || _this$parent$querySel2.classList.add('swiper-pagination-bullet-active');
     });
   }
 }
@@ -431,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "./" + chunkId + ".js?" + {"module0":"bf1f1fd338286abf5b45","module1":"ba3092093735158ed760","module2":"56cd7a1b4cda93b112a5","module3":"44122694aa91ae4f8d6f","module4":"3fdb50e3c44643025d14"}[chunkId] + "";
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"9f0612b4c5b64ccc1412","module1":"9da496bbaec69c025581","module2":"56cd7a1b4cda93b112a5","module3":"44122694aa91ae4f8d6f","module4":"3fdb50e3c44643025d14"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

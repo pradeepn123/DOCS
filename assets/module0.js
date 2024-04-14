@@ -13,7 +13,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/image-with-text */ "./js/components/image-with-text.js");
+/* harmony import */ var JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/image-with-text */ "./js/components/image-with-text.js");
+/* harmony import */ var JsComponents_carousel_items__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/carousel-items */ "./js/components/carousel-items.js");
 
 
 
@@ -24,21 +25,23 @@ __webpack_require__.r(__webpack_exports__);
   var settings = JSON.stringify({
     "slidesPerView": 1,
     "spaceBetween": 10,
-    "overflowNagivation": true,
+    "overflowNagivation": false,
     "breakpoints": {
       "768": {
-        "navigation": true,
         "slidesPerView": 1,
         "spaceBetween": 27
       },
       "1200": {
-        "navigation": true,
         "slidesPerView": 1,
         "spaceBetween": 27,
-        "speed": 600
+        "speed": 600,
+        "pagination": true
       }
     }
   });
+  var carouselsettings = {
+    paginationWrapperClass: 'swiper-pagination--bar'
+  };
   var imageWithTextData = Object.values(data).map(item => {
     var {
       heading = '',
@@ -51,7 +54,7 @@ __webpack_require__.r(__webpack_exports__);
       styleClass = 'style-1',
       mobileMediaGridColumn = 'span 4',
       desktopMediaGridColumn = 'span 4',
-      mobilntentGridColumn = 'span 1',
+      mobileContentGridColumn = 'span 1',
       desktopContentGridColumn = 'span 1',
       url,
       button
@@ -97,28 +100,20 @@ __webpack_require__.r(__webpack_exports__);
     };
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "banner banner--custom"
+    className: "banner banner--custom",
+    "data-parent": true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__header-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("custom-carousel", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "carousel__container swiper",
-    "data-swiper-container": true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "swiper-wrapper"
-  }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "swiper-slide",
-    key: index
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("custom-carousel", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_carousel_items__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    settings: carouselsettings
+  }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    enableTint: true,
     data: eachData,
-    wrapperclassName: "banner__slideshow"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "swiper-pagination"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "swiper-navigations",
-    "data-swiper-navigations": true
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("script", {
+    wrapperClass: "banner__slideshow",
+    key: index
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("script", {
     "data-settings": true,
     type: "text/json"
   }, settings))))));

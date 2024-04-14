@@ -445,6 +445,86 @@ window.addEventListener('resize', () => {
 
 /***/ }),
 
+/***/ "./js/components/carousel-items.js":
+/*!*****************************************!*\
+  !*** ./js/components/carousel-items.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var JsComponents_constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/constants */ "./js/components/constants.js");
+
+
+
+var SwiperWrapper = _ref => {
+  var {
+    children
+  } = _ref;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "carousel__container swiper",
+    "data-swiper-container": true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "swiper-wrapper"
+  }, children.map((renderedComponent, index) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "swiper-slide",
+      key: index
+    }, renderedComponent);
+  })));
+};
+var Navigation = _ref2 => {
+  var {
+    wrapperClass,
+    container
+  } = _ref2;
+  var childNode = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "swiper-navigations ".concat(wrapperClass),
+    "data-navigations": true
+  });
+  return container ? /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(childNode, container) : childNode;
+};
+var Pagination = _ref3 => {
+  var {
+    wrapperClass,
+    container
+  } = _ref3;
+  var childNode = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "swiper-pagination ".concat(wrapperClass),
+    "data-pagination": true
+  });
+  return container ? /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(childNode, container) : childNode;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref4 => {
+  var {
+    children = [],
+    settings = {}
+  } = _ref4;
+  var {
+    parentRef,
+    navigationWrapperClass,
+    paginationWrapperClass
+  } = settings;
+  var paginationContainer = parentRef && parentRef.querySelector(JsComponents_constants__WEBPACK_IMPORTED_MODULE_2__.CAROUSEL["paginationWrapper"]);
+  var navigationContainer = parentRef && parentRef.querySelector(JsComponents_constants__WEBPACK_IMPORTED_MODULE_2__.CAROUSEL["navigationWrapper"]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SwiperWrapper, {
+    children: children
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Navigation, {
+    wrapperClass: navigationWrapperClass,
+    container: navigationContainer
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Pagination, {
+    wrapperClass: paginationWrapperClass,
+    container: paginationContainer
+  }));
+});
+
+/***/ }),
+
 /***/ "./js/components/constants.js":
 /*!************************************!*\
   !*** ./js/components/constants.js ***!
@@ -453,30 +533,18 @@ window.addEventListener('resize', () => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   BREAKPOINTS: () => (/* binding */ BREAKPOINTS)
+/* harmony export */   BREAKPOINTS: () => (/* binding */ BREAKPOINTS),
+/* harmony export */   CAROUSEL: () => (/* binding */ CAROUSEL)
 /* harmony export */ });
-/* unused harmony export LAYOUT */
-/* harmony import */ var JsComponents_breakpoints__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/breakpoints */ "./js/components/breakpoints.js");
-
-var getGap = () => {
-  var gaps = {
-    "default": "12px",
-    "sm": "12px",
-    "md": "16px",
-    "lg": "24px"
-  };
-  console.log(JsComponents_breakpoints__WEBPACK_IMPORTED_MODULE_0__.getCurrentBreakpoint, "fn");
-  var currentBreakpoint = (0,JsComponents_breakpoints__WEBPACK_IMPORTED_MODULE_0__.getCurrentBreakpoint)();
-  return gaps[currentBreakpoint];
-};
-var LAYOUT = {
-  gap: getGap
-};
 var BREAKPOINTS = {
   "0": "default",
   "769": "sm",
   "1024": "md",
   "1200": "lg"
+};
+var CAROUSEL = {
+  paginationWrapper: '[data-pagination-wrapper]',
+  navigationWrapper: '[data-navigation-wrapper]'
 };
 
 /***/ }),
@@ -598,7 +666,8 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
     data: curatedData,
-    wrapperClass
+    wrapperClass,
+    enableTint
   } = _ref;
   var currentBreakpoint = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(JsComponents_contexts_breakpointContextWrapper__WEBPACK_IMPORTED_MODULE_2__.BreakPointContext);
   var selectedBreakpoinData = curatedData[currentBreakpoint] || curatedData["default"];
@@ -610,11 +679,9 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       gridRow: mediagridRow
     },
     content: {
-      maxWidth: contentMaxWidth,
       textColor,
       gridColumn: contentGridColumn,
-      gridRow: contentgridRow,
-      background
+      gridRow: contentgridRow
     }
   } = selectedBreakpoinData;
   var imageObj = _objectSpread({
@@ -627,9 +694,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     };
   }
   var contentStyle = {
-    maxWidth: contentMaxWidth,
     color: textColor,
-    background,
     gridColumn: contentGridColumn,
     gridRow: contentgridRow
   };
@@ -658,10 +723,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       imageFit: "cover"
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "image-text__content-wrapper image-text__content-wrapper--".concat(wrapperClass, " image-text__content-wrapper--").concat(styleClass),
+    className: "image-text__content-wrapper image-text__content-wrapper--".concat(styleClass)
+  }, enableTint && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "carousel__tint"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "image-text__content image-text__content--".concat(wrapperClass),
     style: contentStyle
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "image-text__content image-text__content--".concat(wrapperClass)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("p", {
     className: "image-text__subheading fs-accent section-blocks__accent accent__text"
   }, subheading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", {

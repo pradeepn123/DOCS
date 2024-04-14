@@ -3,12 +3,12 @@ import ResponsiveImage from "JsComponents/ResponsiveImage"
 import { BreakPointContext } from "JsComponents/contexts/breakpointContextWrapper";
 import { useContext } from 'react';
 
-export default ({ data: curatedData, wrapperClass }) => {    
+export default ({ data: curatedData, wrapperClass, enableTint }) => {    
     const currentBreakpoint = useContext(BreakPointContext);
     const selectedBreakpoinData = curatedData[currentBreakpoint] || curatedData["default"];
     const {
      media: {image, ratio, gridColumn:mediaGridColumn, gridRow:mediagridRow} ,
-     content: {maxWidth: contentMaxWidth,textColor, gridColumn:contentGridColumn, gridRow:contentgridRow, background}} = selectedBreakpoinData;
+     content: {textColor, gridColumn:contentGridColumn, gridRow:contentgridRow}} = selectedBreakpoinData;
     const imageObj= {
         id: Date.now(),
         ...image
@@ -19,9 +19,7 @@ export default ({ data: curatedData, wrapperClass }) => {
       }
 
       const contentStyle = {
-        maxWidth:contentMaxWidth,
         color: textColor,
-        background,
         gridColumn: contentGridColumn,
         gridRow: contentgridRow
       }
@@ -43,11 +41,13 @@ export default ({ data: curatedData, wrapperClass }) => {
 
     return(
         <div className={`image-text ${wrapperClass} `} >
+       
            <div className={`image-text__images image-text__images--${wrapperClass} image-text__images--${styleClass}` } style={mediaStyle}>
               <ResponsiveImage image={imageObj} aspectratio={`${ratio}`} settings={{imageFit: "cover"}} />
             </div>
-            <div className={`image-text__content-wrapper image-text__content-wrapper--${wrapperClass} image-text__content-wrapper--${styleClass}`} style={contentStyle}>
-                <div className={`image-text__content image-text__content--${wrapperClass}`}>
+            <div className={`image-text__content-wrapper image-text__content-wrapper--${styleClass}`} >
+                {enableTint && <div className="carousel__tint"></div>}
+                <div className={`image-text__content image-text__content--${wrapperClass}`} style={contentStyle}>
                     <p className="image-text__subheading fs-accent section-blocks__accent accent__text">
                         {subheading}
                         </p>

@@ -1,27 +1,30 @@
 import React from "react";
 import ImageWithText from "JsComponents/image-with-text"
-import Carousel from "JsComponents/Carousel";
+import CarouselItems from "JsComponents/carousel-items";
 
 export default ({ data }) => {
 
 	const settings = JSON.stringify({
 		"slidesPerView": 1,
 		"spaceBetween": 10,
-		"overflowNagivation": true,
+		"overflowNagivation": false,
 		"breakpoints": {
 			"768": {
-				"navigation": true,
 				"slidesPerView": 1,
 				"spaceBetween": 27
 			},
 			"1200": {
-				"navigation": true,
 				"slidesPerView": 1,
 				"spaceBetween": 27,
-				"speed":600
+				"speed":600,
+				"pagination": true,
 			}
 		}
 	});
+
+	const carouselsettings = {
+		paginationWrapperClass: 'swiper-pagination--bar'
+	}
 	const imageWithTextData = Object.values(data).map((item) => {
 		let {
 			heading = '',
@@ -34,7 +37,7 @@ export default ({ data }) => {
 			styleClass = 'style-1',
 			mobileMediaGridColumn = 'span 4',
 			desktopMediaGridColumn = 'span 4',
-			mobilntentGridColumn = 'span 1',
+			mobileContentGridColumn = 'span 1',
 			desktopContentGridColumn = 'span 1',
 			url,
 			button } = item || {};
@@ -82,22 +85,19 @@ export default ({ data }) => {
 
 
 	return (
-		<div className="banner banner--custom">
+		<div className="banner banner--custom" data-parent>
 			<div className="banner__container">
 				<div className="banner__header-content">
 					<div>
 						<custom-carousel>
-							<div className="carousel__container swiper" data-swiper-container>
-								<div className="swiper-wrapper">
-										{imageWithTextData.map((eachData, index) =>
-										<div className="swiper-slide" key={index}>
-											<ImageWithText data={eachData} wrapperclassName="banner__slideshow" />
-											</div>
-										)}
-								</div>
-								<div className="swiper-pagination"></div>
-								<div className="swiper-navigations" data-swiper-navigations></div>
-							</div>
+							<CarouselItems settings={carouselsettings}>
+								{imageWithTextData.map((eachData, index) => 
+								<ImageWithText 
+								enableTint={true}
+								data={eachData} 
+								wrapperClass="banner__slideshow" 
+								key={index}/>)}
+							</CarouselItems>
 							<script data-settings type="text/json">
 								 {settings}
 							</script>

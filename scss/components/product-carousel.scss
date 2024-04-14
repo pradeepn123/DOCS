@@ -2,8 +2,7 @@
 @import 'swiper/css/pagination';
  
 .product-carousel {
-    display: flex;
-
+    &__pagination {
     --swiper-pagination-bottom: auto;
     --swiper-pagination-top: 0%;
     --swiper-pagination-bullet-horizontal-gap: 4px;
@@ -22,4 +21,5 @@
             border: 1.5px solid var(--swiper-pagination-bullet-border-color-custom);
         }
     }
+  }    
 }
