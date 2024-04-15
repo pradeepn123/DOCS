@@ -15,13 +15,17 @@
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var JsComponents_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! JsComponents/constants */ "./js/components/constants.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
 
 var _excluded = ["breakpoints"],
   _excluded2 = ["pagination", "navigation"],
-  _excluded3 = ["navigation", "pagination", "progressPagination"];
+  _excluded3 = ["navigation", "pagination", "progressPagination", "paginationType"];
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+
+
 
 
 class CustomCarousel extends HTMLElement {
@@ -36,6 +40,9 @@ class CustomCarousel extends HTMLElement {
     this.initCarousel();
   }
   getCarouselSettings() {
+    var {
+      paginationType: readOnlyPaginationType
+    } = JsComponents_constants__WEBPACK_IMPORTED_MODULE_4__.CAROUSEL;
     this.currentWidth = window.innerWidth;
     //default settings
     var defaultSettings = {
@@ -76,12 +83,12 @@ class CustomCarousel extends HTMLElement {
       });
     }
     if (this.carouselSettings && Object.keys(this.carouselSettings).length > 0) {
-      debugger;
       var _this$carouselSetting2 = this.carouselSettings,
         {
           navigation,
           pagination,
-          progressPagination
+          progressPagination,
+          paginationType = readOnlyPaginationType["dots"]
         } = _this$carouselSetting2,
         otherSwiperSettings = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$carouselSetting2, _excluded3);
       carouselSettings = _objectSpread({}, otherSwiperSettings);
@@ -101,6 +108,20 @@ class CustomCarousel extends HTMLElement {
           el: swiperPagination,
           clickable: true
         };
+        if (paginationType == "bars") {
+          _pagination = {
+            el: swiperPagination,
+            clickable: true,
+            type: 'custom',
+            renderCustom: (swiper, current, total) => {
+              var text = '';
+              Array(total).fill().forEach((_, index) => {
+                text += "<div class='swiper-pagination-bullet swiper-pagination--bar ".concat(index == current - 1 ? 'swiper-pagination-active' : '', " '>\n                    <div class=\"swiper-pagination__progress\"></div>\n                  </div>");
+              });
+              return text;
+            }
+          };
+        }
         if (progressPagination) {
           _pagination = {
             el: swiperPagination,
@@ -116,7 +137,6 @@ class CustomCarousel extends HTMLElement {
   }
   initCarousel() {
     var _this$querySelector, _this$querySelector2;
-    debugger;
     this.parent = this.closest('[data-parent]');
     this.carouselSettings = JSON.parse(((_this$querySelector = this.querySelector('[data-settings]')) === null || _this$querySelector === void 0 ? void 0 : _this$querySelector.innerHTML) || "{}");
     this.placeholders = (_this$querySelector2 = this.querySelector('[data-carousel-placeholder]')) === null || _this$querySelector2 === void 0 ? void 0 : _this$querySelector2.innerHTML;
@@ -143,14 +163,33 @@ class CustomCarousel extends HTMLElement {
           } else {
             this.parent.querySelector('.swiper-pagination--hide') && this.querySelectorAll('.swiper-pagination--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
           }
+        },
+        init: () => {
+          var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[0].querySelector('.swiper-pagination__progress');
+          if (currentSlider) {
+            gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(currentSlider, {
+              width: "100%",
+              duration: 4,
+              "ease": "ease"
+            });
+          }
         }
       },
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Autoplay]
     }, carouselSettings));
     this.swiper.on('activeIndexChange', current => {
-      var _this$parent$querySel, _this$parent$querySel2;
+      var _this$parent$querySel;
+      var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex];
       (_this$parent$querySel = this.parent.querySelector('.swiper-pagination-bullet-active')) === null || _this$parent$querySel === void 0 || _this$parent$querySel.classList.remove('swiper-pagination-bullet-active');
-      (_this$parent$querySel2 = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex]) === null || _this$parent$querySel2 === void 0 || _this$parent$querySel2.classList.add('swiper-pagination-bullet-active');
+      currentSlider === null || currentSlider === void 0 || currentSlider.classList.add('swiper-pagination-bullet-active');
+    });
+    this.swiper.on('slideChange', current => {
+      var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex].querySelector('.swiper-pagination__progress');
+      gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(currentSlider, {
+        width: "100%",
+        duration: 4,
+        "ease": "ease"
+      });
     });
   }
 }
@@ -433,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "./" + chunkId + ".js?" + {"module0":"b4ab6d474b00440a9013","module1":"f2ca3cb505c8f0ac35fe","module2":"56cd7a1b4cda93b112a5","module3":"44122694aa91ae4f8d6f","module4":"3fdb50e3c44643025d14"}[chunkId] + "";
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"a72fc3f4b44ff562b0d5","module1":"f2ca3cb505c8f0ac35fe","module2":"56cd7a1b4cda93b112a5","module3":"44122694aa91ae4f8d6f","module4":"3fdb50e3c44643025d14"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

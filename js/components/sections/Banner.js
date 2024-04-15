@@ -1,16 +1,18 @@
 import React from "react";
 import ImageWithText from "JsComponents/image-with-text"
 import CarouselItems from "JsComponents/carousel-items";
+import { CAROUSEL } from "JsComponents/constants";
 
 export default ({ data }) => {
-
+const {paginationType} = CAROUSEL;
 	const settings = JSON.stringify({
+		"paginationType": `bars`,
 		"slidesPerView": 1,
 		"spaceBetween": 10,
 		"overflowNagivation": false,
 		"speed":1000,
 		"autoplay": {
-			"delay": 3000
+			"delay": 3000 //use constant here, update bar pagination  animation value as well
 		},
 		"breakpoints": {
 			"768": {
@@ -20,16 +22,14 @@ export default ({ data }) => {
 			"1200": {
 				"slidesPerView": 1,
 				"spaceBetween": 27,
-				"pagination": true,
-				"autoplay": {
-					"delay": 3000
-				}
+				"pagination": true
 			}
 		}
 	});
 
 	const carouselsettings = {
-		paginationWrapperClass: 'swiper-pagination--bar'
+		paginationWrapperClass: 'swiper-pagination--bar',
+		progressbarFillClass: "swiper-pagination-progress-fill"
 	}
 	const imageWithTextData = Object.values(data).map((item) => {
 		let {

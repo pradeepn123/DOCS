@@ -7,6 +7,10 @@ export const BREAKPOINTS = {
 
 export const CAROUSEL = {
     paginationWrapper: '[data-pagination-wrapper]',
-    navigationWrapper: '[data-navigation-wrapper]'
+    navigationWrapper: '[data-navigation-wrapper]',
+    paginationType: {
+        "bars": "bars",
+        "dots": "dots"
+    } 
 }
 

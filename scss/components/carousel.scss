@@ -24,10 +24,6 @@
 .swiper-pagination {
   display: flex;
   z-index: 1;
-  &:not(.swiper-pagination-progressbar){
-    height: 9px !important;
-    bottom: 24px !important;
-  }
   left: 50% !important;
   box-sizing: content-box;
   transform: translateX(-50%) !important;
@@ -142,6 +138,32 @@ custom-carousel {
 }
 
 
-.swiper-pagination--dot {
-  top: 50% !important;
+.swiper-pagination {
+  &--dot {
+    top: 50% !important;
+  }
+
+  &__progress {
+    position: absolute;
+    height:100%;
+    top:0;
+    left: 0;
+    width: 0;
+    background: white;
+  }
+
+  &--bar {
+    position: relative;
+    &.swiper-pagination-active {
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-pagination-custom {
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
 }

@@ -507,8 +507,8 @@ var Pagination = _ref3 => {
   } = _ref4;
   var {
     parentRef,
-    navigationWrapperClass,
-    paginationWrapperClass
+    navigationWrapperClass = '',
+    paginationWrapperClass = ''
   } = settings;
   var paginationContainer = parentRef && parentRef.querySelector(JsComponents_constants__WEBPACK_IMPORTED_MODULE_2__.CAROUSEL["paginationWrapper"]);
   var navigationContainer = parentRef && parentRef.querySelector(JsComponents_constants__WEBPACK_IMPORTED_MODULE_2__.CAROUSEL["navigationWrapper"]);
@@ -544,7 +544,11 @@ var BREAKPOINTS = {
 };
 var CAROUSEL = {
   paginationWrapper: '[data-pagination-wrapper]',
-  navigationWrapper: '[data-navigation-wrapper]'
+  navigationWrapper: '[data-navigation-wrapper]',
+  paginationType: {
+    "bars": "bars",
+    "dots": "dots"
+  }
 };
 
 /***/ }),

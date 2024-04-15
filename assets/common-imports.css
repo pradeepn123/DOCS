@@ -714,10 +714,6 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.swiper-pagination:not(.swiper-pagination-progressbar) {
-  height: 9px !important;
-  bottom: 24px !important;
-}
 .swiper-pagination--dot {
   opacity: 1;
   background: transparent;
@@ -829,7 +825,29 @@ custom-carousel {
 }
 
 .swiper-pagination--dot {
-  top: 50%;
+  top: 50% !important;
+}
+.swiper-pagination__progress {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 0;
+  background: white;
+}
+.swiper-pagination--bar {
+  position: relative;
+}
+.swiper-pagination--bar.swiper-pagination-active {
+  opacity: 1;
+}
+
+.swiper-pagination-custom {
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
 }
 .product-card-item__placeholder {
   width: 100%;

@@ -1,5 +1,8 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { CAROUSEL } from 'JsComponents/constants';
+import { gsap } from 'gsap';
+
 
 class CustomCarousel extends HTMLElement {
   constructor() {
@@ -15,6 +18,7 @@ class CustomCarousel extends HTMLElement {
   }
 
   getCarouselSettings() {
+    const {paginationType: readOnlyPaginationType} = CAROUSEL;
     this.currentWidth = window.innerWidth;
     //default settings
     const defaultSettings = {
@@ -45,9 +49,7 @@ class CustomCarousel extends HTMLElement {
       })
     }
     if (this.carouselSettings && Object.keys(this.carouselSettings).length > 0) {
-      debugger;
-
-      const { navigation, pagination, progressPagination, ...otherSwiperSettings } = this.carouselSettings;
+      const { navigation, pagination, progressPagination,paginationType=readOnlyPaginationType["dots"], ...otherSwiperSettings } = this.carouselSettings;
       carouselSettings = { ...otherSwiperSettings };
       if (navigation) {
         const navigationNext = this.parent.querySelector('[data-navigation-next]');
@@ -63,8 +65,27 @@ class CustomCarousel extends HTMLElement {
         const swiperPagination = this.parent.querySelector('[data-pagination]');
         let pagination = {
           el: swiperPagination,
-          clickable: true
+          clickable: true,
         }
+
+        if(paginationType == "bars") {
+   
+           pagination = {
+            el: swiperPagination,
+            clickable: true,
+            type: 'custom',
+            renderCustom: (swiper, current, total) => {
+              let text = '';
+               (Array(total).fill()).forEach((_,index) => {
+                  text += `<div class='swiper-pagination-bullet swiper-pagination--bar ${index == (current - 1) ? 'swiper-pagination-active' : ''} '>
+                    <div class="swiper-pagination__progress"></div>
+                  </div>`
+               })
+               return text;
+            }
+          }
+        }
+
         if (progressPagination) {
           pagination = {
             el: swiperPagination,
@@ -79,7 +100,6 @@ class CustomCarousel extends HTMLElement {
   }
 
   initCarousel() {
-    debugger;
     this.parent = this.closest('[data-parent]');
     this.carouselSettings = JSON.parse(this.querySelector('[data-settings]')?.innerHTML || "{}");
     this.placeholders = this.querySelector('[data-carousel-placeholder]')?.innerHTML;
@@ -113,6 +133,13 @@ class CustomCarousel extends HTMLElement {
           else {
             this.parent.querySelector('.swiper-pagination--hide') && this.querySelectorAll('.swiper-pagination--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
           }
+          
+        },
+        init: () => {
+          const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[0].querySelector('.swiper-pagination__progress');
+          if(currentSlider) {
+            gsap.to(currentSlider, { width: `100%`, duration:4, "ease": "ease" });
+          }
         }
       },
       modules: [Navigation, Pagination, Autoplay],
@@ -121,8 +148,14 @@ class CustomCarousel extends HTMLElement {
     });
 
     this.swiper.on('activeIndexChange', (current) => {
+      const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex];
       this.parent.querySelector('.swiper-pagination-bullet-active')?.classList.remove('swiper-pagination-bullet-active');
-      this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex]?.classList.add('swiper-pagination-bullet-active');
+      currentSlider?.classList.add('swiper-pagination-bullet-active');
+    })
+
+    this.swiper.on('slideChange', (current) => {
+      const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex].querySelector('.swiper-pagination__progress');
+      gsap.to(currentSlider, { width: `100%`, duration:4, "ease": "ease" });
     })
   }
 }

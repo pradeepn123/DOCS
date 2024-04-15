@@ -13,8 +13,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/image-with-text */ "./js/components/image-with-text.js");
-/* harmony import */ var JsComponents_carousel_items__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/carousel-items */ "./js/components/carousel-items.js");
+/* harmony import */ var JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! JsComponents/image-with-text */ "./js/components/image-with-text.js");
+/* harmony import */ var JsComponents_carousel_items__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/carousel-items */ "./js/components/carousel-items.js");
+/* harmony import */ var JsComponents_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/constants */ "./js/components/constants.js");
+
 
 
 
@@ -22,13 +24,17 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data
   } = _ref;
+  var {
+    paginationType
+  } = JsComponents_constants__WEBPACK_IMPORTED_MODULE_1__.CAROUSEL;
   var settings = JSON.stringify({
+    "paginationType": "bars",
     "slidesPerView": 1,
     "spaceBetween": 10,
     "overflowNagivation": false,
     "speed": 1000,
     "autoplay": {
-      "delay": 3000
+      "delay": 3000 //use constant here, update bar pagination  animation value as well
     },
     "breakpoints": {
       "768": {
@@ -38,15 +44,13 @@ __webpack_require__.r(__webpack_exports__);
       "1200": {
         "slidesPerView": 1,
         "spaceBetween": 27,
-        "pagination": true,
-        "autoplay": {
-          "delay": 3000
-        }
+        "pagination": true
       }
     }
   });
   var carouselsettings = {
-    paginationWrapperClass: 'swiper-pagination--bar'
+    paginationWrapperClass: 'swiper-pagination--bar',
+    progressbarFillClass: "swiper-pagination-progress-fill"
   };
   var imageWithTextData = Object.values(data).map(item => {
     var {
@@ -112,9 +116,9 @@ __webpack_require__.r(__webpack_exports__);
     className: "banner__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "banner__header-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("custom-carousel", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_carousel_items__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("custom-carousel", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_carousel_items__WEBPACK_IMPORTED_MODULE_2__["default"], {
     settings: carouselsettings
-  }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, imageWithTextData.map((eachData, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(JsComponents_image_with_text__WEBPACK_IMPORTED_MODULE_3__["default"], {
     enableTint: true,
     data: eachData,
     wrapperClass: "banner__slideshow",

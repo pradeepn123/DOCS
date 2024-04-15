@@ -37,7 +37,7 @@ const Pagination = ({wrapperClass, container}) => {
 
 
 export default ({ children = [], settings={}}) => {
-    const {parentRef,navigationWrapperClass,paginationWrapperClass} = settings;
+    const {parentRef,navigationWrapperClass = '',paginationWrapperClass = ''} = settings;
     const paginationContainer = parentRef && parentRef.querySelector(CAROUSEL["paginationWrapper"]);
     const navigationContainer = parentRef && parentRef.querySelector(CAROUSEL["navigationWrapper"]);
       return (
