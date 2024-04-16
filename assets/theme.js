@@ -8419,6 +8419,8 @@ function AccountLogin (node) {
   };
 }
 
+window.AccountLogin = AccountLogin;
+
 var selectors$G = {
   accountLink: "[data-account-link]",
   accountLogin: "[data-account-login][data-scope='component']",
@@ -9726,6 +9728,7 @@ var classes$7 = {
   active: "active",
   belowHeader: "below-header"
 };
+
 var menuNav = function menuNav(node) {
   var overlay = node.querySelector(selectors$t.overlay);
   var menuButton = document.querySelector(selectors$t.menuButton);
@@ -9759,11 +9762,13 @@ var menuNav = function menuNav(node) {
     }
   }
   function open() {
+    initmobileMenuNav();
+    initMobilemenuNavProduct();
     node.classList.add(classes$7.active);
     document.body.setAttribute("mobile-menu-open", "true");
     menuButton.setAttribute("aria-expanded", true);
     menuButton.setAttribute("aria-label", menuButton.getAttribute("data-aria-label-opened"));
-    homePane.addEventListener("scroll", handleCloseButtonBelowHeader);
+    homePane?.addEventListener("scroll", handleCloseButtonBelowHeader);
     setTimeout(function () {
       focusTrap.activate();
       disableBodyScroll(node, {
@@ -9778,7 +9783,6 @@ var menuNav = function menuNav(node) {
         }
       });
     }, 50);
-    initmobileMenuNav();
   }
   function close(e) {
     node.classList.remove(classes$7.active);
@@ -9882,6 +9886,8 @@ var menuNav = function menuNav(node) {
     navigateToPaneByKey: navigateToPaneByKey
   };
 };
+
+window.menuNav = menuNav;
 
 var selectors$s = {
   mobileMenu: "[data-mobile-menu]",

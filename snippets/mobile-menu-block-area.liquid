@@ -15,6 +15,7 @@
   capture appearing_blocks
     for block in blocks
       assign block_submenu_name_down = block.settings.submenu_name | downcase
+      assign meganav_settings = block.settings
 
       if block_submenu_name_down == submenu_name_down and block.settings.block_position == position
         case block.type
@@ -32,13 +33,6 @@
 
 
   <li class="mobile_menu__promo_blocks" data-position="{{ position }}">
-    {{ appearing_blocks }}
-    {% comment %} <mobile-react-megamenu-product>
-      <script type= "application/json" id="mobile-menu-product">
-        {
-          "data": {% render 'mobile-megamenu-product-json', block: block %}
-        }
-      </script>
-    </mobile-react-megamenu-product>  {% endcomment %}
+    {{ appearing_blocks }}    
   </li>
 

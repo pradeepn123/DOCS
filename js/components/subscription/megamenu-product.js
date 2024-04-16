@@ -1,7 +1,6 @@
 import React from "react";
 
 export default ({ shopifyData }) => {
-    console.log(shopifyData,'data')
     const {data:{proheading, product_list: products}} = shopifyData;
     
     return (
@@ -13,7 +12,7 @@ export default ({ shopifyData }) => {
                     return <a href={handle} aria-label="[pt]" className="meganav-promoted-products-item">
                         <div className="meganav-promoted-products-item-image-wrap">
                             <div className="image aspect-ratio--square animation--lazy-load loaded">
-                                <img alt="Alastin C-RADICAL Defense Antioxidant Serum" className="image__img" loading="lazy" width="2500" height="2500" src={image.src} />
+                                <img alt={title} className="image__img" loading="lazy" width="2500" height="2500" src={image.src} />
                             </div>
                         </div>
 

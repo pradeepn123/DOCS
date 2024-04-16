@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 export default ({ shopifyData }) => {    
-    const {data:{navigation:defaultNavigation, product_list: products}} = shopifyData;
-
+    const {data:{navigation:defaultNavigation, product_list: products, dynamicHeader = false}} = shopifyData;
+    const handle = window.localStorage.getItem('location-page');
     const [navigation, updateNavigations] = useState(defaultNavigation);
 
     const updateNavigationItems = () => {
         const dynamicNavigation = JSON.parse(JSON.stringify(navigation));
         dynamicNavigation.forEach(item => {
             let {menu_link, sub_menu_title} = item;
-            const handle = window.localStorage.getItem('location-page');
             menu_link = `/collections/${handle}`
             item["menu_link"] = menu_link
             sub_menu_title.forEach(item => {
@@ -19,12 +18,22 @@ export default ({ shopifyData }) => {
                  item["url"] = newurl 
             })
          })
-        updateNavigations(dynamicNavigation);
+         updateNavigations(dynamicNavigation);
     }
+
+    const getNavigationItems = () => {
+        (async () => {
+            const navigation = await fetch(`/pages/${handle}?view=get-navigation`);
+            const response = await navigation.json();
+            updateNavigations(response.megamenu);
+        })();
+    }
+
     useEffect(() => {
-        updateNavigationItems();
+        dynamicHeader ? getNavigationItems() : updateNavigationItems();
     },[])
-    window.updateNavigationItems = updateNavigationItems;
+
+
     return (
         <>
             <div className="meganav__nav" data-column-count="4" data-show-column-dividers="true">

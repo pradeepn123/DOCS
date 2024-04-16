@@ -1,0 +1,36 @@
+{
+  "menu_list": [
+    {% for link in mobile_links.links %}
+      {% unless forloop.first %},{% endunless %}
+      {
+        "title": "{{ link.title }}",
+        "handle": "{{ link.url }}",
+        "depth": 1
+        {% if link.links.size > 0 %}
+          ,"submenu": [
+            {% for sublink in link.links %}
+              {% unless forloop.first %},{% endunless %}
+              {
+                "title": "{{ sublink.title }}",
+                "handle": "{{ sublink.url }}",
+                "depth": 2
+                {% if sublink.links.size > 0 %}
+                  ,"submenu": [
+                    {% for subcategorylink in sublink.links %}
+                      {% unless forloop.first %},{% endunless %}
+                      {
+                        "title": "{{ subcategorylink.title }}",
+                        "handle": "{{ subcategorylink.url }}",
+                        "depth": 3
+                      }
+                    {% endfor %}
+                  ]
+                {% endif %}
+              }
+            {% endfor %}
+          ]
+        {% endif %}
+      }
+    {% endfor %}
+  ]
+}
