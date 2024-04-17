@@ -111,6 +111,12 @@
   </head>
 
   <body class="template-{{ request.page_type | handle }}">
+    <script> 
+    {%  if template contains 'collection' %}
+      window.localStorage.setItem("location", "{{collection.id}}");
+      window.localStorage.setItem("location-page", "{{collection.handle}}");
+    {%  endif %}
+    </script>
     <div class="page">
       {% if settings.enable_page_transitions %}
         {% render 'page-transition-overlay' %}
