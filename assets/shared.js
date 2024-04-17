@@ -593,9 +593,14 @@ var BreakPointContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.creat
     shopifyData
   } = _ref;
   var [sections, updateSections] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+  var getSectionData = () => {
     (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
-      var data = yield fetch('/pages/clarkston');
+      var loader = document.querySelector('.product-card-item__placeholder');
+      loader.style.display = 'block';
+      var bannerLoader = document.querySelector('.banner_loader_section');
+      bannerLoader.style.display = 'block';
+      var handle = window.localStorage.getItem('location-page');
+      var data = yield fetch("/pages/".concat(handle));
       var xmlString = yield data.text();
       var pageDoc = new DOMParser().parseFromString(xmlString, "text/html");
       var pageData = "";
@@ -623,14 +628,18 @@ var BreakPointContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.creat
         };
       }()));
       if (sectionData) {
-        var loader = document.querySelector('.product-card-item__placeholder');
-        loader.style.display = 'none';
-        var bannerLoader = document.querySelector('.banner_loader_section');
-        bannerLoader.style.display = 'none';
+        var _loader = document.querySelector('.product-card-item__placeholder');
+        _loader.style.display = 'none';
+        var _bannerLoader = document.querySelector('.banner_loader_section');
+        _bannerLoader.style.display = 'none';
       }
       updateSections(sections);
     })();
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    getSectionData();
   }, []);
+  window.updateHomepage = getSectionData;
   return sections.map((componentData, index) => {
     var {
       Component,
@@ -1569,6 +1578,7 @@ var SvgIcon = _ref => {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     window.localStorage.setItem("location", selectedLocation.id);
     window.localStorage.setItem("location-page", selectedLocation.handle);
+    window.updateHomepage && window.updateHomepage();
   }, [selectedLocation]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     window.addEventListener('click', ev => {
@@ -1608,7 +1618,6 @@ var SvgIcon = _ref => {
         handleSelection(location);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: "".concat(url, "?filter.v.availability=1"),
       className: "storeDd-wrapper__options-box ".concat(id == selectedLocation.id ? "checked" : '')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
       className: "storeDd-wrapper__storeName",

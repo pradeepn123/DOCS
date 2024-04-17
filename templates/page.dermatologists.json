@@ -1,0 +1,534 @@
+{
+  "sections": {
+    "banner_JQUbh7": {
+      "type": "banner",
+      "blocks": {
+        "image_with_text_overlay_UxarHd": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/AVENE_PROMO.png",
+            "image_mobile": "shopify://shop_images/Group_20.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 0.8,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Soothes, Strengthens & Rebalances the Skin</p>",
+            "heading-font-mob": 48,
+            "subheading": "Eau Thermale Avène",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify://pages/about-us"
+          }
+        },
+        "image_with_text_overlay_kxGbgm": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/SKIN_MEDICA_WEB_BANNER.png",
+            "image_mobile": "shopify://shop_images/SKIN_MEDICA_WEBSITE_BANNER.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 0.8,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Experience The Luxury Of Scientific Skin Care.</p>",
+            "heading-font-mob": 48,
+            "subheading": "SKINMEDICA",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify://pages/clarkston"
+          }
+        },
+        "image_with_text_overlay_QPqerD": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/ALASTIN_PROMO.png",
+            "image_mobile": "shopify://shop_images/Group_21.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 0.8,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Say Goodbye&lt;/br&gt;to Crepey Skin</p>",
+            "heading-font-mob": 48,
+            "subheading": "ALASTIN Skincare",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify://pages/clarkston"
+          }
+        },
+        "image_with_text_overlay_4t7Q9M": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/GLYTONE_PROMO.png",
+            "image_mobile": "shopify://shop_images/Group_23.png",
+            "desktop-ratio": 2.6,
+            "mobile-ratio": 0.8,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Target Your </p><p>Treatment Plan</p>",
+            "heading-font-mob": 48,
+            "subheading": "GLYTONE",
+            "description": "",
+            "cta_text": "SHOP NOW",
+            "cta_url": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_UxarHd",
+        "image_with_text_overlay_kxGbgm",
+        "image_with_text_overlay_QPqerD",
+        "image_with_text_overlay_4t7Q9M"
+      ],
+      "settings": {
+      }
+    },
+    "json_image_card_AHgpJA": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_Vcdd3x": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/stephany-lorena-Y0exoj3nREU-unsplash_1.png",
+            "collection_title": "SUN PROTECTION",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Sun Protection"
+          }
+        },
+        "select_JzVEcm": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/image_18.png",
+            "collection_title": "MOISTURIZING",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Moisturizing"
+          }
+        },
+        "select_gHHFAA": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/image_24.png",
+            "collection_title": "BRIGHTENING",
+            "collection_filter_type": "skincare",
+            "collection_filter": "Brightening"
+          }
+        },
+        "select_JGQ3jb": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/pexels-photo-7143195.webp",
+            "collection_title": "SKIN DEFENCE",
+            "collection_filter_type": "skin_type",
+            "collection_filter": "Age Defense/Rejuvenation"
+          }
+        }
+      },
+      "block_order": [
+        "select_Vcdd3x",
+        "select_JzVEcm",
+        "select_gHHFAA",
+        "select_JGQ3jb"
+      ],
+      "disabled": true,
+      "settings": {
+        "center_content": true,
+        "heading": "Featured Categories",
+        "slides_per_view": 4,
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 60,
+        "section_style_spacing_bottom": 60,
+        "image_fit": "cover",
+        "image_aspect_ratio": 1
+      }
+    },
+    "image_with_text_split_BnThCN": {
+      "type": "image-with-text-split",
+      "blocks": {
+        "image_with_text_overlay_gcTXtQ": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Frame_6.png",
+            "image_mobile": "shopify://shop_images/Frame_6.png",
+            "desktop-ratio": 1.5,
+            "mobile-ratio": 1.5,
+            "text_position": "center",
+            "text_position_horizontal": "center",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Get The Care You Want,<br/> Whenever You Want</p>",
+            "heading-font": 32,
+            "heading-font-mob": 32,
+            "subheading": "CLARKSTON DERMATOLOGY",
+            "description": "Discover our curated selection of premium brands to provide unparalleled results, giving you the radiant complexion you deserve.",
+            "cta_text": "Explore",
+            "cta_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_gcTXtQ"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "json_image_card_AHgpJB": {
+      "type": "json-image-card",
+      "blocks": {
+        "select_Vcdd3x": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/Group_28.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": "Sun Protection"
+          }
+        },
+        "select_JzVEcm": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify://shop_images/Group_27.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": "Moisturizing"
+          }
+        },
+        "select_gHHFAA": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/Group_24.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": "Brightening"
+          }
+        },
+        "select_mEpRJg": {
+          "type": "select",
+          "settings": {
+            "collection": "",
+            "image_source": "shopify://shop_images/Group_26.png",
+            "collection_title": "",
+            "collection_filter_type": "brand",
+            "collection_filter": ""
+          }
+        },
+        "select_JGQ3jb": {
+          "type": "select",
+          "settings": {
+            "collection": "clarkston",
+            "image_source": "shopify://shop_images/Group_25.png",
+            "collection_title": "",
+            "collection_filter_type": "skin_type",
+            "collection_filter": "Age Defense/Rejuvenation"
+          }
+        }
+      },
+      "block_order": [
+        "select_Vcdd3x",
+        "select_JzVEcm",
+        "select_gHHFAA",
+        "select_mEpRJg",
+        "select_JGQ3jb"
+      ],
+      "settings": {
+        "center_content": true,
+        "heading": "Shop By Brands",
+        "slides_per_view": 5,
+        "image_circle_crop_enable": true,
+        "image_spacing": 10,
+        "title_font_type": "body",
+        "text_alignment": "center",
+        "section_style_spacing_top": 60,
+        "section_style_spacing_bottom": 60,
+        "image_fit": "contain",
+        "image_aspect_ratio": 2.5
+      }
+    },
+    "banner_VCL6Kt": {
+      "type": "banner",
+      "blocks": {
+        "image_with_text_overlay_zVWTAH": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "text_position": "center",
+            "text_position_horizontal": "center",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "",
+            "heading-font-mob": 48,
+            "subheading": "",
+            "description": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "image_with_text_overlay_p7Bcqh": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/Frame_6.png",
+            "desktop-ratio": 4,
+            "text_position": "center",
+            "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Get The Care You Want,<br/> Whenever You Want</p>",
+            "heading-font-mob": 48,
+            "subheading": "CLARKSTON DERMATOLOGY",
+            "description": "Discover our curated selection of premium brands to provide unparalleled results, giving you the radiant complexion you deserve.",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_zVWTAH",
+        "image_with_text_overlay_p7Bcqh"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "json_featured_product_with_media_e8VRJ4": {
+      "type": "JSON-featured-product-with-media",
+      "blocks": {
+        "image_with_text_overlay_eRpTt3": {
+          "type": "image_with_text_overlay",
+          "settings": {
+            "image_desktop": "shopify://shop_images/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
+            "image_mobile": "shopify://shop_images/BETTER_ea979cf8-ddcb-4887-ac96-e44ae187141c.png",
+            "desktop-ratio": 0.8,
+            "mobile-ratio": 0.9,
+            "text_position": "top",
+            "text_position_horizontal": "left",
+            "text_position_mob": "center",
+            "text_position_horizontal_mob": "center",
+            "heading": "<p>Best Selling </p><p>Products</p>",
+            "heading-font": 16,
+            "heading-font-mob": 16,
+            "subheading": "",
+            "description": "",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "featured_products_Pwrwi3": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "alastin-renewal-retinol-25",
+              "alastin-renewal-retinol-5",
+              "alastin-restorative",
+              "alastin-restorative-eye"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_overlay_eRpTt3",
+        "featured_products_Pwrwi3"
+      ],
+      "settings": {
+        "center_content": false,
+        "preheading": "",
+        "heading": "Featured collection with media",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_link": "shopify://collections/all",
+        "button_label": "View all products",
+        "button_style": "primary",
+        "maximum_products": 3,
+        "num_columns": "3",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "media_position": "left",
+        "media_width": 40,
+        "media_height": 350,
+        "media_position_mobile": "above",
+        "media_height_mobile": 360,
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
+    "json_featured_products_JMnJHK": {
+      "type": "json-featured-products",
+      "blocks": {
+        "featured_products_e6bWzm": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "cicalfate-restorative-skin-cream",
+              "retrinal-ceramide-lipid-replenishing-balm",
+              "high-protection-tinted-compact-spf-50-beige",
+              "high-protection-tinted-compact-spf-50-honey",
+              "avene-retrinal-0-05-cream",
+              "thermal-spring-water-1-76-oz",
+              "thermal-spring-water-10-14-fl-oz"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_e6bWzm"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "FEATURED PRODUCTS",
+        "heading": "Eau Thermale Avène",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
+    "json_featured_products_Afm3Yp": {
+      "type": "json-featured-products",
+      "blocks": {
+        "featured_products_aXdTbm": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "glytone-age-defying-c-advanced-antioxidant-serum",
+              "glytone-enhance-brightening-complex",
+              "lactic-superficial-retexturizing-serum",
+              "lipid-recovery-cream",
+              "mandelic-gentle-resurfacing-serum",
+              "night-renewal-cream"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_aXdTbm"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "FEATURED PRODUCTS",
+        "heading": "Glytone",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    },
+    "json_featured_products_9xMgrw": {
+      "type": "json-featured-products",
+      "blocks": {
+        "featured_products_WFWeaJ": {
+          "type": "featured_products",
+          "settings": {
+            "products": [
+              "alastin-c-radical-defense-antioxidant-serum",
+              "lipid-recovery-cream",
+              "heliocare",
+              "latisse",
+              "glytone-age-defying-c-advanced-antioxidant-serum"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "featured_products_WFWeaJ"
+      ],
+      "settings": {
+        "center_content": true,
+        "preheading": "TOP PICKS",
+        "heading": "For You",
+        "subheading": "",
+        "maximum_content_width": 650,
+        "button_1_button_link": "",
+        "button_1_button_label": "",
+        "button_1_button_style": "primary",
+        "button_2_button_link": "",
+        "button_2_button_label": "",
+        "button_2_button_style": "tertiary",
+        "button_position": "header",
+        "maximum_products": 10,
+        "num_columns": "5",
+        "num_columns_mobile": "2",
+        "enable_slider_desktop": true,
+        "enable_slider_mobile": true,
+        "accent": "",
+        "title": "Featured collection",
+        "text": "Shop all",
+        "text_position": "flex-start_flex-start",
+        "color_scheme": "default",
+        "override_with_custom_colors": false,
+        "override_color_text": "#393939",
+        "override_color_background": "#ffffff",
+        "section_style_spacing_top": 36,
+        "section_style_spacing_bottom": 36,
+        "section_style_enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "banner_JQUbh7",
+    "json_image_card_AHgpJA",
+    "image_with_text_split_BnThCN",
+    "json_image_card_AHgpJB",
+    "banner_VCL6Kt",
+    "json_featured_product_with_media_e8VRJ4",
+    "json_featured_products_JMnJHK",
+    "json_featured_products_Afm3Yp",
+    "json_featured_products_9xMgrw"
+  ]
+}

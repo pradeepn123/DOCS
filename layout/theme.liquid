@@ -136,8 +136,12 @@
         <div class="header-overlay__inner"></div>
       </div>
 
+      {% assign dynamic_homepage = true %}
+
       <main id="main" class="main">
-        {% if template == 'index' %}
+        {% if template == 'index' and dynamic_homepage %}
+          {% render 'banner-loader' %}
+          {% render 'placeholder-product-card' %}
           <homepage>
            <script type="application/json" id="theme-files">
              {
@@ -145,8 +149,6 @@
               }
           </script>
           </homepage>
-          {% render 'banner-loader' %}
-          {% render 'placeholder-product-card' %}
         {% else %}
           {{ content_for_layout }}
         {% endif %}

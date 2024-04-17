@@ -3,16 +3,22 @@ import BreakpointWrapper from './contexts/breakpointContextWrapper';
 
 export default ({shopifyData}) => {
   const [sections, updateSections] = useState([]);
-   useEffect(() => {
+
+  const getSectionData = () => {
     (async () => {
-        const data = await fetch('/pages/clarkston');
+      const loader = document.querySelector('.product-card-item__placeholder')
+      loader.style.display = 'block';
+      const bannerLoader = document.querySelector('.banner_loader_section')
+      bannerLoader.style.display = 'block';
+        const handle = window.localStorage.getItem('location-page');
+        const data = await fetch(`/pages/${handle}`);
         var xmlString = await data.text();
-         var pageDoc = new DOMParser().parseFromString(xmlString, "text/html");
-         let pageData = "";
-         pageDoc.querySelectorAll('[data-json]').forEach((scriptData, index) => {
-           if(index) {
+        var pageDoc = new DOMParser().parseFromString(xmlString, "text/html");
+        let pageData = "";
+        pageDoc.querySelectorAll('[data-json]').forEach((scriptData, index) => {
+          if(index) {
             pageData = pageData + ","
-           }
+          }
           pageData = pageData +`${scriptData.innerHTML}`;
         })
         pageData = `{ ${pageData} }`
@@ -36,7 +42,13 @@ export default ({shopifyData}) => {
         }
         updateSections(sections);
     })();
+  }
+   useEffect(() => {
+    getSectionData();
    }, []);
+
+   window.updateHomepage = getSectionData;
+
 
    return ( sections.map((componentData, index) => {
     const {Component, props} = componentData;
