@@ -1,0 +1,10 @@
+.EZDrawer nav {
+    z-index: 1000 !important;
+    width: -webkit-fill-available !important;
+}
+
+.drawer__main-content{
+    flex-grow:1;
+    padding: 25px;
+  }
+  

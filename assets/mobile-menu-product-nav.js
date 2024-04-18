@@ -9,11 +9,11 @@
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_mobile_menu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/mobile-menu-product */ "./js/components/subscription/mobile-menu-product.js");
+/* harmony import */ var JsComponents_megamenu_mobile_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/mobile-megamenu-nav */ "./js/components/megamenu/mobile-megamenu-nav.js");
 
 
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_mobile_menu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-react-megamenu-product', '#mobile-menu-product');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_mobile_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-react-megamenu-product', '#mobile-menu-product');
 });
 
 /***/ })
@@ -130,6 +130,17 @@
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */

@@ -2,7 +2,6 @@ import React from "react";
 
 export default ({ shopifyData }) => {
     const {data:{proheading, product_list: products}} = shopifyData;
-    
     return (
         <>  
             <h4 className="meganav__secondary--heading fs-accent fs-accent-bold">{proheading}</h4>

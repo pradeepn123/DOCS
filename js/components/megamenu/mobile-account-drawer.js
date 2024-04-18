@@ -1,7 +1,6 @@
 import React from "react";
 
 export default () => {
-
     return (
         <div data-menu-depth="1" data-pane-key="account-info" data-scroll-lock-ignore="" aria-hidden="true" inert="true">                        
             <li className="mobile-menu__item mobile-menu__item--header">

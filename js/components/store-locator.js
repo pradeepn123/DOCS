@@ -25,17 +25,24 @@ export default ({ shopifyData }) => {
     if(!selectedItem)  selectedItem = curatedData[0];
     const [selectedLocation, setSelectedLocation] = useState(selectedItem)
     const [isDropdownActive, setDropDownActive] = useState(false);
+
+    //switch for drawer
+    const isDrawer = false;
+
+    const toggleDrawer = () => {
+      //load the component from js/component into the modal and pass the data
+      window.drawer.update('store-locator-modal', {data:curatedData});
+    }
+
     const toggleDropdown = () => {
       setDropDownActive(!isDropdownActive);
     }
     const handleSelection = (location) => {
       setSelectedLocation(location);
-   
     }
     useEffect(() => {
       window.localStorage.setItem("location", selectedLocation.id);
       window.localStorage.setItem("location-page", selectedLocation.handle);
-      window.updateHomepage && window.updateHomepage();
     },[selectedLocation])
 
     useEffect (() => {
@@ -47,11 +54,11 @@ export default ({ shopifyData }) => {
     },[])
     return (
       <>
-     <div className="store-locator__container" data-dropdown-wrapper onClick={toggleDropdown}>
+     <div className="store-locator__container" data-dropdown-wrapper onClick={isDrawer ? toggleDrawer : toggleDropdown}>
       <div className="store-locator__title">
         <p>Shop from</p>
       </div>
-        <div className={`store-locator__location ${isDropdownActive? 'select-clicked' : ''}`} data-dropdown-select>
+      <div className={`store-locator--dropdown store-locator__location ${isDropdownActive? 'select-clicked' : ''}`} data-dropdown-select>
           <p>{selectedLocation.title}</p>
           <SvgIcon icon={chevronDown} />
           <div className="store-locator__location-list">
@@ -59,7 +66,7 @@ export default ({ shopifyData }) => {
                 {data.map((location,index) => {
                     const {id,title,address, url} = location || {};
                     return  <div className="storeDd-wrapper__optionsWrap" data-dropdown-selector="true" key={index} onClick={() => {handleSelection(location)}}>
-                                <a  className={`storeDd-wrapper__options-box ${id == selectedLocation.id ? "checked" : ''}`}>
+                                <a  href={`${url}?filter.v.availability=1`} className={`storeDd-wrapper__options-box ${id == selectedLocation.id ? "checked" : ''}`}>
                                     <p className="storeDd-wrapper__storeName" store-name="true">{title}</p>
                                     <div className="storeDd-wrapper__text-container">
                                         <div className="storeDd-wrapper__storeAddress" dangerouslySetInnerHTML={{__html: address}}></div>

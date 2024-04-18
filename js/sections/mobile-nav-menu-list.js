@@ -1,5 +1,5 @@
 import reactWrapper from "JsComponents/reactWrapper";
-import mobileMenuProduct from "ReactComponents/mobile-menu-list";
+import MobileMenuProduct from "JsComponents/megamenu/mobile-megamenu-product";
 export default () => {
-    reactWrapper(mobileMenuProduct, 'mobile-nav-menu-list', '#mobile-nav-menu-list');
+    reactWrapper(MobileMenuProduct, 'mobile-nav-menu-list', '#mobile-nav-menu-list');
 }

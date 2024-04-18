@@ -1,3 +1,30 @@
+/*!*******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/react-modern-drawer/dist/index.css ***!
+  \*******************************************************************************************************************************/
+.EZDrawer .EZDrawer__checkbox {
+  display: none; }
+  .EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__overlay {
+    display: block;
+    opacity: 1; }
+  .EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container {
+    visibility: visible;
+    transform: translate3d(0, 0, 0) !important; }
+
+.EZDrawer .EZDrawer__overlay {
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.EZDrawer .EZDrawer__container {
+  position: fixed;
+  visibility: hidden;
+  background: white;
+  transition: all;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1); }
+
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/sections/common-imports.scss ***!
   \******************************************************************************************************************************************************************************************************************************/
@@ -35,7 +62,7 @@
 }
 
 /**
- * Swiper 11.1.0
+ * Swiper 11.1.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -43,7 +70,7 @@
  *
  * Released under the MIT License
  *
- * Released on: March 28, 2024
+ * Released on: April 9, 2024
  */
 @font-face {
   font-family: "swiper-icons";
@@ -979,7 +1006,7 @@ custom-carousel {
 }
 
 /**
- * Swiper 11.1.0
+ * Swiper 11.1.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -987,7 +1014,7 @@ custom-carousel {
  *
  * Released under the MIT License
  *
- * Released on: March 28, 2024
+ * Released on: April 9, 2024
  */
 @font-face {
   font-family: "swiper-icons";

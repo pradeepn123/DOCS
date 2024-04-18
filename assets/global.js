@@ -2,201 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/components/custom-carousel.js":
-/*!******************************************!*\
-  !*** ./js/components/custom-carousel.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
-/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var JsComponents_constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! JsComponents/constants */ "./js/components/constants.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-
-
-var _excluded = ["breakpoints"],
-  _excluded2 = ["pagination", "navigation"],
-  _excluded3 = ["navigation", "pagination", "progressPagination", "paginationType"];
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-
-
-
-
-class CustomCarousel extends HTMLElement {
-  constructor() {
-    super();
-    this.carouselSettings;
-    this.currentWidth;
-    this.innerHTML;
-    this.container;
-  }
-  connectedCallback() {
-    this.initCarousel();
-  }
-  getCarouselSettings() {
-    var {
-      paginationType: readOnlyPaginationType
-    } = JsComponents_constants__WEBPACK_IMPORTED_MODULE_4__.CAROUSEL;
-    this.currentWidth = window.innerWidth;
-    //default settings
-    var defaultSettings = {
-      slidesPerView: 1,
-      spaceBetween: 15,
-      speed: 1000,
-      navigation: false
-    };
-    var carouselSettings = defaultSettings;
-    //end of default settings 
-
-    //handle breakpoint
-    var _this$carouselSetting = this.carouselSettings,
-      {
-        breakpoints
-      } = _this$carouselSetting,
-      otherSettings = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$carouselSetting, _excluded);
-    if (breakpoints) {
-      this.breakpoints = Object.keys(breakpoints);
-      this.breakpoints.forEach((breakpoint, index) => {
-        if (this.currentWidth >= breakpoint) {
-          if (breakpoints[breakpoint]) {
-            this.breakpointSettings = breakpoints[breakpoint];
-          } else {
-            this.breakpointSettings = breakpoints[this.breakpoints[index - 1]];
-          }
-          var _this$breakpointSetti = this.breakpointSettings,
-            {
-              pagination,
-              navigation
-            } = _this$breakpointSetti,
-            otherResponsiveSettings = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$breakpointSetti, _excluded2);
-          this.carouselSettings = _objectSpread(_objectSpread(_objectSpread({}, otherSettings), otherResponsiveSettings), {}, {
-            pagination,
-            navigation
-          });
-        }
-      });
-    }
-    if (this.carouselSettings && Object.keys(this.carouselSettings).length > 0) {
-      var _this$carouselSetting2 = this.carouselSettings,
-        {
-          navigation,
-          pagination,
-          progressPagination,
-          paginationType = readOnlyPaginationType["dots"]
-        } = _this$carouselSetting2,
-        otherSwiperSettings = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$carouselSetting2, _excluded3);
-      carouselSettings = _objectSpread({}, otherSwiperSettings);
-      if (navigation) {
-        var navigationNext = this.parent.querySelector('[data-navigation-next]');
-        var navigationPrev = this.parent.querySelector('[data-navigation-prev]');
-        carouselSettings = _objectSpread(_objectSpread({}, carouselSettings), {}, {
-          navigation: {
-            nextEl: navigationNext,
-            prevEl: navigationPrev
-          }
-        });
-      }
-      if (pagination) {
-        var swiperPagination = this.parent.querySelector('[data-pagination]');
-        var _pagination = {
-          el: swiperPagination,
-          clickable: true
-        };
-        if (paginationType == "bars") {
-          _pagination = {
-            el: swiperPagination,
-            clickable: true,
-            type: 'custom',
-            renderCustom: (swiper, current, total) => {
-              var text = '';
-              Array(total).fill().forEach((_, index) => {
-                text += "<div class='swiper-pagination-bullet swiper-pagination--bar ".concat(index == current - 1 ? 'swiper-pagination-active' : '', " '>\n                    <div class=\"swiper-pagination__progress\"></div>\n                  </div>");
-              });
-              return text;
-            }
-          };
-        }
-        if (progressPagination) {
-          _pagination = {
-            el: swiperPagination,
-            type: 'progressbar'
-          };
-        }
-        carouselSettings = _objectSpread(_objectSpread({}, carouselSettings), {}, {
-          pagination: _pagination
-        });
-      }
-    }
-    return carouselSettings;
-  }
-  initCarousel() {
-    var _this$querySelector, _this$querySelector2;
-    this.parent = this.closest('[data-parent]');
-    this.carouselSettings = JSON.parse(((_this$querySelector = this.querySelector('[data-settings]')) === null || _this$querySelector === void 0 ? void 0 : _this$querySelector.innerHTML) || "{}");
-    this.placeholders = (_this$querySelector2 = this.querySelector('[data-carousel-placeholder]')) === null || _this$querySelector2 === void 0 ? void 0 : _this$querySelector2.innerHTML;
-    this.navigations = this.parent.querySelector('[data-navigations]');
-    this.currentWidth = window.innerWidth;
-    var swiperNavigationElements = "\n      <div data-navigation-next data-navigation  class=\"swiper-navigation swiper-navigation--next ".concat(this.carouselSettings.overflowNagivation ? "swiper-navigation--overflow" : '', " \">\n      <svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12.4016H11.5H23M23 12.4016L13.8 3M23 12.4016L13.8 21.8032\" stroke=\"currentColor\" stroke-width=\"1.75\"></path></svg>\n    </div>\n    <div data-navigation-prev data-navigation class=\"swiper-navigation swiper-navigation--prev ").concat(this.carouselSettings.overflowNagivation ? "swiper-navigation--overflow" : '', " \">\n    <svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 12.4016H11.5H23M23 12.4016L13.8 3M23 12.4016L13.8 21.8032\" stroke=\"currentColor\" stroke-width=\"1.75\"></path></svg>\n    </div>\n    ");
-    this.carouselSettings['customNavigation'] ? '' : this.navigations.innerHTML = swiperNavigationElements;
-    this.container = this.querySelector('[data-swiper-container]');
-    var carouselSettings = this.getCarouselSettings();
-    this.swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](this.container, _objectSpread({
-      on: {
-        beforeInit: () => {
-          var {
-            navigation,
-            pagination
-          } = carouselSettings || {};
-          if (!navigation) {
-            this.parent.querySelectorAll('[data-navigation]').forEach(navigation => navigation.classList.add('swiper-navigation--hide'));
-          } else {
-            this.parent.querySelector('.swiper-navigation--hide') && this.querySelectorAll('.swiper-navigation--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
-          }
-          if (!pagination) {
-            this.parent.querySelectorAll('.swiper-pagination').forEach(navigation => navigation.classList.add('swiper-pagination--hide'));
-          } else {
-            this.parent.querySelector('.swiper-pagination--hide') && this.querySelectorAll('.swiper-pagination--hide').forEach(navigation => navigation.classList.remove("swiper-pagination--hide"));
-          }
-        },
-        init: () => {
-          var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[0].querySelector('.swiper-pagination__progress');
-          if (currentSlider) {
-            gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(currentSlider, {
-              width: "100%",
-              duration: 4,
-              "ease": "ease"
-            });
-          }
-        }
-      },
-      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Autoplay]
-    }, carouselSettings));
-    this.swiper.on('activeIndexChange', current => {
-      var _this$parent$querySel;
-      var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex];
-      (_this$parent$querySel = this.parent.querySelector('.swiper-pagination-bullet-active')) === null || _this$parent$querySel === void 0 || _this$parent$querySel.classList.remove('swiper-pagination-bullet-active');
-      currentSlider === null || currentSlider === void 0 || currentSlider.classList.add('swiper-pagination-bullet-active');
-    });
-    this.swiper.on('slideChange', current => {
-      var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex].querySelector('.swiper-pagination__progress');
-      gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(currentSlider, {
-        width: "100%",
-        duration: 4,
-        "ease": "ease"
-      });
-    });
-  }
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CustomCarousel);
-
-/***/ }),
-
 /***/ "./js/sections/custom-store-locatore.js":
 /*!**********************************************!*\
   !*** ./js/sections/custom-store-locatore.js ***!
@@ -207,11 +12,11 @@ class CustomCarousel extends HTMLElement {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_store_locator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/store-locator */ "./js/components/subscription/store-locator.js");
+/* harmony import */ var JsComponents_store_locator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/store-locator */ "./js/components/store-locator.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_store_locator__WEBPACK_IMPORTED_MODULE_1__["default"], 'store-locator', '#storeLocator-data');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_store_locator__WEBPACK_IMPORTED_MODULE_1__["default"], 'store-locator', '#storeLocator-data');
 });
 
 /***/ }),
@@ -222,14 +27,16 @@ class CustomCarousel extends HTMLElement {
   \*******************************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
-/* harmony import */ var _custom_store_locatore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./custom-store-locatore */ "./js/sections/custom-store-locatore.js");
+/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./subscription */ "./js/sections/subscription.js");
+/* harmony import */ var _custom_store_locatore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./custom-store-locatore */ "./js/sections/custom-store-locatore.js");
 /* harmony import */ var _megamenu_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./megamenu-nav */ "./js/sections/megamenu-nav.js");
 /* harmony import */ var _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./megamenu-product-nav */ "./js/sections/megamenu-product-nav.js");
 /* harmony import */ var _mobile_menu_product_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mobile-menu-product-nav */ "./js/sections/mobile-menu-product-nav.js");
 /* harmony import */ var _mobile_nav_menu_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mobile-nav-menu-list */ "./js/sections/mobile-nav-menu-list.js");
-/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./homepage */ "./js/sections/homepage.js");
-/* harmony import */ var JsComponents_custom_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! JsComponents/custom-carousel */ "./js/components/custom-carousel.js");
+/* harmony import */ var _homepage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./homepage */ "./js/sections/homepage.js");
+/* harmony import */ var JsComponents_custom_carousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! JsComponents/custom-carousel */ "./js/components/custom-carousel.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal */ "./js/sections/modal.js");
+
 
 
 
@@ -243,10 +50,11 @@ window.initMegamenuNavProduct = _megamenu_product_nav__WEBPACK_IMPORTED_MODULE_1
 window.initMobilemenuNavProduct = _mobile_menu_product_nav__WEBPACK_IMPORTED_MODULE_2__["default"];
 window.initmobileMenuNav = _mobile_nav_menu_list__WEBPACK_IMPORTED_MODULE_3__["default"];
 document.addEventListener('DOMContentLoaded', () => {
-  (0,_subscription__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_custom_store_locatore__WEBPACK_IMPORTED_MODULE_5__["default"])();
-  (0,_homepage__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  customElements.define('custom-carousel', JsComponents_custom_carousel__WEBPACK_IMPORTED_MODULE_7__["default"]);
+  (0,_modal__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_subscription__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_custom_store_locatore__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_homepage__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  customElements.define('custom-carousel', JsComponents_custom_carousel__WEBPACK_IMPORTED_MODULE_8__["default"]);
 });
 
 /***/ }),
@@ -280,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_megamenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/megamenu */ "./js/components/subscription/megamenu.js");
+/* harmony import */ var JsComponents_megamenu_desktop_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/desktop-megamenu-nav */ "./js/components/megamenu/desktop-megamenu-nav.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_megamenu__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu', '#meganav-menu');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_desktop_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu', '#meganav-menu');
 });
 
 /***/ }),
@@ -299,11 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_megamenu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/megamenu-product */ "./js/components/subscription/megamenu-product.js");
+/* harmony import */ var JsComponents_megamenu_desktop_megamenu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/desktop-megamenu-product */ "./js/components/megamenu/desktop-megamenu-product.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu-product', '#meganav-menu-product');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_desktop_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'react-megamenu-product', '#meganav-menu-product');
 });
 
 /***/ }),
@@ -318,11 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_mobile_menu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/mobile-menu-product */ "./js/components/subscription/mobile-menu-product.js");
+/* harmony import */ var JsComponents_megamenu_mobile_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/mobile-megamenu-nav */ "./js/components/megamenu/mobile-megamenu-nav.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_mobile_menu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-react-megamenu-product', '#mobile-menu-product');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_mobile_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-react-megamenu-product', '#mobile-menu-product');
 });
 
 /***/ }),
@@ -337,11 +145,30 @@ document.addEventListener('DOMContentLoaded', () => {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_mobile_menu_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/mobile-menu-list */ "./js/components/subscription/mobile-menu-list.js");
+/* harmony import */ var JsComponents_megamenu_mobile_megamenu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/mobile-megamenu-product */ "./js/components/megamenu/mobile-megamenu-product.js");
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_mobile_menu_list__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-nav-menu-list', '#mobile-nav-menu-list');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_mobile_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-nav-menu-list', '#mobile-nav-menu-list');
+});
+
+/***/ }),
+
+/***/ "./js/sections/modal.js":
+/*!******************************!*\
+  !*** ./js/sections/modal.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var JsComponents_drawer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/drawer */ "./js/components/drawer.js");
+/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_drawer__WEBPACK_IMPORTED_MODULE_1__["default"], 'drawer-component');
 });
 
 /***/ }),
@@ -472,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "./" + chunkId + ".js?" + {"module0":"a72fc3f4b44ff562b0d5","module1":"f2ca3cb505c8f0ac35fe","module2":"56cd7a1b4cda93b112a5","module3":"44122694aa91ae4f8d6f","module4":"3fdb50e3c44643025d14"}[chunkId] + "";
+/******/ 			return "./" + chunkId + ".js?" + {"module0":"e0bafb239d9c5ecc6c1b","module1":"defd353290a49740eafa","module2":"947fd71ca2d12a2841fb","drawer-component10":"1bfc9c364827c64cb962","drawer-component26":"d8e9039baf4e94148b9f","drawer-component53":"0deb098e4c8f9290486f"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

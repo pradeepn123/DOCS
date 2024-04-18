@@ -9,11 +9,11 @@
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_mobile_menu_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ReactComponents/mobile-menu-list */ "./js/components/subscription/mobile-menu-list.js");
+/* harmony import */ var JsComponents_megamenu_mobile_megamenu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/mobile-megamenu-product */ "./js/components/megamenu/mobile-megamenu-product.js");
 
 
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(ReactComponents_mobile_menu_list__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-nav-menu-list', '#mobile-nav-menu-list');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_mobile_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-nav-menu-list', '#mobile-nav-menu-list');
 });
 
 /***/ })
@@ -130,6 +130,17 @@
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/node module decorator */

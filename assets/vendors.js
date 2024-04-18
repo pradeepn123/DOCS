@@ -38506,6 +38506,166 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-modern-drawer/dist/index.modern.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-modern-drawer/dist/index.modern.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+var getDirectionStyle = function getDirectionStyle(dir, size) {
+  switch (dir) {
+    case 'left':
+      return {
+        top: 0,
+        left: 0,
+        transform: 'translate3d(-100%, 0, 0)',
+        width: size,
+        height: '100vh'
+      };
+
+    case 'right':
+      return {
+        top: 0,
+        right: 0,
+        transform: 'translate3d(100%, 0, 0)',
+        width: size,
+        height: '100vh'
+      };
+
+    case 'bottom':
+      return {
+        left: 0,
+        right: 0,
+        bottom: 0,
+        transform: 'translate3d(0, 100%, 0)',
+        width: '100%',
+        height: size
+      };
+
+    case 'top':
+      return {
+        left: 0,
+        right: 0,
+        top: 0,
+        transform: 'translate3d(0, -100%, 0)',
+        width: '100%',
+        height: size
+      };
+
+    default:
+      return {};
+  }
+};
+
+var EZDrawer = function EZDrawer(props) {
+  var open = props.open,
+      _props$onClose = props.onClose,
+      onClose = _props$onClose === void 0 ? function () {} : _props$onClose,
+      children = props.children,
+      style = props.style,
+      _props$enableOverlay = props.enableOverlay,
+      enableOverlay = _props$enableOverlay === void 0 ? true : _props$enableOverlay,
+      _props$overlayColor = props.overlayColor,
+      overlayColor = _props$overlayColor === void 0 ? '#000' : _props$overlayColor,
+      _props$overlayOpacity = props.overlayOpacity,
+      overlayOpacity = _props$overlayOpacity === void 0 ? 0.4 : _props$overlayOpacity,
+      _props$zIndex = props.zIndex,
+      zIndex = _props$zIndex === void 0 ? 100 : _props$zIndex,
+      _props$duration = props.duration,
+      duration = _props$duration === void 0 ? 500 : _props$duration,
+      direction = props.direction,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 250 : _props$size,
+      className = props.className,
+      customIdSuffix = props.customIdSuffix,
+      _props$lockBackground = props.lockBackgroundScroll,
+      lockBackgroundScroll = _props$lockBackground === void 0 ? false : _props$lockBackground,
+      _props$overlayClassNa = props.overlayClassName,
+      overlayClassName = _props$overlayClassNa === void 0 ? '' : _props$overlayClassNa;
+  var bodyRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var updatePageScroll = function updatePageScroll() {
+      bodyRef.current = window.document.querySelector('body');
+
+      if (bodyRef.current && lockBackgroundScroll) {
+        if (open) {
+          bodyRef.current.style.overflow = 'hidden';
+        } else {
+          bodyRef.current.style.overflow = '';
+        }
+      }
+    };
+
+    updatePageScroll();
+  }, [open]);
+  var idSuffix = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
+    return customIdSuffix || (Math.random() + 1).toString(36).substring(7);
+  }, [customIdSuffix]);
+  var overlayStyles = {
+    backgroundColor: "" + overlayColor,
+    opacity: "" + overlayOpacity,
+    zIndex: zIndex
+  };
+
+  var drawerStyles = _extends({
+    zIndex: zIndex + 1,
+    transitionDuration: duration + "ms"
+  }, getDirectionStyle(direction, size), style);
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: 'EZDrawer' + idSuffix,
+    className: 'EZDrawer'
+  }, react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: 'checkbox',
+    id: 'EZDrawer__checkbox' + idSuffix,
+    className: 'EZDrawer__checkbox',
+    onChange: onClose,
+    checked: open
+  }), react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
+    role: 'navigation',
+    id: 'EZDrawer__container' + idSuffix,
+    style: drawerStyles,
+    className: 'EZDrawer__container ' + className
+  }, children), enableOverlay && react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: 'EZDrawer__checkbox' + idSuffix,
+    id: 'EZDrawer__overlay' + idSuffix,
+    className: 'EZDrawer__overlay ' + overlayClassName,
+    style: overlayStyles
+  }));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EZDrawer);
+//# sourceMappingURL=index.modern.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -47376,6 +47536,17 @@ function Zoom(_ref) {
       gesture.slideEl = undefined;
     }
   }
+  let allowTouchMoveTimeout;
+  function allowTouchMove() {
+    swiper.touchEventsData.preventTouchMoveFromPointerMove = false;
+  }
+  function preventTouchMove() {
+    clearTimeout(allowTouchMoveTimeout);
+    swiper.touchEventsData.preventTouchMoveFromPointerMove = true;
+    allowTouchMoveTimeout = setTimeout(() => {
+      allowTouchMove();
+    });
+  }
   function onTouchStart(e) {
     const device = swiper.device;
     if (!gesture.imageEl) return;
@@ -47387,10 +47558,16 @@ function Zoom(_ref) {
     image.touchesStart.y = event.pageY;
   }
   function onTouchMove(e) {
-    if (!eventWithinSlide(e) || !eventWithinZoomContainer(e)) return;
+    if (!eventWithinSlide(e) || !eventWithinZoomContainer(e)) {
+      return;
+    }
     const zoom = swiper.zoom;
-    if (!gesture.imageEl) return;
-    if (!image.isTouched || !gesture.slideEl) return;
+    if (!gesture.imageEl) {
+      return;
+    }
+    if (!image.isTouched || !gesture.slideEl) {
+      return;
+    }
     if (!image.isMoved) {
       image.width = gesture.imageEl.offsetWidth || gesture.imageEl.clientWidth;
       image.height = gesture.imageEl.offsetHeight || gesture.imageEl.clientHeight;
@@ -47403,7 +47580,10 @@ function Zoom(_ref) {
     // Define if we need image drag
     const scaledWidth = image.width * zoom.scale;
     const scaledHeight = image.height * zoom.scale;
-    if (scaledWidth < gesture.slideWidth && scaledHeight < gesture.slideHeight) return;
+    if (scaledWidth < gesture.slideWidth && scaledHeight < gesture.slideHeight) {
+      allowTouchMove();
+      return;
+    }
     image.minX = Math.min(gesture.slideWidth / 2 - scaledWidth / 2, 0);
     image.maxX = -image.minX;
     image.minY = Math.min(gesture.slideHeight / 2 - scaledHeight / 2, 0);
@@ -47417,10 +47597,12 @@ function Zoom(_ref) {
     if (!image.isMoved && !isScaling) {
       if (swiper.isHorizontal() && (Math.floor(image.minX) === Math.floor(image.startX) && image.touchesCurrent.x < image.touchesStart.x || Math.floor(image.maxX) === Math.floor(image.startX) && image.touchesCurrent.x > image.touchesStart.x)) {
         image.isTouched = false;
+        allowTouchMove();
         return;
       }
       if (!swiper.isHorizontal() && (Math.floor(image.minY) === Math.floor(image.startY) && image.touchesCurrent.y < image.touchesStart.y || Math.floor(image.maxY) === Math.floor(image.startY) && image.touchesCurrent.y > image.touchesStart.y)) {
         image.isTouched = false;
+        allowTouchMove();
         return;
       }
     }
@@ -47428,6 +47610,7 @@ function Zoom(_ref) {
       e.preventDefault();
     }
     e.stopPropagation();
+    preventTouchMove();
     image.isMoved = true;
     const scaleRatio = (zoom.scale - currentScale) / (gesture.maxRatio - swiper.params.zoom.minRatio);
     const {
@@ -50555,7 +50738,7 @@ function onTouchMove(event) {
       data.startMoving = true;
     }
   }
-  if (data.isScrolling) {
+  if (data.isScrolling || e.type === 'touchmove' && data.preventTouchMoveFromPointerMove) {
     data.isTouched = false;
     return;
   }
@@ -52844,7 +53027,7 @@ function makeElementsArray(el) {
 /* harmony import */ var _shared_update_on_virtual_data_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared/update-on-virtual-data.mjs */ "./node_modules/swiper/shared/update-on-virtual-data.mjs");
 /* harmony import */ var _shared_update_swiper_mjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/update-swiper.mjs */ "./node_modules/swiper/shared/update-swiper.mjs");
 /**
- * Swiper React 11.1.0
+ * Swiper React 11.1.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -52852,7 +53035,7 @@ function makeElementsArray(el) {
  *
  * Released under the MIT License
  *
- * Released on: March 28, 2024
+ * Released on: April 9, 2024
  */
 
 
@@ -53253,7 +53436,7 @@ SwiperSlide.displayName = 'SwiperSlide';
 /* harmony export */ });
 /* harmony import */ var _shared_swiper_core_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/swiper-core.mjs */ "./node_modules/swiper/shared/swiper-core.mjs");
 /**
- * Swiper 11.1.0
+ * Swiper 11.1.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -53261,7 +53444,7 @@ SwiperSlide.displayName = 'SwiperSlide';
  *
  * Released under the MIT License
  *
- * Released on: March 28, 2024
+ * Released on: April 9, 2024
  */
 
 

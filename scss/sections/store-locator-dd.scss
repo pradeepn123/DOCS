@@ -1,89 +1,273 @@
 @use 'StyleComponents/breakpoints';
 @use 'StyleComponents/typography';
 @use 'StyleComponents/colors';
+@import 'StyleComponents/modal';
 
-.storeDd-wrapper{
-    background: #fff;
-    padding: 0px 17px 0px 17px;
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    top: 100%;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    visibility: hidden;
-    opacity: 0;
 
-    &.menu-open {
-        visibility: visible;
-        opacity: 1;
-    }
-  
-    @media (min-width:1024px){
-        width: 267px; 
-        left: unset;
-        top: 80%;
-        right: 11%; 
-    }
-    @media (min-width:1200px){
-        right: 9%;
-    }
-    @media (min-width:1680px){
-        right: 9%;
-    }
+.store-locator--dropdown {
+    .storeDd-wrapper {
+        background: #fff;
+        padding: 0px 17px 0px 17px;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 100%;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        visibility: hidden;
+        opacity: 0;
 
-    &__optionsWrap{
-        border-bottom:  none; 
-        padding: 17px 0;
-        // cursor: default;
-    }
-    &__optionsWrap:not(:last-child) {
-        border-bottom: 1px solid #D7D7D7; 
-    } 
-
-    &__storeName{
-        margin-bottom: 5px;
-        font-weight: typography.$regular-weight;
-        font-size: typography.$body-title-size;
-    }
-
-    &__storeAddress{
-        font-size: 12px;
-        max-width: 60%;
-    }
-    &__options-box {
-
-        .storeDd-wrapper__text-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        &.menu-open {
+            visibility: visible;
+            opacity: 1;
         }
 
-        &.checked {
-            .storeDd-wrapper__button {
-                svg {
-                    display: unset;
+        @media (min-width:1024px) {
+            width: 267px;
+            left: unset;
+            top: 80%;
+            right: 11%;
+        }
+
+        @media (min-width:1200px) {
+            right: 9%;
+        }
+
+        @media (min-width:1680px) {
+            right: 9%;
+        }
+
+        &__optionsWrap {
+            border-bottom: none;
+            padding: 17px 0;
+            // cursor: default;
+        }
+
+        &__optionsWrap:not(:last-child) {
+            border-bottom: 1px solid #D7D7D7;
+        }
+
+        &__storeName {
+            margin-bottom: 5px;
+            font-weight: typography.$regular-weight;
+            font-size: typography.$body-title-size;
+        }
+
+        &__storeAddress {
+            font-size: 12px;
+            max-width: 60%;
+        }
+
+        &__options-box {
+
+            .storeDd-wrapper__text-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &.checked {
+                .storeDd-wrapper__button {
+                    svg {
+                        display: unset;
+                    }
                 }
+            }
+
+            label {
+                max-width: 60%;
+                margin-bottom: 19px;
             }
         }
 
-        label{
+        &__optionsWrap2 {
+            margin-top: 17px;
+        }
+
+        &__button {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #1A428A;
+            border-radius: 50%;
+            cursor: pointer;
+
+            svg {
+                display: none;
+            }
+        }
+    }
+}
+
+.store-locator--drawer {
+    .drawer__main-content {
+        .storeDd-wrapper__optionsWrap:first-child {
+            border-top: 1px solid #D1D1D1;
+        }
+
+        .store-location-drawer__search {
+            .search-input {
+                width: 100%;
+                box-sizing: border-box;
+                border: 1px solid #CECECE;
+                font-size: 16px;
+                background-color: white;
+                background-image: url('../../assets/search-icon.png');
+                background-position: right;
+                background-repeat: no-repeat;
+                padding: 11px 14px;
+                background-position-y: 5px;
+                margin-bottom: 31px;
+            }
+        }
+    }
+
+    .storeDd-wrapper {
+        background: #fff;
+        padding: 0px 17px 0px 17px;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 100%;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        visibility: hidden;
+        opacity: 0;
+
+        &.menu-open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (min-width:1024px) {
+            width: 267px;
+            left: unset;
+            top: 80%;
+            right: 11%;
+        }
+
+        @media (min-width:1200px) {
+            right: 9%;
+        }
+
+        @media (min-width:1680px) {
+            right: 9%;
+        }
+
+        &__optionsWrap {
+            border-bottom: none;
+            padding: 23px 0;
+
+            // cursor: default;
+            .show-detail-text {
+                font-family: var(--font-heading);
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 17.64px;
+                text-align: left;
+                color: #1A428A;
+                cursor: pointer;
+                display: flex;
+                justify-content: flex-start;
+                column-gap: 0.5em;
+                margin: 13px 0 0 48px;
+                width: fit-content;
+            }
+        }
+
+        &__optionsWrap {
+            border-top: 1px solid #D1D1D1;
+        }
+
+        &__storeName {
+            margin-bottom: 5px;
+            font-weight: typography.$regular-weight;
+            font-size: typography.$body-title-size;
+        }
+
+        &__storeAddress {
+            font-size: 12px;
             max-width: 60%;
-            margin-bottom: 19px;
+        }
+
+        &__options-box {
+
+            .storeDd-wrapper__text-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .storeDd-wrapper__text-icon-container {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                column-gap: 0.5em;
+
+                .store-location-icon {
+                    vertical-align: text-top;
+                }
+
+                .storeDd-wrapper__storeAddress {
+                    font-family: var(--font-heading);
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 20.16px;
+                    text-align: left;
+                    color: #000000;
+                }
+            }
+
+            &.checked {
+                .storeDd-wrapper__button {
+                    svg {
+                        display: unset;
+                    }
+                }
+            }
+
+            label {
+                max-width: 60%;
+                margin-bottom: 19px;
+            }
+        }
+
+        &__optionsWrap2 {
+            margin-top: 17px;
+        }
+
+        &__button {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #1A428A;
+            border-radius: 50%;
+            cursor: pointer;
+
+            svg {
+                display: none;
+            }
         }
     }
 
-    &__optionsWrap2{
-        margin-top: 17px;
-    }
-    &__button {
-        width: 32px;
-        height: 32px;
-        border: 1px solid #1A428A;
-        border-radius: 50%;
-        cursor: pointer;
 
-        svg {
-            display: none;
-        }
-    }
+    .storeDd-wrapper__text-container .storeDd-wrapper__storeAddress{
+        font-family: var(--font-heading);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20.16px;
+        text-align: left;
+      }
+     .storeDd-wrapper__text-container .storeDd-wrapper-detail {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17.64px;
+        text-align: left;
+        color: var(--color-accent);
+      }
+
+    .storeDd-wrapper__storeName {
+        font-family: var(--font-heading);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22.68px;
+        text-align: left;
+      }
 }
