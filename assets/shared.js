@@ -2401,6 +2401,8 @@ var SvgIcon = _ref => {
 
   //switch for drawer
   var isDrawer = false;
+  //switch for dynamic content
+  var isDynamic = false;
   var toggleDrawer = () => {
     //load the component from js/component into the modal and pass the data
     window.drawer.update('store-locator-modal', {
@@ -2416,6 +2418,7 @@ var SvgIcon = _ref => {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     window.localStorage.setItem("location", selectedLocation.id);
     window.localStorage.setItem("location-page", selectedLocation.handle);
+    isDynamic && window.updateHomepage && window.updateHomepage();
   }, [selectedLocation]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     window.addEventListener('click', ev => {
@@ -2455,7 +2458,7 @@ var SvgIcon = _ref => {
         handleSelection(location);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: "".concat(url, "?filter.v.availability=1"),
+      href: "".concat(isDynamic ? '#' : "".concat(url, "?filter.v.availability=1")),
       className: "storeDd-wrapper__options-box ".concat(id == selectedLocation.id ? "checked" : '')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
       className: "storeDd-wrapper__storeName",
