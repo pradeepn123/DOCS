@@ -19,6 +19,7 @@
                     {% for subcategorylink in sublink.links %}
                       {% unless forloop.first %},{% endunless %}
                       {
+                        "parent_title": "{{ sublink.title }}",
                         "title": "{{ subcategorylink.title }}",
                         "handle": "{{ subcategorylink.url }}",
                         "depth": 3

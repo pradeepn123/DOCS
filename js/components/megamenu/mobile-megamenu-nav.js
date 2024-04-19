@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import MobileAccountDrawer from "./mobile-account-drawer";
 
-export default ({ shopifyData }) => {
-    console.log(shopifyData, "data");
+export default ({ shopifyData }) => {    
+    console.log(shopifyData,'shopifyData')
     const {data: { menu_list: menulinks }} = shopifyData;
     const handleUrl = window.localStorage.getItem('location-page');
     const collectionUrl = `/collections/${handleUrl}`;

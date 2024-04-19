@@ -136,7 +136,7 @@ class CustomCarousel extends HTMLElement {
           
         },
         init: () => {
-          const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[0].querySelector('.swiper-pagination__progress');
+          const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[0]?.querySelector('.swiper-pagination__progress');
           if(currentSlider) {
             gsap.to(currentSlider, { width: `100%`, duration:4, "ease": "ease" });
           }
@@ -154,7 +154,7 @@ class CustomCarousel extends HTMLElement {
     })
 
     this.swiper.on('slideChange', (current) => {
-      const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex].querySelector('.swiper-pagination__progress');
+      const currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex]?.querySelector('.swiper-pagination__progress');
       gsap.to(currentSlider, { width: `100%`, duration:4, "ease": "ease" });
     })
   }

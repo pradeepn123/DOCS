@@ -9,11 +9,11 @@
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./js/components/reactWrapper.js");
-/* harmony import */ var JsComponents_megamenu_mobile_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/mobile-megamenu-nav */ "./js/components/megamenu/mobile-megamenu-nav.js");
+/* harmony import */ var JsComponents_megamenu_mobile_megamenu_product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/megamenu/mobile-megamenu-product */ "./js/components/megamenu/mobile-megamenu-product.js");
 
 
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_mobile_megamenu_nav__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-react-megamenu-product', '#mobile-menu-product');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(JsComponents_megamenu_mobile_megamenu_product__WEBPACK_IMPORTED_MODULE_1__["default"], 'mobile-react-megamenu-product', '#mobile-menu-product');
 });
 
 /***/ })

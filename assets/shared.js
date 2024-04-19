@@ -1177,7 +1177,8 @@ class CustomCarousel extends HTMLElement {
           }
         },
         init: () => {
-          var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[0].querySelector('.swiper-pagination__progress');
+          var _this$parent$querySel;
+          var currentSlider = (_this$parent$querySel = this.parent.querySelectorAll('.swiper-pagination-bullet')[0]) === null || _this$parent$querySel === void 0 ? void 0 : _this$parent$querySel.querySelector('.swiper-pagination__progress');
           if (currentSlider) {
             gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(currentSlider, {
               width: "100%",
@@ -1190,13 +1191,14 @@ class CustomCarousel extends HTMLElement {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_3__.Autoplay]
     }, carouselSettings));
     this.swiper.on('activeIndexChange', current => {
-      var _this$parent$querySel;
+      var _this$parent$querySel2;
       var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex];
-      (_this$parent$querySel = this.parent.querySelector('.swiper-pagination-bullet-active')) === null || _this$parent$querySel === void 0 || _this$parent$querySel.classList.remove('swiper-pagination-bullet-active');
+      (_this$parent$querySel2 = this.parent.querySelector('.swiper-pagination-bullet-active')) === null || _this$parent$querySel2 === void 0 || _this$parent$querySel2.classList.remove('swiper-pagination-bullet-active');
       currentSlider === null || currentSlider === void 0 || currentSlider.classList.add('swiper-pagination-bullet-active');
     });
     this.swiper.on('slideChange', current => {
-      var currentSlider = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex].querySelector('.swiper-pagination__progress');
+      var _this$parent$querySel3;
+      var currentSlider = (_this$parent$querySel3 = this.parent.querySelectorAll('.swiper-pagination-bullet')[current.activeIndex]) === null || _this$parent$querySel3 === void 0 ? void 0 : _this$parent$querySel3.querySelector('.swiper-pagination__progress');
       gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(currentSlider, {
         width: "100%",
         duration: 4,
@@ -1848,7 +1850,7 @@ __webpack_require__.r(__webpack_exports__);
   var {
     shopifyData
   } = _ref;
-  console.log(shopifyData, "data");
+  console.log(shopifyData, 'shopifyData');
   var {
     data: {
       menu_list: menulinks
